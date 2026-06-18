@@ -30,6 +30,20 @@ DB_PATH = os.environ.get(
 MIN_TERM_LEN = 4
 MAX_NGRAM_WORDS = 5
 
+_NEGATION_PATTERNS = re.compile(
+    r"(?:"
+    r"pas\s+d[e']?\s*"
+    r"|sans\s+"
+    r"|absence\s+(?:totale\s+)?(?:d[e']?\s*)?"
+    r"|aucune?\s+"
+    r"|ni\s+(?:d[e']?\s*)?"
+    r"|(?:non?\s+)?(?:retrouve|observe|identifie|note|visualise|objective|constate)(?:e?s?)\s+"
+    r")$",
+    re.IGNORECASE,
+)
+
+_NEGATION_WINDOW = 40
+
 _STOP_WORDS_CLINICAL = {
     "foetus", "foetal", "foetale", "fetal", "fetale", "grossesse", "examen",
     "externe", "interne", "aspect", "normal", "normale", "normaux",
@@ -136,11 +150,17 @@ class HPOExtractor:
 
         self._sorted_keys = sorted(self._index.keys(), key=len, reverse=True)
 
+    def _is_negated(self, text_norm: str, match_start: int) -> bool:
+        window_start = max(0, match_start - _NEGATION_WINDOW)
+        prefix = text_norm[window_start:match_start]
+        return bool(_NEGATION_PATTERNS.search(prefix))
+
     def _match_exact(self, text_norm: str) -> list[tuple[str, str, str, str, float, str]]:
         """Find exact substring matches of HPO labels in normalized text.
 
         Uses word boundary checks to avoid partial word matches
         (e.g. 'tissu' matching inside 'tissulaire').
+        Skips matches preceded by negation patterns.
         """
         results = []
         matched_spans = set()
@@ -164,6 +184,9 @@ class HPOExtractor:
                     for ms in matched_spans
                 )
                 if overlap:
+                    pos += 1
+                    continue
+                if self._is_negated(text_norm, pos):
                     pos += 1
                     continue
                 matched_spans.add(span)
