@@ -286,7 +286,45 @@ class ConvergenceMatrix:
         ranked = sorted(scores.items(), key=lambda x: -x[1])[:top_k]
         return {sid: i + 1 for i, (sid, _) in enumerate(ranked)}
 
-    # ── Channel 4: FTS5 (case_reports + chunk_meta) ──
+    # ── Channel 4: PhenoFit (syndrome→vignette fit with family matching) ──
+
+    def _channel_phenofit(self, clinical_text, top_k=TOP_K_PER_CHANNEL, hpo_matches=None):
+        matches = hpo_matches if hpo_matches is not None else self._extract_hpo(clinical_text)
+        if not matches:
+            return {}
+
+        vignette_hpos = {m.hpo_id for m in matches}
+        vignette_conf = {m.hpo_id: m.confidence for m in matches}
+        vignette_expanded = set(vignette_hpos)
+        for h in list(vignette_hpos):
+            vignette_expanded |= self.hpo_ancestors_map.get(h, set())
+
+        candidate_sids = set()
+        for hpo_id in vignette_hpos:
+            for sid, _ in self.hpo_to_syndromes.get(hpo_id, []):
+                candidate_sids.add(sid)
+
+        alpha = 0.15
+        scores = {}
+        for sid in candidate_sids:
+            expected = self.syndrome_expected.get(sid, [])
+            if not expected:
+                continue
+            score = 0.0
+            for hpo_id, prob in expected:
+                ic = self.hpo_ic.get(hpo_id, 1.0)
+                if hpo_id in vignette_hpos:
+                    score += prob * ic * vignette_conf.get(hpo_id, 1.0)
+                elif hpo_id in vignette_expanded:
+                    score += 0.5 * prob * ic
+                elif hpo_id not in self.postnatal_hpos:
+                    score -= alpha * prob * ic
+            scores[sid] = score
+
+        ranked = sorted(scores.items(), key=lambda x: -x[1])[:top_k]
+        return {sid: i + 1 for i, (sid, _) in enumerate(ranked)}
+
+    # ── Channel 5: FTS5 (case_reports + chunk_meta) ──
 
     def _channel_fts(self, query, top_k=TOP_K_PER_CHANNEL):
         tokens = re.findall(r"[a-zA-Zéèêëàâäôöùûüïîç]{3,}", query.lower())
@@ -394,9 +432,10 @@ class ConvergenceMatrix:
         bio_ranks = self._channel_biolord(bio_emb)
         hpo_ranks = self._channel_hpo(clinical_text, hpo_matches=hpo_matches)
         aki_ranks = self._channel_akinator(clinical_text, hpo_matches=hpo_matches)
+        pf_ranks = self._channel_phenofit(clinical_text, hpo_matches=hpo_matches)
         fts_ranks = self._channel_fts(clinical_text)
 
-        merged, ch_presence = self._rrf_merge(bio_ranks, hpo_ranks, aki_ranks, fts_ranks)
+        merged, ch_presence = self._rrf_merge(bio_ranks, hpo_ranks, aki_ranks, pf_ranks, fts_ranks)
 
         vignette_hpo_ids = {m.hpo_id for m in hpo_matches} if hpo_matches else set()
         rescored = self._absence_penalty(merged, vignette_hpo_ids, top_k,
@@ -419,6 +458,7 @@ class ConvergenceMatrix:
                 "biolord_rank": bio_ranks.get(sid),
                 "hpo_rank": hpo_ranks.get(sid),
                 "akinator_rank": aki_ranks.get(sid),
+                "phenofit_rank": pf_ranks.get(sid),
                 "fts_rank": fts_ranks.get(sid),
                 "n_channels": ch_presence[sid],
                 "vf_covered": n_covered,
@@ -430,6 +470,7 @@ class ConvergenceMatrix:
             print(f"\n  BioLORD:   {len(bio_ranks)} syndromes")
             print(f"  HPO:       {len(hpo_ranks)} syndromes")
             print(f"  Akinator:  {len(aki_ranks)} syndromes")
+            print(f"  PhenoFit:  {len(pf_ranks)} syndromes")
             print(f"  FTS5:      {len(fts_ranks)} syndromes")
             print(f"  Merged:    {len(merged)} syndromes")
             print(f"  Time:      {elapsed*1000:.0f}ms")
@@ -454,9 +495,10 @@ class ConvergenceMatrix:
             bio_ranks = all_bio_ranks[i]
             hpo_ranks = self._channel_hpo(text, hpo_matches=hpo_matches)
             aki_ranks = self._channel_akinator(text, hpo_matches=hpo_matches)
+            pf_ranks = self._channel_phenofit(text, hpo_matches=hpo_matches)
             fts_ranks = self._channel_fts(text)
 
-            merged, ch_presence = self._rrf_merge(bio_ranks, hpo_ranks, aki_ranks, fts_ranks)
+            merged, ch_presence = self._rrf_merge(bio_ranks, hpo_ranks, aki_ranks, pf_ranks, fts_ranks)
 
             vignette_hpo_ids = {m.hpo_id for m in hpo_matches} if hpo_matches else set()
             rescored = self._absence_penalty(merged, vignette_hpo_ids, top_k,
@@ -695,16 +737,17 @@ def main():
         eval_benchmark(cm, top_k=args.top)
     elif args.query:
         results = cm.query(args.query, top_k=args.top, verbose=True)
-        print(f"\n{'Rang':>4s} {'Ch':>3s} {'RRF':>7s} {'VF':>7s} {'Pen':>5s} {'BioL':>5s} {'HPO':>5s} {'Aki':>5s} {'FTS':>5s} | {'Syndrome'}")
-        print("-" * 120)
+        print(f"\n{'Rang':>4s} {'Ch':>3s} {'RRF':>7s} {'VF':>7s} {'Pen':>5s} {'BioL':>5s} {'HPO':>5s} {'Aki':>5s} {'PFit':>5s} {'FTS':>5s} | {'Syndrome'}")
+        print("-" * 130)
         for i, r in enumerate(results, 1):
             bio = str(r["biolord_rank"]) if r["biolord_rank"] else "-"
             hpo = str(r["hpo_rank"]) if r["hpo_rank"] else "-"
             aki = str(r["akinator_rank"]) if r["akinator_rank"] else "-"
+            pf = str(r["phenofit_rank"]) if r.get("phenofit_rank") else "-"
             fts = str(r["fts_rank"]) if r["fts_rank"] else "-"
             vf = f"{r['vf_covered']}/{r['vf_total']}" if r.get("vf_total") else "-"
             pen = f"{r['absence_penalty']:.0%}" if r.get("absence_penalty") else "-"
-            print(f"  {i:>2d}  {r['n_channels']:>4d} {r['rrf_score']:.5f} {vf:>7s} {pen:>5s} {bio:>5s} {hpo:>5s} {aki:>5s} {fts:>5s} | "
+            print(f"  {i:>2d}  {r['n_channels']:>4d} {r['rrf_score']:.5f} {vf:>7s} {pen:>5s} {bio:>5s} {hpo:>5s} {aki:>5s} {pf:>5s} {fts:>5s} | "
                   f"{r['name'][:55]} [{r['category']}]")
     else:
         parser.print_help()
