@@ -28,6 +28,20 @@ DB_PATH = os.environ.get(
 CHUNK_SIZE = 512
 CHUNK_OVERLAP = 64
 
+_ORPHA_RE = re.compile(r"^(ORPHA[_:]?\d+)[_\-\s]")
+
+
+def parse_orpha_from_filename(stem):
+    m = _ORPHA_RE.match(stem)
+    if not m:
+        return None, stem
+    raw = m.group(1)
+    orpha_id = raw.replace("ORPHA_", "ORPHA:").replace("ORPHA", "ORPHA:")
+    if orpha_id.count(":") > 1:
+        orpha_id = "ORPHA:" + orpha_id.split(":")[-1]
+    label = stem[m.end():].strip(" _-")
+    return orpha_id, label or stem
+
 
 def serialize_vec(vec):
     return struct.pack(f"{len(vec)}f", *vec)
@@ -49,7 +63,7 @@ def extract_text_from_pdf(pdf_path):
     return pages
 
 
-def chunk_pages(pages, source_name, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
+def chunk_pages(pages, orpha_id, source_name, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
     chunks = []
     for page_info in pages:
         text = page_info["text"].strip()
@@ -64,6 +78,7 @@ def chunk_pages(pages, source_name, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERLAP
             chunk_text = " ".join(chunk_words)
             chunks.append({
                 "text": chunk_text,
+                "orpha_id": orpha_id,
                 "source": source_name,
                 "page": page_info["page"],
                 "source_type": "book",
@@ -94,7 +109,7 @@ def embed_and_store(chunks, db_path=DB_PATH, batch_size=64):
     for i, chunk in enumerate(chunks):
         cur = conn.execute(
             "INSERT INTO chunk_meta (chunk_text, title, source_type, source_id) VALUES (?, ?, ?, ?)",
-            (chunk["text"], chunk["source"], chunk["source_type"],
+            (chunk["text"], chunk["orpha_id"], chunk["source_type"],
              f"{chunk['source']}_p{chunk['page']}"),
         )
         rowid = cur.lastrowid
@@ -157,16 +172,23 @@ def process_path(path, db_path=DB_PATH):
 
     all_chunks = []
     for pdf in pdfs:
-        source_name = pdf.stem
-        if source_name in existing:
-            print(f"  SKIP (already embedded): {source_name}")
+        orpha_id, label = parse_orpha_from_filename(pdf.stem)
+        title_key = orpha_id or pdf.stem
+
+        if title_key in existing:
+            print(f"  SKIP (already embedded): {title_key}")
             continue
 
+        if not orpha_id:
+            print(f"  WARN no ORPHA prefix: {pdf.name} — chunks won't map to a syndrome")
+
         print(f"\n  Processing: {pdf.name} ({pdf.stat().st_size / 1024 / 1024:.1f} MB)")
+        if orpha_id:
+            print(f"    ORPHA: {orpha_id}  label: {label}")
         pages = extract_text_from_pdf(pdf)
         print(f"    {len(pages)} pages extracted")
 
-        chunks = chunk_pages(pages, source_name)
+        chunks = chunk_pages(pages, orpha_id or "unknown", title_key)
         print(f"    {len(chunks)} chunks created")
         all_chunks.extend(chunks)
 
