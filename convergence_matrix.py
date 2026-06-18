@@ -137,6 +137,12 @@ class ConvergenceMatrix:
             if source_id in gr_title_map:
                 self.chunk_syndrome[rowid] = gr_title_map[source_id]
 
+        for rowid, title in self.conn.execute(
+            "SELECT rowid, title FROM chunk_meta WHERE source_type = 'book'"
+        ).fetchall():
+            if title and title.startswith("ORPHA:"):
+                self.chunk_syndrome[rowid] = title
+
         n_mapped = len(self.chunk_syndrome)
         n_total = self.conn.execute("SELECT COUNT(*) FROM chunk_meta").fetchone()[0]
         self._n_mapped = n_mapped
