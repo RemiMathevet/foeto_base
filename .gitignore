@@ -2,3 +2,12 @@ __pycache__/
 *.pyc
 *.bak_*
 feedback/
+syndromes_foetaux.db
+syndromes.db
+*.npz
+*.html
+*_data.json
+*_results.json
+vignettes_batch/
+static/
+templates/
