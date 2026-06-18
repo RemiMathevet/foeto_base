@@ -386,7 +386,7 @@ class ConvergenceMatrix:
     # ── Public API ──
 
     def query(self, clinical_text, top_k=TOP_K_FINAL, verbose=False,
-              absence_penalty_weight=0.5):
+              absence_penalty_weight=0.3):
         t0 = time.time()
 
         bio_emb = self.biolord.encode(clinical_text, normalize_embeddings=True)
@@ -436,7 +436,7 @@ class ConvergenceMatrix:
 
         return results
 
-    def query_batch(self, texts, top_k=TOP_K_FINAL, absence_penalty_weight=0.5):
+    def query_batch(self, texts, top_k=TOP_K_FINAL, absence_penalty_weight=0.3):
         t0 = time.time()
         print(f"Batch encoding {len(texts)} queries with BioLORD...")
         bio_embs = self.biolord.encode(texts, batch_size=64, show_progress_bar=True,
