@@ -62,6 +62,14 @@ _NORMALITY_PATTERNS = re.compile(
 
 _NEGATION_WINDOW = 40
 _NORMALITY_WINDOW = 60
+_CONTEXT_WINDOW = 150
+_CONTEXT_COVERAGE_THRESHOLD = 0.80
+
+_DETERMINERS = {
+    "de", "du", "des", "le", "la", "les", "l", "d", "un", "une",
+    "et", "a", "au", "aux", "en", "par", "pour", "avec", "dans",
+    "sur", "ou", "qui", "que", "ce", "se", "son", "sa", "ses",
+}
 
 _CONTRADICTORY_GROUPS = [
     (  # Microcéphalie ↔ Macrocéphalie
@@ -180,6 +188,11 @@ class HPOExtractor:
 
         self._sorted_keys = sorted(self._index.keys(), key=len, reverse=True)
 
+        self._reverse_index: dict[str, set[str]] = {}
+        for key, entries in self._index.items():
+            for hpo_id, *_ in entries:
+                self._reverse_index.setdefault(hpo_id, set()).add(key)
+
     def _is_negated(self, text_norm: str, match_start: int, match_end: int | None = None) -> bool:
         window_start = max(0, match_start - _NEGATION_WINDOW)
         prefix = text_norm[window_start:match_start]
@@ -235,6 +248,27 @@ class HPOExtractor:
                     results.append((hpo_id, label_fr, label_en, category, base_conf, key))
                 break
         return results
+
+    def _context_coverage(self, text_norm: str, hpo_id: str, span: str) -> float:
+        """Check how much of an HPO label's content words appear near the match."""
+        pos = text_norm.find(span)
+        if pos == -1:
+            return 0.0
+        win_start = max(0, pos - _CONTEXT_WINDOW)
+        win_end = min(len(text_norm), pos + len(span) + _CONTEXT_WINDOW)
+        context = text_norm[win_start:win_end]
+
+        best_ratio = 0.0
+        for key in self._reverse_index.get(hpo_id, ()):
+            content_words = [w for w in key.split() if w not in _DETERMINERS]
+            if not content_words:
+                continue
+            total = sum(len(w) for w in content_words)
+            matched = sum(len(w) for w in content_words if w in context)
+            ratio = matched / total
+            if ratio > best_ratio:
+                best_ratio = ratio
+        return best_ratio
 
     def _segment_has_normality(self, segment_norm: str) -> bool:
         return bool(_NORMALITY_PATTERNS.search(segment_norm))
@@ -307,8 +341,10 @@ class HPOExtractor:
             fuzzy = self._match_fuzzy(seg)
             for m in fuzzy:
                 if m[0] not in matched_hpo_ids:
-                    raw_matches.append(m)
-                    matched_hpo_ids.add(m[0])
+                    cov = self._context_coverage(text_norm, m[0], m[5])
+                    if cov >= _CONTEXT_COVERAGE_THRESHOLD:
+                        raw_matches.append(m)
+                        matched_hpo_ids.add(m[0])
 
         best: dict[str, tuple] = {}
         for hpo_id, label_fr, label_en, category, conf, span in raw_matches:
