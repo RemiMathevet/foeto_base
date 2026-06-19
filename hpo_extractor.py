@@ -42,7 +42,37 @@ _NEGATION_PATTERNS = re.compile(
     re.IGNORECASE,
 )
 
+_NORMALITY_PATTERNS = re.compile(
+    r"(?:"
+    r"dans\s+l(?:a|es)\s+normes?"
+    r"|de\s+(?:taille|volume|poids)\s+normal(?:e|aux)?"
+    r"|sans\s+(?:particularite|anomalie)"
+    r"|\bras\b"
+    r"|parai(?:t|ssent)\s+normal(?:e|aux)?"
+    r"|semble(?:nt)?\s+normal(?:e|aux)?"
+    r"|d'aspect\s+normal(?:e|aux)?"
+    r"|normes?\s+pour\s+(?:le\s+terme|l'age)"
+    r"|proportionn(?:e|ee|es)?"
+    r"|bien\s+(?:forme|developpe|visualise)(?:e?s?)?"
+    r"|en\s+place"
+    r"|(?:a|aux)\s+limites?\s+(?:de\s+la\s+)?normal(?:e|es)?"
+    r")",
+    re.IGNORECASE,
+)
+
 _NEGATION_WINDOW = 40
+_NORMALITY_WINDOW = 60
+
+_CONTRADICTORY_GROUPS = [
+    (  # Microcéphalie ↔ Macrocéphalie
+        {"HP:0000252", "HP:0000253", "HP:0005484", "HP:0011451", "HP:0040195", "HP:0040196"},
+        {"HP:0000256", "HP:0004481", "HP:0004482", "HP:0004488", "HP:0005490", "HP:0040194"},
+    ),
+    ({"HP:0001562"}, {"HP:0001561"}),  # Oligohydramnios ↔ Polyhydramnios
+    ({"HP:0001511"}, {"HP:0001548"}),  # RCIU ↔ Macrosomie
+    ({"HP:0000347"}, {"HP:0000303"}),  # Micrognathie ↔ Macrognathie
+    ({"HP:0000568"}, {"HP:0000520"}),  # Microphtalmie ↔ Macrophtalmie
+]
 
 _STOP_WORDS_CLINICAL = {
     "foetus", "foetal", "foetale", "fetal", "fetale", "grossesse", "examen",
@@ -150,10 +180,21 @@ class HPOExtractor:
 
         self._sorted_keys = sorted(self._index.keys(), key=len, reverse=True)
 
-    def _is_negated(self, text_norm: str, match_start: int) -> bool:
+    def _is_negated(self, text_norm: str, match_start: int, match_end: int | None = None) -> bool:
         window_start = max(0, match_start - _NEGATION_WINDOW)
         prefix = text_norm[window_start:match_start]
-        return bool(_NEGATION_PATTERNS.search(prefix))
+        if _NEGATION_PATTERNS.search(prefix):
+            return True
+        pre_start = max(0, match_start - _NORMALITY_WINDOW)
+        pre_text = text_norm[pre_start:match_start]
+        if _NORMALITY_PATTERNS.search(pre_text):
+            return True
+        if match_end is not None:
+            post_end = min(len(text_norm), match_end + _NORMALITY_WINDOW)
+            post_text = text_norm[match_end:post_end]
+            if _NORMALITY_PATTERNS.search(post_text):
+                return True
+        return False
 
     def _match_exact(self, text_norm: str) -> list[tuple[str, str, str, str, float, str]]:
         """Find exact substring matches of HPO labels in normalized text.
@@ -186,7 +227,7 @@ class HPOExtractor:
                 if overlap:
                     pos += 1
                     continue
-                if self._is_negated(text_norm, pos):
+                if self._is_negated(text_norm, pos, end):
                     pos += 1
                     continue
                 matched_spans.add(span)
@@ -195,9 +236,14 @@ class HPOExtractor:
                 break
         return results
 
+    def _segment_has_normality(self, segment_norm: str) -> bool:
+        return bool(_NORMALITY_PATTERNS.search(segment_norm))
+
     def _match_fuzzy(self, segment: str) -> list[tuple[str, str, str, str, float, str]]:
         """Token-level fuzzy matching — only for multi-word medical terms."""
         seg_norm = _norm(segment)
+        if self._segment_has_normality(seg_norm):
+            return []
         tokens = [t for t in seg_norm.split() if len(t) >= 6 and t not in _STOP_WORDS_CLINICAL]
         if len(tokens) < 2:
             return []
@@ -216,6 +262,28 @@ class HPOExtractor:
                             seen_hpo.add(hpo_id)
                             results.append((hpo_id, label_fr, label_en, category, 0.65, bigram))
         return results
+
+    @staticmethod
+    def _filter_contradictions(best: dict[str, tuple]) -> dict[str, tuple]:
+        for group_a, group_b in _CONTRADICTORY_GROUPS:
+            hits_a = {hid: best[hid][4] for hid in group_a if hid in best}
+            hits_b = {hid: best[hid][4] for hid in group_b if hid in best}
+            if not hits_a or not hits_b:
+                continue
+            max_a = max(hits_a.values())
+            max_b = max(hits_b.values())
+            if max_a > max_b:
+                for hid in hits_b:
+                    del best[hid]
+            elif max_b > max_a:
+                for hid in hits_a:
+                    del best[hid]
+            else:
+                for hid in hits_a:
+                    del best[hid]
+                for hid in hits_b:
+                    del best[hid]
+        return best
 
     def extract(self, text: str, min_confidence: float = 0.5) -> list[HPOMatch]:
         """Extract HPO terms from clinical text.
@@ -246,6 +314,8 @@ class HPOExtractor:
         for hpo_id, label_fr, label_en, category, conf, span in raw_matches:
             if hpo_id not in best or conf > best[hpo_id][4]:
                 best[hpo_id] = (hpo_id, label_fr, label_en, category, conf, span)
+
+        best = self._filter_contradictions(best)
 
         results = []
         for hpo_id, label_fr, label_en, category, conf, span in best.values():
