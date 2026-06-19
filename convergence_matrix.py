@@ -416,7 +416,8 @@ class ConvergenceMatrix:
             n_covered = sum(1 for h, _ in prenatal_vf if self._hpo_is_covered(h, vignette_set))
             n_total = len(prenatal_vf)
             absence_rate = 1.0 - (n_covered / n_total)
-            penalty = weight * absence_rate
+            damping = min(1.0, 5 / n_total)
+            penalty = weight * absence_rate * damping
             rescored.append((sid, rrf_score - penalty * rrf_score, n_covered, n_total, penalty))
         rescored.sort(key=lambda x: -x[1])
         return rescored[:top_k]
