@@ -50,6 +50,11 @@ class ConvergenceMatrix:
         self._init_fts_chunk_meta()
         self._load_hpo_ic()
         self._load_syndrome_expected_hpo()
+        self._excluded_syndromes = {
+            row[0] for row in self.conn.execute(
+                "SELECT id FROM syndromes WHERE COALESCE(is_excluded, 0) = 1"
+            ).fetchall()
+        }
 
         if load_models:
             self._load_models()
@@ -398,6 +403,8 @@ class ConvergenceMatrix:
         vignette_set = set(vignette_hpo_ids)
         rescored = []
         for sid, rrf_score in merged_ranked[:top_k * 3]:
+            if sid in self._excluded_syndromes:
+                continue
             vf_hpos = self.syndrome_vf.get(sid, [])
             if not vf_hpos:
                 rescored.append((sid, rrf_score, 0, 0, 0))
