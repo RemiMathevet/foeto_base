@@ -436,6 +436,8 @@ class ConvergenceMatrix:
         expected_family = self.hpo_ancestors_map.get(expected_hpo, set())
         return bool(expected_family & vignette_hpos)
 
+    NO_VF_PENALTY = 0.10
+
     def _absence_penalty(self, merged_ranked, vignette_hpo_ids, top_k, weight=0.5):
         vignette_set = set(vignette_hpo_ids)
         rescored = []
@@ -444,11 +446,13 @@ class ConvergenceMatrix:
                 continue
             vf_hpos = self.syndrome_vf.get(sid, [])
             if not vf_hpos:
-                rescored.append((sid, rrf_score, 0, 0, 0))
+                penalty = self.NO_VF_PENALTY
+                rescored.append((sid, rrf_score - penalty * rrf_score, 0, 0, penalty))
                 continue
             prenatal_vf = [(h, p) for h, p in vf_hpos if h not in self.postnatal_hpos]
             if not prenatal_vf:
-                rescored.append((sid, rrf_score, 0, 0, 0))
+                penalty = self.NO_VF_PENALTY
+                rescored.append((sid, rrf_score - penalty * rrf_score, 0, 0, penalty))
                 continue
             n_covered = sum(1 for h, _ in prenatal_vf if self._hpo_is_covered(h, vignette_set))
             n_total = len(prenatal_vf)
