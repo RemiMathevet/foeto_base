@@ -41,7 +41,7 @@ class ConvergenceMatrix:
     def __init__(self, db_path=DB_PATH, load_models=True, rrf_k=RRF_K,
                  embeddings_url=None):
         import sqlite_vec
-        self.conn = sqlite3.connect(db_path)
+        self.conn = sqlite3.connect(db_path, check_same_thread=False)
         self.conn.enable_load_extension(True)
         sqlite_vec.load(self.conn)
         self.conn.row_factory = sqlite3.Row
@@ -300,8 +300,15 @@ class ConvergenceMatrix:
         if not matches:
             return {}
 
-        present = {m.hpo_id: m.confidence for m in matches}
+        present = {}
+        negated = {}
+        for m in matches:
+            if m.negated:
+                negated[m.hpo_id] = m.confidence
+            else:
+                present[m.hpo_id] = m.confidence
         alpha = 0.15
+        alpha_neg = 0.6
 
         candidate_sids = set()
         for hpo_id in present:
@@ -318,6 +325,8 @@ class ConvergenceMatrix:
                 ic = self.hpo_ic.get(hpo_id, 1.0)
                 if hpo_id in present:
                     score += prob * ic * present[hpo_id]
+                elif hpo_id in negated:
+                    score -= alpha_neg * prob * ic * negated[hpo_id]
                 elif hpo_id not in self.postnatal_hpos:
                     score -= alpha * prob * ic
             scores[sid] = score

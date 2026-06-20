@@ -111,6 +111,7 @@ class HPOMatch:
     matched_span: str
     confidence: float  # 1.0=exact, 0.85=alias, 0.7=fuzzy
     context: str = ""  # fetal/postnatal/both
+    negated: bool = False
 
 
 def _norm(text: str) -> str:
@@ -209,12 +210,12 @@ class HPOExtractor:
                 return True
         return False
 
-    def _match_exact(self, text_norm: str) -> list[tuple[str, str, str, str, float, str]]:
+    def _match_exact(self, text_norm: str) -> list[tuple[str, str, str, str, float, str, bool]]:
         """Find exact substring matches of HPO labels in normalized text.
 
         Uses word boundary checks to avoid partial word matches
         (e.g. 'tissu' matching inside 'tissulaire').
-        Skips matches preceded by negation patterns.
+        Negated matches are kept but flagged (7th tuple element = True).
         """
         results = []
         matched_spans = set()
@@ -240,12 +241,10 @@ class HPOExtractor:
                 if overlap:
                     pos += 1
                     continue
-                if self._is_negated(text_norm, pos, end):
-                    pos += 1
-                    continue
+                neg = self._is_negated(text_norm, pos, end)
                 matched_spans.add(span)
                 for hpo_id, label_fr, label_en, category, base_conf in self._index[key]:
-                    results.append((hpo_id, label_fr, label_en, category, base_conf, key))
+                    results.append((hpo_id, label_fr, label_en, category, base_conf, key, neg))
                 break
         return results
 
@@ -294,7 +293,7 @@ class HPOExtractor:
                     for hpo_id, label_fr, label_en, category, base_conf in self._index[key]:
                         if hpo_id not in seen_hpo:
                             seen_hpo.add(hpo_id)
-                            results.append((hpo_id, label_fr, label_en, category, 0.65, bigram))
+                            results.append((hpo_id, label_fr, label_en, category, 0.65, bigram, False))
         return results
 
     @staticmethod
@@ -347,14 +346,14 @@ class HPOExtractor:
                         matched_hpo_ids.add(m[0])
 
         best: dict[str, tuple] = {}
-        for hpo_id, label_fr, label_en, category, conf, span in raw_matches:
+        for hpo_id, label_fr, label_en, category, conf, span, neg in raw_matches:
             if hpo_id not in best or conf > best[hpo_id][4]:
-                best[hpo_id] = (hpo_id, label_fr, label_en, category, conf, span)
+                best[hpo_id] = (hpo_id, label_fr, label_en, category, conf, span, neg)
 
         best = self._filter_contradictions(best)
 
         results = []
-        for hpo_id, label_fr, label_en, category, conf, span in best.values():
+        for hpo_id, label_fr, label_en, category, conf, span, neg in best.values():
             if conf < min_confidence:
                 continue
             ctx = self._hpo_data.get(hpo_id, {}).get("context", "both")
@@ -366,6 +365,7 @@ class HPOExtractor:
                 matched_span=span,
                 confidence=conf,
                 context=ctx,
+                negated=neg,
             ))
 
         results.sort(key=lambda m: (-m.confidence, m.category, m.label_fr))
