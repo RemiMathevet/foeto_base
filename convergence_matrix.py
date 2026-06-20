@@ -38,13 +38,15 @@ def serialize_vec(vec):
 
 
 class ConvergenceMatrix:
-    def __init__(self, db_path=DB_PATH, load_models=True, rrf_k=RRF_K):
+    def __init__(self, db_path=DB_PATH, load_models=True, rrf_k=RRF_K,
+                 embeddings_url=None):
         import sqlite_vec
         self.conn = sqlite3.connect(db_path)
         self.conn.enable_load_extension(True)
         sqlite_vec.load(self.conn)
         self.conn.row_factory = sqlite3.Row
         self.rrf_k = rrf_k
+        self.embeddings_url = embeddings_url
 
         self._build_chunk_to_syndrome_map()
         self._init_fts_chunk_meta()
@@ -62,15 +64,41 @@ class ConvergenceMatrix:
             self.biolord = None
 
     def _load_models(self):
-        from sentence_transformers import SentenceTransformer
-        print("Loading BioLORD-2023...")
-        self.biolord = SentenceTransformer("FremyCompany/BioLORD-2023")
+        if self.embeddings_url:
+            print(f"Using remote embeddings via {self.embeddings_url}")
+            self.biolord = None
+        else:
+            from sentence_transformers import SentenceTransformer
+            print("Loading BioLORD-2023...")
+            self.biolord = SentenceTransformer("FremyCompany/BioLORD-2023")
 
         from hpo_extractor import HPOExtractor
         print("Loading HPO extractor...")
         self.hpo_extractor = HPOExtractor(db_path=DB_PATH)
 
         self._load_syndrome_hpo()
+
+    def _encode_biolord(self, texts, batch_size=64, show_progress_bar=False):
+        """Encode via BioLORD local ou via Magos /embeddings."""
+        import requests as _requests
+        single = isinstance(texts, str)
+        if single:
+            texts = [texts]
+        if self.embeddings_url:
+            resp = _requests.post(
+                f"{self.embeddings_url}/embeddings",
+                json={"input": texts, "model": "BioLORD-2023"},
+                timeout=120,
+            )
+            resp.raise_for_status()
+            data = resp.json()["data"]
+            embs = np.array([d["embedding"] for d in sorted(data, key=lambda x: x["index"])],
+                            dtype=np.float32)
+        else:
+            embs = self.biolord.encode(texts, normalize_embeddings=True,
+                                       batch_size=batch_size,
+                                       show_progress_bar=show_progress_bar)
+        return embs[0] if single else embs
 
     def _load_hpo_ic(self):
         self.hpo_ic = {}
@@ -441,7 +469,7 @@ class ConvergenceMatrix:
               absence_penalty_weight=0.3):
         t0 = time.time()
 
-        bio_emb = self.biolord.encode(clinical_text, normalize_embeddings=True)
+        bio_emb = self._encode_biolord(clinical_text)
         hpo_matches = self._extract_hpo(clinical_text)
         bio_ranks = self._channel_biolord(bio_emb)
         hpo_ranks = self._channel_hpo(clinical_text, hpo_matches=hpo_matches)
@@ -494,8 +522,7 @@ class ConvergenceMatrix:
     def query_batch(self, texts, top_k=TOP_K_FINAL, absence_penalty_weight=0.3):
         t0 = time.time()
         print(f"Batch encoding {len(texts)} queries with BioLORD...")
-        bio_embs = self.biolord.encode(texts, batch_size=64, show_progress_bar=True,
-                                       normalize_embeddings=True)
+        bio_embs = self._encode_biolord(texts, batch_size=64, show_progress_bar=True)
         t_enc = time.time() - t0
         print(f"  Encoding: {t_enc:.1f}s")
 
@@ -607,8 +634,7 @@ def eval_benchmark(cm, top_k=10):
     all_names = list(all_names)
 
     print(f"\nEncoding {len(all_names)} unique names for scoring...")
-    name_embs = cm.biolord.encode(all_names, batch_size=64, normalize_embeddings=True,
-                                   show_progress_bar=True)
+    name_embs = cm._encode_biolord(all_names, batch_size=64, show_progress_bar=True)
     emb_map = {name: emb for name, emb in zip(all_names, name_embs)}
 
     syn_emb_matrix = np.stack([emb_map[n] for n in syn_names])
