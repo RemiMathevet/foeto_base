@@ -801,5 +801,140 @@ def _inject_feedback_widget(response):
 
 
 # =====================================================================
+# FOETO TERMS — list / detail / edit / csv
+# =====================================================================
+FOETO_EDITABLE = [
+    "label_fr", "label_en", "organe", "axis", "domain",
+    "type_patho", "sous_type_patho", "description_fr", "cr_description",
+    "parent_id", "genes", "multisysteme",
+]
+
+
+@app.route("/foeto")
+def foeto_list():
+    db = get_db()
+    q = request.args.get("q", "").strip()
+    organ = request.args.get("organ", "")
+    domain = request.args.get("domain", "")
+    type_patho = request.args.get("type_patho", "")
+    page = int(request.args.get("page", 1))
+
+    organs = [r[0] for r in db.execute(
+        "SELECT DISTINCT organe FROM foeto_terms ORDER BY organe").fetchall()]
+    domains = [r[0] for r in db.execute(
+        "SELECT DISTINCT domain FROM foeto_terms WHERE domain IS NOT NULL ORDER BY domain").fetchall()]
+    types_patho = [r[0] for r in db.execute(
+        "SELECT DISTINCT type_patho FROM foeto_terms WHERE type_patho IS NOT NULL ORDER BY type_patho").fetchall()]
+
+    base = """
+        SELECT ft.id, ft.label_fr, ft.label_en, ft.organe, ft.axis,
+               ft.domain, ft.type_patho, ft.sous_type_patho
+        FROM foeto_terms ft WHERE 1=1
+    """
+    args = []
+    if q:
+        base += " AND (ft.label_fr LIKE ? OR ft.label_en LIKE ? OR ft.id LIKE ? OR ft.description_fr LIKE ?)"
+        w = f"%{q}%"
+        args.extend([w, w, w, w])
+    if organ:
+        base += " AND ft.organe = ?"
+        args.append(organ)
+    if domain:
+        base += " AND ft.domain = ?"
+        args.append(domain)
+    if type_patho:
+        base += " AND ft.type_patho = ?"
+        args.append(type_patho)
+
+    query = f"{base} ORDER BY ft.organe, ft.id"
+    terms, total, total_pages, page = paginate(query, tuple(args), page)
+
+    return render_template("foeto_list.html", terms=terms, total=total,
+                           page=page, total_pages=total_pages,
+                           q=q, organ=organ, domain=domain, type_patho=type_patho,
+                           organs=organs, domains=domains, types_patho=types_patho)
+
+
+@app.route("/foeto/<path:fid>")
+def foeto_view(fid):
+    db = get_db()
+    term = db.execute("SELECT * FROM foeto_terms WHERE id = ?", (fid,)).fetchone()
+    if not term:
+        abort(404)
+
+    hpo = db.execute("""
+        SELECT fh.hpo_id, h.label_en, h.label_fr
+        FROM foeto_hpo fh LEFT JOIN hpo_terms h ON fh.hpo_id = h.hpo_id
+        WHERE fh.foeto_id = ? ORDER BY fh.hpo_id
+    """, (fid,)).fetchall()
+
+    children = db.execute(
+        "SELECT id, label_fr FROM foeto_terms WHERE parent_id = ? ORDER BY id", (fid,)
+    ).fetchall()
+
+    edges_out = db.execute("""
+        SELECT e.target_id, e.relation, e.confidence, t.label_fr
+        FROM foeto_edges e LEFT JOIN foeto_terms t ON e.target_id = t.id
+        WHERE e.source_id = ? ORDER BY e.relation, e.confidence DESC
+    """, (fid,)).fetchall()
+
+    edges_in = db.execute("""
+        SELECT e.source_id, e.relation, e.confidence, t.label_fr
+        FROM foeto_edges e LEFT JOIN foeto_terms t ON e.source_id = t.id
+        WHERE e.target_id = ? ORDER BY e.relation, e.confidence DESC
+    """, (fid,)).fetchall()
+
+    return render_template("foeto_view.html", term=dict(term), hpo=hpo, children=children,
+                           edges_out=edges_out, edges_in=edges_in)
+
+
+@app.route("/foeto/<path:fid>/edit", methods=["GET", "POST"])
+def foeto_edit(fid):
+    db = get_db()
+    term = db.execute("SELECT * FROM foeto_terms WHERE id = ?", (fid,)).fetchone()
+    if not term:
+        abort(404)
+
+    if request.method == "POST":
+        sets, vals = [], []
+        for col in FOETO_EDITABLE:
+            v = request.form.get(col)
+            if v is not None:
+                sets.append(f"{col} = ?")
+                vals.append(v.strip() if v.strip() else None)
+        if sets:
+            vals.append(fid)
+            db.execute(f"UPDATE foeto_terms SET {', '.join(sets)} WHERE id = ?", vals)
+            db.commit()
+            flash("Terme FOETO mis a jour.", "success")
+        return redirect(url_for("foeto_view", fid=fid))
+
+    return render_template("foeto_edit.html", term=dict(term))
+
+
+@app.route("/foeto/csv")
+def foeto_csv():
+    import csv as _csv
+    import io as _io
+    db = get_db()
+    rows = db.execute(
+        """SELECT id, label_fr, label_en, organe, axis, domain,
+                  type_patho, sous_type_patho, description_fr, cr_description,
+                  parent_id, genes, multisysteme, sources, viewer_id
+           FROM foeto_terms ORDER BY organe, id"""
+    ).fetchall()
+    buf = _io.StringIO()
+    w = _csv.writer(buf)
+    cols = ["id", "label_fr", "label_en", "organe", "axis", "domain",
+            "type_patho", "sous_type_patho", "description_fr", "cr_description",
+            "parent_id", "genes", "multisysteme", "sources", "viewer_id"]
+    w.writerow(cols)
+    for r in rows:
+        w.writerow([r[c] for c in cols])
+    return Response(buf.getvalue(), mimetype="text/csv",
+                    headers={"Content-Disposition": "attachment; filename=foeto_terms.csv"})
+
+
+# =====================================================================
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5070, debug=True)
