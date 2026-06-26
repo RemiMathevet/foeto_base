@@ -194,18 +194,33 @@ class HPOExtractor:
             for hpo_id, *_ in entries:
                 self._reverse_index.setdefault(hpo_id, set()).add(key)
 
+    @staticmethod
+    def _sentence_window(text: str, pos: int, window: int, direction: str) -> str:
+        _SENT_BOUNDARY = re.compile(r"[.;:\n]")
+        if direction == "before":
+            start = max(0, pos - window)
+            chunk = text[start:pos]
+            m = _SENT_BOUNDARY.search(chunk[::-1])
+            if m:
+                chunk = chunk[len(chunk) - m.start():]
+            return chunk
+        else:
+            end = min(len(text), pos + window)
+            chunk = text[pos:end]
+            m = _SENT_BOUNDARY.search(chunk)
+            if m:
+                chunk = chunk[:m.start()]
+            return chunk
+
     def _is_negated(self, text_norm: str, match_start: int, match_end: int | None = None) -> bool:
-        window_start = max(0, match_start - _NEGATION_WINDOW)
-        prefix = text_norm[window_start:match_start]
+        prefix = self._sentence_window(text_norm, match_start, _NEGATION_WINDOW, "before")
         if _NEGATION_PATTERNS.search(prefix):
             return True
-        pre_start = max(0, match_start - _NORMALITY_WINDOW)
-        pre_text = text_norm[pre_start:match_start]
+        pre_text = self._sentence_window(text_norm, match_start, _NORMALITY_WINDOW, "before")
         if _NORMALITY_PATTERNS.search(pre_text):
             return True
         if match_end is not None:
-            post_end = min(len(text_norm), match_end + _NORMALITY_WINDOW)
-            post_text = text_norm[match_end:post_end]
+            post_text = self._sentence_window(text_norm, match_end, _NORMALITY_WINDOW, "after")
             if _NORMALITY_PATTERNS.search(post_text):
                 return True
         return False
