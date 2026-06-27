@@ -249,7 +249,8 @@ def generate_prenatal_summary(hpo_by_system: dict[str, list]) -> str:
     ]
     lines = []
     for system in prenatal_relevant:
-        terms = hpo_by_system.get(system, [])
+        terms = [t for t in hpo_by_system.get(system, [])
+                 if t.get("context") != "postnatal"]
         if not terms:
             continue
         terms_sorted = sorted(terms, key=lambda t: -(t.get("prob") or 0))
