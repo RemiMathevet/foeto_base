@@ -1,0 +1,1116 @@
+{
+  "cerveau": [
+    {
+      "foeto_id": "FOETO:0060209_ernst",
+      "label": "Histiocytes spumeux leptoméningés",
+      "proposed_type": "MFIU",
+      "reason": "Présence de macrophages spumeux dans la leptoméninge, signe histologique de macération ou d'hypoxie-ischémie fœtale, non physiologique."
+    },
+    {
+      "foeto_id": "FOETO:0060240",
+      "label": "Agénésie du corps calleux",
+      "proposed_type": "malformation",
+      "reason": "Anomalie congénitale du développement (défaut morphogénétique)."
+    },
+    {
+      "foeto_id": "FOETO:0060241",
+      "label": "Schizencéphalie",
+      "proposed_type": "malformation",
+      "reason": "Défaut de formation corticale congénital."
+    },
+    {
+      "foeto_id": "FOETO:0060244",
+      "label": "Lésion de la substance blanche périventriculaire non kystique",
+      "proposed_type": "trophisme",
+      "reason": "Lésion ischémique/vasculaire typique du trophisme fœtal (PVL)."
+    },
+    {
+      "foeto_id": "FOETO:0060245",
+      "label": "Arrêt de maturation oligodendrogliale",
+      "proposed_type": "dysplasie",
+      "reason": "Anomalie de la différenciation et de la croissance cellulaire."
+    },
+    {
+      "foeto_id": "FOETO:0060247",
+      "label": "Défaut de gyrification cérébelleuse",
+      "proposed_type": "malformation",
+      "reason": "Anomalie du développement morphogénétique du cervelet."
+    },
+    {
+      "foeto_id": "FOETO:0060250",
+      "label": "Nécrose ischémique de la substance blanche — focale",
+      "proposed_type": "trophisme",
+      "reason": "Lésion secondaire à une ischémie ou pathologie vasculaire."
+    },
+    {
+      "foeto_id": "FOETO:0060251",
+      "label": "Microgliose",
+      "proposed_type": "trophisme",
+      "reason": "Réaction gliale non spécifique à une lésion ischémique ou traumatique."
+    },
+    {
+      "foeto_id": "FOETO:0060252",
+      "label": "Nécrose du secteur CA1 de l'hippocampe",
+      "proposed_type": "trophisme",
+      "reason": "Nécrose ischémique sélective, marqueur de souffrance fœtale."
+    },
+    {
+      "foeto_id": "FOETO:0060253",
+      "label": "Anomalie de la myélinisation cérébelleuse",
+      "proposed_type": "dysplasie",
+      "reason": "Trouble de la différenciation et de la maturation myélinisante."
+    }
+  ],
+  "coeur": [
+    {
+      "foeto_id": "FOETO:0010202_arch",
+      "label": "Cellules d'Anitschkow (noyaux en raquette/hibou)",
+      "proposed_type": "infectieux",
+      "reason": "Signe inflammatoire pathologique (corps d'Aschoff), absent à l'état normal fœtal."
+    },
+    {
+      "foeto_id": "FOETO:0010203_ernst",
+      "label": "Structure nucléaire d'Anitschkow",
+      "proposed_type": "infectieux",
+      "reason": "Marqueur inflammatoire pathologique, non physiologique chez le fœtus."
+    },
+    {
+      "foeto_id": "FOETO:0010210_ernst",
+      "label": "Dysplasie valvulaire — excrescence myxoïde nodulaire",
+      "proposed_type": "dysplasie",
+      "reason": "Anomalie de différenciation cellulaire et architecturale valvulaire."
+    },
+    {
+      "foeto_id": "FOETO:0010211_ernst",
+      "label": "Kyste sanguin congénital de valvule cardiaque",
+      "proposed_type": "malformation",
+      "reason": "Lésion kystique congénitale, défaut morphogénétique valvulaire."
+    },
+    {
+      "foeto_id": "FOETO:0010212_arch",
+      "label": "Épaississement fibro-élastique de l'endocarde auriculaire gauche",
+      "proposed_type": "malformation",
+      "reason": "Anomalie développementale de l'endocarde (fibroélastose congénitale)."
+    },
+    {
+      "foeto_id": "FOETO:0010214_ernst",
+      "label": "Dispersion du tissu nodal de conduction",
+      "proposed_type": "malformation",
+      "reason": "Anomalie développementale de la localisation du tissu de conduction."
+    },
+    {
+      "foeto_id": "FOETO:0010217_path",
+      "label": "Valve myxoïde et nodulaire (valve dysplasique)",
+      "proposed_type": "dysplasie",
+      "reason": "Anomalie de différenciation structurale et cellulaire de la valve cardiaque."
+    },
+    {
+      "foeto_id": "FOETO:0010221_ernst",
+      "label": "Vacuolisation pathologique des cardiomyocytes (myocytolyse)",
+      "proposed_type": "trophisme",
+      "reason": "Lésion dégénérative ou ischémique des cardiomyocytes."
+    },
+    {
+      "foeto_id": "FOETO:0010223_ernst",
+      "label": "Infiltrat lymphocytaire épicardique focal — signe d'aneuploïdie",
+      "proposed_type": "infectieux",
+      "reason": "Infiltrat inflammatoire suggérant une réponse infectieuse ou immunitaire."
+    },
+    {
+      "foeto_id": "FOETO:0010224_ernst",
+      "label": "Tissu thyroïdien ou thymique hétérotopique dans le péricarde",
+      "proposed_type": "malformation",
+      "reason": "Anomalie de migration cellulaire lors du développement embryonnaire."
+    }
+  ],
+  "cordon": [
+    {
+      "foeto_id": "FOETO:0100217_ch11",
+      "label": "Artère ombilicale unique",
+      "proposed_type": "malformation",
+      "reason": "Anomalie congénitale du développement du cordon (défaut de formation d'une artère ombilicale)."
+    }
+  ],
+  "digestif": [
+    {
+      "foeto_id": "FOETO:0050215_gi",
+      "label": "Persistance de cellules ciliées en surface de l'épithélium œsophagien",
+      "proposed_type": "malformation",
+      "reason": "Anomalie de maturation épithéliale ; la persistance de l'épithélium cilié au-delà du stade développemental normal constitue un défaut morphogénétique de différenciation."
+    },
+    {
+      "foeto_id": "FOETO:0050288_ret",
+      "label": "Aplatissement et effacement des villosités du grêle par distension méconiale",
+      "proposed_type": "trophisme",
+      "reason": "Atrophie villositaire secondaire à une distension méconiale (effet de pression et ischémie locale), non physiologique."
+    },
+    {
+      "foeto_id": "FOETO:0050316",
+      "label": "Agrégats lymphocytaires pancréatiques fœtaux",
+      "proposed_type": "infectieux",
+      "reason": "Présence d'infiltrats lymphocytaires non physiologique dans le pancréas fœtal, typiquement associée à une infection congénitale (TORCH, etc.)."
+    },
+    {
+      "foeto_id": "FOETO:0050318",
+      "label": "Hétérotopie splénique nodulaire pancréatique",
+      "proposed_type": "malformation",
+      "reason": "Anomalie congénitale de position du tissu splénique, relevant d'un défaut de morphogenèse embryonnaire."
+    },
+    {
+      "foeto_id": "FOETO:0050319",
+      "label": "Hétérotopie pancréatique",
+      "proposed_type": "malformation",
+      "reason": "Présence de tissu pancréatique ectopique en dehors de l'organe normal, résultant d'un défaut de migration cellulaire durant le développement."
+    },
+    {
+      "foeto_id": "FOETO:0050343",
+      "label": "Inclusions intranucléaires à cytomégalovirus dans les glandes salivaires",
+      "proposed_type": "infectieux",
+      "reason": "Présence d'inclusions virales pathognomoniques d'une infection à CMV."
+    },
+    {
+      "foeto_id": "FOETO:0050344",
+      "label": "Absence de différenciation acinaire salivaire",
+      "proposed_type": "malformation",
+      "reason": "Anomalie du développement glandulaire avec défaut de différenciation acinaire."
+    },
+    {
+      "foeto_id": "FOETO:0050345",
+      "label": "Persistance du stroma mésenchymateux lâche après le troisième trimestre (glandes salivaires)",
+      "proposed_type": "dysplasie",
+      "reason": "Anomalie de la différenciation et du remodelage stromal témoignant d'un retard de maturation tissulaire."
+    }
+  ],
+  "endocrine": [
+    {
+      "foeto_id": "FOETO:0110411_ret",
+      "label": "Autolyse de la thyroïde fœtale — effondrement architectural",
+      "proposed_type": "MFIU",
+      "reason": "Artéfact de dégradation post-mortem (macération/rétention) et non un aspect histologique physiologique."
+    },
+    {
+      "foeto_id": "FOETO:0110508",
+      "label": "Parathyroïde ectopique intrathyroïdien",
+      "proposed_type": "malformation",
+      "reason": "Anomalie de migration embryonnaire (défaut morphogénétique) d'une glande endocrine."
+    },
+    {
+      "foeto_id": "FOETO:0110509",
+      "label": "Parathyroïde ectopique associée à un lobule thymique cervical",
+      "proposed_type": "malformation",
+      "reason": "Anomalie de migration embryonnaire liée au 3e arc branchial, classée comme défaut de développement."
+    },
+    {
+      "foeto_id": "FOETO:0110609",
+      "label": "Kyste de la fente de Rathke",
+      "proposed_type": "malformation",
+      "reason": "Anomalie de développement liée à la persistance et à la dilatation de la poche de Rathke."
+    },
+    {
+      "foeto_id": "FOETO:0110613",
+      "label": "Reliquats de glandes salivaires dans la neurohypophyse",
+      "proposed_type": "malformation",
+      "reason": "Présence de tissu ectopique résultant d'un défaut de migration ou de différenciation embryonnaire."
+    },
+    {
+      "foeto_id": "FOETO:0110614",
+      "label": "Hypophyse pharyngée ectopique",
+      "proposed_type": "malformation",
+      "reason": "Défaut de migration de l'ébauche hypophysaire vers la selle turcique, anomalie morphogénétique."
+    }
+  ],
+  "foie": [
+    {
+      "foeto_id": "FOETO:0040216",
+      "label": "Myélopoïèse hépatique excessive",
+      "proposed_type": "trophisme",
+      "reason": "Signe d'anémie fœtale ou d'hydrops, relevant des pathologies trophiques vasculaires."
+    },
+    {
+      "foeto_id": "FOETO:0040217",
+      "label": "Hémosidérose hépatique périveinulaire",
+      "proposed_type": "trophisme",
+      "reason": "Traduit une hypoxie/ischémie hépatique ou une congestion, typique des troubles trophiques."
+    },
+    {
+      "foeto_id": "FOETO:0040218",
+      "label": "Tissu pancréatique ectopique périductal",
+      "proposed_type": "malformation",
+      "reason": "Anomalie de développement avec migration ou différenciation anormale de tissus pancréatiques."
+    },
+    {
+      "foeto_id": "FOETO:0040219",
+      "label": "Cartilage hyalin périductal",
+      "proposed_type": "malformation",
+      "reason": "Présence de tissu cartilagineux anormal dans le foie, reflet d'un défaut morphogénétique."
+    },
+    {
+      "foeto_id": "FOETO:0040220",
+      "label": "Foie ectopique",
+      "proposed_type": "malformation",
+      "reason": "Anomalie de développement positionnel et morphogénétique du foie."
+    },
+    {
+      "foeto_id": "FOETO:0040221",
+      "label": "Fibrose hépatique congénitale",
+      "proposed_type": "malformation",
+      "reason": "Défaut de remodelage des voies biliaires et du stroma, anomalie de développement structurel."
+    },
+    {
+      "foeto_id": "FOETO:0040222",
+      "label": "Paucité des canaux biliaires interlobulaires",
+      "proposed_type": "dysplasie",
+      "reason": "Défaut de différenciation et de remodelage de la plaque ductale biliaire."
+    },
+    {
+      "foeto_id": "FOETO:0040223",
+      "label": "Hémophagocytose sinusoïdale hépatique",
+      "proposed_type": "infectieux",
+      "reason": "Réaction histiocytaire souvent secondaire à une infection fœtale ou à un syndrome inflammatoire d'origine infectieuse."
+    },
+    {
+      "foeto_id": "FOETO:0040224",
+      "label": "Épithélium biliaire columnar mucineux (voies biliaires extrahépatiques)",
+      "proposed_type": "dysplasie",
+      "reason": "Métaplasie/dysplasie épithéliale anormale, reflétant une différenciation cellulaire altérée des voies biliaires."
+    }
+  ],
+  "genital": [
+    {
+      "foeto_id": "FOETO:0120210_ovary",
+      "label": "Corps de Call-Exner",
+      "proposed_type": "tumoral",
+      "reason": "Les corps de Call-Exner sont des structures pathognomoniques des tumeurs à cellules de granulosa et ne constituent pas un élément histologique normal de l'ovaire fœtal."
+    },
+    {
+      "foeto_id": "FOETO:0120217_prostate",
+      "label": "Développement prostatique insuffisant",
+      "proposed_type": "malformation",
+      "reason": "Hypoplasie ou sous-développement prostatique, anomalie de la morphogenèse."
+    },
+    {
+      "foeto_id": "FOETO:0120220_uterus",
+      "label": "Disproportion cervico-corporéale utérine",
+      "proposed_type": "malformation",
+      "reason": "Anomalie morphométrique congénitale de la proportion entre le col et le corps utérin."
+    },
+    {
+      "foeto_id": "FOETO:0120221",
+      "label": "Cellules de Leydig ectopiques (tunica albuginea / tissu paratesticulaire)",
+      "proposed_type": "malformation",
+      "reason": "Hétérotopie cellulaire, anomalie de migration ou de développement tissulaire."
+    },
+    {
+      "foeto_id": "FOETO:0120221_uterus",
+      "label": "Septum utérin (cloison utérine résiduelle)",
+      "proposed_type": "malformation",
+      "reason": "Anomalie de fusion/résorption des canaux de Müller, malformation utérine congénitale."
+    },
+    {
+      "foeto_id": "FOETO:0120222_ovary",
+      "label": "Absence de follicule primordial à 18 SA ou plus",
+      "proposed_type": "malformation",
+      "reason": "Les follicules primordiaux doivent apparaître vers 11-12 SA ; leur absence tardive signe un défaut de folliculogenèse ou une dysgenèse gonadique."
+    },
+    {
+      "foeto_id": "FOETO:0120223",
+      "label": "Persistance anormale des gonocytes (après 6 mois)",
+      "proposed_type": "malformation",
+      "reason": "Les gonocytes doivent subir une apoptose physiologique vers 20 SA ; leur persistance après 6 mois correspond à une gonocytose, anomalie du développement/différenciation."
+    },
+    {
+      "foeto_id": "FOETO:0120223_ovary",
+      "label": "Structure gonadoblastome-like intrafolliculaire",
+      "proposed_type": "tumoral",
+      "reason": "Lésion pré-néoplasique/néoplasique caractéristique des tumeurs germinales ou du gonadoblastome, relevant de la néoplasie."
+    },
+    {
+      "foeto_id": "FOETO:0120229",
+      "label": "Hématopoïèse extramédullaire testiculaire/paratesticulaire",
+      "proposed_type": "trophisme",
+      "reason": "Signe de stress fœtal, d'anémie ou d'hydrops ; la présence d'HEM dans les tissus génitaux fœtaux est pathologique et relève des anomalies de trophisme/vascularisation."
+    },
+    {
+      "foeto_id": "FOETO:0120239",
+      "label": "Hypospadias — fusion incomplète des plis urétraux",
+      "proposed_type": "malformation",
+      "reason": "Défaut morphogénétique de fusion des plis urétraux au cours du développement fœtal."
+    },
+    {
+      "foeto_id": "FOETO:0120240",
+      "label": "Cryptorchidie — absence de testicule dans le scrotum",
+      "proposed_type": "malformation",
+      "reason": "Anomalie du développement et de la descente testiculaire, défaut morphogénétique."
+    },
+    {
+      "foeto_id": "FOETO:0120241",
+      "label": "Ambiguïté sexuelle des organes génitaux externes — aspect histologique",
+      "proposed_type": "malformation",
+      "reason": "Anomalie du développement sexuel correspondant à un défaut de différenciation morphogénétique."
+    },
+    {
+      "foeto_id": "FOETO:0120318",
+      "label": "Absence de lumière des ductules épididymaires (tubulogenèse incomplète)",
+      "proposed_type": "malformation",
+      "reason": "Défaut de développement morphogénétique (canalisation tubulaire incomplète) correspondant à une anomalie de formation structurelle."
+    },
+    {
+      "foeto_id": "FOETO:0120508",
+      "label": "Agénésie de la vésicule séminale",
+      "proposed_type": "malformation",
+      "reason": "Absence congénitale d'une structure anatomique, défaut de morphogenèse."
+    },
+    {
+      "foeto_id": "FOETO:0120509",
+      "label": "Hypoplasie de la vésicule séminale",
+      "proposed_type": "malformation",
+      "reason": "Sous-développement d'un organe, anomalie de développement."
+    },
+    {
+      "foeto_id": "FOETO:0120510",
+      "label": "Kyste de la vésicule séminale",
+      "proposed_type": "malformation",
+      "reason": "Formation kystique résultant d'une anomalie de canalisation ou de développement."
+    },
+    {
+      "foeto_id": "FOETO:0120511",
+      "label": "Diverticule de la vésicule séminale",
+      "proposed_type": "malformation",
+      "reason": "Anomalie morphogénétique avec formation d'une saillie anormale."
+    },
+    {
+      "foeto_id": "FOETO:0120606",
+      "label": "Métaplasie malpighienne de l'urètre prostatique fœtal",
+      "proposed_type": "dysplasie",
+      "reason": "Changement pathologique du type épithélial, anomalie de différenciation cellulaire."
+    },
+    {
+      "foeto_id": "FOETO:0120607",
+      "label": "Métaplasie malpighienne des canaux prostatiques fœtaux",
+      "proposed_type": "dysplasie",
+      "reason": "Changement pathologique du type épithélial, anomalie de différenciation cellulaire."
+    },
+    {
+      "foeto_id": "FOETO:0120609",
+      "label": "Dilatation kystique de l'utricule prostatique",
+      "proposed_type": "malformation",
+      "reason": "Anomalie structurelle et de développement de l'utricule prostatique."
+    }
+  ],
+  "hematolymphoide": [
+    {
+      "foeto_id": "FOETO:0130202b",
+      "label": "Absence de lymphocytes spléniques",
+      "proposed_type": "malformation",
+      "reason": "Absence totale de lymphocytes dans la rate fœtale, anormale et suggérant un défaut de développement lymphoïde ou une immunodéficience congénitale."
+    },
+    {
+      "foeto_id": "FOETO:0130203c",
+      "label": "Appauvrissement lymphocytaire ganglionnaire",
+      "proposed_type": "malformation",
+      "reason": "Lymphopénie ganglionnaire fœtale anormale, indicative d'une hypoplasie lymphoïde ou d'un défaut de différenciation immunitaire."
+    },
+    {
+      "foeto_id": "FOETO:0130204",
+      "label": "Effacement pulpe rouge/pulpe blanche splénique",
+      "proposed_type": "trophisme",
+      "reason": "Perte de l'architecture splénique fœtale normale, suggérant une congestion, une ischémie ou une altération trophique vasculaire."
+    },
+    {
+      "foeto_id": "FOETO:0130205",
+      "label": "Tissu splénique ectopique",
+      "proposed_type": "malformation",
+      "reason": "Présence de tissu en dehors de son site anatomique habituel, constituant une anomalie de développement."
+    },
+    {
+      "foeto_id": "FOETO:0130206",
+      "label": "Tissu pancréatique intrasplénique",
+      "proposed_type": "malformation",
+      "reason": "Tissu pancréatique situé dans la rate, défaut de migration embryonnaire."
+    },
+    {
+      "foeto_id": "FOETO:0130207",
+      "label": "Tissu splénique intrapancréatique",
+      "proposed_type": "malformation",
+      "reason": "Tissu splénique situé dans le pancréas, anomalie de développement morphogénétique."
+    },
+    {
+      "foeto_id": "FOETO:0130207e",
+      "label": "Dysérythropoïèse réactive (anomalies nucléaires des normoblastes)",
+      "proposed_type": "dysplasie",
+      "reason": "Anomalie de différenciation cellulaire érythroïde, souvent réactionnelle à un stress ou une hémolyse."
+    },
+    {
+      "foeto_id": "FOETO:0130208a",
+      "label": "Involution thymique de stress (aiguë)",
+      "proposed_type": "trophisme",
+      "reason": "Atrophie thymique secondaire à un stress fœtal (hypoxie, détresse), reflet d'une altération trophique."
+    },
+    {
+      "foeto_id": "FOETO:0130208b",
+      "label": "Follicule secondaire splénique (centre germinatif)",
+      "proposed_type": "malformation",
+      "reason": "Présence prématurée de centres germinatifs, normalement postnatals"
+    },
+    {
+      "foeto_id": "FOETO:0130208c",
+      "label": "Hématopoïèse ganglionnaire fœtale",
+      "proposed_type": "trophisme",
+      "reason": "Hématopoïèse extramédullaire anormale dans les ganglions, signe de stress fœtal ou anémie"
+    },
+    {
+      "foeto_id": "FOETO:0130208d",
+      "label": "Centres germinatifs amygdaliens présents — anomalie en période fœtale",
+      "proposed_type": "malformation",
+      "reason": "Formation de centres germinatifs avant la période postnatale, anomalie de maturation"
+    },
+    {
+      "foeto_id": "FOETO:0130208e",
+      "label": "Hémophagocytose médullaire",
+      "proposed_type": "infectieux",
+      "reason": "Phénomène réactionnel pathologique souvent lié à une infection ou une activation immunitaire sévère"
+    },
+    {
+      "foeto_id": "FOETO:0130209a",
+      "label": "Déplétion lymphocytaire corticale thymique",
+      "proposed_type": "trophisme",
+      "reason": "Signe d'involution thymique liée au stress fœtal, hypoxie ou pathologie vasculaire"
+    },
+    {
+      "foeto_id": "FOETO:0130209b",
+      "label": "Absence de zone du manteau splénique",
+      "proposed_type": "malformation",
+      "reason": "Défaut de développement de la zone B périfolliculaire normale de la rate"
+    },
+    {
+      "foeto_id": "FOETO:0130209c",
+      "label": "Hémophagocytose ganglionnaire",
+      "proposed_type": "infectieux",
+      "reason": "Phénomène pathologique réactionnel, fréquemment associé à des infections ou syndromes hémophagocytaires"
+    },
+    {
+      "foeto_id": "FOETO:0130210",
+      "label": "Involution thymique de stress — grade 1",
+      "proposed_type": "trophisme",
+      "reason": "Atrophie thymique réactionnelle au stress fœtal ou à l'hypoxie"
+    },
+    {
+      "foeto_id": "FOETO:0130210a",
+      "label": "Aspect en ciel étoilé du cortex thymique",
+      "proposed_type": "trophisme",
+      "reason": "Image d'apoptose massive ou de nécrose corticale liée au stress fœtal"
+    },
+    {
+      "foeto_id": "FOETO:0130210b",
+      "label": "Absence de zone marginale splénique",
+      "proposed_type": "malformation",
+      "reason": "Défaut de développement de la zone marginale normale de la rate fœtale"
+    },
+    {
+      "foeto_id": "FOETO:0130210e",
+      "label": "Érythroblastes nucléés circulants (érythropoïèse de stress)",
+      "proposed_type": "trophisme",
+      "reason": "Libération d'érythroblastes dans le sang due à un stress fœtal, anémie ou hypoxie"
+    },
+    {
+      "foeto_id": "FOETO:0130211",
+      "label": "Involution thymique de stress — grade 2",
+      "proposed_type": "trophisme",
+      "reason": "Atrophie thymique réactionnelle sévère liée au stress fœtal"
+    },
+    {
+      "foeto_id": "FOETO:0130211b",
+      "label": "Artériole centrale splénique sans gaine lymphoïde",
+      "proposed_type": "malformation",
+      "reason": "Absence de la gaine lymphoïde périartériolaire (PALS), élément normal du pulp blanc"
+    },
+    {
+      "foeto_id": "FOETO:0130211c",
+      "label": "Centre germinatif ganglionnaire (postnatal)",
+      "proposed_type": "malformation",
+      "reason": "Structure normalement postnatale, anormale en période fœtale"
+    },
+    {
+      "foeto_id": "FOETO:0130211e",
+      "label": "Présence d'adipocytes médullaires (moelle jaune débutante)",
+      "proposed_type": "malformation",
+      "reason": "La moelle fœtale est normalement rouge (hématopoïétique); la présence d'adipocytes est anormale"
+    },
+    {
+      "foeto_id": "FOETO:0130212",
+      "label": "Involution thymique de stress — grade 3—4",
+      "proposed_type": "trophisme",
+      "reason": "Atrophie thymique sévère liée au stress fœtal prolongé ou hypoxie"
+    },
+    {
+      "foeto_id": "FOETO:0130212a",
+      "label": "Amincissement du cortex thymique",
+      "proposed_type": "trophisme",
+      "reason": "Signe histologique d'involution thymique de stress"
+    },
+    {
+      "foeto_id": "FOETO:0130212b",
+      "label": "Sinus splénique absent",
+      "proposed_type": "malformation",
+      "reason": "Absence d'une structure vasculaire normale de la rate"
+    },
+    {
+      "foeto_id": "FOETO:0130213",
+      "label": "Involution thymique de stress",
+      "proposed_type": "trophisme",
+      "reason": "Atrophie thymique réactionnelle au stress fœtal"
+    },
+    {
+      "foeto_id": "FOETO:0130216",
+      "label": "Hypoplasie / aplasie thymique",
+      "proposed_type": "malformation",
+      "reason": "Défaut congénital du développement thymique (ex: syndrome de DiGeorge)."
+    },
+    {
+      "foeto_id": "FOETO:0130217",
+      "label": "Déplétion des zones paracorticales ganglionnaires",
+      "proposed_type": "infectieux",
+      "reason": "Perte lymphocytaire typique des infections virales ou immunodépression fœtale."
+    },
+    {
+      "foeto_id": "FOETO:0130217a",
+      "label": "Hématopoïèse extramédullaire thymique",
+      "proposed_type": "trophisme",
+      "reason": "Hématopoïèse anormale dans le thymus, liée à anémie, hydrops ou hypoxie."
+    },
+    {
+      "foeto_id": "FOETO:0130218",
+      "label": "Hyperplasie thymique vraie",
+      "proposed_type": "dysplasie",
+      "reason": "Hyperplasie réactionnelle ou néoplasique altérant l'architecture normale."
+    },
+    {
+      "foeto_id": "FOETO:0130218b",
+      "label": "Maturation splénique retardée",
+      "proposed_type": "dysplasie",
+      "reason": "Anomalie de la différenciation et de l'organisation architecturale splénique."
+    },
+    {
+      "foeto_id": "FOETO:0130219",
+      "label": "Hémorragie thymique",
+      "proposed_type": "trophisme",
+      "reason": "Saignement parenchymateux d'origine vasculaire, traumatique ou ischémique."
+    },
+    {
+      "foeto_id": "FOETO:0130219b",
+      "label": "Développement lymphoïde splénique accéléré",
+      "proposed_type": "infectieux",
+      "reason": "Réaction lymphoïde exagérée secondaire à une stimulation antigénique ou infection."
+    },
+    {
+      "foeto_id": "FOETO:0130220",
+      "label": "Hématopoïèse splénique exubérante avec effacement de l'architecture",
+      "proposed_type": "trophisme",
+      "reason": "Hyperplasie médullaire massive souvent associée à hydrops, anémie sévère ou MVM."
+    },
+    {
+      "foeto_id": "FOETO:0130221",
+      "label": "Accumulation de métabolites dans les macrophages spléniques",
+      "proposed_type": "maladie metabo",
+      "reason": "Stockage anormal de substances dans les macrophages (maladies de surcharge)."
+    }
+  ],
+  "membranes": [
+    {
+      "foeto_id": "FOETO:0100201_exam",
+      "label": "Dépôt de méconium dans l'amnion",
+      "proposed_type": "trophisme",
+      "reason": "Signe de détresse fœtale ou d'hypoxie, pathologique et non physiologique."
+    }
+  ],
+  "multi_organe": [
+    {
+      "foeto_id": "FOETO:0170200D",
+      "label": "Microcéphalie",
+      "proposed_type": "malformation",
+      "reason": "Anomalie de développement cranio-cérébral caractérisée par un volume cérébral significativement réduit."
+    },
+    {
+      "foeto_id": "FOETO:0170201D",
+      "label": "Microencéphalie",
+      "proposed_type": "malformation",
+      "reason": "Réduction pathologique du volume encéphalique, défaut morphogénétique du système nerveux central."
+    },
+    {
+      "foeto_id": "FOETO:0170202D",
+      "label": "Mégalencéphalie",
+      "proposed_type": "malformation",
+      "reason": "Augmentation pathologique du volume cérébral, anomalie de la croissance ou de la différenciation neuronale."
+    },
+    {
+      "foeto_id": "FOETO:0170203D",
+      "label": "Poids cérébral réduit pour l'âge gestationnel",
+      "proposed_type": "trophisme",
+      "reason": "Signe de restriction de croissance fœtale ou d'altération trophique cérébrale."
+    },
+    {
+      "foeto_id": "FOETO:0170204D",
+      "label": "Disproportion poids cérébral / poids corporel",
+      "proposed_type": "trophisme",
+      "reason": "Déséquilibre des paramètres de croissance reflétant une atteinte trophique ou un RCIU."
+    },
+    {
+      "foeto_id": "FOETO:0170205D",
+      "label": "Disproportion poids cervelet / poids cérébral total",
+      "proposed_type": "malformation",
+      "reason": "Évoque une hypoplasie ou un défaut de développement spécifique du cervelet."
+    },
+    {
+      "foeto_id": "FOETO:0170221A",
+      "label": "Cellules géantes dans le stroma interlobulaire mammaire",
+      "proposed_type": "infectieux",
+      "reason": "Les cellules géantes stromales traduisent une réaction inflammatoire ou granulomateuse, non physiologique dans le développement mammaire fœtal."
+    }
+  ],
+  "oeil_oreille": [
+    {
+      "foeto_id": "FOETO:0140233",
+      "label": "Vitré hyperplasique primitif persistant (PHPV)",
+      "proposed_type": "malformation",
+      "reason": "Persistance anormale du vitré primitif, constituant une anomalie du développement fœtal."
+    },
+    {
+      "foeto_id": "FOETO:0140234",
+      "label": "Colobome irien (défaut de fermeture de la fissure optique)",
+      "proposed_type": "malformation",
+      "reason": "Anomalie congénitale de fermeture de la fissure optique, défaut morphogénétique."
+    }
+  ],
+  "parenchyme": [
+    {
+      "foeto_id": "FOETO:0100204_ch11",
+      "label": "Agglutination villositaire",
+      "proposed_type": "trophisme",
+      "reason": "Lésion thrombo-inflammatoire ou signe de malperfusion placentaire."
+    },
+    {
+      "foeto_id": "FOETO:0100205_exam",
+      "label": "Infarctus villositaire",
+      "proposed_type": "trophisme",
+      "reason": "Ischémie placentaire secondaire à une occlusion vasculaire."
+    },
+    {
+      "foeto_id": "FOETO:0100206_ch11",
+      "label": "Villosités avasculaires",
+      "proposed_type": "trophisme",
+      "reason": "Signe de malperfusion vasculaire fœtale (FVM)."
+    },
+    {
+      "foeto_id": "FOETO:0100207_exam",
+      "label": "Thrombus intervilleux",
+      "proposed_type": "trophisme",
+      "reason": "Lésion thrombotique placentaire pathologique."
+    },
+    {
+      "foeto_id": "FOETO:0100208_exam",
+      "label": "Thrombus de la plaque choriale",
+      "proposed_type": "trophisme",
+      "reason": "Lésion thrombotique placentaire pathologique."
+    },
+    {
+      "foeto_id": "FOETO:0100209_ch06",
+      "label": "Épaississement de la membrane basale trophoblastique",
+      "proposed_type": "trophisme",
+      "reason": "Signe histologique de malperfusion vasculaire maternelle (MVM)."
+    },
+    {
+      "foeto_id": "FOETO:0100212_exam",
+      "label": "Hématome rétroplacentaire",
+      "proposed_type": "trophisme",
+      "reason": "Hémorragie et détachement placentaire pathologiques."
+    },
+    {
+      "foeto_id": "FOETO:0100213_exam",
+      "label": "Villite chronique",
+      "proposed_type": "infectieux",
+      "reason": "Inflammation placentaire d'origine infectieuse ou immunitaire."
+    },
+    {
+      "foeto_id": "FOETO:0100219_ch11",
+      "label": "Macrophages pigmentés au méconium",
+      "proposed_type": "trophisme",
+      "reason": "Signe de stress fœtal, hypoxie ou passage de méconium in utero."
+    },
+    {
+      "foeto_id": "FOETO:0100225_ch07",
+      "label": "Hypoplasie villositaire distale (déficience des villosités terminales)",
+      "proposed_type": "trophisme",
+      "reason": "Anomalie de la maturation villositaire liée à une malperfusion."
+    },
+    {
+      "foeto_id": "FOETO:0100226_ch06",
+      "label": "Accumulation de glycogène dans le syncytiotrophoblaste",
+      "proposed_type": "maladie metabo",
+      "reason": "Signe de stress métabolique fœtal ou d'hyperinsulinisme materno-fœtal."
+    },
+    {
+      "foeto_id": "FOETO:0100226_merged",
+      "label": "Lobe placentaire accessoire (succenturié)",
+      "proposed_type": "malformation",
+      "reason": "Anomalie de développement morphogénétique du placenta."
+    },
+    {
+      "foeto_id": "FOETO:0100228_ch07",
+      "label": "Hypercapillarisation des villosités terminales (chorangiose)",
+      "proposed_type": "trophisme",
+      "reason": "Réponse vasculaire à l'hypoxie maternelle ou au RCIU."
+    },
+    {
+      "foeto_id": "FOETO:0100232_micro",
+      "label": "Nécrose fibrinoïde intravillositaire",
+      "proposed_type": "trophisme",
+      "reason": "Lésion thrombotique et ischémique des villosités."
+    }
+  ],
+  "peau": [
+    {
+      "foeto_id": "FOETO:0090204",
+      "label": "Stratification épidermique incomplète",
+      "proposed_type": "malformation",
+      "reason": "Une stratification épidermique incomplète traduit un défaut de développement ou de maturation de l'épiderme, caractéristique d'une anomalie morphogénétique ou d'une dysplasie cutanée, et non d'une histologie normale."
+    }
+  ],
+  "placenta": [
+    {
+      "foeto_id": "FOETO:0100200",
+      "label": "Chorioamnionite",
+      "proposed_type": "infectieux",
+      "reason": "Inflammation des membranes fœtales, pathologie infectieuse caractéristique."
+    },
+    {
+      "foeto_id": "FOETO:0100201_macro",
+      "label": "Placenta bilobé",
+      "proposed_type": "malformation",
+      "reason": "Anomalie congénitale de la morphogenèse placentaire (défaut morphogénétique)."
+    },
+    {
+      "foeto_id": "FOETO:0100202_exam",
+      "label": "Dépôt de méconium dans le chorion",
+      "proposed_type": "trophisme",
+      "reason": "Signe de détresse fœtale et d'ischémie/compromise vasculaire placentaire."
+    },
+    {
+      "foeto_id": "FOETO:0100203_exam",
+      "label": "Métaplasie malpighienne de l'amnion",
+      "proposed_type": "dysplasie",
+      "reason": "Anomalie de différenciation cellulaire réactionnelle de l'épithélium amniotique."
+    },
+    {
+      "foeto_id": "FOETO:0100203_macro",
+      "label": "Placenta membraneux",
+      "proposed_type": "malformation",
+      "reason": "Anomalie congénitale du développement placentaire caractérisée par une villisation diffuse de la surface choriale."
+    },
+    {
+      "foeto_id": "FOETO:0100206_ch15",
+      "label": "Villi fantômes du chorion lisse",
+      "proposed_type": "MFIU",
+      "reason": "Signe histologique classique de macération et de mort fœtale in utero."
+    },
+    {
+      "foeto_id": "FOETO:0100206_exam",
+      "label": "Infarctus marginal",
+      "proposed_type": "trophisme",
+      "reason": "Lésion ischémique d'origine maternelle relevant de la pathologie vasculaire placentaire."
+    },
+    {
+      "foeto_id": "FOETO:0100209_exam",
+      "label": "Dépôt de fibrine périvillositaire massive (infarctus du plancher maternel)",
+      "proposed_type": "trophisme",
+      "reason": "Lésion vasculaire et ischémique placentaire caractéristique d'un trouble du trophisme."
+    },
+    {
+      "foeto_id": "FOETO:0100210_ch11",
+      "label": "Infarctus maternel du plancher placentaire",
+      "proposed_type": "trophisme",
+      "reason": "Nécrose ischémique du plancher placentaire, relevant de la pathologie vasculaire et du trophisme."
+    },
+    {
+      "foeto_id": "FOETO:0100211_ch11",
+      "label": "Histiocytose intervillositaire chronique",
+      "proposed_type": "infectieux",
+      "reason": "Processus inflammatoire chronique des espaces intervillositaires, classé dans la catégorie infectieux/inflammatoire."
+    },
+    {
+      "foeto_id": "FOETO:0100211_macro",
+      "label": "Insertion excentrée du cordon ombilical",
+      "proposed_type": "malformation",
+      "reason": "Anomalie morphogénétique du développement de l'insertion du cordon sur le placenta."
+    },
+    {
+      "foeto_id": "FOETO:0100212_ch11",
+      "label": "Villite d'étiologie inconnue",
+      "proposed_type": "infectieux",
+      "reason": "Infiltration inflammatoire des villosités, relevant des processus infectieux/inflammatoires placentaires."
+    },
+    {
+      "foeto_id": "FOETO:0100213_ch06",
+      "label": "Distorsion/perte des microvillosités syncytiales",
+      "proposed_type": "trophisme",
+      "reason": "Signe de stress et d'insuffisance trophique du syncytiotrophoblaste, lié à une pathologie vasculaire/ischemique."
+    },
+    {
+      "foeto_id": "FOETO:0100213_ch11",
+      "label": "Chorioamnionite aiguë",
+      "proposed_type": "infectieux",
+      "reason": "Inflammation aiguë des membranes fœtales, explicitement listée dans la catégorie infectieux."
+    },
+    {
+      "foeto_id": "FOETO:0100214_ch11",
+      "label": "Funisitis aiguë",
+      "proposed_type": "infectieux",
+      "reason": "Inflammation aiguë du cordon ombilical, relevant des processus infectieux."
+    },
+    {
+      "foeto_id": "FOETO:0100214_ernst",
+      "label": "Villosités intermédiaires immatures — aspect histologique",
+      "proposed_type": "trophisme",
+      "reason": "Retard de maturation villeuse, souvent associé à hypoxie fœtale ou RCIU."
+    },
+    {
+      "foeto_id": "FOETO:0100215_ch11",
+      "label": "Vascularite choriale éosinophilique à cellules T",
+      "proposed_type": "infectieux",
+      "reason": "Lésion inflammatoire vasculaire suggérant une réponse infectieuse ou immuno-médiée."
+    },
+    {
+      "foeto_id": "FOETO:0100215_exam",
+      "label": "Congestion vasculaire villositaire",
+      "proposed_type": "trophisme",
+      "reason": "Signe de stase veineuse ou de malperfusion vasculaire maternelle/fœtale."
+    },
+    {
+      "foeto_id": "FOETO:0100216_ch06",
+      "label": "Nécrose primaire du cytotrophoblaste",
+      "proposed_type": "trophisme",
+      "reason": "Lésion ischémique/nécrotique liée à une altération du flux placentaire."
+    },
+    {
+      "foeto_id": "FOETO:0100216_ch11",
+      "label": "Thrombose des vaisseaux fœtaux",
+      "proposed_type": "trophisme",
+      "reason": "Obstruction vasculaire fœtale, relevant des pathologies vasculaires placentaires."
+    },
+    {
+      "foeto_id": "FOETO:0100216_macro",
+      "label": "Zones nécrotiques à la base des septa placentaires",
+      "proposed_type": "trophisme",
+      "reason": "Infarctus septaux typiques d'une malperfusion vasculaire maternelle (MVM)."
+    },
+    {
+      "foeto_id": "FOETO:0100218_ch06",
+      "label": "Couche cytotrophoblastique quasi-complète",
+      "proposed_type": "trophisme",
+      "reason": "Marqueur de maturation villeuse retardée, souvent liée à un stress fœtal ou RCIU."
+    },
+    {
+      "foeto_id": "FOETO:0100218_ch11",
+      "label": "Nécrose musculaire vasculaire ombilicale",
+      "proposed_type": "trophisme",
+      "reason": "Lésion ischémique ou thrombotique du cordon ombilical."
+    },
+    {
+      "foeto_id": "FOETO:0100218_exam",
+      "label": "Thrombose des vaisseaux membranaires",
+      "proposed_type": "trophisme",
+      "reason": "Thrombose vasculaire fœtale, relevant des pathologies vasculaires placentaires."
+    },
+    {
+      "foeto_id": "FOETO:0100219_merged",
+      "label": "Placenta circumvallé",
+      "proposed_type": "malformation",
+      "reason": "Anomalie morphogénétique du développement placentaire."
+    },
+    {
+      "foeto_id": "FOETO:0100220_ch11",
+      "label": "Méconium subamniotique",
+      "proposed_type": "trophisme",
+      "reason": "Signe histologique de souffrance fœtale et d'ischémie placentaire."
+    },
+    {
+      "foeto_id": "FOETO:0100220_merged",
+      "label": "Placenta circummarginal",
+      "proposed_type": "malformation",
+      "reason": "Anomalie de développement (insertion anormale des membranes)."
+    },
+    {
+      "foeto_id": "FOETO:0100221_ch11",
+      "label": "Modifications dégénératives de l'amnion",
+      "proposed_type": "trophisme",
+      "reason": "Altération secondaire liée à l'ischémie ou au stress fœtal."
+    },
+    {
+      "foeto_id": "FOETO:0100222_ch11",
+      "label": "Défaut de transformation physiologique des artères utéroplacentaires",
+      "proposed_type": "trophisme",
+      "reason": "Pathologie vasculaire placentaire associée aux complications de la grossesse."
+    },
+    {
+      "foeto_id": "FOETO:0100222_exam",
+      "label": "Chorioangiome",
+      "proposed_type": "tumoral",
+      "reason": "Néoplasie bénigne du tissu placentaire."
+    },
+    {
+      "foeto_id": "FOETO:0100223_ch11",
+      "label": "Athérose des vaisseaux déciduaux",
+      "proposed_type": "trophisme",
+      "reason": "L'athérose déciduale est une vasculopathie maternelle caractéristique d'une malperfusion vasculaire placentaire (MVM), relevant des pathologies du trophisme placentaire."
+    },
+    {
+      "foeto_id": "FOETO:0100226_ch11",
+      "label": "Microabcès sous-amniotiques du cordon (Candida)",
+      "proposed_type": "infectieux",
+      "reason": "La présence de microabcès causée par Candida indique une infection fœtale/membranaire, classée dans la catégorie infectieuse."
+    },
+    {
+      "foeto_id": "FOETO:0100228_ch11",
+      "label": "Nécrose déciduale",
+      "proposed_type": "trophisme",
+      "reason": "Signe d'ischémie ou d'infarctus placentaire (malperfusion maternelle)."
+    },
+    {
+      "foeto_id": "FOETO:0100228_exam",
+      "label": "Dépôt d'hémosidérine dans les membranes",
+      "proposed_type": "trophisme",
+      "reason": "Témoin d'une hémorragie ancienne ou d'une résorption hémorragique."
+    },
+    {
+      "foeto_id": "FOETO:0100229_ch07",
+      "label": "Villosités fantômes (ghosts villositaires)",
+      "proposed_type": "trophisme",
+      "reason": "Signe histologique d'infarctus ou d'ischémie placentaire sévère."
+    },
+    {
+      "foeto_id": "FOETO:0100229_ch11",
+      "label": "Inflammation chronique déciduale",
+      "proposed_type": "infectieux",
+      "reason": "Signe d'inflammation chronique, souvent d'origine infectieuse ou immuno-médiée."
+    },
+    {
+      "foeto_id": "FOETO:0100230_ch11",
+      "label": "Cellules anormales dans l'espace intervillositaire",
+      "proposed_type": "tumoral",
+      "reason": "Présence de cellules atypiques suggérant une néoplasie trophoblastique ou une embolie pathologique."
+    },
+    {
+      "foeto_id": "FOETO:0100232_ch11",
+      "label": "Hémorragie rétroplacentaire",
+      "proposed_type": "trophisme",
+      "reason": "Hémorragie pathologique localisée sous la plaque choriale."
+    },
+    {
+      "foeto_id": "FOETO:0100233_ch11",
+      "label": "Produits de stockage anormaux dans le trophoblaste et les macrophages stromaux",
+      "proposed_type": "maladie metabo",
+      "reason": "Stockage anormal de substances suggérant une surcharge cytoplasmique ou une pathologie métabolique placentaire."
+    },
+    {
+      "foeto_id": "FOETO:0100234_micro",
+      "label": "Fibrose stromale villositaire",
+      "proposed_type": "trophisme",
+      "reason": "Signe histologique d'ischémie chronique ou de malperfusion vasculaire maternelle (MVM)."
+    },
+    {
+      "foeto_id": "FOETO:0100235_ch11",
+      "label": "Macrophages avec pigment ferrique dans le cordon et les membranes",
+      "proposed_type": "trophisme",
+      "reason": "Présence d'hémosidérine témoignant d'une hémorragie ancienne ou d'une souffrance vasculaire placentaire."
+    },
+    {
+      "foeto_id": "FOETO:0100235_ernst",
+      "label": "Modifications réactives de l'épithélium amniotique",
+      "proposed_type": "infectieux",
+      "reason": "Réaction inflammatoire typique associée à une chorioamniotite ou infection ascendante."
+    },
+    {
+      "foeto_id": "FOETO:0100236_ernst",
+      "label": "Macrophages chargés d'hémosidérine dans les membranes",
+      "proposed_type": "trophisme",
+      "reason": "Marqueur d'hémorragie ancienne ou de pathologie vasculaire placentaire."
+    },
+    {
+      "foeto_id": "FOETO:0100237_ernst",
+      "label": "Métaplasie malpighienne de l'épithélium du cordon ombilical",
+      "proposed_type": "infectieux",
+      "reason": "Lésion réactionnelle caractéristique d'une chorioamniotite ou infection fœtale."
+    },
+    {
+      "foeto_id": "FOETO:0100237_micro",
+      "label": "Hématies nucléées dans les vaisseaux villositaires",
+      "proposed_type": "trophisme",
+      "reason": "Signe d'anémie fœtale, d'hydrops ou de souffrance placentaire (pathologie vasculaire/hydrops)."
+    }
+  ],
+  "poumon": [
+    {
+      "foeto_id": "FOETO:0030240_ernst",
+      "label": "Matériel karyorrhectique intrapulmonaire",
+      "proposed_type": "disruption",
+      "reason": "Débris nécrotiques témoignant d'une atteinte secondaire (aspiration ou inflammation)."
+    },
+    {
+      "foeto_id": "FOETO:0030241",
+      "label": "Squames intrapulmonaires en nombre augmenté",
+      "proposed_type": "disruption",
+      "reason": "Signe d'aspiration (vernix ou méconium), processus acquis destructeur secondaire."
+    },
+    {
+      "foeto_id": "FOETO:0030242",
+      "label": "Hyperplasie des corps neuroendocrines pulmonaires",
+      "proposed_type": "dysplasie",
+      "reason": "Prolifération cellulaire anormale ou réactive des cellules neuroendocrines."
+    },
+    {
+      "foeto_id": "FOETO:0030243",
+      "label": "Muscularisation artériolaire intra-acinaire pathologique",
+      "proposed_type": "trophisme",
+      "reason": "Remodelage vasculaire secondaire à l'hypoxie fœtale ou au RCIU."
+    }
+  ],
+  "rein": [
+    {
+      "foeto_id": "FOETO:0020240",
+      "label": "Zone néphrogénique persistante après 36 SA",
+      "proposed_type": "malformation",
+      "reason": "Persistance anormale du tissu néphrogénique au-delà du terme physiologique de cessation de la néphrogenèse (34-36 SA)."
+    },
+    {
+      "foeto_id": "FOETO:0020241",
+      "label": "Réduction néphronique",
+      "proposed_type": "malformation",
+      "reason": "Anomalie du développement caractérisée par un nombre insuffisant de néphrons, résultant d'un défaut de néphrogenèse."
+    },
+    {
+      "foeto_id": "FOETO:0020242A",
+      "label": "Dysgenèse tubulaire rénale",
+      "proposed_type": "dysplasie",
+      "reason": "Anomalie de différenciation et de maturation des tubules rénaux fœtaux."
+    },
+    {
+      "foeto_id": "FOETO:0020243A",
+      "label": "Glomérules sclérotiques involutionnels",
+      "proposed_type": "trophisme",
+      "reason": "Signe histologique d'ischémie rénale ou d'insuffisance trophique chronique (RCIU, hypoxie)."
+    },
+    {
+      "foeto_id": "FOETO:0020245A",
+      "label": "Compaction glomérulaire corticale",
+      "proposed_type": "trophisme",
+      "reason": "Signe d'ischémie rénale ou d'hypovolémie fœtale, correspondant à un rétrécissement de la capsule de Bowman par atrophie du glomérule."
+    }
+  ],
+  "squelette": [
+    {
+      "foeto_id": "FOETO:0070227",
+      "label": "Cortex osseux mince ou absent près du cartilage de croissance",
+      "proposed_type": "dysplasie",
+      "reason": "Absence ou hypoplasie marquée du cortex osseux, signe d'anomalie de la différenciation ou de la minéralisation osseuse (ex : dysplasie squelettique ou ostéogenèse imparfaite) et non d'un repère histologique fœtal physiologique."
+    }
+  ]
+}
