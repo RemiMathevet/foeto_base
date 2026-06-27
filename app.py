@@ -806,7 +806,7 @@ def _inject_feedback_widget(response):
 FOETO_EDITABLE = [
     "label_fr", "label_en", "organe", "axis", "domain",
     "type_patho", "sous_type_patho", "description_fr", "cr_description",
-    "parent_id", "genes", "multisysteme",
+    "parent_id", "multisysteme",
 ]
 
 
@@ -884,8 +884,24 @@ def foeto_view(fid):
         WHERE e.target_id = ? ORDER BY e.relation, e.confidence DESC
     """, (fid,)).fetchall()
 
+    syndrome_ids = [r[0] for r in db.execute(
+        "SELECT DISTINCT syndrome_id FROM syndrome_foeto_v2 WHERE foeto_id = ? AND score > 0.30",
+        (fid,)
+    ).fetchall()]
+    genes = set()
+    if syndrome_ids:
+        ph = ",".join("?" * len(syndrome_ids))
+        genes = set(r[0] for r in db.execute(
+            f"SELECT DISTINCT sg.gene_symbol FROM syndrome_genes sg WHERE sg.syndrome_id IN ({ph})",
+            syndrome_ids
+        ).fetchall())
+    desc_genes = set(r[0] for r in db.execute(
+        "SELECT gene_symbol FROM foeto_genes WHERE foeto_id = ?", (fid,)
+    ).fetchall())
+    genes = sorted(genes | desc_genes)
+
     return render_template("foeto_view.html", term=dict(term), hpo=hpo, children=children,
-                           edges_out=edges_out, edges_in=edges_in)
+                           edges_out=edges_out, edges_in=edges_in, genes=genes)
 
 
 @app.route("/foeto/<path:fid>/edit", methods=["GET", "POST"])
@@ -920,14 +936,14 @@ def foeto_csv():
     rows = db.execute(
         """SELECT id, label_fr, label_en, organe, axis, domain,
                   type_patho, sous_type_patho, description_fr, cr_description,
-                  parent_id, genes, multisysteme, sources, viewer_id
+                  parent_id, multisysteme, sources, viewer_id
            FROM foeto_terms ORDER BY organe, id"""
     ).fetchall()
     buf = _io.StringIO()
     w = _csv.writer(buf)
     cols = ["id", "label_fr", "label_en", "organe", "axis", "domain",
             "type_patho", "sous_type_patho", "description_fr", "cr_description",
-            "parent_id", "genes", "multisysteme", "sources", "viewer_id"]
+            "parent_id", "multisysteme", "sources", "viewer_id"]
     w.writerow(cols)
     for r in rows:
         w.writerow([r[c] for c in cols])

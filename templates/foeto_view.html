@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block title %}{{ term.id }} — FOETO-BASE{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div>
+        <small style="color:var(--text2)"><a href="{{ url_for('foeto_list') }}">FOETO</a> / <a href="{{ url_for('foeto_list', organ=term.organe) }}">{{ term.organe }}</a></small>
+        <h1>{{ term.label_fr or term.id }}</h1>
+        {% if term.label_en %}<p style="color:var(--text2);font-style:italic">{{ term.label_en }}</p>{% endif %}
+    </div>
+    <a href="{{ url_for('foeto_edit', fid=term.id) }}" class="btn btn-primary btn-sm">Modifier</a>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem">
+    <span class="badge badge-autre">{{ term.organe }}</span>
+    {% if term.domain %}
+        <span class="badge {% if term.domain == 'placenta' %}badge-tumoral{% else %}badge-malformatif{% endif %}">{{ term.domain }}</span>
+    {% endif %}
+    {% if term.type_patho %}
+        <span class="badge badge-metabolique">{{ term.type_patho }}</span>
+    {% endif %}
+    {% if term.sous_type_patho %}
+        <span class="badge badge-both">{{ term.sous_type_patho }}</span>
+    {% endif %}
+    {% if term.axis %}
+        <span class="badge badge-prenatal">{{ term.axis }}</span>
+    {% endif %}
+    {% if term.viewer_id %}
+        <span class="badge badge-both">viewer: {{ term.viewer_id }}</span>
+    {% endif %}
+    {% if term.parent_id %}
+        <span class="badge badge-both">parent: <a href="{{ url_for('foeto_view', fid=term.parent_id) }}">{{ term.parent_id }}</a></span>
+    {% endif %}
+</div>
+
+{% if term.description_fr %}
+<div class="card">
+    <h2>Description</h2>
+    <div class="md-content">{{ term.description_fr|md }}</div>
+</div>
+{% endif %}
+
+{% if term.cr_description %}
+<div class="card">
+    <h2>CR Description</h2>
+    <p style="font-style:italic">{{ term.cr_description }}</p>
+</div>
+{% endif %}
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+    <div class="card">
+        <h2>HPO <span style="color:var(--green)">({{ hpo|length }})</span></h2>
+        {% if hpo %}
+        <table>
+            <thead><tr><th>ID</th><th>Label</th></tr></thead>
+            <tbody>
+            {% for h in hpo %}
+                <tr>
+                    <td class="mono"><a href="{{ url_for('hpo_view', hpo_id=h.hpo_id) }}">{{ h.hpo_id }}</a></td>
+                    <td>{{ h.label_en or h.label_fr or '—' }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p style="color:var(--text2)">Aucun HPO.</p>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <h2>Genes <small>({{ genes|length }})</small></h2>
+        {% if genes %}
+        <div class="tag-list">
+            {% for g in genes %}
+                <a href="{{ url_for('gene_view', symbol=g) }}" class="badge badge-both">{{ g }}</a>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p style="color:var(--text2)">Aucun gene.</p>
+        {% endif %}
+    </div>
+</div>
+
+{% if edges_out or edges_in %}
+<div class="card">
+    <h2>Relations DAG <span style="color:var(--text2)">({{ edges_out|length + edges_in|length }})</span></h2>
+    {% if edges_out %}
+    <table>
+        <thead><tr><th>Relation</th><th>→ Cible</th><th>Conf.</th></tr></thead>
+        <tbody>
+        {% for e in edges_out %}
+            <tr>
+                <td><span class="badge {% if e.relation == 'diagnostic_différentiel' %}badge-haute{% elif e.relation == 'composante_de' %}badge-causal{% elif e.relation == 'évolution_de' %}badge-prenatal{% else %}badge-autre{% endif %}">{{ e.relation }}</span></td>
+                <td><a href="{{ url_for('foeto_view', fid=e.target_id) }}">{{ e.label_fr or e.target_id }}</a></td>
+                <td class="mono">{{ '%.1f'|format(e.confidence) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+    {% if edges_in %}
+    <table style="margin-top:1rem">
+        <thead><tr><th>Source ←</th><th>Relation</th><th>Conf.</th></tr></thead>
+        <tbody>
+        {% for e in edges_in %}
+            <tr>
+                <td><a href="{{ url_for('foeto_view', fid=e.source_id) }}">{{ e.label_fr or e.source_id }}</a></td>
+                <td><span class="badge {% if e.relation == 'diagnostic_différentiel' %}badge-haute{% elif e.relation == 'composante_de' %}badge-causal{% elif e.relation == 'évolution_de' %}badge-prenatal{% else %}badge-autre{% endif %}">{{ e.relation }}</span></td>
+                <td class="mono">{{ '%.1f'|format(e.confidence) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+{% endif %}
+
+{% if children %}
+<div class="card">
+    <h2>Enfants <span style="color:var(--text2)">({{ children|length }})</span></h2>
+    <table>
+        <thead><tr><th>ID</th><th>Label</th></tr></thead>
+        <tbody>
+        {% for c in children %}
+            <tr>
+                <td class="mono"><a href="{{ url_for('foeto_view', fid=c.id) }}">{{ c.id }}</a></td>
+                <td>{{ c.label_fr or '—' }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+{% if term.sources %}
+<div class="card">
+    <h2>Sources</h2>
+    <div class="tag-list">
+        {% for s in term.sources.split('|') if s %}
+            <span class="badge badge-both">{{ s }}</span>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+{% endblock %}
