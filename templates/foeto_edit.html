@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Modifier {{ term.id }} — FOETO-BASE{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div>
+        <small style="color:var(--text2)"><a href="{{ url_for('foeto_list') }}">FOETO</a> / <a href="{{ url_for('foeto_view', fid=term.id) }}">{{ term.id }}</a></small>
+        <h1>Modifier {{ term.label_fr or term.id }}</h1>
+    </div>
+</div>
+
+<form method="post" action="{{ url_for('foeto_edit', fid=term.id) }}">
+    <div class="card">
+        <div class="form-row">
+            <div class="form-group">
+                <label>Label FR</label>
+                <input type="text" name="label_fr" value="{{ term.label_fr or '' }}">
+            </div>
+            <div class="form-group">
+                <label>Label EN</label>
+                <input type="text" name="label_en" value="{{ term.label_en or '' }}">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Organe</label>
+                <input type="text" name="organe" value="{{ term.organe or '' }}">
+            </div>
+            <div class="form-group">
+                <label>Domaine</label>
+                <select name="domain">
+                    <option value="">—</option>
+                    <option value="foetus" {% if term.domain == 'foetus' %}selected{% endif %}>foetus</option>
+                    <option value="placenta" {% if term.domain == 'placenta' %}selected{% endif %}>placenta</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Type patho</label>
+                <input type="text" name="type_patho" value="{{ term.type_patho or '' }}">
+            </div>
+            <div class="form-group">
+                <label>Sous-type patho</label>
+                <input type="text" name="sous_type_patho" value="{{ term.sous_type_patho or '' }}">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Axe</label>
+                <input type="text" name="axis" value="{{ term.axis or '' }}">
+            </div>
+            <div class="form-group">
+                <label>Parent ID</label>
+                <input type="text" name="parent_id" value="{{ term.parent_id or '' }}" placeholder="FOETO:...">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Multisysteme</label>
+                <input type="text" name="multisysteme" value="{{ term.multisysteme or '' }}" placeholder="organe1|organe2">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Description FR</label>
+            <textarea name="description_fr" rows="4">{{ term.description_fr or '' }}</textarea>
+        </div>
+        <div class="form-group">
+            <label>CR Description</label>
+            <textarea name="cr_description" rows="2" placeholder="Prose pour le compte-rendu">{{ term.cr_description or '' }}</textarea>
+        </div>
+    </div>
+    <div style="display:flex;gap:0.5rem">
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a href="{{ url_for('foeto_view', fid=term.id) }}" class="btn">Annuler</a>
+    </div>
+</form>
+{% endblock %}
