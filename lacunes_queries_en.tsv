@@ -1,0 +1,55 @@
+entite	query_en
+Placenta accreta / adherenta (FIGO grade 1)	placenta accreta adherenta FIGO grade 1 adherent villi myometrial surface
+Placenta increta (FIGO grade 2)	placenta increta FIGO grade 2 villi invading myometrium
+Placenta percreta (FIGO grade 3), sous-grades 3a (séreuse utérine), 3b (vessie), 3c (autres organes pelviens)	placenta percreta FIGO grade 3 uterine serosa bladder invasion
+Absence de décidue basale entre villosités et myomètre (critère histologique diagnostique du PAS)	absence of decidua basalis between villi and myometrium placenta accreta spectrum diagnostic criterion
+Absence / interruption de la couche fibrinoïde de Nitabuch	Nitabuch fibrinoid layer absence interruption
+Villosités au contact direct des fibres musculaires lisses myométriales (contact villo-myométrial)	chorionic villi in direct contact with myometrial smooth muscle fibres
+Cicatrice de césarienne / déhiscence myométriale associée au PAS	caesarean section scar myometrial dehiscence placenta accreta spectrum
+Placenta praevia (accreta praevia)	placenta praevia accreta
+MIR grade 2 (chorioamnionite aiguë sévère : polynucléaires confluents, ≥ 3 foyers)	maternal inflammatory response stage 2 severe acute chorioamnionitis confluent neutrophils
+Nœud vrai du cordon ombilical	true knot of the umbilical cord
+Microabcès sous-chorionique (critère de sévérité du MIR grade 2)	subchorionic microabscess maternal inflammatory response severity
+Macrophages spumeux pariétaux / artériopathie déciduale à cellules spumeuses	foamy macrophages arterial wall decidual vasculopathy acute atherosis
+Déciduite chronique à plasmocytes	chronic deciduitis with plasma cells
+Cordon grêle (diamètre réduit / hypoplasie du cordon)	thin umbilical cord reduced diameter cord hypoplasia
+Infarctus de siège central (et seuil > 5 % du parenchyme)	central infarct location extent more than 5 percent of parenchyma
+FIR grade 2 — atténuation / dégénérescence du muscle lisse vasculaire avec polynucléaires intramuraux quasi confluents	fetal inflammatory response stage 2 attenuation degeneration of vascular smooth muscle intramural neutrophils
+Thrombus non occlusifs (critère de FVM globale)	non-occlusive thrombus fetal vascular malperfusion criterion
+Placentation extrachoriale (chapeau)	extrachorial placentation circumvallate circummarginate
+VUE — distribution focale / multifocale / diffuse	villitis of unknown etiology focal multifocal diffuse distribution
+Môle hydatiforme complète	complete hydatidiform mole
+Môle hydatiforme partielle	partial hydatidiform mole
+Placentite / villite syphilitique (Treponema pallidum)	syphilitic placentitis villitis Treponema pallidum
+Placentite palustre (intervillite à Plasmodium, pigment malarique / hémozoïne)	malarial placentitis Plasmodium intervillositis malaria pigment hemozoin
+Placentite à SARS-CoV-2 (nécrose trophoblastique + intervillite histiocytaire + fibrine périvillositaire)	SARS-CoV-2 placentitis trophoblast necrosis histiocytic intervillositis perivillous fibrin
+Tumeur trophoblastique du site d'implantation (PSTT)	placental site trophoblastic tumor PSTT
+Métastases placentaires maternelles (mélanome, carcinome) et fœtales	placental metastases maternal melanoma carcinoma fetal metastasis
+Triploïdie (phénotype placentaire)	triploidy placental phenotype
+Mosaïcisme confiné au placenta	confined placental mosaicism
+Placenta des mucopolysaccharidoses et de la sialidose (vacuolisation lysosomale étiquetée)	mucopolysaccharidosis sialidosis placenta lysosomal vacuolation storage disorder
+Nodules de Langhans (plaque choriale, anatomie normale)	Langhans nodules chorionic plate normal anatomy
+Syndrome transfuseur-transfusé (STT/TTTS) — entité diagnostique	twin-to-twin transfusion syndrome TTTS
+Stades I à V de Quintero (gradation du TTTS)	Quintero staging system stages I to V twin-to-twin transfusion
+Stadification TAPS (Slaghekke) : stades anténatals 1-5 et stades post-nataux 1-4 fondés sur le ratio de diamètre des anastomoses	twin anemia polycythemia sequence TAPS Slaghekke staging anastomosis diameter ratio
+Jumeau acardiaque / séquence TRAP (twin reversed arterial perfusion)	acardiac twin twin reversed arterial perfusion TRAP sequence
+Transfusion fœto-fœtale aiguë (péri-partum, jumeau pâle / jumeau pléthorique)	acute peripartum feto-fetal transfusion pale twin plethoric twin
+Partage placentaire inégal / discordance de territoire placentaire entre jumeaux (Lewi, Khalil)	unequal placental sharing discordant placental territory in twins
+RCIU sélectif du jumeau monochorionique (sIUGR, types I-III de Gratacós)	selective intrauterine growth restriction monochorionic twins Gratacos types
+Enchevêtrement / nœud des cordons ombilicaux (jumeaux monoamniotiques)	umbilical cord entanglement knotting monoamniotic twins
+Détermination de la chorionicité sur la membrane de séparation — nombre de couches / présence de trophoblaste interposé (critère diagnostique)	chorionicity determination dividing membrane number of layers interposed trophoblast
+MIR grade 2 — réponse inflammatoire maternelle sévère (polynucléaires confluents, ≥ 3 foyers)	maternal inflammatory response stage 2 severe confluent neutrophils three or more foci
+Microabcès sous-chorionique (critère de sévérité du MIR grade 2)	subchorionic microabscess grading maternal inflammatory response
+VUE haut grade — variante multifocale (patchy) vs variante diffuse	high-grade villitis of unknown etiology patchy versus diffuse
+VUE bas grade — variante focale vs variante multifocale	low-grade villitis of unknown etiology focal versus multifocal
+Villite chronique tronculaire / des villosités souches (stem villitis)	stem villitis chronic villitis of stem villi obliterative fetal vasculopathy
+FIR grade 2 — polynucléaires intramuraux quasi confluents avec atténuation/dégénérescence du muscle lisse vasculaire	fetal inflammatory response stage 2 near-confluent intramural neutrophils smooth muscle degeneration
+Gradation de sévérité de la MVM (bas grade / haut grade, étendue des lésions)	maternal vascular malperfusion severity grading low grade high grade extent
+Arrêt de maturation villositaire (Reifungsarrest / maturation arrest)	arrest of villous maturation AVM Reifungsarrest
+Dissociation de maturation villositaire (maturation dissociée)	dissociated villous maturation
+Maturation villositaire dysharmonieuse / hétérogène (maturation asynchrone au sein d'un même placenta)	dysharmonious heterogeneous asynchronous villous maturation
+Placenta de prééclampsie (corrélation clinico-pathologique hypertensive)	preeclampsia placenta clinicopathological correlation hypertensive disorder
+Placentopathie diabétique (pattern placentaire du diabète maternel)	diabetic placentopathy placental pattern of maternal diabetes
+Pattern placentaire du RCIU (placenta de restriction de croissance)	placental pattern of intrauterine growth restriction IUGR
+Placenta de grossesse prolongée / post-terme (hypermaturité placentaire)	prolonged postterm pregnancy placenta hypermaturity
+Pattern placentaire du tabagisme maternel	placental pattern of maternal smoking

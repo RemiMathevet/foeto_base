@@ -1,0 +1,89 @@
+id	label_fr	label_en
+FOETO:PP.PAR-MAL-003	Placenta accreta spectrum	placenta accreta spectrum
+FOETO:PP.PAR-MET-004	Calcifications	placental calcifications
+FOETO:PP.PAR-MET-005	Drépanocytose placentaire	placental changes of sickle cell disease with sickled maternal erythrocytes in the intervillous space
+FOETO:PP.PAR-NOR-000	Parenchyme normal	normal villous parenchyma
+FOETO:PP.PAR-NOR-001	ANSCT augmentés	increased syncytial knots
+FOETO:PP.PAR-NOR-003	Autre (histo)	other histological finding
+FOETO:PP.PAR-INF-011	MIR Stage 1 — Chorionite subchoriale aiguë	MIR stage 1 — acute subchorionitis
+FOETO:PP.PAR-INF-012	MIR Stage 2 — Chorioamniotite aiguë	MIR stage 2 — acute chorioamnionitis
+FOETO:PP.PAR-INF-013	MIR Stage 3 — Chorioamniotite nécrosante	MIR stage 3 — necrotizing chorioamnionitis
+FOETO:PP.PAR-INF-014	MIR Grade 1 — Abcès décidual	MIR grade 1 — decidual abscess
+FOETO:PP.PAR-INF-016	RIF1 — Vasculite choriale	FIR stage 1 — chorionic vasculitis
+FOETO:PP.COR-NOR-000	Cordon normal	normal umbilical cord
+FOETO:PP.COR-VAS-001	MAVM (meconium associated vascular myonecrosis)	meconium-associated vascular myonecrosis (MAVM)
+FOETO:PP.VFU-NOR-000	Vaisseaux funiculaires normaux	normal umbilical cord vessels
+FOETO:PP.WHA-NOR-000	Gelée de Wharton normale	normal Wharton jelly
+FOETO:PP.AMN-NOR-000	Amnios normal	normal amnion
+FOETO:PP.CHO-NOR-000	Chorion laeve normal	normal chorion laeve
+FOETO:PP.DME-NOR-000	Décidue des membranes normale	normal decidua capsularis of the membranes
+FOETO:PP.IAC-NOR-000	Interface amnios/chorion normale	normal amniochorionic interface
+FOETO:PP.ICD-NOR-000	Interface chorion/décidue normale	normal choriodecidual interface
+FOETO:PP.VAC-VAS-002	Endovasculite hémorragique allanto-choriale	hemorrhagic endovasculitis of the chorioallantoic vessels
+FOETO:PP.VAC-VAS-003	FVM — Ectasie vasculaire choriale	FVM — chorionic vascular ectasia
+FOETO:PP.PAR-VAS-013	MVM — Artériopathie déciduale	MVM — decidual vasculopathy
+FOETO:PP.PAR-VAS-014	MVM — Hypoplasie villositaire distale	MVM — distal villous hypoplasia
+FOETO:PP.PAR-VAS-015	MVM — Infarctus	MVM — villous infarct
+FOETO:PP.PAR-VAS-022	NIDF — Travées (stade étendu)	massive perivillous fibrinoid deposition, trabecular (extensive) pattern
+FOETO:PP.PAR-VAS-023	VUE High grade	high-grade villitis of unknown etiology (VUE)
+FOETO:PP.PAR-VAS-024	VUE Low grade	low-grade villitis of unknown etiology (VUE)
+FOETO:PP.PAR-VAS-027	NIDF — Îlots (stade focal)	perivillous fibrinoid deposition, focal islands
+FOETO:PP.MEM-INF-008	MIR Grade 1	MIR grade 1 — mild patchy maternal inflammatory response in the membranes
+FOETO:PP.MEM-INF-009	MIR Grade 1 — Abcès décidual	MIR grade 1 — decidual abscess of the membranes
+FOETO:PP.MEM-INF-010	MIR Stage 1 — Chorionite subchoriale aiguë	MIR stage 1 — acute subchorionitis of the membranes
+FOETO:PP.MEM-INF-011	MIR Stage 2 — Chorioamniotite aiguë	MIR stage 2 — acute chorioamnionitis of the membranes
+FOETO:PP.PBA-VAS-001	Artériopathie déciduale de la plaque basale	decidual vasculopathy of the basal plate
+FOETO:PP.PBA-VAS-002	Nécrose fibrinoïde de la paroi artérielle déciduale	fibrinoid necrosis of the decidual arterial wall
+FOETO:PP.PBA-VAS-003	Hématome rétroplacentaire basal	basal retroplacental hematoma
+FOETO:PP.PCH-INF-001	Chorionite subchoriale aiguë	acute subchorionitis
+FOETO:PP.PCH-INF-002	Chorioamniotite aiguë de la plaque choriale	acute chorioamnionitis involving the chorionic plate
+FOETO:PP.PCH-MET-001	Dépôts de fibrinoïde sous-choriaux	subchorionic fibrinoid deposition
+FOETO:PP.PCH-NOR-000	Plaque choriale normale	normal chorionic plate
+FOETO:PP.PCH-NOR-001	Coussinets myxoïdes intimaux des vaisseaux de la plaque choriale	intimal myxoid cushions of the chorionic plate vessels
+FOETO:PP.PCH-VAS-001	Thrombus de la plaque choriale	chorionic plate vessel thrombus
+FOETO:PP.PCH-VAS-002	Vaisseau de la plaque choriale à paroi épaisse et ectasique	thick-walled ectatic chorionic plate vessel
+FOETO:PP.PCH-VAS-003	Thrombose sous-choriale massive (môle de Breus)	massive subchorionic thrombohematoma (Breus mole)
+FOETO:PP.PCH-VAS-004	Asymétrie de la paroi des vaisseaux de la plaque choriale	asymmetric wall thickening of the chorionic plate vessels
+FOETO:PP.VAC-INF-001	Vascularite des vaisseaux allanto-choriaux (réponse fœtale stade 1)	chorionic plate vessel vasculitis (FIR stage 1)
+FOETO:PP.VAC-NOR-000	Vaisseaux allanto-choriaux normaux	normal chorionic plate vessels
+FOETO:PP.VAC-VAS-001	Thrombose des vaisseaux allanto-choriaux	thrombosis of chorionic plate vessels
+FOETO:PP.PAR-NOR-004	Autre (label)	other (label)
+FOETO:PP.PAR-NOR-005	Autre (région)	other (region)
+FOETO:PP.PAR-NOR-008	MVM — Maturation villositaire accélérée	MVM — accelerated villous maturation
+FOETO:PP.PAR-RET-002	Cariolyse (rétention >48h)	karyolysis (intrauterine retention >48 hours)
+FOETO:PP.AUP-INF-001	Artérite déciduale	decidual arteritis
+FOETO:PP.AUP-NOR-000	Artères utéro-placentaires normales (remodelage physiologique)	normal uteroplacental arteries with physiologic remodeling
+FOETO:PP.AUP-VAS-001	Défaut de remodelage des artères spiralées	failure of spiral artery remodeling
+FOETO:PP.AUP-VAS-002	Défaut de transformation physiologique des artères utéro-placentaires	absence of physiologic transformation of uteroplacental arteries
+FOETO:PP.AUP-VAS-003	Athérose aiguë des artères spiralées	acute atherosis of spiral arteries
+FOETO:PP.AUP-VAS-004	MVM — Artériopathie déciduale spiralée	MVM — decidual vasculopathy of spiral arteries
+FOETO:PP.AUP-VAS-005	Nécrose fibrinoïde pariétale des artères spiralées	mural fibrinoid necrosis of spiral arteries
+FOETO:PP.AUP-VAS-006	Thrombose des artères utéro-placentaires	uteroplacental artery thrombosis
+FOETO:PP.COR-INF-001	FIR Grade 1	FIR grade 1
+FOETO:PP.COR-INF-002	FIR Grade 2 — Funiculite nécrosante	FIR grade 2 — necrotizing funisitis
+FOETO:PP.COR-INF-003	FIR Stage 1 — Phlébite ombilicale / vasculite choriale	FIR stage 1 — umbilical phlebitis / chorionic vasculitis
+FOETO:PP.COR-INF-004	FIR Stage 2 — Artérite ombilicale / funiculite	FIR stage 2 — umbilical arteritis / funisitis
+FOETO:PP.COR-INF-005	FIR Stage 3 — Funiculite concentrique	FIR stage 3 — concentric umbilical perivasculitis (funisitis)
+FOETO:PP.VDI-NOR-000	Villosité distale normale	normal terminal (distal) villus
+FOETO:PP.VIL-NOR-000	Villosités normales	normal chorionic villi
+FOETO:PP.VIN-NOR-000	Villosité intermédiaire normale	normal intermediate villus
+FOETO:PP.VSO-NOR-000	Villosité souche normale	normal stem villus
+FOETO:PP.MEM-INF-012	MIR Stage 3 — Chorioamniotite nécrosante	MIR stage 3 — necrotizing chorioamnionitis
+FOETO:PP.MEM-NOR-001	Membranes normales	normal extraplacental membranes
+FOETO:PP.EIV-NOR-000	Espace intervilleux normal	normal intervillous space
+FOETO:PP.EVI-NOR-000	Espace villeux normal	normal villous compartment
+FOETO:PP.PAR-INF-003	Maladies inflammatoires chroniques du placenta	chronic inflammatory lesions of the placenta
+FOETO:PP.PAR-VAS-005	FVM High grade — Thrombose gros vaisseaux	FVM high grade — large fetal vessel thrombosis
+FOETO:PP.PAR-VAS-006	FVM Low grade — Villosités avasculaires focales	FVM low grade — focal avascular villi
+FOETO:PP.PAR-VAS-007	Fibrine périvillositaire augmentée	increased perivillous fibrin deposition
+FOETO:PP.PAR-VAS-010	Hémorragie intervilleuse	intervillous hemorrhage
+FOETO:PP.PAR-VAS-011	Hémorragie intravillositaire	intravillous hemorrhage
+FOETO:PP.SAN-NOR-000	Sang circulant normal	normal circulating fetal blood
+FOETO:PP.DBA-NOR-000	Décidue basale normale	normal decidua basalis
+FOETO:PP.PBA-INF-001	Villite basale chronique	chronic basal villitis
+FOETO:PP.PBA-INF-002	Abcès décidual	decidual abscess
+FOETO:PP.PBA-MET-001	Dépôts de fibrinoïde dans la plaque basale	fibrinoid deposition in the basal plate
+FOETO:PP.PBA-MET-002	Vacuolisation des cellules déciduales basales	vacuolization of basal decidual cells
+FOETO:PP.PBA-MET-003	Excès de trophoblaste extravilleux	excessive extravillous trophoblast
+FOETO:PP.PBA-NOR-000	Plaque basale normale	normal basal plate
+FOETO:PP.PBA-NOR-001	Villosités d'ancrage dans la plaque basale	anchoring villi in the basal plate

@@ -1,0 +1,663 @@
+id	niveau	lesion	site	qualifieurs	pattern	compartiment	label_fr	doute
+FOETO:PP.PAR-MAL-003	entite					parenchyme	Placenta accreta spectrum	libellé désignant un spectre d'entités (accreta/increta/percreta) sans lésion élémentaire ni siège précisé
+FOETO:PP.PAR-MET-001	element	dépôt de glycogène	syncytiotrophoblaste			parenchyme	Accumulation de glycogène dans le syncytiotrophoblaste	
+FOETO:PP.PAR-MET-002	element	accumulation lysosomale de glycogène	placenta			parenchyme	Accumulation lysosomale de glycogène dans le placenta	siège non précisé au-delà de l'organe entier
+FOETO:PP.PAR-MET-003	element	athérose	décidue	aigu		parenchyme	Athérose aiguë déciduale	vaisseau atteint non nommé dans le libellé (artère spiralée sous-entendue)
+FOETO:PP.PAR-MET-004	element	calcification		augmenté en nombre|diffus		parenchyme	Calcifications	siège des calcifications non précisé
+FOETO:PP.PAR-MET-005	entite	falciformation érythrocytaire	espace intervilleux			parenchyme	Drépanocytose placentaire	
+FOETO:PP.PAR-MET-006	element	dépôt d'hémosidérine	macrophage chorionique			parenchyme	Hémosidérine dans les macrophages chorioniques	
+FOETO:PP.PAR-MET-007	element	vacuolisation	macrophage villositaire			parenchyme	Vacuolisation des cellules de Hofbauer	
+FOETO:PP.PAR-MET-008	element	vacuolisation	cellule déciduale			parenchyme	Vacuolisation des décidues (cellules déciduales)	
+FOETO:PP.PAR-MET-009	element	vacuolisation	cytotrophoblaste villositaire			parenchyme	Vacuolisation du cytotrophoblaste villositaire	
+FOETO:PP.PAR-MET-010	element	vacuolisation	syncytiotrophoblaste			parenchyme	Vacuolisation du syncytiotrophoblaste	
+FOETO:PP.PAR-NOR-000	structure		parenchyme placentaire	normal		parenchyme	Parenchyme normal	libellé de normalité (absence de lésion), non factorisable en lésion élémentaire
+FOETO:PP.PAR-NOR-001	element	augmentation des nœuds syncytiaux		augmenté en nombre|diffus		parenchyme	ANSCT augmentés	siège villositaire non explicite dans le libellé
+FOETO:PP.PAR-NOR-002	structure			monochorionique		parenchyme	Anastomose vasculaire fœto-fœtale (jumeaux monochorioniques)	repère vasculaire architectural, siège (plaque choriale) non précisé dans le libellé
+FOETO:PP.PAR-NOR-003	element					parenchyme	Autre (histo)	libellé fourre-tout sans contenu descriptif, non factorisable
+FOETO:PP.PLA-CLA-010	element	nécrose	décidue			placenta	Nécrose déciduale	libellé générique : ni siège précis (basale/pariétale) ni étendue
+FOETO:PP.PLA-CLA-011	element	nécrose	décidue des membranes			placenta	Nécrose déciduale membraneuse	
+FOETO:PP.PLA-CLA-012	element	nécrose laminaire	décidue des membranes			placenta	Nécrose laminaire de la décidua des membranes	
+FOETO:PP.PLA-CLA-013	element	nécrose des myocytes de la média	vaisseau ombilical			placenta	Nécrose musculaire vasculaire ombilicale	
+FOETO:PP.PLA-CLA-014	element	nécrose	cytotrophoblaste	primaire		placenta	Nécrose primaire du cytotrophoblaste	
+FOETO:PP.PLA-CLA-015	element	nécrose	syncytiotrophoblaste	focal		placenta	Nécrose syncytiale focale	
+FOETO:PP.PLA-CLA-016	element	paucité des membranes vasculo-syncytiales	membrane vasculo-syncytiale			placenta	Paucité des membranes vasculo-syncytiales	
+FOETO:PP.PLA-CLA-017	element	villosités avasculaires avec changements dégénératifs (karyorrhexie, microcalcifications, ferrugination)	villosité			placenta	Villosités avasculaires avec dégénérescence (karyorrhexie, calcifications, ferrugination)	libellé composite regroupant plusieurs altérations élémentaires en une seule chaîne
+FOETO:PP.PLA-CLA-018	element	nécrose	base des septa placentaires	focal		placenta	Zones nécrotiques à la base des septa placentaires	
+FOETO:PP.PLA-DYS-001	element	calcification	vaisseau placentaire			placenta	Calcification vasculaire placentaire	
+FOETO:PP.PLA-DYS-002	element	citerne	villosité			placenta	Citerne villeuse	
+FOETO:PP.PLA-DYS-003	element	excès de gelée de Wharton avec épaississement	cordon ombilical			placenta	Cordon ombilical épaissi avec excès de gelée de Wharton	
+FOETO:PP.PLA-DYS-004	element	ectasie vasculaire	vaisseau villositaire			placenta	Dilatation vasculaire fœtale villositaire	
+FOETO:PP.PLA-DYS-005	element	distribution non périphérique des capillaires	villosité			placenta	Distribution non périphérique des capillaires villositaires	
+FOETO:PP.PLA-DYS-006	element	défaut de remodelage physiologique	artère spiralée			placenta	Défaut de remodelage des artères spiralées	
+FOETO:PP.PAR-INF-004	element	villite	villosité	aigu		parenchyme	Villite aiguë	
+FOETO:PP.PAR-INF-005	element	villite	villosité de la plaque basale	basal|chronique		parenchyme	Villite basale chronique	
+FOETO:PP.PAR-INF-006	element	villite	villosité	chronique		parenchyme	Villite chronique	
+FOETO:PP.PAR-INF-007	entite	villite	villosité	chronique|étiologie inconnue	villite chronique d'étiologie indéterminée (VUE)	parenchyme	Villite chronique d'étiologie inconnue (VCEI)	
+FOETO:PP.PAR-INF-008	element	villite lympho-plasmocytaire	villosité	chronique		parenchyme	Villite chronique lympho-plasmocytaire	
+FOETO:PP.PAR-INF-009	element	villite granulomateuse	villosité			parenchyme	Villite granulomateuse	
+FOETO:PP.PAR-INF-010	element	villite nécrosante	villosité	nécrosant		parenchyme	Villite nécrosante	
+FOETO:PP.PAR-INF-011	entite	infiltrat de polynucléaires neutrophiles	région sous-choriale	aigu|stade 1	réponse inflammatoire maternelle (MIR)	parenchyme	MIR Stage 1 — Chorionite subchoriale aiguë	libellé (chorionite subchoriale) et description micro (infiltrat décidual sans extension au chorion) désignent des sièges différents
+FOETO:PP.PAR-INF-012	entite	infiltrat de polynucléaires neutrophiles	membranes chorio-amniotiques	aigu|stade 2	réponse inflammatoire maternelle (MIR)	parenchyme	MIR Stage 2 — Chorioamniotite aiguë	
+FOETO:PP.PAR-INF-013	entite	infiltrat à polynucléaires neutrophiles avec nécrose de l'amnios	membranes chorio-amniotiques	aigu|nécrosant|stade 3	réponse inflammatoire maternelle (MIR)	parenchyme	MIR Stage 3 — Chorioamniotite nécrosante	
+FOETO:PP.PAR-INF-014	element	abcès	décidue	aigu|grade 1	réponse inflammatoire maternelle (MIR)	parenchyme	MIR Grade 1 — Abcès décidual	
+FOETO:PP.PAR-INF-015	entite	infiltrat plasmocytaire	décidue basale	chronique|multiple|épars		parenchyme	Déciduite chronique	
+FOETO:PP.PAR-INF-016	entite	vascularite à polynucléaires neutrophiles	vaisseau de la plaque choriale	aigu|stade 1	réponse inflammatoire fœtale (FIR)	parenchyme	RIF1 — Vasculite choriale	
+FOETO:PP.PAR-MAL-001	element	hypoplasie villositaire distale	villosité terminale			parenchyme	Hypoplasie villositaire distale (déficience des villosités terminales)	
+FOETO:PP.PAR-MAL-002	structure		disque placentaire	succenturié|succenturié		parenchyme	Lobe placentaire accessoire (succenturié)	anomalie morphologique macroscopique de forme, pas une lésion histologique élémentaire
+FOETO:PP.PLA-NOR-013	element	dysplasie villositaire	villosité	alternance avec villosités normales|aspect en mosaïque		placenta	Aspect en mosaïque de villosités normales et dysplasiques	libellé descriptif d'un aspect panoramique : la lésion élémentaire (dysplasie villositaire) n'est pas précisée histologiquement
+FOETO:PP.PLA-NOR-014	element	asymétrie de l'épaisseur pariétale	vaisseau chorionique de surface			placenta	Asymétrie de l'épaisseur pariétale des vaisseaux chorioniques de surface	
+FOETO:PP.PLA-NOR-015	element	asymétrie de l'épaisseur pariétale	vaisseau de la plaque choriale	amincissement		placenta	Asymétrie de la paroi des vaisseaux de la plaque choriale	
+FOETO:PP.PLA-NOR-016	element	augmentation de l'index prolifératif des cytotrophoblastes	villosité			placenta	Augmentation de l'index prolifératif des cytotrophoblastes villositaires	
+FOETO:PP.PLA-NOR-017	element	augmentation de la densité des cytotrophoblastes	villosité			placenta	Augmentation de la densité des cytotrophoblastes villositaires	
+FOETO:PP.PLA-NOR-018	element	augmentation de la surface villositaire	villosité	totale		placenta	Augmentation de la surface villositaire totale	
+FOETO:PP.PLA-NOR-019	element	augmentation des cellules trophoblastiques géantes	site d'implantation			placenta	Augmentation des cellules trophoblastiques géantes du site d'implantation	
+FOETO:PP.PLA-NOR-020	element	augmentation des nœuds syncytiaux	villosité avasculaire			placenta	Augmentation des nœuds syncytiaux dans les villosités avasculaires	
+FOETO:PP.PLA-NOR-021	structure		bourgeon syncytial			placenta	Bourgeon syncytial / bourgeon trophoblastique	libellé à double dénomination (syncytial / trophoblastique) pour un même repère architectural
+FOETO:PP.PLA-NOR-022	structure		bourgeon syncytial			placenta	Bourgeons syncytiaux	
+FOETO:PP.PLA-NOR-023	structure		bourgeon vasculaire endothélial villositaire			placenta	Bourgeons vasculaires endothéliaux villositaires	
+FOETO:PP.PLA-NOR-024	structure		bourgeon villositaire			placenta	Bourgeons villositaires (villosité sprout)	
+FOETO:PP.PLA-NOR-025	element	calcification	placenta			placenta	Calcifications placentaires	
+FOETO:PP.PLA-NOR-026	element	calcification	placenta	absente ou rare		placenta	Calcifications placentaires absentes ou rares	libellé exprimant une absence/rareté (constat négatif) et non une lésion présente
+FOETO:PP.PLA-NOR-027	structure		canal stromal villositaire			placenta	Canaux stromaux villeux	
+FOETO:PP.COR-MAL-001	entite	insertion vélamenteuse du cordon	cordon ombilical			cordon	Insertion vélamenteuse du cordon ombilical	
+FOETO:PP.COR-MAL-002	entite	artère ombilicale unique	cordon ombilical			cordon	Artère ombilicale unique	
+FOETO:PP.COR-NOR-000	structure		cordon ombilical	normal		cordon	Cordon normal	
+FOETO:PP.COR-RET-001	element	hémorragie périvasculaire	gelée de Wharton	artefact		cordon	Hémorragie périvasculaire dans la gelée de Wharton (artefact)	
+FOETO:PP.COR-RET-002	element	nécrose des myocytes de la paroi vasculaire	vaisseau ombilical	post-mortem|rétention supérieure à 6 jours		cordon	Nécrose myocytes cordon (rétention >6j Genest)	
+FOETO:PP.COR-TUM-001	entite	hémangiome	cordon ombilical			cordon	Hémangiome funiculaire	
+FOETO:PP.COR-VAS-001	entite	nécrose des myocytes de la paroi vasculaire	vaisseau ombilical	induite par le méconium		cordon	MAVM (meconium associated vascular myonecrosis)	
+FOETO:PP.COR-VAS-002	element	thrombose	vaisseau ombilical			cordon	Thrombose vasculaire ombilicale	libellé ne précise ni le vaisseau atteint (artère/veine) ni l'ancienneté du thrombus
+FOETO:PP.VFU-NOR-000	structure		vaisseau ombilical	normal		cordon	Vaisseaux funiculaires normaux	
+FOETO:PP.WHA-NOR-000	structure		gelée de Wharton	normal		cordon	Gelée de Wharton normale	
+FOETO:PP.AMN-NOR-000	structure		amnios	normal		membranes	Amnios normal	
+FOETO:PP.CHO-NOR-000	structure		chorion laeve	normal		membranes	Chorion laeve normal	
+FOETO:PP.DME-NOR-000	structure		décidue des membranes	normal		membranes	Décidue des membranes normale	
+FOETO:PP.IAC-NOR-000	structure		interface chorio-amniotique	normal		membranes	Interface amnios/chorion normale	
+FOETO:PP.ICD-NOR-000	structure		interface chorio-déciduale	normal		membranes	Interface chorion/décidue normale	
+FOETO:PP.VAC-VAS-002	entite	endovasculite hémorragique	vaisseau allanto-chorial			vaisseaux_allantochoriaux	Endovasculite hémorragique allanto-choriale	
+FOETO:PP.VAC-VAS-003	element	ectasie vasculaire	vaisseau de la plaque choriale		malperfusion vasculaire fœtale (FVM)	vaisseaux_allantochoriaux	FVM — Ectasie vasculaire choriale	
+FOETO:PP.PLA-INF-023	element	kyste parasitaire (toxoplasme)	placenta			placenta	Kystes toxoplasmiques placentaires	
+FOETO:PP.PLA-INF-024	element	macrophages chargés de méconium	membranes libres			placenta	Macrophages chargés de méconium (membranes)	
+FOETO:PP.PLA-INF-025	element	micro-abcès	placenta	en cocarde|listériose		placenta	Micro-abcès placentaires en cocarde (listériose)	
+FOETO:PP.PLA-INF-026	element	micro-abcès	cordon ombilical, région sous-amniotique	candidosique		placenta	Microabcès sous-amniotiques du cordon (Candida)	
+FOETO:PP.PLA-INF-027	element	modifications réactives épithéliales	épithélium amniotique			placenta	Modifications réactives de l'épithélium amniotique	libellé peu spécifique, ne précise pas la nature des modifications
+FOETO:PP.PLA-INF-028	element	nécrose des myocytes de la média	vaisseau ombilical	induite par le méconium		placenta	Myonécrose vasculaire ombilicale induite par le méconium	
+FOETO:PP.PLA-INF-029	element	dépôt de méconium	région sous-amniotique			placenta	Méconium subamniotique	
+FOETO:PP.PLA-INF-030	element	métaplasie malpighienne	épithélium du cordon ombilical			placenta	Métaplasie malpighienne de l'épithélium du cordon ombilical	
+FOETO:PP.PLA-INF-031	element	nécrose des myocytes de la média	vaisseaux du cordon ombilical et de la plaque choriale	induite par le méconium		placenta	Nécrose musculaire vasculaire méconique (cordon/surface placentaire)	
+FOETO:PP.PLA-INF-032	entite	inflammation placentaire	placenta	hématogène		placenta	Placentite hématogène	
+FOETO:PP.PLA-INF-033	element	périvasculite	vaisseau décidual	chronique		placenta	Périvasculite chronique déciduale	
+FOETO:PP.PLA-INF-034	element	réaction giganto-cellulaire à corps étranger au vernix	décidue et myomètre			placenta	Réaction à corps étranger au vernix (décidua/myomètre)	
+FOETO:PP.PLA-INF-035	element	œdème stromal avec augmentation des cellules de hofbauer	stroma villositaire			placenta	Stroma villositaire œdémateux avec augmentation des cellules de Hofbauer	
+FOETO:PP.PLA-INF-036	element	hyphes et spores fongiques	placenta	candidosique		placenta	Structures mycéliennes et spores fongiques (candida) dans le placenta	
+FOETO:PP.PLA-INF-037	entite	vascularite éosinophilique à cellules t	vaisseau de la plaque choriale			placenta	Vascularite choriale éosinophilique à cellules T	
+FOETO:PP.PLA-MAL-025	element	kyste	gelée de Wharton			placenta	Kyste de la gelée de Wharton	
+FOETO:PP.PLA-MAL-026	entite	kyste omphalomésentérique	cordon ombilical			placenta	Kyste omphalomésentérique du cordon ombilical	
+FOETO:PP.PLA-MAL-027	element	métaplasie malpighienne	surface du cordon ombilical			placenta	Métaplasie malpighienne de la surface du cordon	
+FOETO:PP.PLA-MAL-028	element	nécrose épithéliale	épithélium amniotique de la membrane de séparation gémellaire			placenta	Nécrose de l'épithélium amniotique (membrane de séparation gémellaire)	
+FOETO:PP.PLA-MAL-029	element	nécrose pariétale	artère ombilicale			placenta	Nécrose de la paroi artérielle ombilicale	
+FOETO:PP.PLA-MAL-030	entite	insertion circummarginale des membranes	marge placentaire			placenta	Placenta circummarginal	
+FOETO:PP.PLA-MAL-031	entite	insertion circumvallée des membranes	marge placentaire			placenta	Placenta circumvallé	
+FOETO:PP.PLA-MAL-032	entite	infarctus	territoire placentaire du jumeau papyracé	focal		placenta	Placenta fœtus papyraceus (portion infarcte)	libellé mêlant une entité gémellaire (fœtus papyraceus) et la lésion de son territoire placentaire
+FOETO:PP.PLA-MAL-033	element	reliquat musculaire	artère ombilicale	atrophique		placenta	Remnant musculaire d'artère ombilicale atrophiée	
+FOETO:PP.PLA-MAL-034	pattern				séquence anémie-polycythémie gémellaire (TAPS)	placenta	Séquence anémie-polycythémie gémellaire (TAPS) — aspect placentaire	libellé renvoyant globalement aux aspects placentaires, sans lésion élémentaire précisée
+FOETO:PP.PLA-MAL-035	element	thrombose	artère ombilicale			placenta	Thrombose d'artère ombilicale	
+FOETO:PP.PLA-MAL-036	element	thrombose	veine ombilicale			placenta	Thrombose de veine ombilicale	
+FOETO:PP.PLA-MAL-037	element	thrombose	veine de surface placentaire			placenta	Thrombose des veines de surface placentaire	
+FOETO:PP.PLA-MAL-038	element	tissu ectopique	cordon ombilical			placenta	Tissu ectopique dans le cordon ombilical	nature du tissu ectopique non précisée dans le libellé
+FOETO:PP.PLA-MAL-039	element	torsion et coarctation	cordon ombilical			placenta	Torsion / coarctation du cordon ombilical	libellé regroupant deux lésions distinctes (torsion, coarctation) sous un seul intitulé
+FOETO:PP.PAR-VAS-013	entite	artériopathie	artère déciduale		malperfusion vasculaire maternelle (MVM)	parenchyme	MVM — Artériopathie déciduale	
+FOETO:PP.PAR-VAS-014	entite	hypoplasie villositaire distale	villosité distale		malperfusion vasculaire maternelle (MVM)	parenchyme	MVM — Hypoplasie villositaire distale	
+FOETO:PP.PAR-VAS-015	element	infarctus	villosité		malperfusion vasculaire maternelle (MVM)	parenchyme	MVM — Infarctus	
+FOETO:PP.PAR-VAS-016	pattern			segmentaire	malperfusion vasculaire fœtale (FVM)	parenchyme	Malperfusion vasculaire fœtale segmentaire	
+FOETO:PP.PAR-VAS-017	element	nécrose fibrinoïde pariétale	artère déciduale			parenchyme	Nécrose fibrinoïde de la paroi artérielle déciduale	
+FOETO:PP.PAR-VAS-018	element	nécrose fibrinoïde pariétale	villosité			parenchyme	Nécrose fibrinoïde intravillositaire	
+FOETO:PP.PAR-VAS-019	entite	thrombose	espace sous-chorial	massif		parenchyme	Thrombose sous-choriale massive (môle de Breus)	
+FOETO:PP.PAR-VAS-020	element	thrombose	vaisseau de la plaque choriale			parenchyme	Thrombus de la plaque choriale	
+FOETO:PP.PAR-VAS-021	element	thrombose	espace intervilleux			parenchyme	Thrombus intervilleux	
+FOETO:PP.PAR-VAS-022	entite			travées|étendu	NIDF	parenchyme	NIDF — Travées (stade étendu)	acronyme NIDF non explicité dans le libellé : lésion élémentaire et siège non factorisables
+FOETO:PP.PAR-VAS-023	entite	villite	villosité	haut grade|multifocal	villite chronique d'étiologie indéterminée (VUE)	parenchyme	VUE High grade	
+FOETO:PP.PAR-VAS-024	entite	villite	villosité	bas grade|multifocal	villite chronique d'étiologie indéterminée (VUE)	parenchyme	VUE Low grade	
+FOETO:PP.PAR-VAS-025	entite	vasculopathie thrombotique				parenchyme	Vasculopathie thrombotique fœtale	
+FOETO:PP.PAR-VAS-026	element	villosités avasculaires	villosité			parenchyme	Villosités avasculaires	
+FOETO:PP.PAR-VAS-027	entite			focal|îlots	NIDF	parenchyme	NIDF — Îlots (stade focal)	acronyme NIDF non explicité dans le libellé : lésion élémentaire et siège non factorisables
+FOETO:PP.PLA-NOR-088	maturation	inclusions de glycogène	cytotrophoblaste			placenta	Inclusions de glycogène dans les cellules cytotrophoblastiques	
+FOETO:PP.PLA-NOR-089	structure		insertion du cordon ombilical	central		placenta	Insertion du cordon ombilical — centrale	
+FOETO:PP.PLA-NOR-090	element	invasion trophoblastique	myomètre			placenta	Invasion trophoblastique myométriale	phénomène de placentation physiologique, non lésionnel en soi
+FOETO:PP.PLA-NOR-091	element	kyste	amnios			placenta	Kyste amniotique	
+FOETO:PP.PLA-NOR-092	element	kyste	membranes chorio-amniotiques	microscopique		placenta	Kyste choriamniotique microscopique (membranes)	
+FOETO:PP.PLA-NOR-093	element	kyste	chorion			placenta	Kyste chorioniaque	libellé orthographiquement altéré (« chorioniaque »), siège chorial imprécis
+FOETO:PP.PLA-NOR-094	element	kyste	îlot cellulaire trophoblastique			placenta	Kyste d'îlot cellulaire trophoblastique	
+FOETO:PP.PLA-NOR-095	element	kyste	trophoblaste extravilleux			placenta	Kyste trophoblastique extravilleux	
+FOETO:PP.PLA-NOR-096	element	kyste	îlot cellulaire trophoblastique	multiple		placenta	Kystes des îlots cellulaires trophoblastiques	
+FOETO:PP.PLA-NOR-097	structure		espace sous-chorial			placenta	Lac sous-chorial	
+FOETO:PP.PLA-NOR-098	structure		pore intervilleux			placenta	Largeur des pores intervilleux	paramètre morphométrique (largeur) et non lésion ni structure au sens strict
+FOETO:PP.PLA-NOR-099	structure		lit placentaire			placenta	Lit placentaire (site placentaire)	
+FOETO:PP.PLA-NOR-100	maturation		capillaire villositaire	central		placenta	Localisation centrale des capillaires villositaires	
+FOETO:PP.PLA-NOR-101	structure		macrophage villositaire			placenta	Macrophage villositaire (cellule de Hofbauer)	
+FOETO:PP.PLA-NOR-102	structure		macrophage villositaire	multiple		placenta	Macrophages villeux (cellules de Hofbauer)	
+FOETO:PP.PLA-NOR-133	structure		membrane de séparation gémellaire	bichorionique biamniotique		placenta	Placenta bichorionique biamniотique (architecture membranaire)	
+FOETO:PP.PLA-NOR-134	structure		placenta	bilobé		placenta	Placenta bilobé	variante de forme placentaire, non lésionnelle
+FOETO:PP.PLA-NOR-135	structure		placenta	membraneux		placenta	Placenta membraneux	anomalie de forme placentaire classée en architecture
+FOETO:PP.PLA-NOR-136	structure		placenta	gémellaire|monochorionique diamniotique		placenta	Placenta monochorionique diamniotique	
+FOETO:PP.PLA-NOR-137	structure		membrane de séparation gémellaire	monochorionique diamniotique		placenta	Placenta monochorionique diamniотique (architecture membranaire)	
+FOETO:PP.PLA-NOR-138	structure		placenta	gémellaire|monochorionique monoamniotique		placenta	Placenta monochorionique monoamniotique	
+FOETO:PP.PLA-NOR-139	structure		plaque basale			placenta	Plaque basale	
+FOETO:PP.PLA-NOR-140	structure		plaque basale	architecture materno-fœtale		placenta	Plaque basale — architecture materno-fœtale	
+FOETO:PP.PLA-NOR-141	structure		plaque choriale			placenta	Plaque choriale	
+FOETO:PP.PLA-NOR-142	structure		plaque choriale	architecture fœtale		placenta	Plaque choriale — architecture fœtale	
+FOETO:PP.PLA-NOR-143	structure		amnios	monochorionique monoamniotique|vestigial		placenta	Plica amniotique vestigiale (placenta MoMo)	
+FOETO:PP.PLA-NOR-144	element	ponts syncytiaux	espace intervilleux			placenta	Ponts intervillositaires syncytiaux	
+FOETO:PP.PLA-NOR-145	maturation		cytotrophoblaste villositaire	selon l'âge gestationnel		placenta	Proportion de cytotrophoblaste villositaire selon l'âge gestationnel	
+FOETO:PP.PLA-NOR-146	element	précurseurs hématopoïétiques non érythroïdes circulants		circulant|non érythroïde		placenta	Précurseurs hématopoïétiques non érythroïdes circulants	siège vasculaire fœtal implicite, non précisé dans le libellé
+FOETO:PP.PLA-NOR-147	element	pseudokyste	septum placentaire			placenta	Pseudokystes des septa placentaires	
+FOETO:PP.MEM-CLA-001	entite	amnios nodosum	amnios			membranes	Amnios nodosum	
+FOETO:PP.MEM-CLA-002	element	macrophages chargés de méconium	amnios	délai 24-48 h		membranes	Macrophages chargés de méconium (délai 24-48h)	
+FOETO:PP.MEM-CLA-003	element	nécrose laminaire	décidue des membranes			membranes	Nécrose laminaire des membranes	
+FOETO:PP.MEM-CLA-004	element	séparation chorioamniotique	interface chorio-amniotique			membranes	Séparation chorioamniotique	
+FOETO:PP.MEM-INF-001	entite	infiltrat de polynucléaires neutrophiles	membranes chorio-amniotiques	aigu|modéré|stade 2	chorioamnionite	membranes	Chorioamniotite aiguë modérée (stade 2)	
+FOETO:PP.MEM-INF-002	entite	infiltrat de polynucléaires neutrophiles	espace sous-chorial	aigu|stade 1	chorioamnionite	membranes	Chorioamniotite aiguë sous-choriale (stade 1)	
+FOETO:PP.MEM-INF-003	entite	infiltrat lymphocytaire	membranes chorio-amniotiques	chronique	chorioamnionite	membranes	Chorioamniotite chronique	
+FOETO:PP.MEM-INF-004	entite	infiltrat de polynucléaires neutrophiles avec nécrose	membranes chorio-amniotiques	aigu|nécrosant|stade 3	chorioamnionite	membranes	Chorioamniotite nécrosante (stade 3)	
+FOETO:PP.MEM-INF-005	entite	infiltrat inflammatoire mixte	membranes chorio-amniotiques	subaigu	chorioamnionite	membranes	Chorioamniotite subaiguë	libellé sans précision du type cellulaire ni du stade
+FOETO:PP.MEM-INF-006	entite	infiltrat de polynucléaires neutrophiles	décidue	aigu		membranes	Déciduite aiguë	
+FOETO:PP.MEM-INF-007	entite	infiltrat lympho-plasmocytaire	décidue basale	chronique		membranes	Déciduite chronique	
+FOETO:PP.MEM-INF-008	pattern			grade 1	réponse inflammatoire maternelle (MIR)	membranes	MIR Grade 1	libellé purement gradué, aucune lésion ni siège précisé
+FOETO:PP.MEM-INF-009	element	abcès	décidue	aigu|grade 1	réponse inflammatoire maternelle (MIR)	membranes	MIR Grade 1 — Abcès décidual	
+FOETO:PP.MEM-INF-010	entite	infiltrat de polynucléaires neutrophiles	espace sous-chorial	aigu|stade 1	réponse inflammatoire maternelle (MIR)	membranes	MIR Stage 1 — Chorionite subchoriale aiguë	libellé dit sous-chorial alors que la description micro situe l'infiltrat dans la décidue
+FOETO:PP.MEM-INF-011	entite	infiltrat de polynucléaires neutrophiles	membranes chorio-amniotiques	aigu|stade 2	réponse inflammatoire maternelle (MIR)	membranes	MIR Stage 2 — Chorioamniotite aiguë	
+FOETO:PP.PLA-NOR-103	maturation		villosité	selon l'âge gestationnel		placenta	Maturation villositaire (évaluation par rapport à l'âge gestationnel)	libellé générique : désigne l'acte d'évaluation de la maturation, pas un stade précis
+FOETO:PP.PLA-NOR-104	maturation		villosité	accélérée		placenta	Maturation villositaire accélérée	
+FOETO:PP.PLA-NOR-105	maturation		villosité	adaptée à l'âge gestationnel		placenta	Maturation villositaire adaptée à l'âge gestationnel	
+FOETO:PP.PLA-NOR-106	maturation		villosité	normal		placenta	Maturation villositaire normale	
+FOETO:PP.PLA-NOR-107	maturation		villosité	retardée		placenta	Maturation villositaire retardée	
+FOETO:PP.PLA-NOR-108	structure		amnios			placenta	Membrane amniotique (amnios)	
+FOETO:PP.PLA-NOR-109	structure		membrane basale trophoblastique			placenta	Membrane basale trophoblastique	
+FOETO:PP.PLA-NOR-110	structure		membrane de séparation gémellaire	bichorionique biamniotique|coupe histologique		placenta	Membrane de séparation gémellaire DiDi (coupe histologique)	
+FOETO:PP.PLA-NOR-111	structure		membrane de séparation gémellaire	coupe histologique|monochorionique diamniotique		placenta	Membrane de séparation gémellaire DiMo (coupe histologique)	
+FOETO:PP.PLA-NOR-112	structure		membrane de séparation gémellaire	bichorionique biamniotique		placenta	Membrane séparatrice bichoriale biamniote	
+FOETO:PP.PLA-NOR-113	structure		membrane de séparation gémellaire	monochorionique diamniotique		placenta	Membrane séparatrice monochoriale diamniote	
+FOETO:PP.PLA-NOR-114	structure		membrane vasculo-syncytiale			placenta	Membrane vasculo-syncytiale	repère architectural normal servant d'indicateur de maturation villositaire
+FOETO:PP.PLA-NOR-115	structure		capillaire villositaire terminal	membranes basales distinctes		placenta	Membranes basales distinctes des capillaires villositaires terminaux	
+FOETO:PP.PLA-NOR-116	structure		membranes libres	architecture tricouche		placenta	Membranes extraplacentaires — architecture tricouche	
+FOETO:PP.PLA-NOR-117	structure		membrane vasculo-syncytiale			placenta	Membranes vasculo-syncytiales	variante au pluriel du même repère architectural
+FOETO:PP.PLA-MET-012	element	histiocytes de surcharge	tissus placentaires			placenta	Histiocytes de surcharge dans les tissus placentaires	siège très vague (« tissus placentaires ») et nature du matériel de surcharge non précisée
+FOETO:PP.PLA-MET-013	element	dépôt d'hémosidérine	membranes			placenta	Hémosidérose membranaire placentaire	
+FOETO:PP.PLA-MET-014	element	inclusions lysosomales membraneuses	placenta			placenta	Inclusions lysosomales membraneuses dans le placenta	type cellulaire non précisé ; lésion identifiable seulement en microscopie électronique
+FOETO:PP.PLA-MET-015	element	infiltrat de cellules de gaucher	stroma villositaire			placenta	Infiltrat de cellules de Gaucher dans le stroma villositaire	
+FOETO:PP.PLA-MET-016	element	macrophages chargés d'hémosidérine	membranes chorio-amniotiques			placenta	Macrophages avec hémosidérine dans la chorioamniotique	
+FOETO:PP.PLA-MET-017	element	macrophages chargés d'hémosidérine	cordon ombilical et membranes			placenta	Macrophages avec pigment ferrique dans le cordon et les membranes	siège composite (deux structures dans un même libellé)
+FOETO:PP.PLA-MET-018	element	macrophages chargés d'hémosidérine	membranes			placenta	Macrophages chargés d'hémosidérine dans les membranes	
+FOETO:PP.PLA-MET-019	element	minéralisation villositaire	villosité	segmentaire		placenta	Minéralisation segmentaire des villosités	
+FOETO:PP.PLA-MET-020	element	macrophages chargés de pigment biliaire	membranes			placenta	Pigment biliaire dans les macrophages des membranes (ictère fœtal)	la mention « ictère fœtal » est une interprétation clinique accolée à la lésion
+FOETO:PP.PLA-MET-021	element	placentomégalie	placenta	aspect pâle		placenta	Placentomégalie avec aspect pâle	signe macroscopique et non lésion histologique élémentaire
+FOETO:PP.PLA-MET-022	element	produits de stockage anormaux	trophoblaste et macrophages stromaux villositaires			placenta	Produits de stockage anormaux dans le trophoblaste et les macrophages stromaux	siège composite ; nature du matériel de stockage non précisée
+FOETO:PP.PLA-MET-023	element	vacuoles claires limitées par une membrane	cellules placentaires	microscopie électronique		placenta	Vacuoles claires liées à une membrane dans les cellules placentaires (MEB)	type cellulaire non précisé
+FOETO:PP.PLA-MET-024	element	vacuolisation endothéliale	capillaire villositaire			placenta	Vacuolisation de l'endothélium capillaire villositaire	
+FOETO:PP.PLA-MET-025	element	vacuolisation épithéliale	épithélium amniotique			placenta	Vacuolisation de l'épithélium amniotique	
+FOETO:PP.PLA-MET-026	element	vacuolisation des fibrocytes	cordon ombilical			placenta	Vacuolisation des fibrocytes du cordon ombilical	
+FOETO:PP.PLA-NOR-193	maturation		villosité intermédiaire mature			placenta	Villosité intermédiaire mature	
+FOETO:PP.PLA-NOR-194	maturation		villosité mésenchymateuse			placenta	Villosité mésenchymateuse	
+FOETO:PP.PLA-NOR-195	structure		villosité souche			placenta	Villosité souche	
+FOETO:PP.PLA-NOR-196	maturation		villosité terminale			placenta	Villosité terminale	
+FOETO:PP.PLA-NOR-197	structure		villosité d'ancrage			placenta	Villosités d'ancrage dans la plaque basale	
+FOETO:PP.PLA-NOR-198	maturation	proportion augmentée de villosités intermédiaires	villosité intermédiaire	augmenté		placenta	Villosités intermédiaires en proportion augmentée	libellé quantitatif sans précision de type (immature/mature) ni de seuil
+FOETO:PP.PLA-NOR-199	maturation		villosité intermédiaire immature			placenta	Villosités intermédiaires immatures	
+FOETO:PP.PLA-NOR-200	maturation		villosité intermédiaire immature	aspect histologique		placenta	Villosités intermédiaires immatures — aspect histologique	mention 'aspect histologique' purement descriptive, n'ajoute pas de contenu factorisable
+FOETO:PP.PLA-NOR-201	maturation		villosité intermédiaire mature			placenta	Villosités intermédiaires matures	
+FOETO:PP.PLA-NOR-202	maturation		villosité intermédiaire mature	aspect histologique		placenta	Villosités intermédiaires matures — aspect histologique	mention 'aspect histologique' purement descriptive, n'ajoute pas de contenu factorisable
+FOETO:PP.PLA-NOR-203	maturation		villosité mésenchymateuse			placenta	Villosités mésenchymateuses	
+FOETO:PP.PLA-NOR-204	maturation		villosité mésenchymateuse	aspect histologique		placenta	Villosités mésenchymateuses — aspect histologique	mention 'aspect histologique' purement descriptive, n'ajoute pas de contenu factorisable
+FOETO:PP.PLA-NOR-205	structure		villosité souche			placenta	Villosités souches (villi souches)	
+FOETO:PP.PLA-NOR-206	structure		villosité souche	aspect histologique		placenta	Villosités souches — aspect histologique	mention 'aspect histologique' purement descriptive, n'ajoute pas de contenu factorisable
+FOETO:PP.PLA-NOR-207	maturation		villosité terminale			placenta	Villosités terminales	
+FOETO:PP.PBA-VAS-001	entite	artériopathie	artère déciduale de la plaque basale			plaque_basale	Artériopathie déciduale de la plaque basale	libellé générique : ne précise pas le type d'artériopathie (nécrose fibrinoïde, athérose, hypertrophie musculaire)
+FOETO:PP.PBA-VAS-002	element	nécrose fibrinoïde pariétale	artère déciduale			plaque_basale	Nécrose fibrinoïde de la paroi artérielle déciduale	
+FOETO:PP.PBA-VAS-003	entite	hématome rétroplacentaire	plaque basale			plaque_basale	Hématome rétroplacentaire basal	
+FOETO:PP.PCH-INF-001	element	chorionite	région sous-choriale	aigu		plaque_choriale	Chorionite subchoriale aiguë	
+FOETO:PP.PCH-INF-002	entite	chorioamniotite	plaque choriale	aigu	chorioamnionite	plaque_choriale	Chorioamniotite aiguë de la plaque choriale	
+FOETO:PP.PCH-MET-001	element	dépôt de fibrinoïde	espace sous-chorial			plaque_choriale	Dépôts de fibrinoïde sous-choriaux	
+FOETO:PP.PCH-NOR-000	structure		plaque choriale	normal		plaque_choriale	Plaque choriale normale	
+FOETO:PP.PCH-NOR-001	structure	coussinet myxoïde intimal	vaisseau de la plaque choriale			plaque_choriale	Coussinets myxoïdes intimaux des vaisseaux de la plaque choriale	aspect classé comme variante normale, pas comme lésion : niveau ambigu entre structure et élément
+FOETO:PP.PCH-VAS-001	element	thrombose	vaisseau de la plaque choriale			plaque_choriale	Thrombus de la plaque choriale	
+FOETO:PP.PCH-VAS-002	element	épaississement pariétal avec ectasie luminale	vaisseau de la plaque choriale			plaque_choriale	Vaisseau de la plaque choriale à paroi épaisse et ectasique	
+FOETO:PP.PCH-VAS-003	entite	thrombose	espace sous-chorial	massif		plaque_choriale	Thrombose sous-choriale massive (môle de Breus)	
+FOETO:PP.PCH-VAS-004	element	asymétrie de l'épaisseur pariétale	vaisseau de la plaque choriale			plaque_choriale	Asymétrie de la paroi des vaisseaux de la plaque choriale	
+FOETO:PP.VAC-INF-001	element	vascularite	vaisseau allanto-chorial	stade 1	réponse inflammatoire fœtale (FIR)	vaisseaux_allantochoriaux	Vascularite des vaisseaux allanto-choriaux (réponse fœtale stade 1)	
+FOETO:PP.VAC-NOR-000	structure		vaisseau allanto-chorial	normal		vaisseaux_allantochoriaux	Vaisseaux allanto-choriaux normaux	
+FOETO:PP.VAC-VAS-001	element	thrombose	vaisseau allanto-chorial			vaisseaux_allantochoriaux	Thrombose des vaisseaux allanto-choriaux	
+FOETO:PP.PLA-NOR-208	maturation		villosité terminale			placenta	Villosités terminales — aspect histologique	libellé générique « aspect histologique », sans lésion ni qualifieur factorisable
+FOETO:PP.PLA-NOR-209	element	élargissement villositaire en patte	villosité			placenta	Villosités élargies à aspect en patte	
+FOETO:PP.PLA-NOR-210	element	vésicules extracellulaires trophoblastiques	trophoblaste			placenta	Vésicules extracellulaires trophoblastiques (exosomes / microvésicules)	entité ultrastructurale/biologique, non observable en microscopie optique de routine
+FOETO:PP.PLA-NOR-211	element	altération morphologique des membranes	membranes fœtales, zone cervicale	focal		placenta	Zone d'altération morphologique des membranes (zone cervicale)	« zone d'altération morphologique » reste vague sur la nature de l'altération
+FOETO:PP.PLA-NOR-212	structure		zone jonctionnelle placentaire			placenta	Zone jonctionnelle (zone de décollement placentaire)	
+FOETO:PP.PLA-NOR-213	element	épaississement de la membrane basale	membrane basale trophoblastique et vasculaire villositaire			placenta	Épaississement de la membrane basale trophoblastique et vasculaire	
+FOETO:PP.PLA-NOR-214	element	épaississement du syncytiotrophoblaste	syncytiotrophoblaste			placenta	Épaississement du syncytiotrophoblaste	
+FOETO:PP.PLA-NOR-215	structure		épithélium amniotique			placenta	Épithélium amniotique	
+FOETO:PP.PLA-NOR-216	structure		épithélium amniotique	cubique à cylindrique		placenta	Épithélium amniotique cubique à cylindrique	
+FOETO:PP.PLA-NOR-217	structure		équateur vasculaire placentaire	monochorionique		placenta	Équateur vasculaire placentaire (jumeaux monochorioniques)	
+FOETO:PP.PLA-NOR-218	element	érythroblastes circulants	vaisseau villositaire			placenta	Érythroblastes dans les vaisseaux fœtaux villositaires	
+FOETO:PP.PLA-NOR-219	element	érythroblastes circulants	vaisseau villositaire			placenta	Érythrocytes nucléés dans la circulation villositaire fœtale	classé en axe maturation alors que le libellé décrit la même observation que le terme voisin
+FOETO:PP.PLA-NOR-220	element	érythropoïèse extramédullaire	stroma villositaire			placenta	Érythropoïèse extramédullaire stromale	
+FOETO:PP.PLA-NOR-221	structure		îlot cellulaire trophoblastique			placenta	Îlot cellulaire trophoblastique	
+FOETO:PP.PLA-NOR-222	structure		îlot cellulaire trophoblastique			placenta	Îlots cellulaires trophoblastiques	simple variante de nombre du libellé précédent
+FOETO:PP.PLA-NOR-058	element	dilatation sinusoïdale capillaire	capillaire villositaire fœtal			placenta	Dilatation sinusoïdale des capillaires fœtaux	peut correspondre à un caractère normal de maturation terminale plutôt qu'à une lésion
+FOETO:PP.PLA-NOR-059	maturation	discordance de maturation villositaire	villosité	monochorionique		placenta	Discordance de maturité villositaire entre jumeaux monochorioniques	
+FOETO:PP.PLA-NOR-060	structure		décidue capsulaire	membranes		placenta	Décidua capsulaire (membranes)	
+FOETO:PP.PLA-NOR-061	structure		décidue pariétale			placenta	Décidua pariétale — architecture vasculaire	libellé désigne l'architecture vasculaire déciduale, repère anatomique sans lésion précisée
+FOETO:PP.PLA-NOR-062	element	dédifférenciation des cellules musculaires lisses	artère villositaire			placenta	Dédifférenciation des cellules musculaires lisses artérielles villeuses	
+FOETO:PP.PLA-NOR-063	element	dégénérescence ballonnisante	épithélium amniotique			placenta	Dégénérescence ballonnisante de l'épithélium amniotique	
+FOETO:PP.PLA-NOR-064	element	dénudation épithéliale	syncytiotrophoblaste	focal		placenta	Dénudation focale du syncytiotrophoblaste	
+FOETO:PP.PLA-NOR-065	element	dépôt de fibrine	région sous-choriale			placenta	Dépôt de fibrine sous-choriale	
+FOETO:PP.PLA-NOR-066	element	dépôt de fibrinoïde	placenta			placenta	Dépôt de fibrinoïde placentaire	siège intraplacentaire non précisé, libellé générique
+FOETO:PP.PLA-NOR-067	element	dépôts calciques et ferriques	membrane basale trophoblastique			placenta	Dépôts calciques et ferriques dans la membrane basale trophoblastique	
+FOETO:PP.PLA-NOR-068	element	dépôt de fibrine	surface villositaire			placenta	Dépôts de fibrine sur la surface villositaire	
+FOETO:PP.PLA-NOR-069	element	dépôt de fibrinoïde	plaque basale			placenta	Dépôts de fibrinoïde dans la plaque basale	
+FOETO:PP.PLA-NOR-070	structure		espace intervilleux			placenta	Espace intervilleux	
+FOETO:PP.PLA-NOR-071	structure		stroma villositaire			placenta	Fibres collagènes du stroma villeux	
+FOETO:PP.PLA-NOR-072	structure		plaque basale			placenta	Fibrine de Rohr et fibrine de Nitabuch	libellé regroupe deux couches fibrinoïdes distinctes (Rohr, sous-trophoblastique ; Nitabuch, déciduo-trophoblastique)
+FOETO:PP.PLA-INF-008	element	dégénérescence épithéliale	épithélium amniotique	induite par le méconium		placenta	Dégénérescence de l'épithélium amniotique par le méconium	
+FOETO:PP.PLA-INF-009	element	dépôt de c4d	villosité	immunohistochimie		placenta	Dépôt de C4d dans les villosités (immunohistochimie)	
+FOETO:PP.PLA-INF-010	element	dépôt de méconium	chorion			placenta	Dépôt de méconium dans le chorion	
+FOETO:PP.PLA-INF-011	entite	funiculite nécrosante	cordon ombilical	réponse inflammatoire fœtale|stade 3		placenta	Funiculite nécrosante (stade 3 réponse fœtale)	
+FOETO:PP.PLA-INF-012	entite	funiculite à micro-abcès	surface du cordon ombilical	candidosique|périphérique		placenta	Funiculite périphérique à micro-abcès (candidose)	
+FOETO:PP.PLA-INF-013	entite	funiculite	cordon ombilical	aigu		placenta	Funisitis aiguë	
+FOETO:PP.PLA-INF-014	entite	intervillosite histiocytaire	espace intervilleux	chronique		placenta	Histiocytose intervillositaire chronique	
+FOETO:PP.PLA-INF-015	element	hyperplasie histiocytaire	chorion			placenta	Hyperplasie histiocytaire chorionique	
+FOETO:PP.PLA-INF-016	element	inclusions virales cytomégaliques	placenta	cellules en œil de hibou		placenta	Inclusions cytomégalovirus placentaires (cellules en œil de hibou)	siège placentaire non précisé dans le libellé
+FOETO:PP.PLA-INF-017	element	inclusions virales herpétiques	trophoblaste et décidue			placenta	Inclusions herpétiques dans le trophoblaste/caduque	
+FOETO:PP.PLA-INF-018	element	inclusions virales intranucléaires et intracytoplasmiques	villosité	cytomégalovirus		placenta	Inclusions virales intranucléaires et intracytoplasmiques dans les villosités (CMV)	
+FOETO:PP.PLA-INF-019	element	infiltrat de polynucléaires neutrophiles	espace intervilleux et villosité	micro-abcès		placenta	Infiltrat neutrophilique intervillositaire et intravillositaire (microabcès)	
+FOETO:PP.PLA-INF-020	element	infiltrat plasmocytaire	villosité			placenta	Infiltrat plasmocytaire villositaire	
+FOETO:PP.PLA-INF-021	entite	infiltrat inflammatoire	décidue	chronique		placenta	Inflammation chronique déciduale	
+FOETO:PP.PLA-INF-022	entite	intervillosite	espace intervilleux	chronique|massif		placenta	Intervillite chronique massive	
+FOETO:PP.PLA-DYS-037	element	stroma myxomateux	villosité			placenta	Stroma villositaire myxomateux	
+FOETO:PP.PLA-DYS-038	entite	thrombohématome	espace sous-chorial			placenta	Thrombohématome sous-chorial	
+FOETO:PP.PLA-DYS-039	element	thrombose	vaisseau fœtal placentaire			placenta	Thrombus vasculaire placentaire fœtal	siège vasculaire fœtal non précisé (plaque choriale, tronc villositaire ou cordon)
+FOETO:PP.PLA-DYS-040	element	épaississement pariétal avec ectasie luminale	vaisseau de la plaque choriale			placenta	Vaisseau de la plaque choriale à paroi épaisse et ectasique	
+FOETO:PP.PLA-DYS-041	element	épaississement pariétal vasculaire	vaisseau de villosité tronculaire			placenta	Vaisseau-tronc villositaire à paroi épaisse	
+FOETO:PP.PLA-DYS-042	element	élargissement villositaire œdémateux	villosité			placenta	Villosité choriale élargie et œdémateuse	
+FOETO:PP.PLA-DYS-043	element	villosité hydropique avasculaire	villosité	diffus		placenta	Villosité hydropique diffuse sans vascularisation	
+FOETO:PP.PLA-DYS-044	element	élargissement villositaire avec paucité vasculaire	villosité	relatif		placenta	Villosités agrandies avec paucité vasculaire relative	
+FOETO:PP.PLA-INF-001	element	inclusions virales	cellule amniotique			placenta	Cellules amniotiques infectées (inclusions virales amniotiques)	
+FOETO:PP.PLA-INF-002	element	hémophagocytose	vaisseau fœtal placentaire			placenta	Cellules avec hémophagocytose dans la circulation fœtale placentaire	
+FOETO:PP.PLA-INF-003	element	cellules géantes multinucléées de type langhans	villosité			placenta	Cellules géantes multinucléées de type Langhans dans les villosités	
+FOETO:PP.PLA-INF-004	pattern	chorioamniotite	membranes chorio-amniotiques		chorioamnionite	placenta	Chorioamnionite	temporalité et intensité non précisées
+FOETO:PP.PLA-INF-005	pattern	chorioamniotite	membranes chorio-amniotiques	aigu	chorioamnionite	placenta	Chorioamnionite aiguë	
+FOETO:PP.PLA-INF-006	pattern	chorioamniotite	membranes chorio-amniotiques	chronique	chorioamnionite	placenta	Chorioamnionite chronique	
+FOETO:PP.PLA-INF-007	pattern	chorioamniotite	membranes chorio-amniotiques	aigu	chorioamnionite	placenta	Chorioamniotite aiguë	libellé français orthographiquement déviant (chorioamniotite) pour un contenu de chorioamnionite aiguë
+FOETO:PP.PLA-NOR-148	structure	péricytes péri-vasculaires	vaisseau villositaire	MSA-positif|prolifération vasculaire villositaire		placenta	Péricytes MSA-positifs autour des vaisseaux villositaires proliférants	libellé immunohistochimique mêlant marqueur cellulaire et contexte de prolifération vasculaire ; statut lésionnel ou normal non tranché
+FOETO:PP.PLA-NOR-149	structure		placenta			placenta	Rapport poids placentaire / poids fœtal	paramètre biométrique (rapport pondéral), non factorisable en lésion/site
+FOETO:PP.PLA-NOR-150	structure		reliquat du canal allantoïque du cordon ombilical			placenta	Reliquat allantoïdien dans le cordon ombilical	
+FOETO:PP.PLA-NOR-151	structure		reliquat de vésicule vitelline sous-amniotique			placenta	Reliquat de vésicule vitelline sous l'amnios	
+FOETO:PP.PLA-NOR-152	structure		reliquat du canal omphalo-mésentérique des membranes			placenta	Reliquat du canal omphalo-mésentérique (membranes)	
+FOETO:PP.PLA-NOR-153	structure		reliquat du canal omphalo-mésentérique du cordon ombilical			placenta	Reliquat du canal vitellin (duct omphalo-mésentérique) dans le cordon	
+FOETO:PP.PLA-NOR-154	structure		reliquat de vésicule vitelline	gémellaire		placenta	Reliquat du sac vitellin (placenta gémellaire)	
+FOETO:PP.PLA-NOR-155	structure		reliquat de vaisseaux vitellins du cordon ombilical			placenta	Reliquat vasculaire vitellin dans le cordon ombilical	
+FOETO:PP.PLA-NOR-156	structure		reliquat de vésicule vitelline			placenta	Remnant du sac vitellin	
+FOETO:PP.PLA-NOR-157	maturation		artère spiralée	physiologique		placenta	Remodelage des artères spiralées — maturation de la plaque basale	libellé composite associant remodelage artériel et maturation de la plaque basale
+FOETO:PP.PLA-NOR-158	maturation		artère spiralée	physiologique		placenta	Remodelage physiologique des artères spiralées	
+FOETO:PP.PLA-NOR-159	structure		amnios du cordon ombilical			placenta	Revêtement épithélial amniotique du cordon ombilical	
+FOETO:PP.PLA-NOR-160	element	régénération syncytiotrophoblastique	syncytiotrophoblaste			placenta	Régénération du syncytiotrophoblaste	processus réparateur plutôt que lésion élémentaire ; siège villositaire non précisé
+FOETO:PP.PLA-NOR-161	element	réseau de réticuline en treillis	capillaire villositaire	anormal|coloration réticuline|en treillis		placenta	Réseau de réticuline en treillis dans les villosités capillaires anormales	nature de l'anomalie capillaire villositaire non précisée dans le libellé
+FOETO:PP.PLA-NOR-162	structure		reliquat du canal allantoïque du cordon ombilical			placenta	Résidu du canal allantoïque	
+FOETO:PP.PLA-DYS-022	element	kyste	septum placentaire			placenta	Kyste septal placentaire	
+FOETO:PP.PLA-DYS-023	pattern		placenta		malperfusion vasculaire fœtale (FVM)	placenta	Malperfusion vasculaire fœtale placentaire	
+FOETO:PP.PLA-DYS-024	element	manchon mésenchymateux	espace périvasculaire villositaire			placenta	Manchon mésenchymateux péri-vasculaire	
+FOETO:PP.PLA-DYS-025	element	métaplasie malpighienne	amnios			placenta	Métaplasie malpighienne de l'amnion	
+FOETO:PP.PLA-DYS-026	element	persistance de trophoblaste endovasculaire intramural	paroi vasculaire utéroplacentaire	troisième trimestre		placenta	Persistance de trophoblastes endovasculaires intramuraux au troisième trimestre	le vaisseau concerné n'est pas précisé dans le libellé (siège intramural seulement)
+FOETO:PP.PLA-DYS-027	element	perte d'expression de l'actine musculaire lisse	stroma villositaire	immunohistochimie		placenta	Perte d'expression de l'actine musculaire lisse dans le stroma villositaire	
+FOETO:PP.PLA-DYS-028	element	perte d'expression de p57kip2	stroma villositaire	immunohistochimie		placenta	Perte d'expression de p57kip2 dans le stroma villositaire	
+FOETO:PP.PLA-DYS-029	entite	placentomégalie	placenta			placenta	Placentomégalie	anomalie macroscopique de poids, non lésion élémentaire microscopique ; aucun seuil précisé
+FOETO:PP.PLA-DYS-030	element	prolifération de trophoblaste intermédiaire	espace périvillositaire			placenta	Prolifération de trophoblastes intermédiaires périvilleuse	
+FOETO:PP.PLA-DYS-031	element	pseudo-inclusion trophoblastique				placenta	Pseudo-inclusion trophoblastique	
+FOETO:PP.PLA-DYS-032	element	expression conservée de p57kip2	trophoblaste	immunohistochimie		placenta	Rétention trophoblastique de l'expression de p57kip2	
+FOETO:PP.PLA-DYS-033	element	sclérose fibromusculaire	vaisseau de villosité tronculaire			placenta	Sclérose fibromusculaire des vaisseaux tronculaires	
+FOETO:PP.PLA-DYS-034	element	septation luminale	lumière vasculaire			placenta	Septation luminale vasculaire	
+FOETO:PP.PLA-DYS-035	element	hyalinisation du stroma	stroma villositaire			placenta	Stroma villositaire hyalinisé	
+FOETO:PP.PLA-DYS-036	element	hypercellularité stromale avec fibroblastes indifférenciés	stroma villositaire			placenta	Stroma villositaire hypercellulaire avec fibroblastes indifférenciés	
+FOETO:PP.PLA-NOR-028	structure		capillaire villositaire fœtal			placenta	Capillaires fœtaux villeux	
+FOETO:PP.PLA-NOR-029	structure		capillaire paravasculaire de villosité souche			placenta	Capillaires paravasculaires des villosités souches	
+FOETO:PP.PLA-NOR-030	element	dilatation sinusoïdale capillaire	capillaire villositaire	dilaté		placenta	Capillaires sinusoïdaux villositaires dilatés	classé en architecture normale alors que le libellé décrit une dilatation : statut normal/lésionnel ambigu
+FOETO:PP.PLA-NOR-031	element	reliquat cartilagineux	région sous-amniotique	résiduel		placenta	Cartilage sous-amniotique (reliquat)	reliquat embryonnaire : frontière structure normale / inclusion lésionnelle non tranchée par le libellé
+FOETO:PP.PLA-NOR-032	structure		cavité centrale du lobule placentaire	zone d'afflux artériel		placenta	Cavité centrale du lobule (zone d'afflux artériel)	
+FOETO:PP.PLA-NOR-033	structure		stroma villositaire			placenta	Cellules de Hofbauer — macrophages stromaux villositaires	
+FOETO:PP.PLA-NOR-034	structure		décidue			placenta	Cellules déciduales	
+FOETO:PP.PLA-NOR-035	structure		décidue			placenta	Cellules musculaires lisses myométriales dans la décidua	présence de cellules musculaires lisses myométriales dans la décidue : repère architectural, valeur lésionnelle non explicitée
+FOETO:PP.PLA-NOR-036	structure		stroma villositaire			placenta	Cellules mésenchymateuses stromales villeuses	
+FOETO:PP.PLA-NOR-037	structure		chorion laeve			placenta	Chorion laeve (membranes libres)	
+FOETO:PP.PLA-NOR-038	structure		chorion laeve			placenta	Chorion laeve — architecture trophoblastique	libellé de type rubrique ('architecture trophoblastique'), sans lésion factorisable
+FOETO:PP.PLA-NOR-039	structure		tissu péri-vasculaire de la plaque choriale			placenta	Collagène péri-vasculaire de la plaque choriale	
+FOETO:PP.PLA-NOR-040	structure		colonne cellulaire trophoblastique			placenta	Colonne cellulaire trophoblastique	
+FOETO:PP.PLA-NOR-041	structure		villosité d'ancrage			placenta	Colonnes de cytotrophoblaste extravilleux (colonnes d'ancrage)	
+FOETO:PP.PLA-NOR-042	structure		contour villositaire	lisse		placenta	Contours villositaires lisses	
+FOETO:PP.PLA-INF-038	element	vascularite	vaisseau allanto-chorial	stade 1	réponse inflammatoire fœtale (FIR)	placenta	Vascularite des vaisseaux allanto-choriaux (réponse fœtale stade 1)	
+FOETO:PP.PLA-INF-039	entite	vascularite	vaisseau de la plaque choriale	à cellules T|éosinophilique		placenta	Vasculite chorionique éosinophilique/à cellules T	
+FOETO:PP.PLA-INF-040	element	vascularite	vaisseaux du cordon ombilical et de la plaque choriale			placenta	Vasculite des vaisseaux chorioniques et ombilicaux	
+FOETO:PP.PLA-INF-041	entite	villite	villosité		villite chronique d'étiologie indéterminée (VUE)	placenta	Villite d'étiologie inconnue	
+FOETO:PP.PLA-INF-042	element	villite	villosité	chronique		placenta	Villosite chronique	
+FOETO:PP.PLA-INF-043	element	inclusions intranucléaires virales des érythroblastes	placenta	parvovirus B19		placenta	Érythroblastes à inclusion intranucléaire Parvovirus B19 (placentaire)	siège intravillositaire non précisé dans le libellé
+FOETO:PP.PLA-MAL-001	entite	amnios nodosum	membrane de séparation gémellaire			placenta	Amnios nodosum (membrane de séparation gémellaire)	
+FOETO:PP.PLA-MAL-002	element	anastomose artério-artérielle	plaque choriale (placenta gémellaire)			placenta	Anastomose artério-artérielle (placenta gémellaire)	
+FOETO:PP.PLA-MAL-003	element	anastomose artério-veineuse	placenta gémellaire	profond		placenta	Anastomose artério-veineuse profonde (placenta gémellaire)	
+FOETO:PP.PLA-MAL-004	element	anastomose veino-veineuse	placenta gémellaire			placenta	Anastomose veino-veineuse (placenta gémellaire)	
+FOETO:PP.PLA-MAL-005	element	artère ombilicale unique	cordon ombilical	gémellaire		placenta	Artère ombilicale unique (grossesse gémellaire)	
+FOETO:PP.PLA-MAL-006	element	calcification pariétale	veine choriale			placenta	Calcification vasculaire placentaire (veines choriales)	
+FOETO:PP.PLA-MAL-007	element	calcification	cordon ombilical			placenta	Calcifications du cordon ombilical	
+FOETO:PP.PLA-MAL-008	element	canal allantoïque patent	cordon ombilical			placenta	Canal allantoïque patent (ouraque)	
+FOETO:PP.PLA-MAL-009	element	congestion capillaire villositaire	capillaire villositaire	jumeau receveur	syndrome transfuseur-transfusé (TTTS)	placenta	Capillaires villositaires congestifs (jumeau receveur, TTTS)	
+FOETO:PP.PAR-NOR-004	element					parenchyme	Autre (label)	libellé fourre-tout non spécifique, aucune facette factorisable
+FOETO:PP.PAR-NOR-005	structure					parenchyme	Autre (région)	libellé fourre-tout désignant une région non précisée
+FOETO:PP.PAR-NOR-006	element	condensation chromatinienne nucléaire	syncytiotrophoblaste			parenchyme	Condensation chromatinienne des noyaux syncytiaux	
+FOETO:PP.PAR-NOR-007	element	excès de trophoblaste multinucléé	plaque basale			parenchyme	Excès de trophoblaste multinucléé dans la basale	
+FOETO:PP.PAR-NOR-008	entite	maturation villositaire accélérée	villosité	accélérée	malperfusion vasculaire maternelle (MVM)	parenchyme	MVM — Maturation villositaire accélérée	
+FOETO:PP.PAR-NOR-009	element	nœuds syncytiaux	syncytiotrophoblaste	augmenté|vrais		parenchyme	Nœuds syncytiaux (vrais)	
+FOETO:PP.PAR-NOR-010	entite	retard de maturation villositaire	villosité	retardée		parenchyme	Retard de maturation villositaire	
+FOETO:PP.PAR-NOR-011	element	sénescence trophoblastique	trophoblaste			parenchyme	Sénescence placentaire (trophoblastique)	notion descriptive globale, sans lésion élémentaire précisée
+FOETO:PP.PAR-NOR-012	element	épaississement de la membrane basale	membrane basale trophoblastique			parenchyme	Épaississement de la membrane basale trophoblastique	
+FOETO:PP.PAR-RET-001	element	autolyse	villosité			parenchyme	Autolyse villositaire placentaire	
+FOETO:PP.PAR-RET-002	element	caryolyse		rétention > 48 h		parenchyme	Cariolyse (rétention >48h)	siège non précisé par le libellé
+FOETO:PP.PAR-RET-003	element	effondrement des sinusoïdes capillaires	capillaire villositaire	post-mortem		parenchyme	Effondrement post-mortem des sinusoïdes capillaires villositaires	temporalité discordante entre libellé français (post-mortem) et anglais (post-delivery)
+FOETO:PP.PAR-RET-004	element	faux nœuds syncytiaux	syncytiotrophoblaste	artéfact de section		parenchyme	Faux nœuds syncytiaux (artéfact de section)	
+FOETO:PP.PAR-RET-005	element	hyperplasie des cellules de hofbauer	stroma villositaire			parenchyme	Hyperplasie des cellules de Hofbauer	siège villositaire implicite, non écrit dans le libellé
+FOETO:PP.PAR-RET-006	element	érythropoïèse extramédullaire	capillaire villositaire			parenchyme	Érythroblastose placentaire (érythropoïèse extra-hépatique villositaire)	
+FOETO:PP.PLA-NOR-118	structure		syncytiotrophoblaste			placenta	Microvilli du syncytiotrophoblaste	
+FOETO:PP.PLA-NOR-119	structure		stroma villositaire			placenta	Myofibroblastes stromaux villeux	
+FOETO:PP.PLA-NOR-120	structure		mésenchyme amniotique			placenta	Mésenchyme amniotique	
+FOETO:PP.PLA-NOR-121	structure		mésenchyme chorial de la plaque choriale			placenta	Mésenchyme chorial (plaque choriale)	
+FOETO:PP.PLA-NOR-122	structure		mésenchyme amniotique			placenta	Mésoderme amniotique	libellé synonyme de « mésenchyme amniotique » (mésoderme = mésenchyme), même contenu
+FOETO:PP.PLA-NOR-123	structure		mésenchyme chorial du chorion lisse			placenta	Mésoderme chorionique (chorion lisse)	
+FOETO:PP.PLA-NOR-124	element	métaplasie malpighienne	amnios			placenta	Métaplasie malpighienne de l'amnios	
+FOETO:PP.PLA-NOR-125	element	nœuds syncytiaux				placenta	Nœuds syncytiaux (changement de Tenney-Parker)	
+FOETO:PP.PLA-NOR-126	element	nœuds syncytiaux				placenta	Nœuds syncytiaux (changements de Tenney-Parker)	
+FOETO:PP.PLA-NOR-127	maturation	nœuds syncytiaux	villosité			placenta	Nœuds syncytiaux — maturation villositaire	
+FOETO:PP.PLA-NOR-128	structure		parenchyme placentaire			placenta	Parenchyme villeux — architecture générale	
+FOETO:PP.PLA-NOR-129	structure		vaisseau de la plaque choriale	épars		placenta	Pattern vasculaire dispers de la surface placentaire	
+FOETO:PP.PLA-NOR-130	structure		vaisseau de la plaque choriale	magistral		placenta	Pattern vasculaire magistral de la surface placentaire	
+FOETO:PP.PLA-NOR-131	maturation	persistance de la couche cytotrophoblastique	villosité			placenta	Persistance de la couche cytotrophoblastique (couche de Langhans)	
+FOETO:PP.PLA-NOR-132	structure		placenta gémellaire	biamniotique|bichorionique		placenta	Placenta bichorionique biamniotique	
+FOETO:PP.PLA-NOR-073	maturation	dépôt de fibrine périvillositaire	espace périvillositaire	selon l'âge gestationnel		placenta	Fibrine périvilleuse — dépôt selon l'âge gestationnel	libellé décrivant une quantité physiologique variable, sans seuil ni caractère lésionnel précisé
+FOETO:PP.PLA-NOR-074	maturation	dépôt de fibrine sous-choriale	plaque choriale	épaisseur selon l'âge gestationnel		placenta	Fibrine sous-choriale (fibrine de Langhans) — épaisseur selon l'âge gestationnel	
+FOETO:PP.PLA-NOR-075	structure		plaque basale			placenta	Fibrinoïde de Nitabuch	
+FOETO:PP.PLA-NOR-076	structure		plaque basale			placenta	Fibrinoïde de Rohr	
+FOETO:PP.PLA-NOR-077	element	dépôt de fibrinoïde de type fibrine		type fibrine		placenta	Fibrinoïde de type fibrine	
+FOETO:PP.PLA-NOR-078	element	dépôt de fibrinoïde de type matriciel		type matriciel		placenta	Fibrinoïde de type matriciel	
+FOETO:PP.PLA-NOR-079	element	dépôt de fibrinoïde	espace périvillositaire			placenta	Fibrinoïde périvillositaire	
+FOETO:PP.PLA-NOR-080	maturation	fibrose stromale	stroma villositaire	progressive		placenta	Fibrose stromale villositaire progressive	
+FOETO:PP.PLA-NOR-081	structure		disque placentaire	discoïde|normal		placenta	Forme placentaire normale (discoïde)	
+FOETO:PP.PLA-NOR-082	structure		plaque choriale	bichorionique|fusionné|gémellaire		placenta	Fusion choriale (placentas gémellaires bichorioniques fusionnés)	
+FOETO:PP.PLA-NOR-083	structure		gelée de Wharton	aspect histologique		placenta	Gelée de Wharton — aspect histologique	
+FOETO:PP.PLA-NOR-084	structure		gelée de Wharton	normal		placenta	Gelée de Wharton — aspect normal	
+FOETO:PP.PLA-NOR-085	element	hypertrophie pariétale	vaisseau décidual membranaire			placenta	Hypertrophie pariétale des vaisseaux déciduals membranaires	
+FOETO:PP.PLA-NOR-086	element	érythroblastes circulants	vaisseau villositaire			placenta	Hématies nucléées dans les vaisseaux villositaires	classé en axe maturation alors qu'il s'agit d'un constat cytologique dont la signification (physiologique ou pathologique) dépend de l'âge gestationnel non précisé
+FOETO:PP.PLA-NOR-087	entite	retard de maturation villositaire	villosité distale			placenta	Immaturité villositaire distale	
+FOETO:PP.PLA-NOR-043	element	cordon bifurqué	cordon ombilical	monochorionique monoamniotique		placenta	Cordon ombilical bifurqué (jumeaux MoMo)	libellé classé en architecture normale alors qu'il décrit une variante/anomalie propre aux grossesses monoamniotiques
+FOETO:PP.PLA-NOR-044	element	hyperenroulement	cordon ombilical			placenta	Cordon ombilical hyperenroulé	
+FOETO:PP.PLA-NOR-045	element	longueur excessive	cordon ombilical			placenta	Cordon ombilical long	
+FOETO:PP.PLA-NOR-046	structure		cordon ombilical	normal		placenta	Cordon ombilical — architecture normale	
+FOETO:PP.PLA-NOR-047	structure		cotylédon fœtal (arbre villeux)			placenta	Cotylédons fœtaux (arbres villeux)	
+FOETO:PP.PLA-NOR-048	structure		cotylédon maternel (lobe placentaire)			placenta	Cotylédons maternels (lobes placentaires)	
+FOETO:PP.PLA-NOR-049	maturation		cytotrophoblaste villositaire	quasi-complète		placenta	Couche cytotrophoblastique quasi-complète	
+FOETO:PP.PLA-NOR-050	structure		couche spongieuse des membranes amnio-choriales			placenta	Couche spongieuse (amnios-chorion)	
+FOETO:PP.PLA-NOR-051	structure		couche spongieuse des membranes amnio-choriales	intermédiaire		placenta	Couche spongieuse (intermédiaire) des membranes	
+FOETO:PP.PLA-NOR-052	structure		couche spongieuse des membranes amnio-choriales			placenta	Couche spongieuse amnio-choriale	
+FOETO:PP.PLA-NOR-053	element	coussinet myxoïde intimal	vaisseau de la plaque choriale			placenta	Coussinets myxoïdes intimaux des vaisseaux de la plaque choriale	
+FOETO:PP.PLA-NOR-054	maturation		cytotrophoblaste villositaire	différenciation syncytiale|en voie de fusion		placenta	Cytotrophoblaste en voie de fusion (différenciation syncytiale)	
+FOETO:PP.PLA-NOR-055	structure		cytotrophoblaste villositaire			placenta	Cytotrophoblaste villeux (cellules de Langhans)	
+FOETO:PP.PLA-NOR-056	structure		cytotrophoblaste villositaire			placenta	Cytotrophoblaste villositaire (cellules de Langhans)	
+FOETO:PP.PLA-NOR-057	element	dilatation des citernes du réticulum endoplasmique	syncytiotrophoblaste			placenta	Dilatation des citernes du réticulum endoplasmique syncytial	signe ultrastructural, non évaluable en microscopie optique
+FOETO:PP.PLA-MAL-010	element	capillaires villositaires vides	capillaire villositaire	jumeau donneur	syndrome transfuseur-transfusé (TTTS)	placenta	Capillaires villositaires vides (jumeau donneur, TTTS)	
+FOETO:PP.PLA-MAL-011	entite	cordon ombilical court	cordon ombilical			placenta	Cordon ombilical court	anomalie macroscopique de longueur, pas de seuil précisé
+FOETO:PP.PLA-MAL-012	structure		cotylédon	monochorionique|partagé		placenta	Cotylédon partagé (placenta gémellaire monochorionique)	
+FOETO:PP.PLA-MAL-013	element	discordance de coloration	parenchyme placentaire	monochorionique		placenta	Discordance de coloration du parenchyme placentaire (jumeaux monochorioniques)	signe macroscopique et non lésion microscopique élémentaire
+FOETO:PP.PLA-MAL-014	element	déficit en gelée de Wharton	gelée de Wharton			placenta	Déficit en gelée de Wharton	
+FOETO:PP.PLA-MAL-015	entite	funiculite	cordon ombilical			placenta	Funisitis	libellé sans précision de type cellulaire, de stade ni d'étendue
+FOETO:PP.PLA-MAL-016	entite	hyperenroulement	cordon ombilical			placenta	Hyperenroulement du cordon ombilical	
+FOETO:PP.PLA-MAL-017	entite	hypo-enroulement	cordon ombilical			placenta	Hypo-enroulement du cordon ombilical	
+FOETO:PP.PLA-MAL-018	element	hématopoïèse extramédullaire	cordon ombilical			placenta	Hématopoïèse extra-médullaire du cordon ombilical	
+FOETO:PP.PLA-MAL-019	element	infarctus	villosité	post-ablation laser|superficiel		placenta	Infarctus villositaire superficiel post-ablation laser	
+FOETO:PP.PLA-MAL-020	entite	insertion excentrée du cordon	cordon ombilical			placenta	Insertion excentrée du cordon ombilical	
+FOETO:PP.PLA-MAL-021	entite	insertion furcate du cordon	cordon ombilical			placenta	Insertion furcate du cordon ombilical	
+FOETO:PP.PLA-MAL-022	entite	insertion marginale du cordon	cordon ombilical			placenta	Insertion marginale du cordon ombilical (battledore)	
+FOETO:PP.PLA-MAL-023	entite	insertion vélamenteuse du cordon	cordon ombilical	grossesse multiple		placenta	Insertion vélamenteuse du cordon (grossesse multiple)	
+FOETO:PP.PLA-MAL-024	entite	kyste allantoïque	cordon ombilical			placenta	Kyste allantoïque du cordon ombilical	
+FOETO:PP.PLA-NOR-163	structure		canal omphalo-mésentérique	résiduel		placenta	Résidu du canal omphalomésentérique	vestige embryonnaire du cordon; le siège précis (cordon ombilical) n'est pas explicite dans le libellé
+FOETO:PP.PLA-NOR-164	structure		sac amniotique	monochorionique diamniotique|sac inclus dans un autre		placenta	Sac amniotique contenu dans un autre (placenta gémellaire DiMo)	libellé descriptif d'une disposition membranaire gémellaire, à la limite entre repère architectural et variante
+FOETO:PP.PLA-NOR-165	structure		septum placentaire			placenta	Septa placentaires	
+FOETO:PP.PLA-NOR-166	structure		septum chorionique			placenta	Septum chorioniaque	
+FOETO:PP.PLA-NOR-167	structure		plaque basale	stratification		placenta	Stratification de la plaque basale	
+FOETO:PP.PLA-NOR-168	structure		plaque basale	fibrinoïde		placenta	Strie fibrinoïde de Langhans	éponyme (strie de Langhans) désignant une couche fibrinoïde physiologique; le siège n'est pas explicité dans le libellé
+FOETO:PP.PLA-NOR-169	structure		villosité souche	condensé|fibreux		placenta	Stroma fibreux condensé des villosités souches	
+FOETO:PP.PLA-NOR-170	structure		villosité	réticulaire		placenta	Stroma réticulaire villositaire	
+FOETO:PP.PLA-NOR-171	structure		villosité			placenta	Stroma villeux	
+FOETO:PP.PLA-NOR-172	structure		artère ombilicale	architecture pariétale normale		placenta	Structure vasculaire artérielle ombilicale — architecture normale	
+FOETO:PP.PLA-NOR-173	structure		veine ombilicale	architecture pariétale normale		placenta	Structure vasculaire veineuse ombilicale — architecture normale	
+FOETO:PP.PLA-NOR-174	structure		plaque basale	face maternelle		placenta	Surface basale (maternelle) du placenta	
+FOETO:PP.PLA-NOR-175	structure		plaque choriale	face fœtale		placenta	Surface choriale (face fœtale) du placenta	
+FOETO:PP.PLA-NOR-176	structure		syncytiotrophoblaste			placenta	Syncytiotrophoblaste	
+FOETO:PP.PLA-NOR-177	structure		syncytiotrophoblaste			placenta	Syncytiotrophoblaste villositaire	
+FOETO:PP.PLA-NOR-178	structure		trophoblaste extravilleux			placenta	Trophoblaste extravilleux	
+FOETO:PP.PLA-NOR-179	structure		trophoblaste extravilleux de la plaque basale			placenta	Trophoblaste extravilleux de la plaque basale	
+FOETO:PP.PLA-NOR-180	structure		trophoblaste extravilleux des membranes libres			placenta	Trophoblaste extravilleux des membranes	
+FOETO:PP.PLA-NOR-181	structure		trophoblaste extravilleux inclus dans le fibrinoïde			placenta	Trophoblaste extravillositaire dans le fibrinoïde	constituant normal classé sur l'axe pathologie : ambiguïté entre repère architectural et lésion
+FOETO:PP.PLA-NOR-182	structure		trophoblaste intermédiaire de type chorionique des membranes libres			placenta	Trophoblaste intermédiaire de type chorionic des membranes	
+FOETO:PP.PLA-NOR-183	structure		trophoblaste villositaire	normal|sans hyperplasie		placenta	Trophoblaste villositaire d'aspect normal sans hyperplasie	
+FOETO:PP.PLA-NOR-184	element	vacuolisation des macrophages stromaux	stroma villositaire			placenta	Vacuolisation des macrophages stromaux villositaires	
+FOETO:PP.PLA-NOR-185	structure		vaisseau de la plaque choriale			placenta	Vaisseaux chorioniques de la plaque choriale	
+FOETO:PP.PLA-NOR-186	structure		reliquat de vaisseaux vitellins du cordon ombilical	résiduel		placenta	Vaisseaux vitellins résiduels du cordon	
+FOETO:PP.PLA-NOR-187	structure		placenta			placenta	Variabilité de forme placentaire (index de forme)	paramètre morphométrique macroscopique (index de forme), ni lésion ni structure au sens strict
+FOETO:PP.PLA-NOR-188	structure		lame élastique interne de la veine ombilicale			placenta	Veine ombilicale — lame élastique interne	
+FOETO:PP.PLA-NOR-189	element	dépôt de vernix caseosa	région sous-amniotique			placenta	Vernix caseosa sous-amniotique	
+FOETO:PP.PLA-NOR-190	structure	villosités fantômes	chorion laeve			placenta	Villi fantômes du chorion lisse	vestige villositaire physiologique du chorion laeve, à la limite entre repère architectural et lésion dégénérative
+FOETO:PP.PLA-NOR-191	structure		villosité d'ancrage			placenta	Villosité d'ancrage	
+FOETO:PP.PLA-NOR-192	maturation		villosité intermédiaire immature	immature		placenta	Villosité intermédiaire immature	
+FOETO:PP.PLA-VAS-006	element	dépôt de fibrinoïde	espace périvillositaire			placenta	Dépôt périvillositaire de fibrinoïde	
+FOETO:PP.PLA-VAS-007	element	ectasie vasculaire	villosité souche	stade précoce	malperfusion vasculaire fœtale (FVM)	placenta	Ectasie vasculaire des troncs villositaires (VTF stade précoce)	
+FOETO:PP.PLA-VAS-008	element	ectasie vasculaire	vaisseau fœtal placentaire			placenta	Ectasie vasculaire fœtale placentaire	siège fœtal non précisé (tronc, plaque choriale ou villosité)
+FOETO:PP.PLA-VAS-009	element	dépôt de fibrine	espace intervilleux	augmenté		placenta	Fibrine intervilleuse augmentée	
+FOETO:PP.PLA-VAS-010	element	villosités avasculaires	villosité	grands foyers|étendu		placenta	Grands foyers de villosités avasculaires	
+FOETO:PP.PLA-VAS-011	entite	hématome avec infarctus	parenchyme placentaire			placenta	Hématome d'infarction placentaire	libellé composite associant hématome et infarctus sans précision de siège ni d'ancienneté
+FOETO:PP.PLA-VAS-012	element	hématome	cordon ombilical			placenta	Hématome du cordon ombilical	
+FOETO:PP.PLA-VAS-013	element	hématome	décidue basale			placenta	Hématome décidual basal (hématome rétroplacentaire)	
+FOETO:PP.PLA-VAS-014	element	hématome	décidue marginale			placenta	Hématome décidual marginal	
+FOETO:PP.PLA-VAS-015	element	hématome	marge placentaire			placenta	Hématome marginal placentaire	
+FOETO:PP.PLA-VAS-016	element	hématome	espace sous-chorial			placenta	Hématome sous-chorionique	
+FOETO:PP.PLA-VAS-017	element	hémorragie	espace rétroplacentaire			placenta	Hémorragie rétroplacentaire	
+FOETO:PP.PLA-VAS-018	element	hémorragie	région sous-amniotique			placenta	Hémorragie sous-amniotique	
+FOETO:PP.PLA-VAS-019	entite	infarctus du plancher maternel	plaque basale			placenta	Infarctus du plancher maternel	
+FOETO:PP.PLA-VAS-020	element	infarctus	marge placentaire			placenta	Infarctus marginal	
+FOETO:PP.PLA-TUM-012	element	congestion vasculaire	villosité			placenta	Congestion villositaire	
+FOETO:PP.PLA-TUM-013	element	hématopoïèse extramédullaire	tissu hépatique ectopique placentaire			placenta	Hématopoïèse extramédullaire dans le tissu hépatique ectopique placentaire	
+FOETO:PP.PLA-TUM-014	element	dépôt d'hémosidérine	stroma villositaire			placenta	Hémosidérose stromale placentaire	libellé situe la lésion au « stroma placentaire » sans préciser villositaire ou membranaire
+FOETO:PP.PLA-TUM-015	element	infarctus	chorangiome			placenta	Infarctus de chorangiome	
+FOETO:PP.PLA-TUM-016	entite	léiomyome	placenta			placenta	Léiomyome placentaire	
+FOETO:PP.PLA-TUM-017	element	prolifération endothéliale	lumière vasculaire de chorangiome			placenta	Prolifération endothéliale intravasculaire dans les chorangiomes	
+FOETO:PP.PLA-TUM-018	element	thrombose	chorangiome			placenta	Thrombose intratumorale d'un chorangiome	
+FOETO:PP.PLA-TUM-019	element	thrombose	vaisseau de chorangiome	chronique		placenta	Thrombose vasculaire chronique dans les chorangiomes	
+FOETO:PP.PLA-TUM-020	structure		placenta	ectopique		placenta	Tissu surrénalien cortical ectopique placentaire	inclusion de tissu surrénalien cortical ectopique : anomalie de siège tissulaire, ni lésion élémentaire ni entité lésionnelle
+FOETO:PP.PLA-TUM-021	entite	tératome	placenta			placenta	Tératome placentaire	
+FOETO:PP.PLA-VAS-001	element	atrophie et fibrose villositaires	villosité	secondaire à obstruction vasculaire fœtale		placenta	Atrophie et fibrose villositaires par obstruction vasculaire fœtale	libellé combine deux lésions élémentaires distinctes (atrophie, fibrose stromale) et un mécanisme causal proche de la malperfusion vasculaire fœtale sans la nommer
+FOETO:PP.PLA-VAS-002	element	congestion vasculaire	villosité			placenta	Congestion vasculaire villositaire	
+FOETO:PP.PLA-VAS-003	element	congestion vasculaire	villosité	récent|secondaire à obstruction vasculaire fœtale		placenta	Congestion villositaire par obstruction vasculaire fœtale récente	mécanisme causal proche de la malperfusion vasculaire fœtale, non nommé comme pattern dans le libellé
+FOETO:PP.PLA-VAS-004	element	dépôt de fibrine intramural	gros vaisseau placentaire			placenta	Dépôt de fibrine intramural dans les grands vaisseaux placentaires	« grands vaisseaux placentaires » ne distingue pas vaisseau de la plaque choriale et vaisseau du tronc villositaire
+FOETO:PP.PLA-VAS-005	entite	dépôt de fibrinoïde périvillositaire	espace intervilleux	massif		placenta	Dépôt de fibrine périvillositaire massive (infarctus du plancher maternel)	libellé mêle la lésion élémentaire (dépôt fibrinoïde périvillositaire) et l'entité nommée « infarctus du plancher maternel »
+FOETO:PP.PLA-RET-014	element	prolifération cytotrophoblastique		post-mortem|réactionnel		placenta	Prolifération cytotrophoblastique réactionnelle post-mortem	siège précis du cytotrophoblaste (villositaire ou extravilleux) non indiqué
+FOETO:PP.PLA-RET-015	element	pseudovasculite	cordon ombilical			placenta	Pseudovasculite du cordon ombilical	libellé par analogie (aspect trompeur) sans précision de la lésion élémentaire sous-jacente
+FOETO:PP.PLA-RET-016	element	septation fibroblastique et oblitération luminale	vaisseau de villosité souche	multifocal		placenta	Septation fibroblastique et obliteration luminale des vaisseaux villositaires souches (multifocal) (Genest)	mention éponymique (Genest) non factorisable comme qualifieur
+FOETO:PP.PLA-RET-017	element	septation fibroblastique	villosité souche	multifocal		placenta	Septoïsation fibroblastique villositaire multifocale	
+FOETO:PP.PLA-TUM-001	entite	adénome hépatocellulaire	placenta			placenta	Adénome hépatocellulaire placentaire	
+FOETO:PP.PLA-TUM-002	element	calcification	chorangiome			placenta	Calcification d'un chorangiome	
+FOETO:PP.PLA-TUM-003	element	cellules anormales	espace intervilleux			placenta	Cellules anormales dans l'espace intervillositaire	nature des cellules non précisée, libellé trop vague
+FOETO:PP.PLA-TUM-004	element	cellules tumorales non hématopoïétiques	vaisseau fœtal placentaire			placenta	Cellules tumorales non hématopoïétiques dans la circulation fœtale placentaire	
+FOETO:PP.PLA-TUM-005	entite	chorangiocarcinome	placenta			placenta	Chorangiocarcinome placentaire	
+FOETO:PP.PLA-TUM-006	entite	chorangiome avec prolifération trophoblastique				placenta	Chorangiome avec prolifération trophoblastique	
+FOETO:PP.PLA-TUM-007	entite	chorangiome		myxoïde		placenta	Chorangiome myxoïde	
+FOETO:PP.PLA-TUM-008	entite	chorangiome		stroma fibreux		placenta	Chorangiome à stroma fibreux	
+FOETO:PP.PLA-TUM-009	entite	chorangiose		focal		placenta	Chorangiose focale	
+FOETO:PP.PLA-TUM-010	entite	chorangiose	placenta			placenta	Chorangiose placentaire	
+FOETO:PP.PLA-TUM-011	entite	chorangiome				placenta	Chorioangiome	
+FOETO:PP.AUP-INF-001	element	artérite	artère déciduale			arteres_uteroplacentaires	Artérite déciduale	libellé sans précision de temporalité ni de type d'infiltrat
+FOETO:PP.AUP-NOR-000	structure		artère utéroplacentaire	normal|remodelage physiologique		arteres_uteroplacentaires	Artères utéro-placentaires normales (remodelage physiologique)	
+FOETO:PP.AUP-VAS-001	entite	défaut de remodelage physiologique	artère spiralée			arteres_uteroplacentaires	Défaut de remodelage des artères spiralées	
+FOETO:PP.AUP-VAS-002	entite	défaut de remodelage physiologique	artère utéroplacentaire			arteres_uteroplacentaires	Défaut de transformation physiologique des artères utéro-placentaires	
+FOETO:PP.AUP-VAS-003	element	athérose	artère spiralée	aigu		arteres_uteroplacentaires	Athérose aiguë des artères spiralées	
+FOETO:PP.AUP-VAS-004	entite	artériopathie	artère spiralée		malperfusion vasculaire maternelle (MVM)	arteres_uteroplacentaires	MVM — Artériopathie déciduale spiralée	
+FOETO:PP.AUP-VAS-005	element	nécrose fibrinoïde pariétale	artère spiralée			arteres_uteroplacentaires	Nécrose fibrinoïde pariétale des artères spiralées	
+FOETO:PP.AUP-VAS-006	element	thrombose	artère utéroplacentaire			arteres_uteroplacentaires	Thrombose des artères utéro-placentaires	
+FOETO:PP.COR-INF-001	entite			grade 1	réponse inflammatoire fœtale (FIR)	cordon	FIR Grade 1	libellé purement gradué : ni lésion élémentaire ni siège précisés
+FOETO:PP.COR-INF-002	entite	funiculite nécrosante	cordon ombilical	grade 2|nécrosant	réponse inflammatoire fœtale (FIR)	cordon	FIR Grade 2 — Funiculite nécrosante	
+FOETO:PP.COR-INF-003	entite	inflammation à polynucléaires neutrophiles de la média	veine ombilicale	aigu|stade 1	réponse inflammatoire fœtale (FIR)	cordon	FIR Stage 1 — Phlébite ombilicale / vasculite choriale	libellé associe deux sièges distincts (veine ombilicale et vaisseaux choriaux) dans une même formulation
+FOETO:PP.COR-INF-004	entite	inflammation à polynucléaires neutrophiles de la média	vaisseaux du cordon ombilical	aigu|stade 2	réponse inflammatoire fœtale (FIR)	cordon	FIR Stage 2 — Artérite ombilicale / funiculite	
+FOETO:PP.COR-INF-005	entite	inflammation à polynucléaires neutrophiles de la média	vaisseau ombilical	concentrique|stade 3|trois vaisseaux	réponse inflammatoire fœtale (FIR)	cordon	FIR Stage 3 — Funiculite concentrique	
+FOETO:PP.COR-INF-006	entite	funiculite	cordon ombilical	aigu	réponse inflammatoire fœtale (FIR)	cordon	Funiculite aiguë (réponse fœtale à l'infection)	
+FOETO:PP.COR-INF-007	element	inflammation à polynucléaires neutrophiles de la média	vaisseau ombilical			cordon	Vascularite ombilicale	
+FOETO:PP.PLA-MET-027	element	vacuolisation cytoplasmique	trophoblaste extravilleux			placenta	Vacuolisation du cytotrophoblaste extravilleux	
+FOETO:PP.PLA-MET-028	element	vacuolisation stromale	stroma villositaire			placenta	Vacuolisation du stroma villositaire	
+FOETO:PP.PLA-MET-029	element	épaississement épithélial	épithélium amniotique	contexte de diabète maternel		placenta	Épaississement de l'épithélium amniotique (diabète maternel)	le libellé accole un contexte clinique (diabète maternel) à la lésion élémentaire
+FOETO:PP.PLA-NOR-001	element	pseudo-inclusion trophoblastique	trophoblaste villositaire	absence		placenta	Absence de pseudo-inclusions trophoblastiques	libellé formulé comme un constat négatif, pas comme une lésion observée
+FOETO:PP.PLA-NOR-002	element	amas syncytiaux avec épaississement de la membrane basale	capillaire villositaire			placenta	Amas syncytiaux recouvrant les capillaires avec épaississement de la membrane basale	le libellé combine deux lésions élémentaires distinctes (amas syncytiaux, épaississement de la membrane basale)
+FOETO:PP.PLA-NOR-003	structure		épithélium amniotique	pavimenteux à cubique simple		placenta	Amnion — épithélium pavimenteux à cubique simple	
+FOETO:PP.PLA-NOR-004	structure		anneau sous-chorial de fermeture			placenta	Anneau sous-chorial de fermeture	
+FOETO:PP.PLA-NOR-005	element	apoptose	cytotrophoblaste			placenta	Apoptose du cytotrophoblaste	
+FOETO:PP.PLA-NOR-006	structure		placenta	général		placenta	Architecture générale du placenta	libellé purement générique, non factorisable en lésion ni en repère précis
+FOETO:PP.PLA-NOR-007	structure		arbre villositaire	lobulaire		placenta	Architecture lobulaire de l'arbre villositaire	
+FOETO:PP.PLA-NOR-008	structure		arbre villositaire			placenta	Architecture villositaire placentaire	libellé générique désignant l'architecture villositaire sans précision de niveau
+FOETO:PP.PLA-NOR-009	entite	artère ombilicale unique	cordon ombilical	isolée		placenta	Artère ombilicale unique isolée	
+FOETO:PP.PLA-NOR-010	structure		artère ombilicale	double couche musculaire lisse		placenta	Artère ombilicale — double couche musculaire lisse	
+FOETO:PP.PLA-NOR-011	structure		artère spiralée			placenta	Artère utéroplacentaire (artère spiralée)	
+FOETO:PP.PLA-NOR-012	structure		artère de villosité souche			placenta	Artères des villosités souches	
+FOETO:PP.PAR-VAS-028	entite	hémorragie de sang frais déchirant la plaque basale	plaque basale	petites effusions|récent|stade 1	abruptio placentae	parenchyme	Abruptio placentae — stade 1 (plaque basale)	
+FOETO:PP.PAR-VAS-029	entite	hémorragie de sang frais déchirant la plaque basale	plaque basale	récent|stade 2|vastes lames	abruptio placentae	parenchyme	Abruptio placentae — stade 2 (plaque basale)	
+FOETO:PP.VDI-NOR-000	structure		villosité distale	normal		parenchyme	Villosité distale normale	
+FOETO:PP.VIL-NOR-000	structure		villosité	normal		parenchyme	Villosités normales	
+FOETO:PP.VIN-NOR-000	structure		villosité intermédiaire	normal		parenchyme	Villosité intermédiaire normale	
+FOETO:PP.VSO-NOR-000	structure		villosité souche	normal		parenchyme	Villosité souche normale	
+FOETO:PP.PLA-CLA-001	element	agglutination villositaire	villosité			placenta	Agglutination villositaire par fibrinoïde périvillositaire	
+FOETO:PP.PLA-CLA-002	element	distorsion et perte des microvillosités	syncytiotrophoblaste			placenta	Distorsion/perte des microvillosités syncytiales	
+FOETO:PP.PLA-CLA-003	element	dégénérescence	syncytiotrophoblaste			placenta	Dégénérescence syncytiale	
+FOETO:PP.PLA-CLA-004	element	fibrose stromale	villosité souche			placenta	Fibrose stromale des villosités souches	
+FOETO:PP.PLA-CLA-005	element	fibrose stromale	villosité			placenta	Fibrose stromale villositaire	
+FOETO:PP.PLA-CLA-006	element	caryorrhexie stromale-vasculaire	villosité			placenta	Karyorrhexie stromale-vasculaire des villosités	
+FOETO:PP.PLA-CLA-007	element	lésion vasculaire traumatique	vaisseau de la plaque choriale	post-ponction à l'aiguille		placenta	Lésion vasculaire de la surface chorionique après traumatisme par aiguille	
+FOETO:PP.PLA-CLA-008	element	microfractures	amnios			placenta	Microfractures de l'amnios	
+FOETO:PP.PLA-CLA-009	element	dégénérescence épithéliale	épithélium amniotique			placenta	Modifications dégénératives de l'amnion	
+FOETO:PP.PLA-DYS-007	element	défaut de remodelage physiologique	artère utéroplacentaire			placenta	Défaut de transformation physiologique des artères utéroplacentaires	
+FOETO:PP.PLA-DYS-008	element	extravasation érythrocytaire	stroma villositaire			placenta	Extravasation érythrocytaire stromale villositaire	
+FOETO:PP.PLA-DYS-009	element	dépôt de fibrine intramural	paroi vasculaire			placenta	Fibrine intramural vasculaire	libellé n'indique pas s'il s'agit de vaisseaux fœtaux (plaque choriale/villosités-troncs) ou maternels
+FOETO:PP.PLA-DYS-010	element	hyperplasie trophoblastique	trophoblaste villositaire			placenta	Hyperplasie trophoblastique	
+FOETO:PP.PLA-DYS-011	element	hypertrophie pariétale	artériole déciduale			placenta	Hypertrophie murale des artérioles décidales	
+FOETO:PP.PLA-DYS-012	element	hypertrophie pariétale	vaisseau de villosité tronculaire			placenta	Hypertrophie musculaire des vaisseaux des villosités-troncs	
+FOETO:PP.PLA-DYS-013	entite	placentomégalie	placenta			placenta	Hypertrophie placentaire	anomalie de poids/volume macroscopique, non lésion microscopique
+FOETO:PP.PLA-DYS-014	element	hypervascularité des vaisseaux fœtaux	villosité			placenta	Hypertrophie villositaire des vaisseaux fœtaux (hypervasculaire)	
+FOETO:PP.PLA-DYS-015	entite	hypoplasie placentaire	placenta			placenta	Hypoplasie placentaire	anomalie de poids/volume macroscopique, non lésion microscopique
+FOETO:PP.PLA-DYS-016	element	hypoplasie villositaire distale	villosité distale			placenta	Hypoplasie villositaire distale	
+FOETO:PP.PLA-DYS-017	entite	érythroblastes dans l'espace intervilleux	espace intervilleux			placenta	Hémorragie fœto-maternelle à érythroblastes dans l'espace intervilleux	libellé mêlant l'entité hémorragie fœto-maternelle et son signe élémentaire (érythroblastes intervilleux)
+FOETO:PP.PLA-DYS-018	entite	implantation superficielle	placenta			placenta	Implantation superficielle du placenta	
+FOETO:PP.PLA-DYS-019	element	infiltrat stromal	stroma villositaire	Alcian blue positif		placenta	Infiltrat stromal Alcian blue positif	nature de l'infiltrat non précisée (mucopolysaccharides ?) et siège stromal supposé villositaire
+FOETO:PP.PLA-DYS-020	element	caryorrhexie stromale	stroma villositaire			placenta	Karyorrhexie stromale villositaire	
+FOETO:PP.PLA-DYS-021	element	kyste	chorion laeve			placenta	Kyste du chorion laeve	
+FOETO:PP.PLA-MAL-040	element	tortuosité vasculaire	vaisseau de la plaque choriale	gémellaire		placenta	Tortuosité vasculaire choriale (placenta gémellaire)	
+FOETO:PP.PLA-MAL-041	entite	vaisseaux aberrants	cordon ombilical			placenta	Vasa aberrantia du cordon ombilical	
+FOETO:PP.PLA-MAL-042	entite	trajet membranaire de vaisseaux fœtaux non protégés devant l'orifice cervical	membranes			placenta	Vasa praevia	
+FOETO:PP.PLA-MAL-043	entite	trajet membranaire de vaisseaux fœtaux non protégés devant l'orifice cervical	membranes	gémellaire		placenta	Vasa praevia (grossesse gémellaire)	
+FOETO:PP.PLA-MET-001	element	accumulation de cholestérol et de lipides	syncytiotrophoblaste			placenta	Accumulation de cholestérol et lipides dans le syncytiotrophoblaste	
+FOETO:PP.PLA-MET-002	element	accumulation de macrophages	placenta	obésité maternelle		placenta	Accumulation de macrophages placentaires (placenta maternel obèse)	siège intraplacentaire non précisé (villosité, chambre intervilleuse ?)
+FOETO:PP.PLA-MET-003	element	athérose	vaisseau décidual			placenta	Athérose des vaisseaux déciduaux	
+FOETO:PP.PLA-MET-004	element	calcification dystrophique	vaisseau fœtal placentaire	dystrophique		placenta	Calcification dystrophique des vaisseaux fœtaux placentaires	
+FOETO:PP.PLA-MET-005	element	calcification	placenta			placenta	Calcifications intraplacentaires	siège intraplacentaire non spécifié
+FOETO:PP.PLA-MET-006	element	calcification	dépôt fibrinoïde placentaire			placenta	Calcifications placentaires dans les lésions fibrinoïdes	
+FOETO:PP.PLA-MET-007	element	dépôt d'hémosidérine	membranes			placenta	Dépôt d'hémosidérine dans les membranes	
+FOETO:PP.PLA-MET-008	element	dépôt d'hémosidérine	membranes			placenta	Dépôts d'hémosidérine dans les membranes	
+FOETO:PP.PLA-MET-009	element	dépôts de globotriaosylcéramide	cellule musculaire lisse du cordon ombilical			placenta	Dépôts de globotriaosylcéramide dans les cellules musculaires lisses du cordon	
+FOETO:PP.PLA-MET-010	element	dépôt de glycogène	capillaire placentaire			placenta	Dépôts de glycogène dans les capillaires placentaires	
+FOETO:PP.PLA-MET-011	element	granules intracytoplasmiques dans des vacuoles		PAS-positif		placenta	Granules PAS-positifs intracytoplasmiques dans les vacuoles	type cellulaire et siège non précisés dans le libellé
+FOETO:PP.PLA-VAS-021	entite	infarctus	plaque basale	maternel		placenta	Infarctus maternel du plancher placentaire	libellé éponyme/consacré : désigne une entité (dépôt fibrinoïde massif du plancher) sans nommer la lésion élémentaire
+FOETO:PP.PLA-VAS-022	element	infarctus	villosité	ancien		placenta	Infarctus villositaire ancien	
+FOETO:PP.PLA-VAS-023	element	infarctus	villosité	ancien|villosités fantomatiques		placenta	Infarctus villositaire ancien (villosités fantomatiques)	
+FOETO:PP.PLA-VAS-024	element	infarctus	villosité			placenta	Infarctus villositaire placentaire	
+FOETO:PP.PLA-VAS-025	element	infarctus	villosité	récent		placenta	Infarctus villositaire récent	
+FOETO:PP.PLA-VAS-026	element	infarctus	villosité	subaigu		placenta	Infarctus villositaire subaigu	
+FOETO:PP.PLA-VAS-027	pattern			global	malperfusion vasculaire fœtale (FVM)	placenta	Malperfusion vasculaire fœtale globale	
+FOETO:PP.PLA-VAS-028	element	oblitération vasculaire	vaisseau de villosité tronculaire			placenta	Oblitération des vaisseaux des villosités-troncs	
+FOETO:PP.PLA-VAS-029	element	villosités avasculaires	villosité	focal|petits foyers		placenta	Petits foyers de villosités avasculaires	
+FOETO:PP.PLA-VAS-030	element	pléthore vasculaire	placenta			placenta	Plétore placentaire	libellé global et peu spécifique : ni siège vasculaire ni versant fœtal/maternel précisés
+FOETO:PP.PLA-VAS-031	element	pâleur villositaire	villosité	diffus		placenta	Pâleur villositaire diffuse	
+FOETO:PP.PLA-VAS-032	element	raréfaction du sang fœtal intravasculaire	vaisseau villositaire			placenta	Raréfaction du sang fœtal intravasculaire	
+FOETO:PP.PLA-VAS-033	element	rupture syncytiale avec érythroblastes périvillositaires	syncytiotrophoblaste			placenta	Rupture syncytiale avec érythroblastes périvilleux (hémorragie de Kline)	
+FOETO:PP.PLA-VAS-034	element	squames amniotiques intrathrombotiques	thrombus vasculaire			placenta	Squames amniotiques dans un thrombus vasculaire	
+FOETO:PP.PLA-VAS-035	element	thrombose	artère déciduale			placenta	Thrombose artérielle déciduale	
+FOETO:PP.MEM-INF-012	entite	chorioamniotite nécrosante	membranes libres	aigu|nécrosant|réponse inflammatoire maternelle|stade MIR 3	chorioamnionite	membranes	MIR Stage 3 — Chorioamniotite nécrosante	
+FOETO:PP.MEM-NOR-001	structure		membranes libres	normal		membranes	Membranes normales	
+FOETO:PP.MEM-VAS-001	entite	hémorragie récente	membranes libres	aigu|focal|stade 1	abruptio placentae	membranes	Abruptio placentae — stade 1 (membranes)	
+FOETO:PP.MEM-VAS-002	entite	hémorragie récente	décidue des membranes	aigu|stade 2|étendu	abruptio placentae	membranes	Abruptio placentae — stade 2 (membranes)	
+FOETO:PP.EIV-NOR-000	structure		espace intervilleux	normal		parenchyme	Espace intervilleux normal	
+FOETO:PP.EVI-NOR-000	structure		espace villeux	normal		parenchyme	Espace villeux normal	libellé ambigu : « espace villeux » n'est pas une structure canonique (confusion possible avec espace intervilleux ou villosités)
+FOETO:PP.PAR-CLA-001	element	agglutination villositaire	villosité			parenchyme	Agglutination villositaire	
+FOETO:PP.PAR-CLA-002	element	dépôt de fibrinoïde	espace périvillositaire	massif		parenchyme	Dépôt massif de fibrinoïde périvillositaire	
+FOETO:PP.PAR-CLA-003	element	macrophages chargés de méconium				parenchyme	Macrophages pigmentés au méconium	
+FOETO:PP.PAR-DYS-001	entite	chorangiomatose	placenta	multifocal		parenchyme	Chorangiomatose placentaire	
+FOETO:PP.PAR-DYS-002	entite	chorangiome	placenta			parenchyme	Chorangiome placentaire	
+FOETO:PP.PAR-DYS-003	entite	dysplasie mésenchymateuse	placenta			parenchyme	Dysplasie mésenchymateuse placentaire	
+FOETO:PP.PAR-INF-001	element	intervillosite	espace intervilleux	aigu|péri-infarctus|réactionnel		parenchyme	Intervillosite aiguë réactionnelle périinfarctus	
+FOETO:PP.PAR-INF-002	entite	intervillosite histiocytaire	espace intervilleux	chronique|diffus		parenchyme	Intervillosite chronique histiocytaire	
+FOETO:PP.PAR-INF-003	pattern		placenta	chronique		parenchyme	Maladies inflammatoires chroniques du placenta	libellé générique de regroupement, sans lésion élémentaire ni siège précis factorisables
+FOETO:PP.PLA-VAS-036	element	thrombose	vaisseau ombilical	post-cordocentèse		placenta	Thrombose d'un vaisseau ombilical après cordocentèse	la mention étiologique (cordocentèse) n'est pas une facette lésionnelle mais un contexte iatrogène
+FOETO:PP.PLA-VAS-037	element	thrombose	tributaire de la veine ombilicale			placenta	Thrombose de la veine ombilicale tributaire	
+FOETO:PP.PLA-VAS-038	element	thrombose	vaisseau allanto-chorial			placenta	Thrombose des vaisseaux allanto-choriaux	
+FOETO:PP.PLA-VAS-039	element	thrombose	vaisseau fœtal			placenta	Thrombose des vaisseaux fœtaux	
+FOETO:PP.PLA-VAS-040	element	thrombose	vaisseau membranaire			placenta	Thrombose des vaisseaux membranaires	
+FOETO:PP.PLA-VAS-041	element	thrombose	vaisseau ombilical			placenta	Thrombose des vaisseaux ombilicaux	
+FOETO:PP.PLA-VAS-042	element	thrombose	espace intervilleux			placenta	Thrombose intervilleuse	
+FOETO:PP.PLA-VAS-043	element	thrombose	espace sous-chorial	disséminé|multiple		placenta	Thromboses sous-choriales disséminées	
+FOETO:PP.PLA-VAS-044	element	thrombose	vaisseau fœtal placentaire	calcifié		placenta	Thrombus calcifié dans les vaisseaux fœtaux placentaires	
+FOETO:PP.PLA-VAS-045	element	thrombose	vaisseau fœtal placentaire			placenta	Thrombus dans les vaisseaux placentaires fœtaux	
+FOETO:PP.PLA-VAS-046	element	thrombose	vaisseau de villosité tronculaire			placenta	Thrombus des vaisseaux des villosités-troncs	
+FOETO:PP.PLA-VAS-047	element	thrombose	vaisseau fœtal placentaire	en organisation		placenta	Thrombus en organisation dans les vaisseaux fœtaux placentaires	
+FOETO:PP.PLA-VAS-048	element	thrombose	membranes	intramembraneux		placenta	Thrombus intramembraneux	siège imprécis : intramembraneux peut désigner un vaisseau membranaire ou le stroma des membranes
+FOETO:PP.PLA-VAS-049	element	thrombose	vaisseau fœtal placentaire	organisé		placenta	Thrombus organisé dans les vaisseaux fœtaux placentaires	
+FOETO:PP.PLA-VAS-050	element	thrombose	vaisseau de la plaque choriale	organisé		placenta	Thrombus organisé dans un vaisseau chorioniaque	libellé français 'organisé' et anglais 'organizing' discordants sur le stade
+FOETO:PP.PAR-RET-007	element	œdème stromal	villosité			parenchyme	Œdème villositaire	
+FOETO:PP.PAR-TUM-001	entite	villosités hydriques	villosité	placentomégalie		parenchyme	Placentomégalie avec villosités hydriques	libellé composite associant une donnée macroscopique (placentomégalie) et une lésion villositaire
+FOETO:PP.PAR-TUM-002	element	érythroblastes circulants	circulation fœtale placentaire	en excès		parenchyme	Érythroblastes fœtaux en excès dans la circulation placentaire	
+FOETO:PP.PAR-VAS-001	entite	artériopathie	artère déciduale de la plaque basale			parenchyme	Artériopathie déciduale	
+FOETO:PP.PAR-VAS-002	entite	hypercapillarisation	villosité distale	multifocal		parenchyme	Chorangiose	
+FOETO:PP.PAR-VAS-003	entite	dépôt de fibrinoïde périvillositaire	espace périvillositaire	massif	NIDF	parenchyme	Dépôts fibrinoïdes périvillositaires massifs (NIDF / maternal floor infarction)	
+FOETO:PP.PAR-VAS-004	element	endovasculite hémorragique	vaisseau villositaire	stade précoce	malperfusion vasculaire fœtale (FVM)	parenchyme	Endovasculite hémorragique (VTF stade précoce)	discordance de stade entre le libellé français (précoce) et l'anglais (intermediate)
+FOETO:PP.PAR-VAS-005	element	thrombose	gros vaisseau chorionique	haut grade	malperfusion vasculaire fœtale (FVM)	parenchyme	FVM High grade — Thrombose gros vaisseaux	
+FOETO:PP.PAR-VAS-006	element	villosités avasculaires	villosité	bas grade|focal|multifocal	malperfusion vasculaire fœtale (FVM)	parenchyme	FVM Low grade — Villosités avasculaires focales	
+FOETO:PP.PAR-VAS-007	element	dépôt de fibrine périvillositaire	espace périvillositaire	augmenté|diffus		parenchyme	Fibrine périvillositaire augmentée	
+FOETO:PP.PAR-VAS-008	entite	hypercapillarisation	villosité terminale			parenchyme	Hypercapillarisation des villosités terminales (chorangiose)	
+FOETO:PP.PAR-VAS-009	element	hématome	espace rétroplacentaire			parenchyme	Hématome rétroplacentaire	
+FOETO:PP.PAR-VAS-010	element	hémorragie	espace intervilleux			parenchyme	Hémorragie intervilleuse	
+FOETO:PP.PAR-VAS-011	element	hémorragie	stroma villositaire			parenchyme	Hémorragie intravillositaire	
+FOETO:PP.PAR-VAS-012	element	infarctus	villosité			parenchyme	Infarctus villositaire	
+FOETO:PP.PLA-NOR-223	element	îlots de fibrinoïde avec trophoblaste extravilleux		augmenté		placenta	Îlots de fibrinoïde avec trophoblastes extravilleux augmentés	libellé sans siège précisé (îlots cellulaires du plancher basal ou intraparenchymateux non spécifiés)
+FOETO:PP.PLA-NOR-224	element	œdème	gelée de Wharton			placenta	Œdème de la gelée de Wharton	
+FOETO:PP.PLA-RET-001	element	nœuds syncytiaux		augmenté|post-mortem		placenta	Augmentation des nœuds syncytiaux post-mortem	
+FOETO:PP.PLA-RET-002	element	érythroblastes circulants		augmenté		placenta	Augmentation des érythroblastes intravasculaires	siège vasculaire non précisé (fœtal villositaire présumé mais non écrit)
+FOETO:PP.PLA-RET-003	element	décoloration brune ou rouge	cordon ombilical	critère de Genest		placenta	Decoloration du cordon ombilical brun ou rouge (Genest)	
+FOETO:PP.PLA-RET-004	element	fibrose stromale	villosité	diffus|macération		placenta	Fibrose stromale villositaire diffuse (macération)	
+FOETO:PP.PLA-RET-005	element	dépôt d'hémosidérine	membranes chorio-amniotiques	chronique|diffus		placenta	Hémosidérose chorioamniotique diffuse chronique	
+FOETO:PP.PLA-RET-006	element	caryorrhexie stromale-vasculaire	villosité			placenta	Karyorrhexie stromale-vasculaire villositaire	
+FOETO:PP.PLA-RET-007	element	caryorrhexie intravasculaire	vaisseau villositaire			placenta	Karyorrhexis intravasculaire villositaire	
+FOETO:PP.PLA-RET-008	element	caryorrhexie intravasculaire	vaisseau villositaire	critère de Genest		placenta	Karyorrhexis intravasculaire villositaire (Genest)	
+FOETO:PP.PLA-RET-009	element	macrophages chargés de méconium	décidue			placenta	Macrophages chargés de méconium dans la décidua maternelle	
+FOETO:PP.PLA-RET-010	element	minéralisation de la membrane basale trophoblastique	membrane basale trophoblastique			placenta	Minéralisation de la membrane basale villositaire trophoblastique	discordance fr/en : l'anglais ajoute l'épaississement de la membrane basale
+FOETO:PP.PLA-RET-011	element	nécrose épithéliale	épithélium amniotique	contexte de jumeau décédé		placenta	Nécrose de l'épithélium amniotique (jumeau décédé)	
+FOETO:PP.PLA-RET-012	element	oblitération vasculaire et fibrose villositaire	villosité tronculaire et villosité terminale	critère de Genest|étendu		placenta	Obliteration vasculaire villositaire et fibrose villeuse terminale (extensive) (Genest)	libellé composite associant deux lésions élémentaires distinctes ; le fr dit villositaire, l'en précise stem villous
+FOETO:PP.PLA-RET-013	element	oblitération vasculaire	vaisseau de villosité tronculaire			placenta	Oblitération luminale des vaisseaux villositaires de gros calibre	
+FOETO:PP.PLA-VAS-051	element	thrombose	vaisseau fœtal placentaire	récent		placenta	Thrombus récent dans les vaisseaux fœtaux placentaires	
+FOETO:PP.PLA-VAS-052	element	thrombose	espace sous-chorial			placenta	Thrombus sous-chorioniaque	
+FOETO:PP.PLA-VAS-053	entite	vasculopathie oblitérante	vaisseau fœtal			placenta	Vasculopathie fœtale oblitérante	
+FOETO:PP.PLA-VAS-054	entite	vasculopathie oblitérante	vaisseau fœtal		villite chronique d'étiologie indéterminée (VUE)	placenta	Vasculopathie oblitérante fœtale (VCEI)	
+FOETO:PP.PLA-VAS-055	element	villosités avasculaires hyalinisées	villosité	en amas|stade tardif	malperfusion vasculaire fœtale (FVM)	placenta	Villosités avasculaires hyalinisées en clusters (VTF stade tardif)	
+FOETO:PP.PLA-VAS-056	element	villosités fantômes	villosité			placenta	Villosités fantômes (ghosts villositaires)	
+FOETO:PP.SAN-NOR-000	structure		sang circulant	normal		placenta	Sang circulant normal	
+FOETO:PP.DBA-NOR-000	structure		décidue basale	normal		plaque_basale	Décidue basale normale	
+FOETO:PP.PBA-INF-001	entite	villite	villosité de la plaque basale	chronique		plaque_basale	Villite basale chronique	
+FOETO:PP.PBA-INF-002	element	abcès	décidue			plaque_basale	Abcès décidual	
+FOETO:PP.PBA-MET-001	element	dépôt de fibrinoïde	plaque basale			plaque_basale	Dépôts de fibrinoïde dans la plaque basale	
+FOETO:PP.PBA-MET-002	element	vacuolisation des cellules déciduales	décidue basale			plaque_basale	Vacuolisation des cellules déciduales basales	
+FOETO:PP.PBA-MET-003	element	excès de trophoblaste extravilleux				plaque_basale	Excès de trophoblaste extravilleux	siège non précisé dans le libellé (déduit du compartiment plaque basale)
+FOETO:PP.PBA-NOR-000	structure		plaque basale	normal		plaque_basale	Plaque basale normale	
+FOETO:PP.PBA-NOR-001	structure		villosité d'ancrage			plaque_basale	Villosités d'ancrage dans la plaque basale	

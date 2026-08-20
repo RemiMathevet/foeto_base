@@ -1,0 +1,764 @@
+
+=== niveau — 5 valeurs distinctes / 662 occurrences
+  350  element
+  159  structure
+  112  entite
+   31  maturation
+   10  pattern
+
+=== lesion — 306 valeurs distinctes / 471 occurrences
+   20  thrombose
+   13  thrombus
+   11  infarctus
+    9  villite
+    9  kyste
+    7  dépôt de fibrinoïde
+    6  hématome
+    5  dépôt d'hémosidérine
+    5  nécrose
+    5  calcification
+    5  infiltrat de polynucléaires neutrophiles
+    5  nœuds syncytiaux
+    4  vacuolisation
+    4  métaplasie malpighienne
+    4  artériopathie
+    4  villosités avasculaires
+    4  inflammation des membranes chorio-amniotiques
+    4  fibrose stromale
+    4  hémorragie
+    4  inflammation à polynucléaires neutrophiles de la média
+    3  athérose
+    3  calcifications
+    3  abcès
+    3  artère ombilicale unique
+    3  ectasie vasculaire
+    3  macrophages chargés de méconium
+    3  nécrose fibrinoïde pariétale
+    3  dépôt de fibrine
+    3  congestion vasculaire
+    3  chorangiome
+    2  nécrose laminaire
+    2  infiltrat à polynucléaires neutrophiles
+    2  asymétrie de l'épaisseur pariétale
+    2  endovasculite hémorragique
+    2  micro-abcès
+    2  nécrose des myocytes de la média
+    2  dépôt de méconium
+    2  nécrose épithéliale
+    2  hypoplasie villositaire
+    2  amnios nodosum
+    2  macrophages chargés d'hémosidérine
+    2  vascularite
+    2  épaississement de la membrane basale
+    2  érythroblastes circulants
+    2  érythropoïèse extramédullaire
+    2  dilatation sinusoïdale capillaire
+    2  dégénérescence épithéliale
+    2  funiculite nécrosante
+    2  funiculite
+    2  vasculite
+    2  dépôt de fibrine périvillositaire
+    2  hyperenroulement
+    2  hématopoïèse extramédullaire
+    2  villosités fantômes
+    2  dépôt de fibrinoïde périvillositaire
+    2  chorangiose
+    2  défaut de remodelage physiologique
+    2  hémorragie de sang frais déchirant la plaque basale
+    2  trajet membranaire de vaisseaux fœtaux non protégés devant l'orifice cervical
+    2  hémorragie récente
+    2  hypercapillarisation
+    2  caryorrhexie intravasculaire
+    2  vasculopathie oblitérante
+    1  accumulation de glycogène
+    1  accumulation lysosomale de glycogène
+    1  falciformation érythrocytaire
+    1  augmentation des amas nucléaires syncytiotrophoblastiques
+    1  nécrose de la média musculaire
+    1  paucité des membranes vasculo-syncytiales
+    1  villosités avasculaires avec changements dégénératifs (karyorrhexie, microcalcifications, ferrugination)
+    1  citerne
+    1  excès de gelée de Wharton avec épaississement
+    1  dilatation vasculaire
+    1  distribution non périphérique des capillaires
+    1  défaut de remodelage
+    1  villite lympho-plasmocytaire
+    1  villite granulomateuse
+    1  villite nécrosante
+    1  infiltrat à polynucléaires neutrophiles avec nécrose de l'amnios
+    1  infiltrat inflammatoire plasmocytaire
+    1  vascularite à polynucléaires neutrophiles
+    1  hypoplasie villositaire distale
+    1  dysplasie villositaire
+    1  augmentation de l'index prolifératif des cytotrophoblastes
+    1  augmentation de la densité des cytotrophoblastes
+    1  augmentation de la surface villositaire
+    1  augmentation des cellules trophoblastiques géantes
+    1  augmentation des nœuds syncytiaux
+    1  insertion vélamenteuse
+    1  hémorragie périvasculaire
+    1  nécrose des myocytes de la paroi vasculaire
+    1  hémangiome
+    1  nécrose myocytaire de la paroi vasculaire
+    1  kystes parasitaires (toxoplasme)
+    1  modifications réactives épithéliales
+    1  inflammation placentaire
+    1  périvasculite
+    1  réaction giganto-cellulaire à corps étranger au vernix
+    1  œdème stromal avec augmentation des cellules de hofbauer
+    1  hyphes et spores fongiques
+    1  vascularite éosinophilique à cellules t
+    1  kyste omphalomésentérique
+    1  nécrose pariétale
+    1  insertion circummarginale des membranes
+    1  insertion circumvallée des membranes
+    1  remnant musculaire
+    1  tissu ectopique
+    1  torsion et coarctation
+    1  nécrose fibrinoïde
+    1  vasculopathie thrombotique
+    1  inclusions de glycogène
+    1  invasion trophoblastique
+    1  ponts syncytiaux
+    1  précurseurs hématopoïétiques non érythroïdes circulants
+    1  pseudokystes
+    1  séparation chorioamniotique
+    1  infiltrat lymphocytaire
+    1  infiltrat de polynucléaires neutrophiles avec nécrose
+    1  infiltrat inflammatoire mixte
+    1  infiltrat lympho-plasmocytaire
+    1  histiocytes de surcharge
+    1  inclusions lysosomales membraneuses
+    1  infiltrat de cellules de gaucher
+    1  macrophages chargés de pigment ferrique
+    1  minéralisation villositaire
+    1  macrophages chargés de pigment biliaire
+    1  placentomégalie
+    1  produits de stockage anormaux
+    1  vacuoles claires limitées par une membrane
+    1  vacuolisation endothéliale
+    1  vacuolisation épithéliale
+    1  vacuolisation des fibrocytes
+    1  proportion augmentée de villosités intermédiaires
+    1  hématome rétroplacentaire
+    1  chorionite
+    1  chorioamniotite
+    1  coussinet myxoïde intimal
+    1  épaississement pariétal avec ectasie
+    1  asymétrie pariétale
+    1  élargissement villositaire en patte
+    1  vésicules extracellulaires trophoblastiques
+    1  altération morphologique des membranes
+    1  épaississement du syncytiotrophoblaste
+    1  discordance de maturation villositaire
+    1  dédifférenciation des cellules musculaires lisses
+    1  dégénérescence ballonnisante
+    1  dénudation épithéliale
+    1  dépôts calciques et ferriques
+    1  dépôt de c4d
+    1  funiculite à micro-abcès
+    1  infiltrat histiocytaire intervillositaire
+    1  hyperplasie histiocytaire
+    1  inclusions virales cytomégaliques
+    1  inclusions virales herpétiques
+    1  inclusions virales intranucléaires et intracytoplasmiques
+    1  infiltrat neutrophilique
+    1  infiltrat plasmocytaire
+    1  infiltrat inflammatoire
+    1  infiltrat inflammatoire intervillositaire
+    1  stroma myxomateux
+    1  thrombohématome
+    1  épaississement pariétal avec ectasie luminale
+    1  épaississement pariétal vasculaire
+    1  élargissement villositaire œdémateux
+    1  villosité hydropique avasculaire
+    1  élargissement villositaire avec paucité vasculaire
+    1  inclusions virales
+    1  hémophagocytose
+    1  cellules géantes multinucléées de type langhans
+    1  péricytes péri-vasculaires
+    1  régénération syncytiotrophoblastique
+    1  réseau de réticuline en treillis
+    1  manchon mésenchymateux
+    1  persistance de trophoblaste endovasculaire intramural
+    1  perte d'expression de l'actine musculaire lisse
+    1  perte d'expression de p57kip2
+    1  augmentation du poids placentaire
+    1  prolifération de trophoblaste intermédiaire
+    1  pseudo-inclusion trophoblastique
+    1  expression conservée de p57kip2
+    1  sclérose fibromusculaire
+    1  septation luminale
+    1  hyalinisation du stroma
+    1  hypercellularité stromale avec fibroblastes indifférenciés
+    1  reliquat cartilagineux
+    1  inclusions intranucléaires virales des érythroblastes
+    1  anastomose artério-artérielle
+    1  anastomose artério-veineuse
+    1  anastomose veino-veineuse
+    1  calcification pariétale
+    1  canal allantoïque patent
+    1  congestion capillaire villositaire
+    1  condensation chromatinienne nucléaire
+    1  excès de trophoblaste multinucléé
+    1  maturation villositaire accélérée
+    1  retard de maturation villositaire
+    1  sénescence trophoblastique
+    1  autolyse
+    1  caryolyse
+    1  effondrement des sinusoïdes capillaires
+    1  faux nœuds syncytiaux
+    1  hyperplasie des cellules de hofbauer
+    1  persistance de la couche cytotrophoblastique
+    1  dépôt de fibrine sous-choriale
+    1  dépôt de fibrinoïde de type fibrine
+    1  dépôt de fibrinoïde de type matriciel
+    1  hypertrophie pariétale
+    1  hématies nucléées circulantes
+    1  immaturité villositaire
+    1  cordon bifurqué
+    1  longueur excessive
+    1  coussinets myxoïdes intimaux
+    1  dilatation des citernes du réticulum endoplasmique
+    1  capillaires villositaires vides
+    1  cordon ombilical court
+    1  discordance de coloration
+    1  déficit en gelée de Wharton
+    1  infiltrat inflammatoire du cordon ombilical
+    1  hypo-enroulement
+    1  infarctus villositaire
+    1  insertion excentrée du cordon
+    1  insertion furcate du cordon
+    1  insertion marginale du cordon
+    1  insertion vélamenteuse du cordon
+    1  kyste allantoïque
+    1  vacuolisation des macrophages stromaux
+    1  dépôt de vernix caseosa
+    1  hématome avec infarctus
+    1  infarctus du plancher maternel
+    1  léiomyome
+    1  prolifération endothéliale
+    1  tératome
+    1  atrophie et fibrose villositaires
+    1  dépôt de fibrine intramural
+    1  prolifération cytotrophoblastique
+    1  pseudovasculite
+    1  septation fibroblastique et oblitération luminale
+    1  septation fibroblastique
+    1  adénome hépatocellulaire
+    1  cellules anormales
+    1  cellules tumorales non hématopoïétiques
+    1  chorangiocarcinome
+    1  chorangiome avec prolifération trophoblastique
+    1  chorioangiome
+    1  artérite
+    1  vacuolisation cytoplasmique
+    1  vacuolisation stromale
+    1  épaississement épithélial
+    1  pseudo-inclusions trophoblastiques
+    1  amas syncytiaux avec épaississement de la membrane basale
+    1  apoptose
+    1  agglutination villositaire par dépôt de fibrinoïde périvillositaire
+    1  distorsion et perte des microvillosités
+    1  dégénérescence
+    1  karyorrhexie stromale-vasculaire
+    1  lésion vasculaire traumatique
+    1  microfractures
+    1  défaut de transformation physiologique
+    1  extravasation érythrocytaire
+    1  dépôt de fibrine intramurale
+    1  hyperplasie trophoblastique
+    1  hypertrophie murale
+    1  hypertrophie musculaire de la paroi vasculaire
+    1  hypertrophie placentaire
+    1  hypervascularité des vaisseaux fœtaux
+    1  hypoplasie placentaire
+    1  érythroblastes dans l'espace intervilleux
+    1  implantation superficielle
+    1  infiltrat stromal
+    1  karyorrhexie stromale
+    1  tortuosité vasculaire
+    1  vaisseaux aberrants
+    1  accumulation de cholestérol et de lipides
+    1  accumulation de macrophages
+    1  calcification dystrophique
+    1  dépôts de globotriaosylcéramide
+    1  dépôts de glycogène
+    1  granules intracytoplasmiques dans des vacuoles
+    1  oblitération vasculaire
+    1  pléthore vasculaire
+    1  pâleur villositaire
+    1  raréfaction du sang fœtal intravasculaire
+    1  rupture syncytiale avec érythroblastes périvillositaires
+    1  squames amniotiques intrathrombotiques
+    1  chorioamniotite nécrosante
+    1  agglutination villositaire
+    1  macrophages pigmentés au méconium
+    1  chorangiomatose
+    1  dysplasie mésenchymateuse
+    1  intervillosite
+    1  intervillosite histiocytaire
+    1  œdème stromal
+    1  villosités hydriques
+    1  érythroblastose
+    1  îlots de fibrinoïde avec trophoblaste extravilleux
+    1  œdème
+    1  érythroblastes intravasculaires
+    1  décoloration brune ou rouge
+    1  hémosidérose
+    1  caryorrhexie stromale-vasculaire
+    1  minéralisation de la membrane basale trophoblastique
+    1  oblitération vasculaire et fibrose villositaire
+    1  oblitération luminale vasculaire
+    1  villosités avasculaires hyalinisées
+    1  vacuolisation des cellules déciduales
+    1  excès de trophoblaste extravilleux
+
+=== site — 225 valeurs distinctes / 628 occurrences
+   50  villosité
+   37  placenta
+   35  cordon ombilical
+   20  stroma villositaire
+   19  villosité choriale
+   16  syncytiotrophoblaste
+   16  plaque basale
+   12  espace intervilleux
+   10  épithélium amniotique
+    9  vaisseau de la plaque choriale
+    9  espace sous-chorial
+    9  capillaire villositaire
+    9  vaisseau fœtal placentaire
+    8  amnios
+    7  décidue
+    7  plaque choriale
+    7  villosité souche
+    6  vaisseau villositaire
+    6  espace périvillositaire
+    5  villosité terminale
+    5  artère ombilicale
+    5  artère déciduale
+    5  villosité distale
+    5  chorion et amnios
+    5  membrane de séparation gémellaire
+    5  membranes
+    4  vaisseau ombilical
+    4  artère spiralée
+    4  vaisseaux du cordon ombilical
+    4  chorion laeve
+    4  membranes libres
+    4  marge placentaire
+    4  îlot cellulaire trophoblastique
+    4  décidue basale
+    4  membranes chorio-amniotiques
+    3  cytotrophoblaste villositaire
+    3  parenchyme placentaire
+    3  membrane vasculo-syncytiale
+    3  vaisseau fœtal villositaire
+    3  gelée de Wharton
+    3  région sous-amniotique
+    3  vaisseaux de la plaque choriale
+    3  veine ombilicale
+    3  chorion
+    3  septum placentaire
+    3  membrane basale trophoblastique
+    3  membranes placentaires
+    3  villosité intermédiaire mature
+    3  villosité mésenchymateuse
+    3  villosité intermédiaire immature
+    3  vaisseaux allanto-choriaux
+    3  trophoblaste
+    3  artère spiralée déciduale
+    3  placenta gémellaire
+    3  gelée de Wharton du cordon ombilical
+    3  couche spongieuse des membranes amnio-choriales
+    3  trophoblaste villositaire
+    3  chorangiome
+    3  artère utéro-placentaire
+    2  décidua des membranes
+    2  cytotrophoblaste
+    2  membranes (chorion et amnios)
+    2  disque placentaire
+    2  bourgeon syncytial
+    2  décidue des membranes
+    2  vaisseaux ombilicaux
+    2  surface du cordon ombilical
+    2  membranes chorioamniotiques
+    2  trophoblaste extravilleux
+    2  macrophage villositaire
+    2  membrane inter-fœtale
+    2  espace intervillositaire
+    2  villosité d'ancrage de la plaque basale
+    2  villosité intermédiaire
+    2  artère déciduale de la plaque basale
+    2  reliquat de vésicule vitelline
+    2  vaisseau de villosité tronculaire
+    2  villosité d'ancrage
+    2  vaisseau allanto-chorial
+    2  vaisseau chorionique
+    2  mésenchyme amniotique
+    2  cytotrophoblaste villositaire (cellules de Langhans)
+    2  espace rétroplacentaire
+    2  arbre villositaire
+    2  vaisseau de villosité-tronc
+    2  vaisseaux fœtaux
+    1  macrophage chorionique
+    1  cellule de hofbauer
+    1  cellule déciduale
+    1  décidua
+    1  base des septa placentaires
+    1  vaisseau placentaire
+    1  villosité basale (plaque basale)
+    1  région sous-choriale (plaque choriale)
+    1  décidue basale (plaque basale)
+    1  vaisseaux choriaux (plaque choriale)
+    1  vaisseau chorionique de surface
+    1  site d'implantation
+    1  villosité avasculaire
+    1  bourgeon vasculaire endothélial villositaire
+    1  bourgeon villositaire
+    1  canal stromal villositaire
+    1  interface amnios/chorion
+    1  interface chorion/décidue
+    1  vaisseaux allantochoriaux
+    1  vaisseau chorial
+    1  cordon ombilical, région sous-amniotique
+    1  épithélium du cordon ombilical
+    1  vaisseaux du cordon ombilical et de la plaque choriale
+    1  vaisseaux déciduaux
+    1  décidua et myomètre
+    1  épithélium amniotique de la membrane de séparation gémellaire
+    1  territoire placentaire du jumeau papyracé
+    1  veine de surface placentaire
+    1  cellule cytotrophoblastique
+    1  insertion du cordon ombilical
+    1  myomètre
+    1  pore intervilleux
+    1  lit placentaire
+    1  interface chorioamniotique
+    1  capillaire villositaire terminal
+    1  membranes extraplacentaires
+    1  tissus placentaires
+    1  chorioamnios
+    1  cordon ombilical et membranes
+    1  trophoblaste et macrophages stromaux villositaires
+    1  cellules placentaires
+    1  plaque choriale, versant subchorial
+    1  membranes fœtales, zone cervicale
+    1  zone jonctionnelle placentaire
+    1  membrane basale trophoblastique et vasculaire villositaire
+    1  équateur vasculaire placentaire
+    1  capillaire fœtal villositaire
+    1  décidua capsulaire
+    1  décidua pariétale
+    1  artère villositaire
+    1  région sous-choriale
+    1  surface villositaire
+    1  trophoblaste et caduque
+    1  espace intervilleux et villosité
+    1  caduque
+    1  vaisseau du tronc villositaire
+    1  cellule amniotique
+    1  reliquat allantoïdien du cordon ombilical
+    1  reliquat de vésicule vitelline sous-amniotique
+    1  reliquat du canal omphalo-mésentérique des membranes
+    1  reliquat du canal omphalo-mésentérique du cordon ombilical
+    1  reliquat de vaisseaux vitellins du cordon ombilical
+    1  amnios du cordon ombilical
+    1  reliquat du canal allantoïque
+    1  espace périvasculaire villositaire
+    1  amnion
+    1  paroi vasculaire utéroplacentaire
+    1  espace périvilleux
+    1  lumière vasculaire
+    1  capillaire villositaire fœtal
+    1  capillaire paravasculaire de villosité souche
+    1  cavité centrale du lobule placentaire
+    1  tissu péri-vasculaire de la plaque choriale
+    1  colonne cellulaire trophoblastique
+    1  contour villositaire
+    1  vaisseau chorionique et ombilical
+    1  plaque choriale (placenta gémellaire)
+    1  veine choriale
+    1  mésenchyme chorial de la plaque choriale
+    1  mésenchyme chorial du chorion lisse
+    1  parenchyme villeux
+    1  vaisseau décidual membranaire
+    1  cotylédon fœtal (arbre villeux)
+    1  cotylédon maternel (lobe placentaire)
+    1  couche cytotrophoblastique villositaire
+    1  cotylédon
+    1  canal omphalomésentérique
+    1  sac amniotique
+    1  septum chorionique
+    1  syncytiotrophoblaste villositaire
+    1  trophoblaste extravilleux de la plaque basale
+    1  trophoblaste extravilleux des membranes libres
+    1  trophoblaste extravilleux inclus dans le fibrinoïde
+    1  trophoblaste intermédiaire de type chorionique des membranes libres
+    1  vaisseaux choriaux de la plaque choriale
+    1  vaisseaux vitellins du cordon ombilical
+    1  lame élastique interne de la veine ombilicale
+    1  chorion lisse
+    1  tronc villositaire
+    1  décidue marginale
+    1  espace sous-chorionique
+    1  espace sous-amniotique
+    1  tissu hépatique ectopique placentaire
+    1  lumière vasculaire de chorangiome
+    1  vaisseau de chorangiome
+    1  gros vaisseau placentaire
+    1  vaisseau villositaire souche
+    1  artère ombilicale et veine ombilicale
+    1  cytotrophoblaste extravilleux
+    1  anneau sous-chorial de fermeture
+    1  artère spiralée utéroplacentaire
+    1  artère de villosité souche
+    1  artère utéroplacentaire
+    1  paroi vasculaire
+    1  artériole déciduale
+    1  vaisseau de villosité tronc
+    1  vaisseau chorial de la plaque choriale
+    1  vaisseau décidual
+    1  dépôt fibrinoïde placentaire
+    1  cellule musculaire lisse du cordon ombilical
+    1  capillaire placentaire
+    1  plancher placentaire
+    1  thrombus vasculaire
+    1  décidue des membranes libres
+    1  espace villeux
+    1  villosités
+    1  tributaire de la veine ombilicale
+    1  vaisseau fœtal
+    1  vaisseau membranaire
+    1  chambre intervilleuse
+    1  circulation fœtale placentaire
+    1  gros vaisseau chorionique
+    1  gelée de wharton
+    1  décidue maternelle
+    1  membrane basale trophoblastique villositaire
+    1  villosité tronculaire et villosité terminale
+    1  vaisseaux fœtaux placentaires
+    1  sang circulant
+    1  villosité de la plaque basale
+
+=== pattern — 16 valeurs distinctes / 57 occurrences
+    8  réponse inflammatoire maternelle (MIR)
+    7  FVM
+    6  chorioamnionite
+    6  FIR
+    5  MVM
+    5  chorioamniotite
+    4  VUE
+    4  abruptio placentae
+    3  NIDF
+    2  réponse inflammatoire fœtale
+    2  TTTS
+    1  réponse inflammatoire fœtale (FIR)
+    1  séquence anémie-polycythémie gémellaire (TAPS)
+    1  VTF (FVM)
+    1  villite chronique d'étiologie indéterminée
+    1  vasculopathie thrombotique fœtale
+
+=== qualifieurs — 202 valeurs distinctes
+   27  aigu
+   25  normal
+   18  chronique
+    9  focal
+    9  stade 1
+    7  multifocal
+    6  diffus
+    6  stade 2
+    5  aspect histologique
+    5  massif
+    5  récent
+    4  nécrosant
+    4  stade 3
+    4  grade 1
+    4  multiple
+    4  post-mortem
+    4  augmentés
+    3  induite par le méconium
+    3  gémellaire
+    3  immunomarquage
+    3  critère de genest
+    2  augmenté en nombre
+    2  jumeaux monochorioniques
+    2  candida
+    2  segmentaire
+    2  monochorionique diamniotique
+    2  selon l'âge gestationnel
+    2  subaigu
+    2  accélérée
+    2  retardée
+    2  bichoriale biamniotique
+    2  coupe histologique
+    2  monochoriale biamniotique
+    2  placenta gémellaire
+    2  physiologique
+    2  grossesse gémellaire
+    2  bichorionique
+    2  résiduel
+    2  architecture pariétale normale
+    2  stade précoce
+    2  augmenté
+    2  étendu
+    2  secondaire à obstruction vasculaire fœtale
+    2  ancien
+    2  organisé
+    2  diffuse
+    1  primaire
+    1  basal
+    1  étiologie inconnue
+    1  épars
+    1  accessoire
+    1  succenturié
+    1  aspect en mosaïque
+    1  alternance avec villosités normales
+    1  amincissement
+    1  totale
+    1  absente ou rare
+    1  artefact
+    1  rétention > 6 jours
+    1  associée au méconium
+    1  en cocarde
+    1  listériose
+    1  hématogène
+    1  atrophique
+    1  massive
+    1  travées
+    1  stade étendu
+    1  haut grade
+    1  bas grade
+    1  îlots
+    1  stade focal
+    1  centrale
+    1  microscopique
+    1  localisation centrale
+    1  bichorionique biamniotique
+    1  bilobé
+    1  membraneux
+    1  monochorionique monoamniotique
+    1  architecture materno-fœtale
+    1  architecture fœtale
+    1  vestigial
+    1  placenta monochorionique monoamniotique
+    1  circulant
+    1  non érythroïde
+    1  délai 24-48 h
+    1  modéré
+    1  évaluation par rapport à l'âge gestationnel
+    1  adaptée à l'âge gestationnel
+    1  normale
+    1  membranes basales distinctes
+    1  architecture tricouche
+    1  aspect pâle
+    1  microscopie électronique
+    1  augmentée
+    1  cubique à cylindrique
+    1  placenta monochorionique
+    1  entre jumeaux monochorioniques
+    1  membranes
+    1  immunohistochimie
+    1  réponse inflammatoire fœtale
+    1  périphérique
+    1  candidosique
+    1  cellules en œil de hibou
+    1  cytomégalovirus
+    1  micro-abcès
+    1  relatif
+    1  MSA-positif
+    1  prolifération vasculaire villositaire
+    1  coloration réticuline
+    1  en treillis
+    1  anormal
+    1  troisième trimestre
+    1  dilaté
+    1  reliquat
+    1  zone d'afflux artériel
+    1  lisse
+    1  éosinophilique
+    1  à cellules t
+    1  parvovirus b19
+    1  profonde
+    1  jumeau receveur
+    1  vrais
+    1  rétention supérieure à 48 h
+    1  artéfact de section
+    1  dispersé
+    1  magistral
+    1  biamniotique
+    1  épaisseur selon l'âge gestationnel
+    1  type fibrine
+    1  type matriciel
+    1  progressive
+    1  discoïde
+    1  fusionné
+    1  jumeaux monochoriaux monoamniotiques
+    1  quasi-complète
+    1  intermédiaire
+    1  en voie de fusion
+    1  différenciation syncytiale
+    1  jumeau donneur
+    1  partagé
+    1  placenta gémellaire monochorionique
+    1  superficiel
+    1  post-ablation laser
+    1  grossesse multiple
+    1  placenta gémellaire diamniotique monochorial
+    1  sac inclus dans un autre
+    1  stratification
+    1  fibrinoïde
+    1  fibreux
+    1  condensé
+    1  réticulaire
+    1  face maternelle
+    1  face fœtale
+    1  aspect normal
+    1  sans hyperplasie
+    1  immature
+    1  grands foyers
+    1  ectopique
+    1  réactionnelle
+    1  myxoïde
+    1  stroma fibreux
+    1  remodelage physiologique
+    1  grade 2
+    1  concentrique
+    1  trois vaisseaux
+    1  contexte de diabète maternel
+    1  absence
+    1  pavimenteux à cubique simple
+    1  général
+    1  lobulaire
+    1  isolée
+    1  double couche musculaire lisse
+    1  petites effusions
+    1  vastes lames
+    1  post-ponction à l'aiguille
+    1  alcian blue positif
+    1  obésité maternelle
+    1  dystrophique
+    1  pas-positif
+    1  maternel
+    1  villosités fantomatiques
+    1  globale
+    1  petits foyers
+    1  nécrosante
+    1  stade MIR 3
+    1  réponse inflammatoire maternelle
+    1  réactionnel
+    1  péri-infarctus
+    1  post-cordocentèse
+    1  disséminé
+    1  calcifié
+    1  en organisation
+    1  intramembraneux
+    1  placentomégalie
+    1  en excès
+    1  high grade
+    1  low grade
+    1  macération
+    1  contexte de jumeau décédé
+    1  extensive
+    1  en clusters
+    1  stade tardif
