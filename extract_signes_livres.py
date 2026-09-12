@@ -35,6 +35,36 @@ CHAP = Path("/home/mathevet/Bureau/Embedding_RAG_V2/chapitres")
 MODEL = "Qwen3.6-35B-direct"
 WIN, OVER = 20000, 800                          # fenetre ~5 000 tokens, recouvrement 800 car.
 
+# Spranger decoupe a l'entite (split_spranger_entites.py) : le livre separe
+# lui-meme signes cliniques et signes radiographiques. On extrait SECTION PAR
+# SECTION et la modalite vient du livre — plus d'heuristique a inventer, ce que
+# ni le verbatim ni la definition HPO ne permettaient (2026-09-12).
+def _tol(phrase):
+    return r"\s*".join(r"\s*".join(mot) for mot in phrase.split())
+
+
+SECTIONS_SPRANGER = {
+    "MAJOR CLINICAL FINDINGS": "clinique",
+    "MAJOR RADIOGRAPHIC FEATURES": "radiographique",
+}
+RX_SPRANGER = re.compile(
+    r"^[ \t]*(" + "|".join(_tol(k) for k in list(SECTIONS_SPRANGER) +
+                            ["MAJOR DIFFERENTIAL DIAGNOSES", "COURSE AND PROGNOSIS",
+                             "MODE OF INHERITANCE", "GENETICS", "REMARKS", "TREATMENT",
+                             "BIBLIOGRAPHY"]) + r")[ \t]*$", re.M)
+
+
+def sections_spranger(corps):
+    """(modalite, texte) des seules sections porteuses de signes."""
+    parts = RX_SPRANGER.split(corps)
+    out = []
+    for i in range(1, len(parts) - 1, 2):
+        nom = re.sub(r"\s+", " ", parts[i]).upper()
+        for cle, mod in SECTIONS_SPRANGER.items():
+            if re.sub(r"\s+", "", nom) == re.sub(r"\s+", "", cle):
+                out.append((mod, parts[i + 1].strip()))
+    return out
+
 SYSTEM = """You extract clinical signs from a reference textbook entry about ONE syndrome.
 Return ONLY a JSON object, no prose:
 {"syndrome": "<name as in the text>",
@@ -48,6 +78,14 @@ Skip natural history, etiology, genetics, references, management."""
 
 
 def entries(livre):
+    if livre == "spranger_entites":
+        for f in sorted((CHAP / livre).glob("e*.txt")):
+            lignes = f.read_text(encoding="utf-8").split("\n", 4)
+            num, titre, corps = lignes[0].strip(), lignes[2].strip(), lignes[4] if len(lignes) > 4 else ""
+            for mod, txt in sections_spranger(corps):
+                if len(txt) > 80:
+                    yield f"{f.name}#{mod}", int(num), f"{titre} [{mod}]", txt[:WIN]
+        return
     for f in sorted((CHAP / livre).glob("ch*.txt")):
         lines = f.read_text(encoding="utf-8").split("\n", 4)
         num, title, body = lines[0].strip(), lines[2].strip(), lines[4] if len(lines) > 4 else ""
@@ -65,7 +103,7 @@ def entries(livre):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--livre", choices=["smith", "spranger", "all"], default="all")
+    ap.add_argument("--livre", choices=["smith", "spranger", "spranger_entites", "all"], default="all")
     ap.add_argument("--limit", type=int, default=0)
     a = ap.parse_args()
     c = sqlite3.connect(DB)
@@ -73,9 +111,11 @@ def main():
         id INTEGER PRIMARY KEY, livre TEXT, fichier TEXT, entree_num INTEGER, syndrome_titre TEXT,
         syndrome_llm TEXT, signe TEXT, verbatim TEXT, verbatim_ok INTEGER, frequence TEXT,
         niveau TEXT, region TEXT, modele TEXT, extrait_le TEXT DEFAULT (datetime('now')))""")
+    if "modalite" not in [r[1] for r in c.execute("pragma table_info(syndrome_signes_livres_candidats)")]:
+        c.execute("alter table syndrome_signes_livres_candidats add column modalite TEXT")
     done = {(r[0], r[1]) for r in c.execute("select livre, fichier from syndrome_signes_livres_candidats")}
     cl = MagosClient(client_id="extract-signes-livres")
-    livres = ["smith", "spranger"] if a.livre == "all" else [a.livre]
+    livres = ["smith", "spranger_entites"] if a.livre == "all" else [a.livre]
     n = 0
     for livre in livres:
         for fname, num, title, body in entries(livre):
@@ -117,10 +157,12 @@ def main():
                 vok = 1 if v and re.sub(r"\s+", " ", v.lower())[:60] in norm else 0
                 ok += vok
                 rows.append((livre, fname, num, title, d.get("syndrome"), (s.get("signe") or "").strip(),
-                             v, vok, s.get("frequence"), s.get("niveau"), s.get("region"), MODEL))
+                             v, vok, s.get("frequence"), s.get("niveau"), s.get("region"), MODEL,
+                             fname.split("#")[1] if "#" in fname else None))
             if not rows:
-                rows = [(livre, fname, num, title, d.get("syndrome"), "__VIDE__", "", 0, None, None, None, MODEL)]
-            c.executemany("insert into syndrome_signes_livres_candidats(livre,fichier,entree_num,syndrome_titre,syndrome_llm,signe,verbatim,verbatim_ok,frequence,niveau,region,modele) values(?,?,?,?,?,?,?,?,?,?,?,?)", rows)
+                rows = [(livre, fname, num, title, d.get("syndrome"), "__VIDE__", "", 0, None, None, None, MODEL,
+                         fname.split("#")[1] if "#" in fname else None)]
+            c.executemany("insert into syndrome_signes_livres_candidats(livre,fichier,entree_num,syndrome_titre,syndrome_llm,signe,verbatim,verbatim_ok,frequence,niveau,region,modele,modalite) values(?,?,?,?,?,?,?,?,?,?,?,?,?)", rows)
             c.commit(); n += 1
             print(f"  {livre}/{fname[:52]:52s} {len(rows):3d} signes, {ok:3d} verbatim ok, "
                   f"{sum(1 for x in rows if x[8]):3d} chiffres, {time.time()-t0:4.0f} s", flush=True)
