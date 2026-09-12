@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""Rattache aux familles EXISTANTES les syndromes ajoutes apres leur construction.
+
+phase2_families (build_hpo_families_spectrum.py) DROPPE et renumerote les
+familles, et ne lit que relevance='haute' : on ne la relance pas — les FAM:xxxx
+sont references par syndrome_foeto_livres et extract_micro_livres.FAMILLES.
+Ici : memes FAMILY_PATTERNS (methode 1, name_fr + name_en, confiance 0,9),
+memes voies geniques (methode 2, 0,8) si syndrome_genes les connait, sur les
+syndromes qui ne sont dans aucune famille. Insere, met n_members a jour.
+
+Usage : python3 add_family_members.py [--tous]   (defaut : aliases like 'livre:%')
+"""
+import argparse
+import re
+import sqlite3
+from collections import defaultdict
+
+from build_hpo_families_spectrum import FAMILY_PATTERNS, GENE_PATHWAYS
+
+DB = "/home/mathevet/Bureau/foeto_base/syndromes_foetaux.db"
+PATHWAY_TO_FAMILY = {
+    "RAS/MAPK": "RASopathies", "FGFR": "Craniosynostoses syndromiques", "Collagène_I": "Collagénopathies",
+    "Collagène_II": "Collagénopathies", "Collagène_XI": "Collagénopathies", "Collagène_IX": "Collagénopathies",
+    "Cohésine": "Cohesinopathies", "Rett": "Syndromes de Rett et apparentés", "Peroxysome": "Troubles du spectre Zellweger",
+    "Dystroglycanopathie": "Dystroglycanopathies", "Tubuline": "Tubulinopathies", "BBS/Ciliopathie": "Ciliopathies",
+    "Ciliopathie": "Ciliopathies", "Laminopathie": "Laminopathies", "Craniosynostose": "Craniosynostoses syndromiques",
+}
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--tous", action="store_true", help="tous les syndromes sans famille, pas seulement ceux des livres")
+    ap.add_argument("--livres", action="store_true", help="tout syndrome rattache a une entree de livre (syndrome_hpo_livres)")
+    a = ap.parse_args()
+    c = sqlite3.connect(DB)
+    fam_id = {n: f for f, n in c.execute("select family_id, family_name from syndrome_families")}
+    deja = {r[0] for r in c.execute("select distinct syndrome_id from syndrome_family_members")}
+    where = "" if a.tous else ("where id in (select syndrome_id from syndrome_hpo_livres)" if a.livres else "where aliases like 'livre:%'")
+    cibles = [r for r in c.execute(f"select id, name_fr, name_en from syndromes {where}") if r[0] not in deja]
+    genes = defaultdict(set)
+    for sid, g in c.execute("select syndrome_id, gene_symbol from syndrome_genes where role='causal'"):
+        genes[sid].add(g)
+    n = 0
+    for sid, fr, en in cibles:
+        nom = f"{fr or ''} {en or ''}".lower()
+        for fname, pats in FAMILY_PATTERNS.items():
+            if fname in fam_id and any(re.search(p, nom, re.I) for p in pats):
+                c.execute("insert or ignore into syndrome_family_members values(?,?,?)", (fam_id[fname], sid, 0.9)); n += 1
+                print(f"  {sid} {en or fr} -> {fname}")
+        for g in genes.get(sid, ()):
+            fname = PATHWAY_TO_FAMILY.get(GENE_PATHWAYS.get(g, ""))
+            if fname in fam_id:
+                c.execute("insert or ignore into syndrome_family_members values(?,?,?)", (fam_id[fname], sid, 0.8)); n += 1
+                print(f"  {sid} {en or fr} -> {fname} (gène {g})")
+    c.execute("update syndrome_families set n_members = (select count(*) from syndrome_family_members m where m.family_id = syndrome_families.family_id)")
+    c.commit()
+    print(f"{len(cibles)} syndromes examinés, {n} rattachements")
+
+
+if __name__ == "__main__":
+    main()
