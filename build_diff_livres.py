@@ -102,8 +102,9 @@ def main():
         print(f"  [{r[2][:38]}] {str(r[3])[:40]:40s} -> {r[4] or '-':12s} « {r[5][:70]} »")
 
     if a.apply:
-        c.execute("DROP TABLE IF EXISTS syndrome_diff_livres")
-        c.execute("""CREATE TABLE syndrome_diff_livres (
+        # ne JAMAIS dropper : extract_diff_smith.py ecrit dans la meme table
+        # (le 2026-09-12 un DROP ici a efface les lignes Smith en cours d'ecriture)
+        c.execute("""CREATE TABLE IF NOT EXISTS syndrome_diff_livres (
             id INTEGER PRIMARY KEY,
             livre TEXT NOT NULL, entree TEXT NOT NULL,
             syndrome_titre TEXT NOT NULL,                 -- l'entree dont on part
@@ -111,8 +112,9 @@ def main():
             diff_syndrome_id TEXT REFERENCES syndromes(id),
             verbatim TEXT NOT NULL,                       -- le paragraphe entier : ce qui tranche
             cree_le TEXT NOT NULL DEFAULT (datetime('now')))""")
+        c.execute("DELETE FROM syndrome_diff_livres WHERE livre='spranger'")
         c.executemany("INSERT INTO syndrome_diff_livres (livre, entree, syndrome_titre, diff_nom, diff_syndrome_id, verbatim) VALUES (?,?,?,?,?,?)", rows)
-        c.execute("CREATE INDEX idx_diff_titre ON syndrome_diff_livres(syndrome_titre)")
+        c.execute("CREATE INDEX IF NOT EXISTS idx_diff_titre ON syndrome_diff_livres(syndrome_titre)")
         c.commit()
         print(f"\nsyndrome_diff_livres : {len(rows)} lignes.")
 

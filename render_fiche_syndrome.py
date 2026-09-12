@@ -21,6 +21,7 @@ Usage : python3 render_fiche_syndrome.py "<motif de titre>" [--orpha ORPHA:xxxx]
 import argparse
 import re
 import sqlite3
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -78,17 +79,26 @@ def differentiels(c, orpha, syn, n_max=5, par_diag=6):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("motif")
+    ap.add_argument("motif", nargs="?", default="")
     ap.add_argument("--orpha")
     ap.add_argument("--md")
+    ap.add_argument("--titre", help="titre EXACT d'entree (mode serie)")
+    ap.add_argument("--all", metavar="DOSSIER", help="rend toutes les entrees de niveau syndrome dans DOSSIER")
     a = ap.parse_args()
+    if a.all:
+        return serie(Path(a.all))
     c = sqlite3.connect(f"file:{DB}?mode=ro", uri=True)
     c.row_factory = sqlite3.Row
     L = []
 
-    sig = c.execute("""select * from v_syndrome_hpo_livres_foetal
-                       where syndrome_titre like ? order by niveau, region""",
-                    (f"%{a.motif}%",)).fetchall()
+    if a.titre:
+        sig = c.execute("""select * from v_syndrome_hpo_livres_foetal
+                           where syndrome_titre = ? order by niveau, region""", (a.titre,)).fetchall()
+        a.motif = a.titre
+    else:
+        sig = c.execute("""select * from v_syndrome_hpo_livres_foetal
+                           where syndrome_titre like ? order by niveau, region""",
+                        (f"%{a.motif}%",)).fetchall()
     if not sig:
         raise SystemExit(f"aucune attestation pour « {a.motif} »")
     titre = sig[0]["syndrome_titre"]
@@ -236,6 +246,31 @@ def main():
         print(f"-> {a.md} ({len(md)} car.)")
     else:
         print(md)
+
+
+def serie(dossier):
+    """Toutes les entrees de niveau syndrome -> un .md par entree, en sous-processus
+    (le rendu est ecrit pour une entree ; on ne le refactore pas pour 500)."""
+    import subprocess
+    dossier.mkdir(parents=True, exist_ok=True)
+    c = sqlite3.connect(f"file:{DB}?mode=ro", uri=True)
+    ents = c.execute("""select distinct syndrome_titre, syndrome_id, livre from syndrome_hpo_livres
+                        where niveau_entree='syndrome' order by livre, syndrome_titre""").fetchall()
+    ok = 0
+    for titre, sid, livre in ents:
+        slug = re.sub(r"_+", "_", re.sub(r"[^a-z0-9]+", "_", titre.lower())).strip("_")[:70]
+        out = dossier / f"{livre.replace('_entites', '')}__{slug}.md"
+        cmd = [sys.executable, __file__, "--titre", titre, "--md", str(out)]
+        if sid:
+            cmd += ["--orpha", sid]
+        r = subprocess.run(cmd, capture_output=True, text=True)
+        if r.returncode == 0:
+            ok += 1
+        else:
+            print(f"  !! {titre[:60]} : {r.stderr.strip()[-120:]}", flush=True)
+        if ok % 50 == 0 and ok:
+            print(f"  {ok}/{len(ents)}", flush=True)
+    print(f"{ok}/{len(ents)} fiches -> {dossier}")
 
 
 if __name__ == "__main__":
