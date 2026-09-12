@@ -230,6 +230,23 @@ def main():
             orpha = f"  `{d['diff_syndrome_id']}`" if d["diff_syndrome_id"] else ""
             L.append(f"\n**{nom}**{orpha}  \n> {d['verbatim'][:600]}")
         L.append("\n### 5b. Par chevauchement HPO (Orphanet) — en repli")
+    # --- 5c : parenté calculée sur la matrice ATTESTÉE (syndrome_parente_livres) ---
+    par = c.execute("""select * from syndrome_parente_livres where a = ? order by score desc limit 6""", (titre,)).fetchall()
+    if par:
+        L.append("\n### 5c. Par chevauchement des signes attestés par les livres")
+        L.append("\n*Jaccard pondéré par l'information des termes HPO, sur les signes que Smith/Spranger citent "
+                 "(signe et ancêtres). Entre parenthèses : signes directs communs. Discriminants = ce que l'autre "
+                 "atteste et pas celle-ci.*")
+        for d in par:
+            meme = " — *même entité, autre livre*" if d["meme_orpha"] else ""
+            orp = f" `{d['orpha_b']}`" if d["orpha_b"] else ""
+            L.append(f"\n**{d['b']}**{orp} — score {d['score']:.2f} ({d['n_partages']} communs){meme}")
+            if d["partages"]:
+                L.append(f"- communs : {d['partages']}")
+            if d["disc_b"]:
+                L.append(f"- il a, elle non : {d['disc_b']}")
+            if d["disc_a"]:
+                L.append(f"- elle a, lui non : {d['disc_a']}")
     if syn:
         for autre_id, autre_nom, comm, ici, la_bas in differentiels(c, orpha, syn):
             L.append(f"\n### {autre_nom}  `{autre_id}`")
