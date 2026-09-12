@@ -190,14 +190,25 @@ class ConvergenceMatrix:
                 syn_lookup[row["name_fr"].lower().strip()] = row["id"]
 
         gr_map = {}
-        for slug, title in self.conn.execute("SELECT slug, title FROM genereviews").fetchall():
+        # genereviews_full (899 chapitres, 2026-09-11) prime ; genereviews (584) en repli
+        has_full = self.conn.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='genereviews_full'").fetchone()
+        src = "genereviews_full" if has_full else "genereviews"
+        for slug, title in self.conn.execute(f"SELECT slug, title FROM {src}").fetchall():
             clean = title.split(" - GeneReviews")[0].strip().lower() if title else ""
             if clean in syn_lookup:
                 gr_map[slug] = syn_lookup[clean]
         return gr_map
 
     def _init_fts_chunk_meta(self):
-        """Create FTS5 index on chunk_meta if not exists."""
+        """Create the FTS5 index on chunk_meta, and ALWAYS reindex before querying.
+
+        Le rebuild était enfermé dans le `if not existing` : une fois la table créée il
+        ne repassait jamais, pendant que les embed_*.py continuaient d'insérer. Après la
+        purge des chunks sans HPO l'index gardait le bon NOMBRE de lignes mais d'anciens
+        rowids — MATCH 'calleux' rendait 0 là où LIKE en trouvait 1177, canal lexical mort
+        en silence. 2 s sur 29 513 chunks : inconditionnel.
+        """
         existing = self.conn.execute(
             "SELECT name FROM sqlite_master WHERE type='table' AND name='chunk_meta_fts'"
         ).fetchone()
@@ -211,12 +222,11 @@ class ConvergenceMatrix:
                     content_rowid='rowid'
                 )
             """)
-            self.conn.execute(
-                "INSERT INTO chunk_meta_fts(chunk_meta_fts) VALUES('rebuild')"
-            )
-            self.conn.commit()
-            n = self.conn.execute("SELECT COUNT(*) FROM chunk_meta_fts").fetchone()[0]
-            print(f"  Indexed {n} chunks in chunk_meta_fts")
+        self.conn.execute("INSERT INTO chunk_meta_fts(chunk_meta_fts) VALUES('rebuild')")
+        self.conn.execute("INSERT INTO chunk_meta_fts(chunk_meta_fts) VALUES('integrity-check')")
+        self.conn.commit()
+        n = self.conn.execute("SELECT COUNT(*) FROM chunk_meta_fts").fetchone()[0]
+        print(f"  Indexed {n} chunks in chunk_meta_fts")
 
     # ── Channel 1: BioLORD cosine ──
 

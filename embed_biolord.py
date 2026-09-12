@@ -8,6 +8,16 @@ Usage:
     python embed_biolord.py --source books   # only textbook chapters
     python embed_biolord.py --source pubmed  # only PubMed case reports
     python embed_biolord.py --reembed        # force re-embed all
+
+⚠ Écrit dans chunk_meta, adossé à l'index FTS5 external-content chunk_meta_fts.
+Finir par (2 s sur 29 513 chunks) :
+    INSERT INTO chunk_meta_fts(chunk_meta_fts) VALUES('rebuild');
+    INSERT INTO chunk_meta_fts(chunk_meta_fts) VALUES('integrity-check');
+Sinon l'index garde le bon NOMBRE de lignes mais d'anciens rowids et MATCH renvoie des
+résultats faux en silence — mesuré le 2026-08-06 : 'calleux' 0 en FTS, 1177 en LIKE.
+Les triggers chunk_meta_ai/ad/au couvrent l'INSERT ligne à ligne, pas un ATTACH ni un
+restore de fichier. Avant de conclure qu'un terme manque au corpus, croiser MATCH et
+LIKE : deux ordres de grandeur d'écart = index mort, pas lacune documentaire.
 """
 import argparse, glob, json, os, re, sqlite3, struct, sys, time
 import sqlite_vec
@@ -95,9 +105,19 @@ def get_existing(conn, source_type):
 
 
 def prepare_genereviews(conn, existing):
-    rows = conn.execute(
-        "SELECT slug, title, clinical_text, differential, genotype_phenotype FROM genereviews WHERE clinical_text IS NOT NULL"
-    ).fetchall()
+    # 2026-09-11 : genereviews_full (899 chapitres, texte integral, 28 908 %)
+    # remplace genereviews (584 chapitres, 3 sections tronquees a 8 000 car —
+    # le canal RAG n'a vu que 6 % de chaque chapitre depuis juin). L'ancienne
+    # table reste le repli si la nouvelle n'existe pas.
+    has_full = conn.execute(
+        "SELECT 1 FROM sqlite_master WHERE type='table' AND name='genereviews_full'").fetchone()
+    if has_full:
+        rows = [(slug, title, full, None, None) for slug, title, full in conn.execute(
+            "SELECT slug, title, full_text FROM genereviews_full WHERE full_text IS NOT NULL")]
+    else:
+        rows = conn.execute(
+            "SELECT slug, title, clinical_text, differential, genotype_phenotype FROM genereviews WHERE clinical_text IS NOT NULL"
+        ).fetchall()
 
     items = []
     for slug, title, clinical, diff, genopheno in rows:
