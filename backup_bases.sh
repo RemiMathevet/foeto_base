@@ -5,7 +5,7 @@
 set -u
 SRC=/home/mathevet/Bureau
 DIRS="foeto_base Embedding_RAG_V2 HPO_Foeto/P620/hpo_data akinator fiches_lecture Hub_HTML foetodata_hub benchmark_foeto magos tmux_supervisor/embeddings/pipeline_v2 tmux_supervisor/magos"
-EXCL="--exclude=venv --exclude=__pycache__ --exclude=*.bak-* --exclude=node_modules --exclude=*.pyc --exclude=.canon_* --exclude=graphify-out --exclude=outputs --exclude=syndromes_foetaux_dead.db*"
+EXCL="--exclude=venv --exclude=__pycache__ --exclude=*.bak-* --exclude=*.bak_* --exclude=node_modules --exclude=*.pyc --exclude=.canon_* --exclude=graphify-out --exclude=outputs --exclude=syndromes_foetaux_dead.db*"
 for T in /media/toshiba1 /media/toshiba2; do
   [ -d "$T" ] || { echo "$T absent"; continue; }
   D="$T/Base_backup"; mkdir -p "$D"
