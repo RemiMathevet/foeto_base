@@ -75,6 +75,10 @@ FAMILLES = {
     "FAM:0021": ["dystroglycanopathies", "dystroglycanopathy", "cobblestone"],
     "FAM:0022": ["epidermolysis bullosa", "epidermolyse bulleuse"],
     "FAM:0023": ["congenital disorders of glycosylation", "congenital disorder of glycosylation"],
+    "FAM:0041": ["fibrillinopathies", "fibrillinopathy", "marfanoid"],
+    "FAM:0042": ["enchondromatosis", "osteochondromatosis", "multiple osteochondromas", "multiple exostoses"],
+    "FAM:0043": ["cholangiopathies", "cholangiopathy", "paucity of bile ducts", "bile duct paucity"],
+    "FAM:0044": ["heterotopic ossification", "fibrodysplasia ossificans"],
 }
 
 SYSTEM = """You extract MICROSCOPIC (histological) findings from a pathology textbook passage.
@@ -270,12 +274,14 @@ def main():
         id integer primary key, passage_id integer, syndrome_titre text, syndrome_id text, livre text, chapitre text,
         signe text, verbatim text, verbatim_ok integer, organe text, attribution text, modele text,
         extrait_le text default (datetime('now')))""")
-    done = {r[0] for r in c.execute("select distinct passage_id from syndrome_micro_livres_candidats")}
+    # cle = (syndrome, livre, chapitre), pas passage_id : --passages-familles / --passages-gr
+    # recreent les passages avec de nouveaux ids, les candidats deja extraits restent valables
+    done = {tuple(r) for r in c.execute("select distinct syndrome_titre, livre, chapitre from syndrome_micro_livres_candidats")}
     cl = MagosClient(client_id="extract-micro-livres")
     n = 0
     for pid, titre, sid, livre, chap, passage in c.execute(
             "select id, syndrome_titre, syndrome_id, livre, chapitre, passage from syndrome_micro_passages order by id").fetchall():
-        if pid in done:
+        if (titre, livre, chap) in done:
             continue
         if a.limit and n >= a.limit:
             break
