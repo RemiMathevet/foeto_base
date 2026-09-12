@@ -90,7 +90,7 @@ teguments	8	HP:0000294	Implantation basse des cheveux sur le front	12
 autopsie — coeur	1	HP:0001629	Communication interventriculaire	52	oui
 autopsie — coeur	2	HP:0001631	Communication interauriculaire	39	oui
 autopsie — coeur	3	HP:0001627	Anomalie morphologique du coeur	36	oui
-autopsie — coeur	4	HP:0001643	Persistance du canal artériel	34	oui
+autopsie — coeur	4	HP:0001643	Persistance du canal artériel	34	non	physiologique in utero — passé postnatal le 2026-09-12
 autopsie — coeur	5	HP:0001636	Tétralogie de Fallot	26	
 autopsie — coeur	6	HP:0001642	Sténose pulmonaire	19	
 autopsie — coeur	7	HP:0001634	Prolapsus de la valve mitrale	18	
