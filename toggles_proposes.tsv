@@ -1,0 +1,137 @@
+section	rang	hpo_id	signe	nb_fiches_qui_le_nomment	retenu_en_toggle
+general — croissance	1	HP:0001511	Retard de croissance intra-utérin	45	oui
+general — croissance	2	HP:0001518	Petit pour l'âge gestationnel	8	oui
+general — croissance	3	HP:0001528	Hémihypertrophie	6	oui
+general — croissance	4	HP:0003363	Situs inversus abdominal	4	oui
+general — croissance	5	HP:0001520	Macrosomie	4	
+general — croissance	6	HP:0008846	Retard de croissance intra-utérin sévère	2	
+general — croissance	7	HP:0200053	Hémihypotrophie du membre inférieur	1	
+general — croissance	8	HP:0100556	Hémiatrophie	1	
+tete — crane	1	HP:0000347	micrognathie	160	oui
+tete — crane	2	HP:0000252	Microcéphalie	96	oui
+tete — crane	3	HP:0000256	Macrocéphalie	57	oui
+tete — crane	4	HP:0001363	Crâniosynostose	56	oui
+tete — crane	5	HP:0002007	Proéminence frontale	33	
+tete — crane	6	HP:0000248	Brachycéphalie	27	
+tete — crane	7	HP:0000327	Hypoplasie maxillaire	24	
+tete — crane	8	HP:0000303	Prognathisme mandibulaire	24	
+tete — face	1	HP:0000175	Fente palatine	149	oui
+tete — face	2	HP:0005280	Dépression de l'arête nasale	99	oui
+tete — face	3	HP:0000286	Epicanthus	65	oui
+tete — face	4	HP:0000494	Fissures palpébrales inclinées vers le bas	53	oui
+tete — face	5	HP:0011220	Front proéminent	50	
+tete — face	6	HP:0011800	Rétraction du visage	45	
+tete — face	7	HP:0000431	Arête nasale large	37	
+tete — face	8	HP:0000463	Narines antéversées	34	
+tete — oeil	1	HP:0000316	Hypertélorisme	127	oui
+tete — oeil	2	HP:0000518	Opacité du cristallin	71	oui
+tete — oeil	3	HP:0000568	Microphtalmie	61	oui
+tete — oeil	4	HP:0000508	Ptosis	61	oui
+tete — oeil	5	HP:0000520	Proptose	57	
+tete — oeil	6	HP:0000501	Glaucome	40	
+tete — oeil	7	HP:0000648	Atrophie optique congénitale	29	
+tete — oeil	8	HP:0000592	Sclérotiques bleues/bleutées	25	
+tete — oreille	1	HP:0000369	Implantation basse des oreilles	37	oui
+tete — oreille	2	HP:0000377	Anomalie de l'auricule de l'oreille	26	oui
+tete — oreille	3	HP:0000400	Macrotie	20	oui
+tete — oreille	4	HP:0008551	Microtie (pavillon de l'oreille hypoplasique)	17	oui
+tete — oreille	5	HP:0000358	oreilles en rotation postérieure	12	
+tete — oreille	6	HP:0000411	Oreille proéminente	8	
+tete — oreille	7	HP:0000356	Anomalie de l'oreille externe	8	
+tete — oreille	8	HP:0000413	Atrésie du canal auditif externe	4	
+cou	1	HP:0000470	Cou court	51	oui
+cou	2	HP:0000465	Cou palmé	14	oui
+cou	3	HP:0002162	Implantation des cheveux postérieure basse	6	oui
+cou	4	HP:0000473	Torticolis	4	oui
+cou	5	HP:0005989	Peau excédentaire sur le cou	3	
+cou	6	HP:0000476	Hygroma kystique	3	
+cou	7	HP:0010880	Clarté nucale anormale	2	
+cou	8	HP:0000475	Cou large	2	
+thorax	1	HP:0000767	Pectus excavatum	44	oui
+thorax	2	HP:0000774	Thorax étroit	39	oui
+thorax	3	HP:0005257	Hypoplasie thoracique	22	oui
+thorax	4	HP:0000773	Côtes courtes	22	oui
+thorax	5	HP:0000772	Anomalie des côtes	20	
+thorax	6	HP:0000768	Pectus carinatum	20	
+thorax	7	HP:0000766	Anomalie du sternum	13	
+thorax	8	HP:0000912	Anomalie de Sprengel	11	
+perinee — genital	1	HP:0000028	Cryptorchidie	130	oui
+perinee — genital	2	HP:0000047	Hypospadias	81	oui
+perinee — genital	3	HP:0000054	Micropénis	36	oui
+perinee — genital	4	HP:0000062	Ambiguïté sexuelle	12	oui
+perinee — genital	5	HP:0000048	Scrotum bifide	12	
+perinee — genital	6	HP:0000813	Utérus bicorne	11	
+perinee — genital	7	HP:0008665	Hypertrophie clitoridienne	9	
+perinee — genital	8	HP:0000059	Hypoplasie des grandes lèvres	9	
+membres sup	1	HP:0004209	Clinodactylie de l'auriculaire	53	oui
+membres sup	2	HP:0000954	Pli palmaire transverse unique	46	oui
+membres sup	3	HP:0003083	Luxation de la tête radius	19	oui
+membres sup	4	HP:0010049	métacarpiens courts	18	oui
+membres sup	5	HP:0009882	hypoplasie des phalanges distales de la main	18	
+membres sup	6	HP:0011304	Large pouce	16	
+membres sup	7	HP:0009778	Pouce hypoplasique/petit	15	
+membres sup	8	HP:0002974	Synostose radio-ulnaire	15	
+membres inf	1	HP:0001762	Pied en varus équin	81	oui
+membres inf	2	HP:0002827	Luxation de la hanche	48	oui
+membres inf	3	HP:0002857	Genu valgum	31	oui
+membres inf	4	HP:0002673	Coxa valga	26	oui
+membres inf	5	HP:0001374	Luxation congénitale de la hanche	24	
+membres inf	6	HP:0100864	Col du fémur hypoplasique	23	
+membres inf	7	HP:0001763	Pied plat	23	
+membres inf	8	HP:0001840	Metatarsus adductus	20	
+teguments	1	HP:0000954	Pli palmaire transverse unique	46	oui
+teguments	2	HP:0001792	Hypoplasie des ongles	23	oui
+teguments	3	HP:0008070	Cheveux clairsemés	18	oui
+teguments	4	HP:0001007	Hirsutisme	17	oui
+teguments	5	HP:0000384	Acrochordon périauriculaire	17	
+teguments	6	HP:0000574	Sourcils épais	14	
+teguments	7	HP:0004467	Dépression auriculaire antérieure	12	
+teguments	8	HP:0000294	Implantation basse des cheveux sur le front	12	
+autopsie — coeur	1	HP:0001629	Communication interventriculaire	52	oui
+autopsie — coeur	2	HP:0001631	Communication interauriculaire	39	oui
+autopsie — coeur	3	HP:0001627	Anomalie morphologique du coeur	36	oui
+autopsie — coeur	4	HP:0001643	Persistance du canal artériel	34	oui
+autopsie — coeur	5	HP:0001636	Tétralogie de Fallot	26	
+autopsie — coeur	6	HP:0001642	Sténose pulmonaire	19	
+autopsie — coeur	7	HP:0001634	Prolapsus de la valve mitrale	18	
+autopsie — coeur	8	HP:0001680	Coarctation aortique	17	
+autopsie — poumons	1	HP:0002089	Hypoplasie pulmonaire	20	oui
+autopsie — poumons	2	HP:0002575	Fistule trachéo-oesophagienne	11	oui
+autopsie — poumons	3	HP:0002101	Lobulation pulmonaire anormale	9	oui
+autopsie — poumons	4	HP:0004969	Sténose des artères pulmonaires périphériques	6	oui
+autopsie — poumons	5	HP:0002779	Trachéomalacie	6	
+autopsie — poumons	6	HP:0001601	Laryngomalacie	6	
+autopsie — poumons	7	HP:0002777	Sténose trachéale	5	
+autopsie — poumons	8	HP:0010310	chylothorax	4	
+autopsie — digestif	1	HP:0000023	Hernie inguinale	52	oui
+autopsie — digestif	2	HP:0001537	Hernie ombilicale	38	oui
+autopsie — digestif	3	HP:0002023	Atrésie anale	37	oui
+autopsie — digestif	4	HP:0001539	Omphalocèle	35	oui
+autopsie — digestif	5	HP:0002566	Anomalie de la rotation intestinale	24	
+autopsie — digestif	6	HP:0002021	Sténose du pylore	16	
+autopsie — digestif	7	HP:0002251	Mégacôlon aganglionnaire congénital	15	
+autopsie — digestif	8	HP:0002240	Hépatomégalie	15	
+autopsie — rein	1	HP:0000126	Hydronéphrose	28	oui
+autopsie — rein	2	HP:0000104	Agénésie rénale	19	oui
+autopsie — rein	3	HP:0000110	Dysplasie rénale	10	oui
+autopsie — rein	4	HP:0000085	Rein en fer à cheval	10	oui
+autopsie — rein	5	HP:0002667	néphroblastome (tumeur de wilms)	9	
+autopsie — rein	6	HP:0000125	Rein pelvien	8	
+autopsie — rein	7	HP:0000113	Dysplasie rénale polykystique	8	
+autopsie — rein	8	HP:0012210	Morphologie rénale  anormale	7	
+autopsie — endocrine	1	HP:0000821	Hypothyroïdie	22	oui
+autopsie — endocrine	2	HP:0000819	Diabète sucré	11	oui
+autopsie — endocrine	3	HP:0000835	Hypoplasie surrénalienne	5	oui
+autopsie — endocrine	4	HP:0000843	Hyperparathyroïdie	3	oui
+autopsie — endocrine	5	HP:0000836	Hyperthyroïdie	3	
+autopsie — endocrine	6	HP:0000778	Hypoplasie du thymus	3	
+autopsie — endocrine	7	HP:0040075	Hypopituitarisme	2	
+autopsie — endocrine	8	HP:0010314	Thélarche prématurée	2	
+autopsie — neuro	1	HP:0000252	Microcéphalie	96	oui
+autopsie — neuro	2	HP:0000238	Hydrocéphalie	78	oui
+autopsie — neuro	3	HP:0001274	Agénésie corps calleux	44	oui
+autopsie — neuro	4	HP:0002119	Ventriculomégalie	29	oui
+autopsie — neuro	5	HP:0001321	Hypoplasie cérébelleuse	27	
+autopsie — neuro	6	HP:0001305	Malformation de Dandy-Walker	16	
+autopsie — neuro	7	HP:0002251	Mégacôlon aganglionnaire congénital	15	
+autopsie — neuro	8	HP:0002059	Atrophie cérébrale progressive	15	
