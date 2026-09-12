@@ -77,6 +77,22 @@ def differentiels(c, orpha, syn, n_max=5, par_diag=6):
     return out
 
 
+SMITH_CAT = {  # table des matières de Smith, 8e éd. (outline du PDF)
+    "A": "Chromosomal Abnormality Syndromes Identifiable on Routine Karyotype",
+    "B": "Chromosomal Abnormality Syndromes Identifiable by Molecular Techniques",
+    "C": "Very Small Stature, Not Skeletal Dysplasia", "D": "Moderate Short Stature, Facial, ± Genital",
+    "E": "Senile-Like Appearance", "F": "Early Overgrowth with Associated Defects",
+    "G": "Unusual Brain and/or Neuromuscular Findings with Associated Defects",
+    "H": "Facial Defects as Major Feature", "I": "Facial-Limb Defects as Major Feature",
+    "J": "Limb Defect as Major Feature", "K": "Osteochondrodysplasias",
+    "L": "Osteochondrodysplasia with Osteopetrosis", "M": "Craniosynostosis Syndromes",
+    "N": "Other Skeletal Dysplasias", "O": "Storage Disorders", "P": "Connective Tissue Disorders",
+    "Q": "Hamartoses", "R": "Ectodermal Dysplasias", "S": "Environmental Agents",
+    "T": "Miscellaneous Syndromes", "U": "Miscellaneous Sequences", "V": "Spectra of Defects",
+    "W": "Miscellaneous Associations",
+}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("motif", nargs="?", default="")
@@ -112,15 +128,28 @@ def main():
 
     # --- FAMILLE ----------------------------------------------------------
     L.append("## 1. Famille")
-    fam = c.execute("""select distinct syndrome_titre, entree from syndrome_hpo_livres
-                       where niveau_entree='famille' and (syndrome_titre like '%FGFR3%'
-                          or syndrome_titre like ? )""", (f"%{a.motif}%",)).fetchall()
+    # Le gabarit thanatophore portait « like '%FGFR3%' » en dur : toutes les fiches
+    # sortaient la famille FGFR3 (vu par Rémi sur Meckel-Gruber, 2026-09-12).
+    # Trois sources, chacune nommée : la lettre de Smith (table des matières du
+    # PDF), le groupe de Spranger (préfixe « N. » de l'entrée -> chapitre N),
+    # la famille de la base par l'ORPHA (syndrome_family_members).
+    fam = []
+    m_smith = re.match(r"^([A-W]) ", titre) if livre == "smith" else None
+    if m_smith and m_smith[1] in SMITH_CAT:
+        fam.append(f"- **Catégorie Smith** : {m_smith[1]} — {SMITH_CAT[m_smith[1]]}")
+    m_spr = re.match(r"^(\d+)\.\d+\s", titre) if livre == "spranger_entites" else None
+    if m_spr:
+        chap = sorted(Path("/home/mathevet/Bureau/Embedding_RAG_V2/chapitres/spranger").glob(f"ch{int(m_spr[1]):02d}_*.txt"))
+        if chap:
+            fam.append(f"- **Groupe Spranger** : {m_spr[1]} — {chap[0].stem[5:].replace('_', ' ')}  \n  `{chap[0].name}`")
+    if orpha:
+        for fid, nom in c.execute("""select f.family_id, f.family_name from syndrome_family_members m
+                                     join syndrome_families f on f.family_id = m.family_id
+                                     where m.syndrome_id = ?""", (orpha,)):
+            fam.append(f"- **Famille** (base, {fid}) : {nom}")
     if syn:
-        L.append(f"- **Catégorie** (base) : {syn['category']}")
-    for f in fam:
-        L.append(f"- **Chapitre Spranger** : {f['syndrome_titre']}  \n  `{f['entree']}`")
-    if not fam:
-        L.append("- *(aucun chapitre de famille apparié — à rattacher)*")
+        fam.append(f"- **Catégorie** (base) : {syn['category']}")
+    L.extend(fam or ["- *(aucune famille rattachée — entrée sans ORPHA, sans lettre ni groupe)*"])
 
     # --- IDENTITE ---------------------------------------------------------
     secs = sections(fichier, SMITH if livre == "smith" else SPRANGER)
