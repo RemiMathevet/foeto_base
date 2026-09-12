@@ -77,7 +77,57 @@ Rules: one entry per sign. Copy, never paraphrase, the verbatim. Never invent a 
 Skip natural history, etiology, genetics, references, management."""
 
 
+RX_GR_CLIN = re.compile(r"Clinical Characteristics|Clinical Description|Suggestive Findings|Phenotyp|Establishing the Diagnosis|Natural History", re.I)
+RX_GR_HORS = re.compile(r"Literature Cited|References|Molecular Genetics|Management|Genetic Counseling|Resources|Chapter Notes|Revision History|Differential Diagnosis|Treatment|Surveillance|Evaluation", re.I)
+
+
+def entries_genereviews():
+    """GeneReviews (genereviews_full) : les sections CLINIQUES de chaque chapitre, en
+    fenetres ; les chapitres dont l'ORPHA (par MIM) est un syndrome 'haute' de la base
+    SANS aucune attestation de livre passent en premier — c'est la ou la matrice manque."""
+    import json
+    import sqlite3
+    c = sqlite3.connect(f"file:{DB}?mode=ro", uri=True)
+    mim2orpha = {}
+    for sid, om in c.execute("select id, omim from syndromes where omim is not null and omim <> ''"):
+        for m in om.split(","):
+            mim2orpha.setdefault(m.strip(), sid)
+    try:
+        import xml.etree.ElementTree as ET
+        for d in ET.parse("/home/mathevet/Bureau/foeto_base/orphadata/en_product1.xml").getroot().iter("Disorder"):
+            sid = "ORPHA:" + d.findtext("OrphaCode")
+            for r in d.iter("ExternalReference"):
+                if r.findtext("Source") == "OMIM":
+                    mim2orpha.setdefault(r.findtext("Reference"), sid)
+    except Exception:
+        pass
+    haute = {r[0] for r in c.execute("select id from syndromes where relevance='haute'")}
+    attestes = {r[0] for r in c.execute("select distinct syndrome_id from syndrome_hpo_livres where syndrome_id is not null")}
+    chaps = []
+    for slug, title, om, sj in c.execute("select slug, title, omim_ids, sections_json from genereviews_full"):
+        secs = [x for x in json.loads(sj or "[]") if RX_GR_CLIN.search(x["path"]) and not RX_GR_HORS.search(x["path"].split(">")[-1])]
+        if not secs:
+            continue
+        body = "\n\n".join(f"## {x['path'].split('>')[-1].strip()}\n{x['text']}" for x in secs)
+        orphas = {mim2orpha[m] for m in re.findall(r"\d{6}", om or "") if m in mim2orpha}
+        prio = 0 if any(o in haute and o not in attestes for o in orphas) else (1 if orphas & haute else 2)
+        chaps.append((prio, slug, title.replace(" - GeneReviews® - NCBI Bookshelf", "").strip(), body))
+    chaps.sort()
+    for i, (prio, slug, title, body) in enumerate(chaps):
+        if len(body) <= WIN:
+            yield slug, i, title, body
+        else:
+            step = WIN - OVER
+            for k, start in enumerate(range(0, len(body), step)):
+                yield f"{slug}#w{k:02d}", i, title, body[start:start + WIN]
+                if start + WIN >= len(body) or k >= 2:
+                    break
+
+
 def entries(livre):
+    if livre == "genereviews":
+        yield from entries_genereviews()
+        return
     if livre == "spranger_entites":
         for f in sorted((CHAP / livre).glob("e*.txt")):
             lignes = f.read_text(encoding="utf-8").split("\n", 4)
@@ -91,6 +141,8 @@ def entries(livre):
         num, title, body = lines[0].strip(), lines[2].strip(), lines[4] if len(lines) > 4 else ""
         if livre == "smith" and not re.match(r"^[A-W] ", title):
             continue                              # intro, ch. 2-5, appendice : pas des syndromes
+        if livre == "limb" and int(num) < 5:
+            continue                              # limb.pdf : ch. 1-4 = developpement, examen, radio, chirurgie
         if len(body) <= WIN:
             yield f.name, int(num), title, body
         else:                                     # Spranger : 53 k car. par famille en mediane
@@ -103,7 +155,7 @@ def entries(livre):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--livre", choices=["smith", "spranger", "spranger_entites", "all"], default="all")
+    ap.add_argument("--livre", choices=["smith", "spranger", "spranger_entites", "limb", "genereviews", "all"], default="all")
     ap.add_argument("--limit", type=int, default=0)
     a = ap.parse_args()
     c = sqlite3.connect(DB)
