@@ -29,7 +29,7 @@ import unicodedata
 from collections import Counter
 
 DB = "/home/mathevet/Bureau/foeto_base/syndromes_foetaux.db"
-GROUPE = re.compile(r"^[A-W]\s+")                     # prefixe de groupe Smith
+GROUPE = re.compile(r"^(?:[A-W]|\d+\.\d+)\s+")       # prefixe de groupe Smith (« K ») ou numero Spranger (« 1.1 »)
 PARENTH = re.compile(r"\s*\([^)]*\)\s*$")
 
 
@@ -53,7 +53,11 @@ def index_syndromes(c):
 def variantes(titre):
     """Formes a essayer pour un titre de livre, de la plus complete a la plus nue."""
     t = GROUPE.sub("", titre).strip()
+    t = re.sub(r"\s*\((?:MIM|OMIM)[^)]*\)", "", t).strip()   # « (MIM 187600, 187601) » n'est pas un nom
     out = [t, PARENTH.sub("", t)]
+    # Spranger : « Thanatophoric Dysplasia, Types 1 and 2 » -> essayer aussi avant la virgule
+    if "," in t:
+        out.append(t.split(",")[0].strip())
     m = re.search(r"\(([^)]+)\)", t)
     if m:
         # la parenthese liste souvent PLUSIEURS synonymes separes par des virgules :
