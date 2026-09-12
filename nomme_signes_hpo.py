@@ -72,8 +72,21 @@ def main():
         try:
             r = cl.submit_and_wait(MODEL, prompt, system=SYSTEM, priority=6, timeout_s=600, wait_timeout=900,
                                    options={"temperature": 0.1, "num_predict": 6000})
-            m = re.search(r"\{.*\}", r.get("response") or "", re.S)
-            items = json.loads(m.group())["items"] if m else []
+            raw = r.get("response") or ""
+            m = re.search(r"\{.*\}", raw, re.S)
+            try:
+                items = json.loads(m.group())["items"] if m else []
+            except (json.JSONDecodeError, KeyError, TypeError):
+                # JSON casse (13 lots la nuit du 12) : on recupere les objets item complets
+                items = []
+                for o in re.findall(r"\{[^{}]*\}", raw):
+                    try:
+                        d = json.loads(o)
+                        if "i" in d:
+                            items.append(d)
+                    except json.JSONDecodeError:
+                        pass
+                print(f"  lot {k//LOT + 1}: JSON casse, {len(items)} items recuperes", flush=True)
         except Exception as e:
             print(f"  lot {k//LOT}: ERREUR {e}", flush=True); st["erreur"] += 1
             continue
