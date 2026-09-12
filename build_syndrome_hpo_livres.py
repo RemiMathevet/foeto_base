@@ -74,13 +74,16 @@ def main():
     # des appariements rates. Le niveau est porte en colonne (PREFECT foeto_base
     # 5346afe04b4f : famille -> syndrome -> signe).
     rows = c.execute("""select livre, fichier, syndrome_titre, signe, verbatim, frequence,
-                               niveau, region, hpo_id, hpo_methode
+                               niveau, region, hpo_id, hpo_methode, modalite
                         from syndrome_signes_livres_candidats
                         where verbatim_ok=1 and hpo_id is not null""").fetchall()
 
     out, stats, non_app = [], Counter(), Counter()
-    for livre, fichier, titre, signe, verbatim, freq, niveau, region, hpo, meth in rows:
+    for livre, fichier, titre, signe, verbatim, freq, niveau, region, hpo, meth, modalite in rows:
         niveau_entree = "famille" if livre == "spranger" else "syndrome"
+        # l'extraction par section suffixait le titre « [clinique] » / « [radiographique] » :
+        # la modalite est une COLONNE, le titre reste celui de l'entite (2026-09-12)
+        titre = re.sub(r"\s*\[(clinique|radiographique)\]\s*$", "", titre)
         sid = None
         for v in variantes(titre):
             sid = idx.get(norm(v))
@@ -96,7 +99,7 @@ def main():
         for h in (hpo or "").replace("PARENT:", "").split("+"):
             if h.startswith("HP:"):
                 out.append((sid, titre, niveau_entree, h, livre, fichier, signe, verbatim,
-                            freq, niveau, region, est_parent, meth))
+                            freq, niveau, region, est_parent, meth, modalite))
                 stats["liens"] += 1
 
     print(f"{len(rows)} signes codes -> {stats['liens']} liens syndrome x HPO")
@@ -123,11 +126,12 @@ def main():
             region TEXT,
             est_parent INTEGER NOT NULL DEFAULT 0,       -- noeud d'arborescence, pas le signe brut
             methode TEXT,
+            modalite TEXT,                               -- clinique | radiographique (Spranger) | NULL (Smith)
             cree_le TEXT NOT NULL DEFAULT (datetime('now')))""")
         c.executemany("""INSERT INTO syndrome_hpo_livres
             (syndrome_id, syndrome_titre, niveau_entree, hpo_id, livre, entree, signe_livre,
-             verbatim, frequence, niveau, region, est_parent, methode)
-            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)""", out)
+             verbatim, frequence, niveau, region, est_parent, methode, modalite)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)""", out)
         c.execute("CREATE INDEX idx_shl_syndrome ON syndrome_hpo_livres(syndrome_id)")
         c.execute("CREATE INDEX idx_shl_hpo ON syndrome_hpo_livres(hpo_id)")
         c.execute("CREATE INDEX idx_shl_titre ON syndrome_hpo_livres(syndrome_titre)")

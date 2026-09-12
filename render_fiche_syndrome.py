@@ -124,21 +124,41 @@ def main():
         L.append(f"\n> {secs['ETIOLOGY'][:700]}\n>\n> — *{livre}, {titre}, ETIOLOGY*")
 
     # --- SIGNES -----------------------------------------------------------
+    # Clinique et radio sont SEPARES a la lecture — deux temps de l'examen —
+    # mais forment une seule unite diagnostique : rien ne les pondere
+    # differemment, la radio foetale etant systematique (Remi, 2026-09-12).
     L.append("\n## 3. Signes attestés, dans l'ordre de l'examen")
-    par_reg = defaultdict(list)
-    for s in sig:
-        par_reg[s["region"] or "other"].append(s)
-    for reg in ORDRE + [r for r in par_reg if r not in ORDRE]:
-        if reg not in par_reg:
-            continue
-        L.append(f"\n### {FR.get(reg, reg)}")
-        L.append("| signe | HPO | niveau | fréquence | source |")
-        L.append("|---|---|---|---|---|")
-        for s in sorted(par_reg[reg], key=lambda x: (x["niveau"] != "principal", x["signe_livre"])):
-            lab = s["label_fr"] or s["label_en"]
-            par = " *(parent)*" if s["est_parent"] else ""
-            L.append(f"| {s['signe_livre']} | `{s['hpo_id']}` {lab}{par} | {s['niveau']} | "
-                     f"{s['frequence'] or '—'} | {s['livre']} |")
+    clin = [s for s in sig if s["modalite"] != "radiographique"]
+    radio = [s for s in sig if s["modalite"] == "radiographique"]
+
+    def bloc(lignes):
+        par_reg = defaultdict(list)
+        for s in lignes:
+            par_reg[s["region"] or "other"].append(s)
+        for reg in ORDRE + [r for r in par_reg if r not in ORDRE]:
+            if reg not in par_reg:
+                continue
+            L.append(f"\n#### {FR.get(reg, reg)}")
+            L.append("| signe | HPO | niveau | fréquence | source |")
+            L.append("|---|---|---|---|---|")
+            vus = set()
+            for s in sorted(par_reg[reg], key=lambda x: (x["niveau"] != "principal", x["signe_livre"])):
+                if (s["hpo_id"], s["livre"]) in vus:
+                    continue
+                vus.add((s["hpo_id"], s["livre"]))
+                lab = s["label_fr"] or s["label_en"]
+                par = " *(parent)*" if s["est_parent"] else ""
+                L.append(f"| {s['signe_livre']} | `{s['hpo_id']}` {lab}{par} | {s['niveau']} | "
+                         f"{s['frequence'] or '—'} | {s['livre'].replace('_entites', '')} |")
+
+    L.append("\n### 3a. Examen clinique et autopsie")
+    bloc(clin)
+    if radio:
+        L.append("\n### 3b. Radiographie")
+        bloc(radio)
+        L.append("\n*Les descriptions radiologiques de Spranger sont plus fines que le grain HPO : "
+                 "seules 29 % trouvent un code. Les autres vivent dans le verbatim de la section "
+                 "MAJOR RADIOGRAPHIC FEATURES, reproduit au §7.*")
 
     # --- COTATION V2 ------------------------------------------------------
     L.append("\n## 4. Cotation V2 (vocabulaire de paillasse)")
@@ -159,6 +179,18 @@ def main():
 
     # --- DIFFERENTIEL -----------------------------------------------------
     L.append("\n## 5. Diagnostic différentiel — et ce qui tranche")
+    # d'abord ce que le LIVRE ecrit (Spranger, MAJOR DIFFERENTIAL DIAGNOSES) :
+    # un paragraphe par syndrome a distinguer, avec les criteres — source
+    # verifiable, contrairement au chevauchement Orphanet qui suit en repli
+    dl = c.execute("""select diff_nom, diff_syndrome_id, verbatim, syndrome_titre from syndrome_diff_livres
+                      where syndrome_titre like ? order by id""", (f"%{a.motif}%",)).fetchall()
+    if dl:
+        L.append(f"\n### 5a. Selon le livre — *spranger, {dl[0]['syndrome_titre']}, MAJOR DIFFERENTIAL DIAGNOSES*")
+        for d in dl:
+            nom = d["diff_nom"] or "(sans nom)"
+            orpha = f"  `{d['diff_syndrome_id']}`" if d["diff_syndrome_id"] else ""
+            L.append(f"\n**{nom}**{orpha}  \n> {d['verbatim'][:600]}")
+        L.append("\n### 5b. Par chevauchement HPO (Orphanet) — en repli")
     if syn:
         for autre_id, autre_nom, comm, ici, la_bas in differentiels(c, orpha, syn):
             L.append(f"\n### {autre_nom}  `{autre_id}`")
@@ -185,6 +217,18 @@ def main():
     if secs.get("COMMENT"):
         L.append("\n## 7. Commentaire du livre")
         L.append(f"> {secs['COMMENT'][:1200]}\n>\n> — *{livre}, {titre}, COMMENT*")
+    # verbatim radiographique de Spranger, pour ce que HPO ne code pas
+    sp = c.execute("""select distinct entree, syndrome_titre from syndrome_hpo_livres
+                      where livre='spranger_entites' and syndrome_titre like ?""", (f"%{a.motif}%",)).fetchone()
+    if sp:
+        chemin = Path("/home/mathevet/Bureau/Embedding_RAG_V2/chapitres/spranger_entites") / sp["entree"].split("#")[0]
+        if chemin.exists():
+            corps = chemin.read_text(encoding="utf-8")
+            m = re.search(r"^[ \t]*M\s*A\s*J\s*O\s*R\s+R\s*A\s*D\s*I\s*O\s*G\s*R\s*A\s*P\s*H\s*I\s*C\s+F\s*E\s*A\s*T\s*U\s*R\s*E\s*S[ \t]*$(.*?)^[ \t]*M\s*A\s*J\s*O\s*R\s+D", corps, re.M | re.S)
+            if m:
+                L.append("\n## 8. Sémiologie radiologique — verbatim Spranger")
+                L.append("> " + re.sub(r"\n+", "\n> ", m.group(1).strip())[:1500])
+                L.append(f">\n> — *spranger, {sp['syndrome_titre']}, MAJOR RADIOGRAPHIC FEATURES*")
 
     md = "\n".join(L)
     if a.md:
