@@ -116,6 +116,14 @@ def main():
         print(f"  {n:4d}  {t[:66]}")
 
     if a.apply:
+        # les ORPHA poses APRES la construction (map_orpha_livres, add_orpha_manquants,
+        # arbitrages de Remi) vivent dans cette table : on les garde a travers le DROP,
+        # et ils priment sur l'appariement par nom (2026-09-12)
+        prev = {}
+        try:
+            prev = dict(c.execute("select distinct syndrome_titre, syndrome_id from syndrome_hpo_livres where syndrome_id is not null"))
+        except sqlite3.OperationalError:
+            pass
         c.execute("DROP TABLE IF EXISTS syndrome_hpo_livres")
         c.execute("""CREATE TABLE syndrome_hpo_livres (
             id INTEGER PRIMARY KEY,
@@ -139,7 +147,9 @@ def main():
         c.execute("CREATE INDEX idx_shl_syndrome ON syndrome_hpo_livres(syndrome_id)")
         c.execute("CREATE INDEX idx_shl_hpo ON syndrome_hpo_livres(hpo_id)")
         c.execute("CREATE INDEX idx_shl_titre ON syndrome_hpo_livres(syndrome_titre)")
+        c.executemany("update syndrome_hpo_livres set syndrome_id=? where syndrome_titre=?", [(sid, t) for t, sid in prev.items()])
         c.commit()
+        print(f"  ORPHA conserves d'avant reconstruction : {len(prev)} titres")
         n, s, h, f = c.execute("""select count(*), count(distinct syndrome_titre),
                                   count(distinct hpo_id), sum(frequence is not null)
                                   from syndrome_hpo_livres""").fetchone()
