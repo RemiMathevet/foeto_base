@@ -224,8 +224,39 @@ def main():
     if secs.get("NATURAL HISTORY"):
         L.append("\n## 6. Évolution")
         L.append(f"> {secs['NATURAL HISTORY'][:1200]}\n>\n> — *{livre}, {titre}, NATURAL HISTORY*")
+    # --- MICRO ATTESTEE (syndrome_foeto_livres) --------------------------
+    micro = c.execute("""select * from syndrome_foeto_livres
+                         where syndrome_titre = ? or (? is not null and syndrome_id = ?)
+                         order by case niveau when 'direct' then 0 when 'contexte' then 1 else 2 end,
+                                  age, organe, livre""", (titre, orpha, orpha)).fetchall()
+    if micro:
+        L.append("\n## 7. Micro attestée")
+        L.append("\n*Signes histologiques que les livres de pathologie attribuent à cette entité — "
+                 "verbatim et source à chaque ligne. « Selon le groupe » = histologie décrite pour la famille, "
+                 "héritée, jamais une attestation directe. GeneReviews décrit une biopsie postnatale, pas la lame fœtale.*")
+        vus, bloc = set(), None
+        for m in micro:
+            k = m["verbatim"][:60].lower()     # meme phrase, deux formulations du signe : une ligne
+            if k in vus:
+                continue
+            vus.add(k)
+            b = ("Selon le groupe — " + m["famille"]) if m["niveau"] == "famille" else \
+                ("Attesté pour l'entité" if m["niveau"] == "direct" else "Par contexte (le passage en parle sans la nommer dans la phrase)")
+            if b != bloc:
+                L.append(f"\n### {b}")
+                bloc = b
+            fo = f" `{m['foeto_id']}`" if m["foeto_id"] else " *(terme FOETO à créer)*"
+            age = " — *biopsie postnatale*" if m["age"] == "postnatal" else ""
+            L.append(f"- **{m['signe']}** ({m['organe'] or '?'}){fo} — « {m['verbatim']} » "
+                     f"[{m['livre']}, {m['chapitre']}]{age}")
+        L.append("\n*Composé depuis syndrome_foeto_livres (arbitrage première passe, statut arbitrage_ia).*")
+    else:
+        L.append("\n## 7. Micro attestée")
+        L.append("\n*Aucune histologie attestée dans le corpus pour cette entité — ni en direct, ni par sa famille. "
+                 "La lame est celle de ses malformations, portées par les grilles d'organe.*")
+
     if secs.get("COMMENT"):
-        L.append("\n## 7. Commentaire du livre")
+        L.append("\n## 8. Commentaire du livre")
         L.append(f"> {secs['COMMENT'][:1200]}\n>\n> — *{livre}, {titre}, COMMENT*")
     # verbatim radiographique de Spranger, pour ce que HPO ne code pas
     sp = c.execute("""select distinct entree, syndrome_titre from syndrome_hpo_livres
@@ -236,7 +267,7 @@ def main():
             corps = chemin.read_text(encoding="utf-8")
             m = re.search(r"^[ \t]*M\s*A\s*J\s*O\s*R\s+R\s*A\s*D\s*I\s*O\s*G\s*R\s*A\s*P\s*H\s*I\s*C\s+F\s*E\s*A\s*T\s*U\s*R\s*E\s*S[ \t]*$(.*?)^[ \t]*M\s*A\s*J\s*O\s*R\s+D", corps, re.M | re.S)
             if m:
-                L.append("\n## 8. Sémiologie radiologique — verbatim Spranger")
+                L.append("\n## 9. Sémiologie radiologique — verbatim Spranger")
                 L.append("> " + re.sub(r"\n+", "\n> ", m.group(1).strip())[:1500])
                 L.append(f">\n> — *spranger, {sp['syndrome_titre']}, MAJOR RADIOGRAPHIC FEATURES*")
 
