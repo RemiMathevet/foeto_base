@@ -38,7 +38,7 @@ candidate HPO terms found by a lexical search (name, definition, parent). Choose
 matches the phrase — same concept, not more specific than what the book says (prefer the parent when the
 book is vaguer). If none matches, choose none. Copy the candidate name EXACTLY as listed. "sur" is true only
 when the match is clear.
-Return ONLY JSON: {"items": [{"i": <phrase index>, "nom": "<candidate name or empty>", "sur": true|false}, ...]}"""
+Return ONLY JSON: {"items": [{"i": <phrase index>, "phrase": "<the phrase, copied>", "nom": "<candidate name or empty>", "sur": true|false}, ...]}"""
 
 
 def main():
@@ -52,19 +52,26 @@ def main():
     ours = {r[0]: (r[1], r[2]) for r in c.execute("select hpo_id, label_en, aliases_fr from hpo_terms")}
     idx, idx_tok = R.index(obo, ours)
     # index inverse mot -> termes (formes NAME/EXACT seulement)
-    formes = defaultdict(set)              # hpo_id -> {frozenset de mots}
+    formes = defaultdict(set)              # hpo_id -> {frozenset de racines}
     par_mot = defaultdict(set)
+    STOP_REQ = {"abnormal", "abnormality", "morphology", "of", "the", "anomaly", "defect"}
+
+    def racines(mots):
+        # aganglionosis / aganglionic, porencephaly / porencephalic : racine = 7 premieres lettres
+        return frozenset(w[:7] if len(w) > 7 else w for w in mots if w not in STOP_REQ)
+
     for k, (hid, scope) in idx_tok.items():
-        if scope in ("NAME", "EXACT") and k:
-            formes[hid].add(k)
-            for w in k:
-                par_mot[w].add(hid)
-    STOP_REQ = {"abnormal", "abnormality", "morphology", "of", "the"}
+        if scope in ("NAME", "EXACT") and k and hid in obo:      # obsoletes (dans nos alias) ecartes
+            r = racines(k)
+            if r:
+                formes[hid].add(r)
+                for w in r:
+                    par_mot[w].add(hid)
 
     def chercher(*textes):
         score = Counter()
         for t in textes:
-            q = O.toks(t) - STOP_REQ
+            q = racines(O.toks(t))
             if not q:
                 continue
             cands = Counter()
@@ -107,9 +114,12 @@ def main():
         except Exception as e:
             print(f"  lot {k//LOT + 1}: ERREUR {e}", flush=True); st["erreur"] += 1
             continue
+        # appariement par la PHRASE recopiee (les index glissaient d'un cran quand le modele
+        # sautait un item), l'index en repli
+        par_phrase = {O.norm(x.get("phrase") or ""): x for x in items if isinstance(x, dict)}
         par_i = {int(x.get("i", -1)): x for x in items if isinstance(x, dict)}
         for i, (rid, signe, *_r) in enumerate(lot):
-            x = par_i.get(i) or {}
+            x = par_phrase.get(O.norm(signe)) or par_i.get(i) or {}
             nom, sur = (x.get("nom") or "").strip(), bool(x.get("sur"))
             noms_ok = {obo[h]["name"].lower(): h for h in listes[i]}
             h = noms_ok.get(nom.lower()) if nom else None       # un nom hors liste est refuse
