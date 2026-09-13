@@ -26,6 +26,10 @@ from pathlib import Path
 import render_fiche_syndrome as R
 
 DB = R.DB
+try:
+    TITRES_SPR = json.loads(Path("/home/mathevet/Bureau/Embedding_RAG_V2/chapitres/spranger/_titres_groupes.json").read_text(encoding="utf-8"))
+except Exception:
+    TITRES_SPR = {}
 
 
 def slug_de(s):
@@ -56,7 +60,7 @@ def rendre(c, eid):
         if m:
             chap = sorted(R.SPRANGER.glob(f"ch{int(m[1]):02d}_*.txt"))
             if chap:
-                fam.append(f"- **Groupe Spranger** : {m[1]} — {chap[0].stem[5:].replace('_', ' ')}")
+                fam.append(f"- **Groupe Spranger** : {m[1]} — {TITRES_SPR.get(m[1], chap[0].stem[5:].replace('_', ' '))}")
     if orpha:
         for fid, nom in c.execute("""select f.family_id, f.family_name from syndrome_family_members m
                                      join syndrome_families f on f.family_id = m.family_id where m.syndrome_id = ?""", (orpha,)):

@@ -21,6 +21,7 @@ Usage : python3 build_parente_livres.py
 import re
 import sqlite3
 from collections import defaultdict
+from pathlib import Path
 
 DB = "/home/mathevet/Bureau/foeto_base/syndromes_foetaux.db"
 TOP = 15
@@ -85,6 +86,15 @@ def main():
         part real, niveau text, membres text, primary key (famille, hpo_id))""")
     membres = defaultdict(set)
     noms = dict(c.execute("select family_id, family_name from syndrome_families"))
+    # les groupes de Spranger portent le titre du chapitre (table des matières du PDF),
+    # pas « Groupe Spranger 22 » — c'est « Overgrowth/Accelerated Skeletal Maturation » (Rémi)
+    try:
+        import json
+        tg = json.loads(Path("/home/mathevet/Bureau/Embedding_RAG_V2/chapitres/spranger/_titres_groupes.json").read_text(encoding="utf-8"))
+        for k, v in tg.items():
+            noms[f"SPRFAM:{k}"] = f"Spranger {k} — {v}"
+    except Exception:
+        pass
     o2t = defaultdict(set)
     for e, sid in orpha.items():
         if sid:
