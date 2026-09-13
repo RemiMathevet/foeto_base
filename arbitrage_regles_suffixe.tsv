@@ -1,10 +1,375 @@
 signe	suffixe	hpo_id	label_hpo	occurrences	choix
-normal to tall stature	tall stature	HP:0000098	Tall stature	1	
+developmental delay intellectual disability	intellectual disability	HP:0001249	Intellectual disability	23	
+mild-to-moderate intellectual disability	intellectual disability	HP:0001249	Intellectual disability	7	
+postnatal short stature	short stature	HP:0004322	Short stature	6	
+infant feeding difficulties	feeding difficulties	HP:0011968	Feeding difficulties	4	
+mild-to-severe intellectual disability	intellectual disability	HP:0001249	Intellectual disability	4	
+type 2 diabetes mellitus	diabetes mellitus	HP:0000819	Diabetes mellitus	3	
+small widely spaced teeth	widely spaced teeth	HP:0000687	Widely spaced teeth	3	
+dilated perivascular spaces	perivascular spaces	HP:0012520	Dilation of Virchow-Robin spaces	3	
+moderate-to-profound intellectual disability	intellectual disability	HP:0001249	Intellectual disability	3	
+low-set and posteriorly rotated ears	posteriorly rotated ears	HP:0000358	Posteriorly rotated ears	3	
+pre- and postnatal growth deficiency	postnatal growth deficiency	HP:0008897	Postnatal growth retardation	3	
+first-degree atrioventricular block	atrioventricular block	HP:0001678	Atrioventricular block	3	
+childhood apraxia of speech	apraxia of speech	HP:0011098	Speech apraxia	3	
+median cleft lip	cleft lip	HP:0410030	Cleft lip	2	
+multilevel airway obstruction	airway obstruction	HP:0006536	Airway obstruction	2	
+moderate-to-severe intellectual disability	intellectual disability	HP:0001249	Intellectual disability	2	
+distal esophageal stenosis	esophageal stenosis	HP:0010450	Esophageal stenosis	2	
+short-limb short stature	short stature	HP:0004322	Short stature	2	
+increased dental caries	dental caries	HP:0000670	Carious teeth	2	
+short-limbed short stature	short stature	HP:0004322	Short stature	2	
+long narrow face	narrow face	HP:0000275	Narrow face	2	
+postnatal growth delay	growth delay	HP:0001510	Growth delay	2	
+early-onset degenerative joint disease	degenerative joint disease	HP:0002758	Osteoarthritis	2	
+severe-to-profound intellectual disability	intellectual disability	HP:0001249	Intellectual disability	2	
+supravalvar aortic stenosis	aortic stenosis	HP:0001650	Aortic valve stenosis	2	
+chronic intestinal pseudoobstruction	intestinal pseudoobstruction	HP:0004389	Intestinal pseudo-obstruction	2	
+lower-limb focal dystonia	focal dystonia	HP:0004373	Focal dystonia	2	
+hyperkinetic movement disorder	movement disorder	HP:0100022	Abnormality of movement	2	
+upper respiratory infections	respiratory infections	HP:0011947	Respiratory tract infection	2	
+female breast cancer	breast cancer	HP:0003002	Breast carcinoma	2	
+slowly progressive behavioral changes	behavioral changes	HP:0000708	Atypical behavior	2	
+pes cavus foot deformity	foot deformity	HP:0001760	Abnormal foot morphology	2	
+high steppage gait	steppage gait	HP:0003376	Steppage gait	2	
+progressive symmetric muscle weakness	muscle weakness	HP:0001324	Muscle weakness	2	
+developmental and epileptic encephalopathy	epileptic encephalopathy	HP:0200134	Epileptic encephalopathy	2	
 deficiency of prenatal onset	prenatal onset	HP:0030674	Antenatal onset	1	
-absent ductus arteriosus	ductus arteriosus	HP:0001643	Patent ductus arteriosus	1	
-large carp-like mouth	carp-like mouth	HP:0010806	U-Shaped upper lip vermilion	1	
 lack of body odor	body odor	HP:0500001	Body odor	1	
-cranium large for gestational age	large for gestational age	HP:0001520	Large for gestational age	1	
-small anteverted nares	anteverted nares	HP:0000463	Anteverted nares	1	
 slowly progressive neurologic abnormalities	neurologic abnormalities	HP:0000707	Abnormality of the nervous system	1	
 lack of metaphyseal flaring	metaphyseal flaring	HP:0003015	Flared metaphysis	1	
+anterior tibial muscle weakness	muscle weakness	HP:0001324	Muscle weakness	1	
+distal and proximal symphalangism	proximal symphalangism	HP:0100264	Proximal symphalangism	1	
+primary immune deficiency	immune deficiency	HP:0002721	Immunodeficiency	1	
+hypoplasia aplasia of the pectoralis major muscle	aplasia of the pectoralis major muscle	HP:0009751	Aplasia of the pectoralis major muscle	1	
+abnormally small carpal bones	small carpal bones	HP:0001498	Carpal bone hypoplasia	1	
+proximally hypoplastic fibula	hypoplastic fibula	HP:0003038	Fibular hypoplasia	1	
+extensive polydactyly of feet	polydactyly of feet	HP:0001829	Foot polydactyly	1	
+abdominal and pelvic lipomatosis	pelvic lipomatosis	HP:0034009	Pelvic lipomatosis	1	
+severe macrocytic hypochromic anemia	hypochromic anemia	HP:0001931	Hypochromic anemia	1	
+low-set dysplastic ears	dysplastic ears	HP:0000377	Abnormal pinna morphology	1	
+fused and hypoplastic labia	hypoplastic labia	HP:0000066	Labial hypoplasia	1	
+short bulbous nose	bulbous nose	HP:0000414	Bulbous nose	1	
+mild-to-moderate developmental delay	developmental delay	HP:0001263	Global developmental delay	1	
+central chorioretinal lacunae	chorioretinal lacunae	HP:0007858	Chorioretinal lacunae	1	
+episodic psychomotor regression	psychomotor regression	HP:0002376	Developmental regression	1	
+tongue-based airway obstruction	airway obstruction	HP:0006536	Airway obstruction	1	
+c1 spina bifida occulta	spina bifida occulta	HP:0003298	Spina bifida occulta	1	
+posterior fossa arachnoid cyst	arachnoid cyst	HP:0100702	Arachnoid cyst	1	
+ataxia poor coordination	poor coordination	HP:0002311	Incoordination	1	
+oral dental abnormalities	dental abnormalities	HP:0000164	Abnormality of the dentition	1	
+intellectual disability developmental delay	developmental delay	HP:0001263	Global developmental delay	1	
+congenital portal venous malformations	venous malformations	HP:0012721	Venous malformation	1	
+prenatal-onset growth deficiency	growth deficiency	HP:0001510	Growth delay	1	
+glabellar nevus simplex	nevus simplex	HP:0001052	Nevus flammeus	1	
+eyelid nevus simplex	nevus simplex	HP:0001052	Nevus flammeus	1	
+large umbilical hernia	umbilical hernia	HP:0001537	Umbilical hernia	1	
+small umbilical hernia	umbilical hernia	HP:0001537	Umbilical hernia	1	
+structural cardiac anomalies	cardiac anomalies	HP:0001627	Abnormal heart morphology	1	
+long and slender build	slender build	HP:0001533	Slender build	1	
+positive wrist sign	wrist sign	HP:0025091	Wrist sign	1	
+positive thumb sign	thumb sign	HP:6001274	Thumb sign	1	
+broad flat nasal tip	flat nasal tip	HP:0000437	Depressed nasal tip	1	
+thickened everted lips	everted lips	HP:0012472	Eclabion	1	
+disproportionate short-limbed short stature	short stature	HP:0004322	Short stature	1	
+macrocytic hypoplastic anemia	hypoplastic anemia	HP:0001908	Hypoplastic anemia	1	
+late-maturing ovoid vertebral bodies	ovoid vertebral bodies	HP:0003300	Ovoid vertebral bodies	1	
+mild-to-severe macrocytic anemia	macrocytic anemia	HP:0001972	Macrocytic anemia	1	
+central visual impairment	visual impairment	HP:0000505	Visual impairment	1	
+mild lower facial weakness	facial weakness	HP:0030319	Weakness of facial musculature	1	
+stimulus-induced drop attacks	drop attacks	HP:0010819	Atonic seizure	1	
+kyphoscoliosis of childhood onset	childhood onset	HP:0011463	Childhood onset	1	
+proximal leg weakness	leg weakness	HP:0007340	Lower limb muscle weakness	1	
+short-trunk short stature	short stature	HP:0004322	Short stature	1	
+overall short stature	short stature	HP:0004322	Short stature	1	
+extremely narrow chest	narrow chest	HP:0000774	Narrow chest	1	
+sucking feeding difficulties	feeding difficulties	HP:0011968	Feeding difficulties	1	
+complex congenital heart defects	congenital heart defects	HP:0001627	Abnormal heart morphology	1	
+idiopathic hypogonadotropic hypogonadism	hypogonadotropic hypogonadism	HP:0000044	Hypogonadotropic hypogonadism	1	
+moderately severe feeding problems	feeding problems	HP:0011968	Feeding difficulties	1	
+transient visual loss	visual loss	HP:0000572	Visual loss	1	
+isolated migraine with aura	migraine with aura	HP:0002077	Migraine with aura	1	
+mild-to-profound cognitive impairment	cognitive impairment	HP:0100543	Cognitive impairment	1	
+recurrent kidney stones	kidney stones	HP:0000787	Nephrolithiasis	1	
+skeletal muscle weakness	muscle weakness	HP:0001324	Muscle weakness	1	
+intrauterine growth deficiency	growth deficiency	HP:0001510	Growth delay	1	
+multiple bone cysts	bone cysts	HP:0012062	Bone cyst	1	
+recurrent rectal prolapse	rectal prolapse	HP:0002035	Rectal prolapse	1	
+recurrent chronic joint dislocations	joint dislocations	HP:0001373	Joint dislocation	1	
+glaucoma elevated intraocular pressure	elevated intraocular pressure	HP:0007906	Ocular hypertension	1	
+cardiovascular autonomic dysfunction	autonomic dysfunction	HP:0012332	Abnormal autonomic nervous system physiology	1	
+atypical chest pain	chest pain	HP:0100749	Chest pain	1	
+arterial and aortic tortuosity	aortic tortuosity	HP:0006687	Aortic tortuosity	1	
+brain white matter abnormalities	white matter abnormalities	HP:0002500	Abnormal cerebral white matter morphology	1	
+frank cleft palate	cleft palate	HP:0000175	Cleft palate	1	
+true intellectual disability	intellectual disability	HP:0001249	Intellectual disability	1	
+large bladder diverticula	bladder diverticula	HP:0000015	Bladder diverticulum	1	
+speech and language disorder	language disorder	HP:0002463	Language impairment	1	
+abdominal muscle weakness	muscle weakness	HP:0001324	Muscle weakness	1	
+lobular breast cancer	breast cancer	HP:0003002	Breast carcinoma	1	
+bilateral lobular breast cancer	breast cancer	HP:0003002	Breast carcinoma	1	
+low-frequency conductive hearing loss	conductive hearing loss	HP:0000405	Conductive hearing impairment	1	
+sharp narrow nasal bridge	narrow nasal bridge	HP:0000446	Narrow nasal bridge	1	
+congenital nasal pyriform aperture stenosis	pyriform aperture stenosis	HP:0025011	Pyriform aperture stenosis	1	
+borderline low blood pressure	low blood pressure	HP:0002615	Hypotension	1	
+shortened bowed long bones	bowed long bones	HP:0006487	Bowing of the long bones	1	
+small cervical ribs	cervical ribs	HP:0000891	Cervical ribs	1	
+flat broad nasal bridge	broad nasal bridge	HP:0000431	Wide nasal bridge	1	
+tubular bulbous nose	bulbous nose	HP:0000414	Bulbous nose	1	
+pathologic gastroesophageal reflux	gastroesophageal reflux	HP:0002020	Gastroesophageal reflux	1	
+absent hypoplastic teeth	hypoplastic teeth	HP:0000685	Hypoplasia of teeth	1	
+short downslanted palpebral fissures	downslanted palpebral fissures	HP:0000494	Downslanted palpebral fissures	1	
+massively thickened skin	thickened skin	HP:0001072	Thickened skin	1	
+severely thickened palms and soles	thickened palms and soles	HP:0000972	Palmoplantar hyperkeratosis	1	
+significant growth delay	growth delay	HP:0001510	Growth delay	1	
+atypical melanocytic nevi	melanocytic nevi	HP:0000995	Melanocytic nevus	1	
+yellowish palmoplantar keratoderma	palmoplantar keratoderma	HP:0000982	Palmoplantar keratoderma	1	
+loose redundant skin folds	redundant skin folds	HP:0001582	Redundant skin	1	
+moderate-to-profound developmental delay	developmental delay	HP:0001263	Global developmental delay	1	
+adult-onset dilated cardiomyopathy	dilated cardiomyopathy	HP:0001644	Dilated cardiomyopathy	1	
+prenatal pleural effusion	pleural effusion	HP:0002202	Pleural effusion	1	
+insulin resistance diabetes mellitus	diabetes mellitus	HP:0000819	Diabetes mellitus	1	
+high-pitched nasal voice	nasal voice	HP:0001611	Hypernasal speech	1	
+enlarged parietal foramina	parietal foramina	HP:0002697	Parietal foramina	1	
+absence of truncal dystonia	truncal dystonia	HP:0002530	Axial dystonia	1	
+positive family history	family history	HP:0032316	Family history	1	
+right lung hypoplasia	lung hypoplasia	HP:0002089	Pulmonary hypoplasia	1	
+intracranial arterial tortuosity	arterial tortuosity	HP:0005116	Arterial tortuosity	1	
+anterolateral bowing of the tibia	bowing of the tibia	HP:0002982	Tibial bowing	1	
+symptomatic optic glioma	optic glioma	HP:0009734	Optic nerve glioma	1	
+symptomatic spinal neurofibromas	spinal neurofibromas	HP:0009735	Spinal neurofibroma	1	
+frontal bossing prominent forehead	prominent forehead	HP:0011220	Prominent forehead	1	
+branch pulmonary artery stenosis	pulmonary artery stenosis	HP:0004415	Pulmonary artery stenosis	1	
+central respiratory impairment	respiratory impairment	HP:0002093	Respiratory insufficiency	1	
+chronic wet cough	wet cough	HP:0031245	Productive cough	1	
+increased brain edema	brain edema	HP:0002181	Cerebral edema	1	
+expressive speech delay	speech delay	HP:0000750	Delayed speech and language development	1	
+multiple wormian bones	wormian bones	HP:0002645	Wormian bones	1	
+nasal obstruction choanal atresia	choanal atresia	HP:0000453	Choanal atresia	1	
+significant speech delay	speech delay	HP:0000750	Delayed speech and language development	1	
+severe postnatal short stature	short stature	HP:0004322	Short stature	1	
+short broad neck	broad neck	HP:0000475	Broad neck	1	
+retinal pigmentary changes	pigmentary changes	HP:0001000	Abnormality of skin pigmentation	1	
+broad prominent forehead	prominent forehead	HP:0011220	Prominent forehead	1	
+micropenis webbed penis	webbed penis	HP:0030264	Webbed penis	1	
+extracranial malignant rhabdoid tumor	rhabdoid tumor	HP:0034557	Rhabdoid tumor	1	
+early-onset rhabdoid tumor	rhabdoid tumor	HP:0034557	Rhabdoid tumor	1	
+early-onset severe interstitial lung disease	interstitial lung disease	HP:0006530	Abnormal pulmonary interstitial morphology	1	
+progressive cerebellar gait ataxia	gait ataxia	HP:0002066	Gait ataxia	1	
+focal status epilepticus	status epilepticus	HP:0002133	Status epilepticus	1	
+growth restriction short stature	short stature	HP:0004322	Short stature	1	
+solitary pelvic kidney	pelvic kidney	HP:0000125	Pelvic kidney	1	
+habitual eye poking	eye poking	HP:0001483	Eye poking	1	
+broad or flat nasal bridge	flat nasal bridge	HP:0005280	Depressed nasal bridge	1	
+moderate to severe hearing loss	severe hearing loss	HP:0012714	Severe hearing impairment	1	
+perivascular pigmentary changes	pigmentary changes	HP:0001000	Abnormality of skin pigmentation	1	
+early-onset retinal detachment	retinal detachment	HP:0000541	Retinal detachment	1	
+small bowel intestinal atresia	intestinal atresia	HP:0011100	Intestinal atresia	1	
+apple peel intestinal atresia	intestinal atresia	HP:0011100	Intestinal atresia	1	
+grossly enlarged ventricles	enlarged ventricles	HP:0002119	Ventriculomegaly	1	
+axial hypotonia in infancy	hypotonia in infancy	HP:0008947	Floppy infant	1	
+cow s milk allergy	milk allergy	HP:0100327	Cow milk allergy	1	
+excessive loose skin	loose skin	HP:0000973	Cutis laxa	1	
+growth deficiency short stature	short stature	HP:0004322	Short stature	1	
+posterior fossa arachnoid cysts	arachnoid cysts	HP:0100702	Arachnoid cyst	1	
+dystonic head tremor	head tremor	HP:0002346	Head tremor	1	
+extremely short limbs	short limbs	HP:0009826	Limb undergrowth	1	
+proximal shortening of the arms	shortening of the arms	HP:0009824	Upper limb undergrowth	1	
+symptomatic spinal stenosis	spinal stenosis	HP:0003416	Spinal canal stenosis	1	
+intermittent abdominal distention	abdominal distention	HP:0003270	Abdominal distention	1	
+non-mechanical bowel obstruction	bowel obstruction	HP:0005214	Intestinal obstruction	1	
+neonatal bilious emesis	bilious emesis	HP:0034754	Bilious emesis	1	
+chronic abdominal pain	abdominal pain	HP:0002027	Abdominal pain	1	
+multiple skin tags	skin tags	HP:0010609	Skin tags	1	
+single benign thyroid nodule	thyroid nodule	HP:0025388	Thyroid nodule	1	
+persistent cutis marmorata	cutis marmorata	HP:0000965	Cutis marmorata	1	
+affected limb weakness	limb weakness	HP:0003690	Limb muscle weakness	1	
+behavioral and intellectual deterioration	intellectual deterioration	HP:0001268	Mental deterioration	1	
+non-progressive global developmental delay	global developmental delay	HP:0001263	Global developmental delay	1	
+bulbous upturned nasal tip	upturned nasal tip	HP:0000463	Anteverted nares	1	
+proximal radial dislocation	radial dislocation	HP:0003083	Dislocated radial head	1	
+cervical spina bifida occulta	spina bifida occulta	HP:0003298	Spina bifida occulta	1	
+patterned and repetitive movements	repetitive movements	HP:0000733	Motor stereotypy	1	
+tremulous cervical dystonia	cervical dystonia	HP:0000473	Torticollis	1	
+infantile-onset generalized dystonia	generalized dystonia	HP:0007325	Generalized dystonia	1	
+adult-onset focal cervical dystonia	cervical dystonia	HP:0000473	Torticollis	1	
+mild nonprogressive cognitive impairment	cognitive impairment	HP:0100543	Cognitive impairment	1	
+adult-onset cervical dystonia	cervical dystonia	HP:0000473	Torticollis	1	
+childhood-onset generalized dystonia	generalized dystonia	HP:0007325	Generalized dystonia	1	
+third-degree atrioventricular block	atrioventricular block	HP:0001678	Atrioventricular block	1	
+end-stage heart failure	heart failure	HP:0001635	Congestive heart failure	1	
+short broad nose	broad nose	HP:0000445	Wide nose	1	
+nonspecific dysmorphic facial features	dysmorphic facial features	HP:0001999	Abnormal facial shape	1	
+postnatal-onset short stature	short stature	HP:0004322	Short stature	1	
+slender gracile short tubular bones	short tubular bones	HP:0003026	Short long bone	1	
+gracile short tubular bones	short tubular bones	HP:0003026	Short long bone	1	
+diabetes impaired glucose tolerance	impaired glucose tolerance	HP:0040270	Impaired glucose tolerance	1	
+adult-onset aplastic anemia	aplastic anemia	HP:0001915	Aplastic anemia	1	
+postnatal disproportionate short stature	disproportionate short stature	HP:0003498	Disproportionate short stature	1	
+early-onset heterotopic ossification	heterotopic ossification	HP:0011986	Ectopic ossification	1	
+facial nevus simplex	nevus simplex	HP:0001052	Nevus flammeus	1	
+severe short-limb short stature	short stature	HP:0004322	Short stature	1	
+history of kidney stones	kidney stones	HP:0000787	Nephrolithiasis	1	
+laterally broad eyebrows	broad eyebrows	HP:0011229	Broad eyebrow	1	
+long flat philtrum	flat philtrum	HP:0000319	Smooth philtrum	1	
+esophageal atresia tracheoesophageal fistula	tracheoesophageal fistula	HP:0002575	Tracheoesophageal fistula	1	
+bifid shawl scrotum	shawl scrotum	HP:0000049	Shawl scrotum	1	
+chronic intractable diarrhea	intractable diarrhea	HP:0002041	Intractable diarrhea	1	
+short upturned nose	upturned nose	HP:0000463	Anteverted nares	1	
+small low-set ears	low-set ears	HP:0000369	Low-set ears	1	
+progressively stiff thickened skin	thickened skin	HP:0001072	Thickened skin	1	
+7th cranial nerve palsy	cranial nerve palsy	HP:0006824	Cranial nerve paralysis	1	
+left-sided facial palsy	facial palsy	HP:0010628	Facial palsy	1	
+characteristic coarse facial features	coarse facial features	HP:0000280	Coarse facial features	1	
+dark blue sclerae	blue sclerae	HP:0000592	Blue sclerae	1	
+moderately elevated liver enzymes	elevated liver enzymes	HP:0002910	Elevated circulating hepatic transaminase concentration	1	
+high-frequency sensorineural hearing loss	sensorineural hearing loss	HP:0000407	Sensorineural hearing impairment	1	
+posterior lens luxation	lens luxation	HP:0012019	Lens luxation	1	
+milder intellectual disability	intellectual disability	HP:0001249	Intellectual disability	1	
+rod-cone retinal dystrophy	retinal dystrophy	HP:0000556	Retinal dystrophy	1	
+enlargement and delayed closure of the anterior fontanelle	delayed closure of the anterior fontanelle	HP:0001476	Delayed closure of the anterior fontanelle	1	
+cervical spinal cord compression	spinal cord compression	HP:0002176	Spinal cord compression	1	
+axonal peripheral sensorimotor neuropathy	sensorimotor neuropathy	HP:0007141	Sensorimotor neuropathy	1	
+gastrointestinal feeding problems	feeding problems	HP:0011968	Feeding difficulties	1	
+significant axial hypotonia	axial hypotonia	HP:0008936	Axial hypotonia	1	
+eczematous-like skin rash	skin rash	HP:0000988	Skin rash	1	
+pre- and postnatal growth failure	postnatal growth failure	HP:0008897	Postnatal growth retardation	1	
+childhood-onset abdominal obesity	abdominal obesity	HP:0012743	Abdominal obesity	1	
+focal sclerosis of the skull base	sclerosis of the skull base	HP:0002694	Sclerosis of skull base	1	
+large prominent ears	prominent ears	HP:0000411	Protruding ear	1	
+early marked hip dysplasia	hip dysplasia	HP:0001385	Hip dysplasia	1	
+small central scotoma	central scotoma	HP:0000603	Central scotoma	1	
+early-onset macular degeneration	macular degeneration	HP:0000608	Macular degeneration	1	
+episodic flaccid muscle weakness	muscle weakness	HP:0001324	Muscle weakness	1	
+multifocal premature ventricular contractions	premature ventricular contractions	HP:0006682	Premature ventricular contraction	1	
+atypical hemolytic uremic syndrome	hemolytic uremic syndrome	HP:0005575	Hemolytic-uremic syndrome	1	
+palmar and plantar warts	plantar warts	HP:0033005	Plantar warts	1	
+central and peripheral neuropathy	peripheral neuropathy	HP:0009830	Peripheral neuropathy	1	
+small deep intracerebral hemorrhage	intracerebral hemorrhage	HP:0001342	Cerebral hemorrhage	1	
+undifferentiated skin rash	skin rash	HP:0000988	Skin rash	1	
+positive lupus anticoagulant	lupus anticoagulant	HP:0025343	Lupus anticoagulant	1	
+brown pigmentation of the sclera	pigmentation of the sclera	HP:0007832	Pigmentation of the sclera	1	
+lower motor neuron degeneration	motor neuron degeneration	HP:0007373	Motor neuron atrophy	1	
+upper motor neuron degeneration	motor neuron degeneration	HP:0007373	Motor neuron atrophy	1	
+perseverative compulsive behaviors	compulsive behaviors	HP:0000722	Compulsive behaviors	1	
+closed spinal dysraphism	spinal dysraphism	HP:0010301	Spinal dysraphism	1	
+involuntary action-induced myoclonic jerks	myoclonic jerks	HP:0001336	Myoclonus	1	
+involuntary spontaneous myoclonic jerks	myoclonic jerks	HP:0001336	Myoclonus	1	
+isolated foveal hypoplasia	foveal hypoplasia	HP:0007750	Hypoplasia of the fovea	1	
+proximal lower limb weakness	lower limb weakness	HP:0007340	Lower limb muscle weakness	1	
+axonal sensorimotor neuropathy	sensorimotor neuropathy	HP:0007141	Sensorimotor neuropathy	1	
+radiolucent kidney stones	kidney stones	HP:0000787	Nephrolithiasis	1	
+pronounced peripheral neuropathy	peripheral neuropathy	HP:0009830	Peripheral neuropathy	1	
+palpable subcutaneous nodules	subcutaneous nodules	HP:0001482	Subcutaneous nodule	1	
+young onset prostate cancer	prostate cancer	HP:0012125	Prostate cancer	1	
+aggressive prostate cancer	prostate cancer	HP:0012125	Prostate cancer	1	
+deeply grooved tongue	grooved tongue	HP:0000221	Furrowed tongue	1	
+prepubertal growth delay	growth delay	HP:0001510	Growth delay	1	
+fine motor delay	motor delay	HP:0001270	Motor delay	1	
+external ear anomalies	ear anomalies	HP:0000356	Abnormality of the outer ear	1	
+transient feeding difficulties	feeding difficulties	HP:0011968	Feeding difficulties	1	
+distal joint hyperlaxity	joint hyperlaxity	HP:0001382	Joint hypermobility	1	
+supranuclear facial palsy	facial palsy	HP:0010628	Facial palsy	1	
+spontaneous retinal detachment	retinal detachment	HP:0000541	Retinal detachment	1	
+significant weight loss	weight loss	HP:0001824	Weight loss	1	
+male breast cancer	breast cancer	HP:0003002	Breast carcinoma	1	
+triple-negative breast cancer	breast cancer	HP:0003002	Breast carcinoma	1	
+self-terminating polymorphic ventricular tachycardia	polymorphic ventricular tachycardia	HP:0031677	Polymorphic ventricular tachycardia	1	
+incessant ventricular tachycardia	ventricular tachycardia	HP:0004756	Ventricular tachycardia	1	
+upper gastrointestinal bleeding	gastrointestinal bleeding	HP:0002239	Gastrointestinal hemorrhage	1	
+pretibial skin dimples	skin dimples	HP:0010781	Skin dimple	1	
+vertically oriented narrow iliac wings	narrow iliac wings	HP:0002868	Narrow iliac wing	1	
+large patent ductus arteriosus	patent ductus arteriosus	HP:0001643	Patent ductus arteriosus	1	
+slowly progressive dementia	progressive dementia	HP:0000726	Dementia	1	
+well-drawn arched eyebrows	arched eyebrows	HP:0002553	Highly arched eyebrow	1	
+subacute combined degeneration of the spinal cord	degeneration of the spinal cord	HP:0006827	Atrophy of the spinal cord	1	
+secondary foot deformities	foot deformities	HP:0001760	Abnormal foot morphology	1	
+retinal angioid streaks	angioid streaks	HP:0001102	Angioid streaks	1	
+thoracic and spinal deformities	spinal deformities	HP:0008443	Neuropathic spinal arthropathy	1	
+non-progressive cognitive impairment	cognitive impairment	HP:0100543	Cognitive impairment	1	
+protracted neonatal jaundice	neonatal jaundice	HP:0006579	Prolonged neonatal jaundice	1	
+chronic metabolic alkalosis	metabolic alkalosis	HP:0200114	Metabolic alkalosis	1	
+small hand muscle weakness	hand muscle weakness	HP:0030237	Hand muscle weakness	1	
+early-onset epileptic encephalopathy	epileptic encephalopathy	HP:0200134	Epileptic encephalopathy	1	
+mild nonspecific dysmorphic facial features	dysmorphic facial features	HP:0001999	Abnormal facial shape	1	
+contralateral breast cancer	breast cancer	HP:0003002	Breast carcinoma	1	
+permanent corneal scarring	corneal scarring	HP:0000559	Corneal scarring	1	
+transient intrahepatic cholestasis	intrahepatic cholestasis	HP:0001406	Intrahepatic cholestasis	1	
+peroneal muscular atrophy	muscular atrophy	HP:0003202	Skeletal muscle atrophy	1	
+classic peroneal muscular atrophy	muscular atrophy	HP:0003202	Skeletal muscle atrophy	1	
+severe postnatal feeding difficulties	feeding difficulties	HP:0011968	Feeding difficulties	1	
+valvular pulmonic stenosis	pulmonic stenosis	HP:0001642	Pulmonic stenosis	1	
+isolated speech delay	speech delay	HP:0000750	Delayed speech and language development	1	
+hypochloremic metabolic acidosis	metabolic acidosis	HP:0001942	Metabolic acidosis	1	
+benign intracranial hypertension	intracranial hypertension	HP:0002516	Increased intracranial pressure	1	
+peripheral corneal neovascularization	corneal neovascularization	HP:0011496	Corneal neovascularization	1	
+achilles tendon xanthomas	tendon xanthomas	HP:0010874	Tendon xanthomatosis	1	
+patellar tendon xanthomas	tendon xanthomas	HP:0010874	Tendon xanthomatosis	1	
+neck tendon xanthomas	tendon xanthomas	HP:0010874	Tendon xanthomatosis	1	
+exercise-induced supraventricular arrhythmias	supraventricular arrhythmias	HP:0005115	Supraventricular arrhythmia	1	
+multiple skin tumors	skin tumors	HP:0008069	Neoplasm of the skin	1	
+severely symptomatic orthostatic hypotension	orthostatic hypotension	HP:0001278	Orthostatic hypotension	1	
+rapid shallow breathing	shallow breathing	HP:0040213	Hypopnea	1	
+overt muscle weakness	muscle weakness	HP:0001324	Muscle weakness	1	
+acquired color vision defect	color vision defect	HP:0000551	Color vision defect	1	
+general brain atrophy	brain atrophy	HP:0012444	Brain atrophy	1	
+severe-to-profound sensorineural hearing loss	sensorineural hearing loss	HP:0000407	Sensorineural hearing impairment	1	
+noncirrhotic portal hypertension	portal hypertension	HP:0001409	Portal hypertension	1	
+isolated elevated transaminases	elevated transaminases	HP:0002910	Elevated circulating hepatic transaminase concentration	1	
+intermittent extensor plantar responses	extensor plantar responses	HP:0003487	Babinski sign	1	
+no premature ovarian insufficiency	premature ovarian insufficiency	HP:0008209	Premature ovarian insufficiency	1	
+moderate-to-severe hypotonia in infancy	hypotonia in infancy	HP:0008947	Floppy infant	1	
+mild-to-severe psychomotor developmental delay	psychomotor developmental delay	HP:0001263	Global developmental delay	1	
+neonatal feeding difficulties	feeding difficulties	HP:0011968	Feeding difficulties	1	
+stridor and respiratory distress	respiratory distress	HP:0002098	Respiratory distress	1	
+acute renal tubular necrosis	renal tubular necrosis	HP:0008682	Renal tubular epithelial necrosis	1	
+subtle axial hypotonia	axial hypotonia	HP:0008936	Axial hypotonia	1	
+overwhelming metabolic acidosis	metabolic acidosis	HP:0001942	Metabolic acidosis	1	
+early-onset varicose veins	varicose veins	HP:0002619	Varicose veins	1	
+early-onset progressive psychomotor regression	psychomotor regression	HP:0002376	Developmental regression	1	
+increased central nuclei	central nuclei	HP:0003687	Centrally nucleated skeletal muscle fibers	1	
+action activated myoclonic jerks	myoclonic jerks	HP:0001336	Myoclonus	1	
+stimulus sensitive myoclonic jerks	myoclonic jerks	HP:0001336	Myoclonus	1	
+cholestatic liver failure	liver failure	HP:0001399	Hepatic failure	1	
+b-cell acute lymphoblastic leukemia	acute lymphoblastic leukemia	HP:0006721	Acute lymphoblastic leukemia	1	
+mixed-phenotype acute leukemia	acute leukemia	HP:0002488	Acute leukemia	1	
+diffuse large b-cell lymphoma	b-cell lymphoma	HP:0012191	B-cell lymphoma	1	
+proximal gastric polyposis	gastric polyposis	HP:0033769	Fundic gland polyposis	1	
+gastric fundic gland polyposis	fundic gland polyposis	HP:0033769	Fundic gland polyposis	1	
+symmetric generalized muscle weakness	generalized muscle weakness	HP:0003324	Generalized muscle weakness	1	
+cerebral and cerebellar dysplasia	cerebellar dysplasia	HP:0007033	Cerebellar dysplasia	1	
+hyperkinetic dyskinetic movement disorder	movement disorder	HP:0100022	Abnormality of movement	1	
+pure sensory ataxia	sensory ataxia	HP:0010871	Sensory ataxia	1	
+subtle personality changes	personality changes	HP:0000751	Personality changes	1	
+global cognitive decline	cognitive decline	HP:0001268	Mental deterioration	1	
+socially inappropriate behavior	inappropriate behavior	HP:0000719	Inappropriate behavior	1	
+simple repetitive movements	repetitive movements	HP:0000733	Motor stereotypy	1	
+amnestic mild cognitive impairment	cognitive impairment	HP:0100543	Cognitive impairment	1	
+episodic memory problems	memory problems	HP:0002354	Memory impairment	1	
+kyphosis scoliosis gibbus deformity	gibbus deformity	HP:0002808	Kyphosis	1	
+widespread arterial calcification	arterial calcification	HP:0003207	Arterial calcification	1	
+action limb dystonia	limb dystonia	HP:0002451	Limb dystonia	1	
+cerebellar action tremor	action tremor	HP:0002345	Action tremor	1	
+nonspecific neurologic abnormalities	neurologic abnormalities	HP:0000707	Abnormality of the nervous system	1	
+squared and flat vertebral bodies	flat vertebral bodies	HP:0000926	Platyspondyly	1	
+anterior lumbar vertebral hypoplasia	vertebral hypoplasia	HP:0008417	Vertebral hypoplasia	1	
+unresponsive vegetative state	vegetative state	HP:0031358	Vegetative state	1	
+congenital-onset abnormal muscle tone	abnormal muscle tone	HP:0003808	Abnormal muscle tone	1	
+proximal muscular weakness	muscular weakness	HP:0001324	Muscle weakness	1	
+fixed muscle weakness	muscle weakness	HP:0001324	Muscle weakness	1	
+obstructive hypertrophic cardiomyopathy	hypertrophic cardiomyopathy	HP:0001639	Hypertrophic cardiomyopathy	1	
+childhood focal seizures	focal seizures	HP:0007359	Focal-onset seizure	1	
+recurrent status epilepticus	status epilepticus	HP:0002133	Status epilepticus	1	
+primary liver cancer	liver cancer	HP:0002896	Neoplasm of the liver	1	
+passage of red urine	red urine	HP:0040318	Red urine	1	
+hereditary hemolytic anemia	hemolytic anemia	HP:0001878	Hemolytic anemia	1	
+chronic renal insufficiency	renal insufficiency	HP:0000083	Renal insufficiency	1	
+isolated poor growth	poor growth	HP:0001510	Growth delay	1	
+interstitial pulmonary fibrosis	pulmonary fibrosis	HP:0002206	Pulmonary fibrosis	1	
+episodes of neurologic deterioration	neurologic deterioration	HP:0002344	Progressive neurologic deterioration	1	
+distal leg weakness	leg weakness	HP:0007340	Lower limb muscle weakness	1	
+vulnerability to pulmonary infections	pulmonary infections	HP:0006532	Recurrent pneumonia	1	
+skin sebaceous adenomas	sebaceous adenomas	HP:0009720	Adenoma sebaceum	1	
+chronic neuropathic pain	neuropathic pain	HP:6000040	Neuropathic pain	1	
+early atraumatic loss of teeth	loss of teeth	HP:0006480	Premature loss of teeth	1	
+linear growth failure	growth failure	HP:0001510	Growth delay	1	
