@@ -1,0 +1,81 @@
+signe	nom_propose	hpo_id	label_hpo	n	choix	arbitre	verdict_next	nom_next	arbitre_ext
+dysmorphic features	Dysmorphic facial feature	HP:0001999	Abnormal facial shape	8		next:AUTRE Abnormal facial shape ?	AUTRE	Abnormal facial shape	kimi:OK ?
+Short tubular bones of the hands and feet	Short tubular bones of the hands	HP:0001248	Short tubular bones of the hand	3		next:AUTRE Short tubular bones of the hand and feet ?	AUTRE	Short tubular bones of the hand and feet	kimi:AUTRE Short tubular bones of the hand and feet ?
+delayed carpal/tarsal bone ossification	Delayed carpal bone ossification	HP:0001216	Delayed ossification of carpal bones	2		next:AUTRE Delayed ossification of carpal and tarsal bones ?	AUTRE	Delayed ossification of carpal and tarsal bones	kimi:AUTRE Delayed ossification of carpal and tarsal bones ?
+Delayed ossification of the cranial vault and base	Delayed closure of cranial sutures	HP:0000270	Delayed cranial suture closure	2		next:AUTRE Delayed ossification of the skull base ?	AUTRE	Delayed ossification of the skull base	kimi:AUTRE Delayed ossification of the skull base ?
+Abnormal bile acids	Accumulation of very long chain fatty acids	HP:0008167	Very long chain fatty acid accumulation	1		next:AUTRE Abnormal bile acid metabolism ?	AUTRE	Abnormal bile acid metabolism	kimi:AUTRE Abnormal bile acid metabolism ?
+Abnormal T2-weighted hyperintensity	Abnormality of the white matter	HP:0002500	Abnormal cerebral white matter morphology	1		next:AUTRE Abnormality of the central nervous system imaging ?	AUTRE	Abnormality of the central nervous system imaging	kimi:AUTRE Abnormality of the central nervous system imaging ?
+Absence of dorsal flexion creases	Absence of palmar creases	HP:0010489	Absent palmar crease	1		next:AUTRE Absent dorsal digital crease ?	AUTRE	Absent dorsal digital crease	kimi:AUTRE Absent digital crease ?
+Absent flexion creases	Absent palmar creases	HP:0010489	Absent palmar crease	1		next:AUTRE Absent digital crease ?	AUTRE	Absent digital crease	kimi:AUTRE Absent digital crease ?
+Absent ossification of the odontoid process	Odontoid process hypoplasia	HP:0003311	Hypoplasia of the odontoid process	1		next:AUTRE Absent odontoid process ?	AUTRE	Absent odontoid process	kimi:OK ?
+accessory proximal metacarpal epiphyses	Accessory carpal bone	HP:0004232	Accessory carpal bones	1		next:AUTRE Accessory metacarpal epiphyses ?	AUTRE	Accessory metacarpal epiphyses	kimi:AUTRE Accessory metacarpal epiphyses ?
+Adventitious movements	Abnormality of gait	HP:0001288	Gait disturbance	1		next:AUTRE Choreoathetosis ?	AUTRE	Choreoathetosis	kimi:AUTRE Abnormal involuntary movements ?
+Agenesis/hypoplasia of first metatarsals	Hypoplasia of the first metatarsal	HP:0010105	Short first metatarsal	1		next:AUTRE Hypoplasia of the first metatarsal bone ?	AUTRE	Hypoplasia of the first metatarsal bone	kimi:AUTRE Aplasia/Hypoplasia of the first metatarsal ?
+Atrophic and hypoplastic areas of skin	Atrophic scar	HP:0001075	Atrophic scars	1	HP:0004334	next:AUTRE Cutis laxa ?	AUTRE	Cutis laxa	kimi:AUTRE Dermal atrophy
+auditory symptoms	Auditory hallucinations	HP:0008765	Auditory hallucination	1		next:AUTRE Auditory aura ?	AUTRE	Auditory aura	kimi:AUTRE Auditory aura ?
+Blunted vertebral bodies	Flattened vertebral body	HP:0000926	Platyspondyly	1	PARENT:HP:0003312	next:AUTRE Abnormal vertebral body morphology ?	AUTRE	Abnormal vertebral body morphology	kimi:PARENT
+Bony bridging of sella turcica	Sella turcica abnormalities	HP:0002679	Abnormal sella turcica morphology	1		next:AUTRE Bridging of the sella turcica ?	AUTRE	Bridging of the sella turcica	kimi:AUTRE Bridging of the sella turcica ?
+Complete absence of ossification of anterior ribs	Hypoplasia of the ribs	HP:0000773	Short ribs	1		next:AUTRE Absent anterior rib ossification ?	AUTRE	Absent anterior rib ossification	kimi:AUTRE Aplasia/Hypoplasia of the ribs ?
+Complete bony fusion of the maxilla and mandible	Ankylosis of the temporomandibular joint	HP:0012478	Temporomandibular joint ankylosis	1		next:AUTRE Fusion of maxilla and mandible ?	AUTRE	Fusion of maxilla and mandible	kimi:AUTRE Fusion of maxilla and mandible ?
+cupped spur-like irregular flaring of metaphyses	Metaphyseal spur	HP:0005054	Metaphyseal spurs	1		next:AUTRE Cupped metaphyses ?	AUTRE	Cupped metaphyses	kimi:PARENT ?
+Cystic dilatation of renal tubules	Renal cysts	HP:0000107	Renal cyst	1		next:AUTRE Dilated renal tubules ?	AUTRE	Dilated renal tubules	kimi:OK ?
+decreased ossification in sutural areas	Delayed closure of cranial sutures	HP:0000270	Delayed cranial suture closure	1	HP:0004331	next:AUTRE Delayed cranial suture closure ?	AUTRE	Delayed cranial suture closure	kimi:AUTRE Decreased skull ossification
+defects of the ulna	Ulna aplasia	HP:0003982	Aplasia of the ulna	1	PARENT:HP:0003953	next:AUTRE Abnormality of the ulna ?	AUTRE	Abnormality of the ulna	kimi:PARENT
+delayed calvarial ossification	Delayed closure of cranial sutures	HP:0000270	Delayed cranial suture closure	1		next:AUTRE Delayed ossification of the skull ?	AUTRE	Delayed ossification of the skull	kimi:AUTRE Delayed ossification of the skull ?
+difficulty moving from sitting to standing	Abnormality of gait	HP:0001288	Gait disturbance	1		next:AUTRE Difficulty rising from a squatting position ?	AUTRE	Difficulty rising from a squatting position	kimi:AUTRE Difficulty rising from a squatting position ?
+droopy skin on the cheeks	Prominent nasolabial folds	HP:0005272	Prominent nasolabial fold	1		next:AUTRE Redundant skin of the face ?	AUTRE	Redundant skin of the face	kimi:AUTRE Redundant skin of the face ?
+Failure of ossification of sutures	Delayed closure of cranial sutures	HP:0000270	Delayed cranial suture closure	1	HP:0000270	next:AUTRE Delayed cranial suture closure ?	AUTRE	Delayed cranial suture closure	kimi:OK
+Flexion of the fingers gives the hands a cup-shaped form	Abnormal hand shape	HP:0005922	Abnormal hand morphology	1		next:AUTRE Cupped hand ?	AUTRE	Cupped hand	kimi:AUTRE Cupped hand ?
+Focal epileptiform abnormalities	Abnormality of the electroencephalogram	HP:0002353	EEG abnormality	1		next:AUTRE Focal epileptiform discharges ?	AUTRE	Focal epileptiform discharges	kimi:AUTRE Focal epileptiform discharges ?
+Focal spike and wave discharges	Abnormality of the electroencephalogram	HP:0002353	EEG abnormality	1		next:AUTRE Focal spike and wave discharges ?	AUTRE	Focal spike and wave discharges	kimi:AUTRE Focal spike and wave discharges ?
+Focal white matter signal abnormalities	Abnormality of white matter	HP:0002500	Abnormal cerebral white matter morphology	1		next:AUTRE Abnormal cerebral white matter signal intensity ?	AUTRE	Abnormal cerebral white matter signal intensity	kimi:AUTRE Abnormal cerebral white matter signal intensity ?
+Fused and hypoplastic labia	Hypoplasia of the labia majora	HP:0000059	Hypoplastic labia majora	1		next:AUTRE Hypoplastic labia majora ?	AUTRE	Hypoplastic labia majora	kimi:PARENT ?
+fusion of metatarsal cuneiform and navicular bones	Fusion of tarsal bones	HP:0008368	Tarsal synostosis	1	PARENT:HP:0001850	next:AUTRE Tarsal synostosis ?	AUTRE	Tarsal synostosis	kimi:PARENT
+gait and motor impairment	Abnormality of gait	HP:0001288	Gait disturbance	1		next:AUTRE Abnormality of gait ?	AUTRE	Abnormality of gait	kimi:AUTRE Motor impairment ?
+head and eye deviation	Abnormality of eye movements	HP:0000496	Abnormality of eye movement	1		next:AUTRE Abnormality of eye movement ?	AUTRE	Abnormality of eye movement	kimi:AUTRE Versive seizure ?
+Hypoplasia of the mandibular rami	Hypoplasia of the mandible	HP:0000347	Micrognathia	1		next:AUTRE Hypoplasia of the mandibular rami ?	AUTRE	Hypoplasia of the mandibular rami	kimi:AUTRE Hypoplasia of the mandibular rami ?
+hypoplastic bodies of cervical vertebrae	Hypoplasia of cervical vertebrae	HP:0008434	Hypoplastic cervical vertebrae	1		next:AUTRE Hypoplasia of the cervical vertebral bodies ?	AUTRE	Hypoplasia of the cervical vertebral bodies	kimi:AUTRE Hypoplasia of the cervical vertebral bodies ?
+Hypoplastic cochlea and semicircular canals	Semicircular canal hypoplasia	HP:0011382	Hypoplasia of the semicircular canal	1	PARENT:HP:0011380	next:PARENT Abnormality of the inner ear ?	PARENT	Abnormality of the inner ear	kimi:PARENT
+Hypoplastic interphalangeal creases	Hypoplastic palmar crease	HP:0006184	Decreased palmar creases	1		next:AUTRE Hypoplastic interphalangeal creases ?	AUTRE	Hypoplastic interphalangeal creases	kimi:AUTRE Hypoplastic interphalangeal creases ?
+Hypoplastic/absent flexion creases	Absent palmar creases	HP:0010489	Absent palmar crease	1	PARENT:HP:0010488	next:AUTRE Absent palmar crease ?	AUTRE	Absent palmar crease	kimi:PARENT
+Interrupted eyebrows	Sparse lateral eyebrows	HP:0005338	Sparse lateral eyebrow	1		next:AUTRE Absent lateral eyebrow ?	AUTRE	Absent lateral eyebrow	kimi:PARENT ?
+Large and flattened capital femoral epiphyses	Small femoral head	HP:0008802	Hypoplasia of the femoral head	1		next:AUTRE Enlarged capital femoral epiphysis ?	AUTRE	Enlarged capital femoral epiphysis	kimi:AUTRE Enlarged capital femoral epiphyses ?
+Limitation of flexion at proximal phalangeal joints	Short tubular bones of hands	HP:0001248	Short tubular bones of the hand	1		next:AUTRE Limited flexion at the proximal interphalangeal joints ?	AUTRE	Limited flexion at the proximal interphalangeal joints	kimi:AUTRE Limited flexion at the proximal interphalangeal joints ?
+Limited mobility of the back and neck	Limited range of motion of neck	HP:0000466	Limited neck range of motion	1		next:AUTRE Limited range of motion of the cervical spine ?	AUTRE	Limited range of motion of the cervical spine	kimi:OK ?
+Marked shortening and deformity of the lower legs	Short leg	HP:0006385	Short lower limbs	1		next:AUTRE Short lower limbs ?	AUTRE	Short lower limbs	kimi:AUTRE Short lower leg ?
+Metaphyseal undermodeling of tubular bones with irregular sclerosis of Erlenmeyer flask-like bone ends	Erlenmeyer flask deformity of the femur	HP:0004975	Erlenmeyer flask deformity of the femurs	1		next:AUTRE Erlenmeyer flask deformity ?	AUTRE	Erlenmeyer flask deformity	kimi:AUTRE Flared metaphysis ?
+Mild bowing of femora and tibiae	Bowing of tibia	HP:0002982	Tibial bowing	1	PARENT:HP:0002979	next:AUTRE Bowing of the femur ?	AUTRE	Bowing of the femur	kimi:PARENT
+Multicystic pancreas	Multicystic kidney	HP:0000003	Multicystic kidney dysplasia	1	HP:0001737	next:AUTRE Pancreatic cyst ?	AUTRE	Pancreatic cyst	kimi:AUTRE Pancreatic cysts
+Only 11 ribs	Rib anomaly	HP:0000772	Abnormal rib morphology	1	HP:0000878	next:AUTRE Reduced number of ribs ?	AUTRE	Reduced number of ribs	kimi:AUTRE 11 pairs of ribs
+Open-staircase appearance of vertebral bodies	Vertebral cleft	HP:0008428	Vertebral clefting	1		next:AUTRE Abnormal vertebral body morphology ?	AUTRE	Abnormal vertebral body morphology	kimi:AUTRE Abnormal form of the vertebral bodies ?
+Pancreatic duplication cyst	Pancreatic cyst	HP:0001737	Pancreatic cysts	1		next:AUTRE Pancreatic duplication cyst ?	AUTRE	Pancreatic duplication cyst	kimi:OK ?
+Pearly white atrophic skin lesions	Atrophic scar	HP:0001075	Atrophic scars	1	HP:0004334	next:AUTRE Atrophic skin lesion ?	AUTRE	Atrophic skin lesion	kimi:AUTRE Dermal atrophy
+Peculiar reticular pattern of the calvarium	Hyperostosis of the skull	HP:0004330	Increased skull ossification	1		next:AUTRE Abnormal skull ossification ?	AUTRE	Abnormal skull ossification	kimi:AUTRE Abnormality of skull ossification ?
+Progressive erosion of the metacarpal/metatarsal diaphyses	Hypoplasia of the metacarpals	HP:0010049	Short metacarpal	1		next:AUTRE Osteolysis involving metacarpal bones ?	AUTRE	Osteolysis involving metacarpal bones	kimi:AUTRE Osteolysis ?
+Progressive hyperostosis of skull base, mandible, maxilla, and orbital roofs	Hyperostosis of the skull base	HP:0002694	Sclerosis of skull base	1		next:AUTRE Hyperostosis frontalis interna ?	AUTRE	Hyperostosis frontalis interna	kimi:AUTRE Hyperostosis ?
+Pyeloureteral duplication	Duplication of the renal pelvis	HP:0005580	Duplication of renal pelvis	1	HP:0000081	next:AUTRE Duplication of ureter ?	AUTRE	Duplication of ureter	kimi:AUTRE Duplicated collecting system
+rounded ends of tubular bones	Flared metaphyses	HP:0003015	Flared metaphysis	1		next:AUTRE Rounded metaphysis ?	AUTRE	Rounded metaphysis	kimi:AUTRE Rounded metaphysis ?
+Short cranial base with early sphenooccipital closure	Premature cranial suture closure	HP:0001363	Craniosynostosis	1		next:AUTRE Premature closure of the cranial sutures ?	AUTRE	Premature closure of the cranial sutures	kimi:AUTRE Short cranial base ?
+Short lower leg	Short leg	HP:0006385	Short lower limbs	1		next:AUTRE Short lower leg ?	AUTRE	Short lower leg	kimi:AUTRE Short lower leg ?
+short tubular bones of the extremities	Short tubular bones of the hands	HP:0001248	Short tubular bones of the hand	1	PARENT:HP:0003026	next:AUTRE Short tubular bones of the extremities ?	AUTRE	Short tubular bones of the extremities	kimi:PARENT
+Short tubular bones of the hand and foot	Short tubular bones of hands	HP:0001248	Short tubular bones of the hand	1		next:AUTRE Short tubular bones of the hand and foot ?	AUTRE	Short tubular bones of the hand and foot	kimi:PARENT ?
+Short tubular bones usually well ossified	Short tubular bones of the hands	HP:0001248	Short tubular bones of the hand	1		next:AUTRE Short tubular bones of the extremities ?	AUTRE	Short tubular bones of the extremities	
+Short, thick, ribbon-like, poorly mineralized long bones	Long bone bowing	HP:0006487	Bowing of the long bones	1		next:AUTRE Ribbon-like ribs ?	AUTRE	Ribbon-like ribs	
+short, thickened clavicles	Abnormality of the clavicles	HP:0000889	Abnormal clavicle morphology	1		next:AUTRE Thickened clavicle ?	AUTRE	Thickened clavicle	
+Shortening and/or aplasia of the ulna and/or humerus	Humerus aplasia	HP:0003862	Absent humerus	1		next:AUTRE Hypoplasia of the humerus ?	AUTRE	Hypoplasia of the humerus	
+Shortening of radius and ulna	Shortening of the radius	HP:0002984	Hypoplasia of the radius	1		next:AUTRE Hypoplasia of the ulna ?	AUTRE	Hypoplasia of the ulna	
+signal abnormalities in the white matter	Abnormality of white matter	HP:0002500	Abnormal cerebral white matter morphology	1		next:AUTRE Abnormality of the cerebral white matter ?	AUTRE	Abnormality of the cerebral white matter	
+significant difficulty climbing stairs	Abnormality of gait	HP:0001288	Gait disturbance	1		next:AUTRE Proximal muscle weakness ?	AUTRE	Proximal muscle weakness	
+Slender and twisted long bones	Slender long bones	HP:0003100	Slender long bone	1		next:AUTRE Slender long bone ?	AUTRE	Slender long bone	
+Steno-occlusive cerebral arteriopathy	Stenosis of cerebral arteries	HP:0012492	Cerebral artery stenosis	1		next:AUTRE Cerebral artery occlusion ?	AUTRE	Cerebral artery occlusion	
+stiff, tapered fingers	Tapered fingers	HP:0001182	Tapered finger	1		next:AUTRE Stiff finger ?	AUTRE	Stiff finger	
+Symmetric amyotrophy of the small muscles of hands and feet	Muscle atrophy of hand	HP:0009130	Hand muscle atrophy	1		next:AUTRE Amyotrophy of the small muscles of the hands and feet ?	AUTRE	Amyotrophy of the small muscles of the hands and feet	
+underdeveloped nasal cartilage	Hypoplasia of nasal cartilage	HP:0000430	Underdeveloped nasal alae	1		next:AUTRE Hypoplasia of the nasal cartilage ?	AUTRE	Hypoplasia of the nasal cartilage	
+Unfused nares	Wide nasal tip	HP:0000455	Broad nasal tip	1		next:AUTRE Bifid nose ?	AUTRE	Bifid nose	
+Zipper-​like appearance of the spine	Vertebral segmentation defects	HP:0003422	Vertebral segmentation defect	1		next:AUTRE Absent ossification of the vertebral bodies ?	AUTRE	Absent ossification of the vertebral bodies	
+Short hands and feet	Short foot	HP:0001773	Short foot	7		next:AUTRE Short hand ?	AUTRE	Short hand	
+sleep-disordered breathing	Sleep apnea	HP:0010535	Sleep apnea	4		next:AUTRE Sleep apnea ?	AUTRE	Sleep apnea	
+Cardiac hypertrophy	Cardiomegaly	HP:0001640	Cardiomegaly	3		next:AUTRE Cardiac hypertrophy ?	AUTRE	Cardiac hypertrophy	
+Exposure keratopathy	Keratitis	HP:0000491	Keratitis	3		next:AUTRE Exposure keratopathy ?	AUTRE	Exposure keratopathy	
+Large hands and feet	Macrodactyly	HP:0004099	Macrodactyly	3		next:AUTRE Macrodactyly of the hands ?	AUTRE	Macrodactyly of the hands	
+Repetitive speech	Echolalia	HP:0010529	Echolalia	3		next:AUTRE Repetitive speech ?	AUTRE	Repetitive speech	
