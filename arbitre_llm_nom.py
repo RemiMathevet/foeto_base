@@ -10,8 +10,8 @@ sinon « pas sur ») / NON (non codable), avec « sur » vrai ou faux.
   --etape next        Qwen3.8-Flash-Next via MAGOS (177B totaux, lent, batch) ;
                       les verdicts surs vont dans la colonne choix du TSV, les
                       autres dans arbitrage_openrouter.tsv
-  --etape openrouter  les « pas sur » a un LLM externe (avis.py : gemini, claude,
-                      gpt...) ; ce qui reste « pas sur » reste pour Remi
+  --etape openrouter  les « pas sur » a un LLM externe (avis.py : kimi par defaut —
+                      une autre lignee qu'Anthropic pour un avis vraiment different) ; ce qui reste « pas sur » reste pour Remi
 Lots de 20, JSON, reprise sur le TSV (une ligne deja choisie n'est pas rejouee).
 
 Usage : python3 arbitre_llm_nom.py --etape next [--limit N]
@@ -134,7 +134,7 @@ def appel_openrouter(model, prompt):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--etape", choices=["next", "openrouter"], required=True)
-    ap.add_argument("--modele", default="claude", help="openrouter : alias d'avis.py ou id complet")
+    ap.add_argument("--modele", default="kimi", help="openrouter : alias d'avis.py ou id complet")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--tous", action="store_true", help="next : toutes les lignes sans choix, pas seulement les prioritaires (tok ou n>=3)")
     a = ap.parse_args()

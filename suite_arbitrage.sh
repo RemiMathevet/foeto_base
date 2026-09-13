@@ -8,7 +8,7 @@ while kill -0 "$ATTEND" 2>/dev/null; do sleep 60; done
 eval "$(grep '^export OPENROUTER_API_KEY=' ~/.bashrc)"
 {
 echo "=== $(date) openrouter"
-$PY -u arbitre_llm_nom.py --etape openrouter --modele claude | tail -3
+$PY -u arbitre_llm_nom.py --etape openrouter --modele kimi | tail -3
 echo "=== $(date) application + reconstruction"
 $PY applique_arbitrages.py --apply
 $PY build_syndrome_hpo_livres.py --apply | tail -1
