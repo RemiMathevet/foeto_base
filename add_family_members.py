@@ -51,14 +51,47 @@ EXCLUS = {("Alagille et cholangiopathies syndromiques", "ORPHA:3303"),
           ("Fibrillinopathies et syndromes marfanoïdes", "ORPHA:1606")}
 
 
+# familles EXISTANTES dont phase2 ne connaissait qu'une partie des membres : patterns
+# et genes ajoutes, appliques a toute la base (Remi, 2026-09-13 : « Ciliopathies, 3 membres »)
+ENRICHIR = {
+    "Ciliopathies": {
+        "patterns": [r"jeune", r"asphyxiating thoracic", r"thoracique asphyxiante", r"short.rib", r"côtes courtes",
+                     r"ellis.van.creveld", r"chondroectodermal", r"or[ao].?faci[ao].?digital", r"senior.l[oø]ken",
+                     r"nephronophthisis", r"n[ée]phronophtise", r"sensenbrenner", r"cranioectodermal",
+                     r"mainzer.saldino", r"hydrolethalus", r"alstr[oö]m", r"acrocallosal", r"joubert", r"meckel",
+                     r"bardet.biedl", r"mckusick.kaufman", r"ciliopath"],
+        "genes": ["IFT80", "IFT172", "IFT140", "DYNC2H1", "WDR34", "WDR60", "NEK1", "TTC21B", "EVC", "EVC2",
+                  "OFD1", "NPHP1", "NPHP3", "NPHP4", "CEP290", "TMEM67", "RPGRIP1L", "CC2D2A", "MKS1", "TMEM216",
+                  "B9D1", "B9D2", "TCTN1", "TCTN2", "TCTN3", "KIF7", "INPP5E", "ARL13B", "AHI1", "BBS1", "BBS2",
+                  "BBS4", "BBS10", "BBS12", "WDR19", "WDR35", "IFT122", "IFT43", "TTC8", "HYLS1", "ALMS1"]},
+}
+
+
 def creer_familles(c):
-    """cree les EXTRA_FAMILIES manquantes et y rattache tous les syndromes de la base"""
+    """cree les EXTRA_FAMILIES manquantes et y rattache tous les syndromes de la base ;
+    enrichit les familles ENRICHIR sur toute la base"""
     fam_id = {n: f for f, n in c.execute("select family_id, family_name from syndrome_families")}
-    nxt = 1 + max(int(f.split(":")[1]) for f in fam_id.values())
     genes = defaultdict(set)
     for sid, g in c.execute("select syndrome_id, gene_symbol from syndrome_genes where role='causal'"):
         genes[sid].add(g)
     tous = c.execute("select id, name_fr, name_en from syndromes").fetchall()
+    for fname, spec in ENRICHIR.items():
+        if fname not in fam_id:
+            continue
+        n = 0
+        for sid, fr, en in tous:
+            nom = f"{fr or ''} {en or ''}".lower()
+            conf = 0.9 if any(re.search(p, nom, re.I) for p in spec["patterns"]) else \
+                   0.8 if genes.get(sid, set()) & set(spec["genes"]) else None
+            if conf:
+                n += c.execute("insert or ignore into syndrome_family_members values(?,?,?)", (fam_id[fname], sid, conf)).rowcount
+        print(f"  {fam_id[fname]} {fname} : +{n} membres")
+    creer_familles_extra(c, fam_id, genes, tous)
+
+
+def creer_familles_extra(c, fam_id, genes, tous):
+    """cree les EXTRA_FAMILIES manquantes et y rattache tous les syndromes de la base"""
+    nxt = 1 + max(int(f.split(":")[1]) for f in fam_id.values())
     for fname, spec in EXTRA_FAMILIES.items():
         if fname not in fam_id:
             fid = f"FAM:{nxt:04d}"; nxt += 1
