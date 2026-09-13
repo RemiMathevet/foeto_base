@@ -53,8 +53,30 @@ EXTRA_FAMILIES = {
 
 # un gene partage n'est pas une appartenance : JAG1 met la tetralogie de Fallot chez
 # Alagille, SKI met la deletion 1p36 chez les marfanoides (Remi, 2026-09-12)
+FAMILLES_PAR_SIGNE = {"Hydrops fetalis non immun": "HP:0001789"}
+
 EXCLUS = {("Alagille et cholangiopathies syndromiques", "ORPHA:3303"),
-          ("Fibrillinopathies et syndromes marfanoïdes", "ORPHA:1606")}
+          ("Fibrillinopathies et syndromes marfanoïdes", "ORPHA:1606"),
+          # 2026-09-13 : membres attestes sans AUCUN voisin de parente dans leur famille, relus
+          ("Collagénopathies", "ORPHA:899"),                # Walker-Warburg = dystroglycanopathie
+          ("Collagénopathies", "ORPHA:90636"),              # surdite DFNB : cluster de genes, pas une entite
+          ("Dysplasies ectodermiques", "ORPHA:90636"),
+          ("Ichtyoses congénitales", "ORPHA:90636"),
+          ("Craniosynostoses syndromiques", "ORPHA:2363"),  # LADD : FGFR2 sans craniosynostose
+          ("Craniosynostoses syndromiques", "ORPHA:2396"),  # lipomatose encephalo-cranio-cutanee (FGFR1)
+          ("Craniosynostoses syndromiques", "ORPHA:2645"),  # dysplasie osteoglophonique (FGFR1)
+          ("Holoprosencéphalies", "ORPHA:2396"),
+          ("Holoprosencéphalies", "ORPHA:2645"),
+          ("Holoprosencéphalies", "ORPHA:988"),             # hemimelie tibiale : cluster SHH/LMBR1
+          ("Glycosylation (CDG)", "ORPHA:2059"),            # Fryns
+          ("Glycosylation (CDG)", "ORPHA:293181"),          # epilepsie a crises migrantes
+          ("Mucopolysaccharidoses", "ORPHA:349"),           # fucosidose = oligosaccharidose
+          ("Mucopolysaccharidoses", "ORPHA:93"),            # aspartylglucosaminurie, idem
+          ("RASopathies", "ORPHA:93270"),                   # Saldino-NOONAN : le motif « noonan »
+          ("Syndromes de surcroissance", "ORPHA:85173"),    # IMAGe = RCIU, l'inverse
+          ("Tubulinopathies", "ORPHA:2995"),                # Baraitser-Winter = actinopathie
+          ("Tubulinopathies", "ORPHA:60040"),               # MCAP = PIK3CA, reste en surcroissance
+          ("Épidermolyses bulleuses", "ORPHA:314381")}      # HSAN 6
 
 
 # familles EXISTANTES dont phase2 ne connaissait qu'une partie des membres : patterns
@@ -258,6 +280,10 @@ def main():
     if a.creer:
         creer_familles(c)
     fam_id = {n: f for f, n in c.execute("select family_id, family_name from syndrome_families")}
+    for fname, sid in EXCLUS:                       # une exclusion vaut aussi pour l'existant
+        if fname in fam_id:
+            c.execute("delete from syndrome_family_members where family_id=? and syndrome_id=?", (fam_id[fname], sid))
+    c.commit()
     deja = {r[0] for r in c.execute("select distinct syndrome_id from syndrome_family_members")}
     where = "" if a.tous else ("where id in (select syndrome_id from syndrome_hpo_livres)" if a.livres else "where aliases like 'livre:%'")
     cibles = [r for r in c.execute(f"select id, name_fr, name_en from syndromes {where}") if r[0] not in deja]
@@ -276,6 +302,17 @@ def main():
             if fname in fam_id:
                 c.execute("insert or ignore into syndrome_family_members values(?,?,?)", (fam_id[fname], sid, 0.8)); n += 1
                 print(f"  {sid} {en or fr} -> {fname} (gène {g})")
+    # familles de PRESENTATION : « Hydrops fetalis non immun » n'avait que les entites
+    # hydrops elles-memes, aucun membre atteste. Ses membres sont les syndromes ou un
+    # livre atteste l'anasarque (HP:0001789 et descendants, est_parent=0) — le
+    # differentiel de l'anasarque au foetopathologiste, confiance 0.7
+    for fname, hpo in FAMILLES_PAR_SIGNE.items():
+        if fname in fam_id:
+            k = 0
+            for sid, in c.execute("""select distinct syndrome_id from syndrome_hpo_livres where syndrome_id is not null and est_parent=0
+                                     and (hpo_id=? or hpo_id in (select hpo_id from hpo_ancestors where ancestor_id=?))""", (hpo, hpo)):
+                k += c.execute("insert or ignore into syndrome_family_members values(?,?,?)", (fam_id[fname], sid, 0.7)).rowcount
+            print(f"  {fname} : {k} membres attestés par le signe {hpo}")
     c.execute("update syndrome_families set n_members = (select count(*) from syndrome_family_members m where m.family_id = syndrome_families.family_id)")
     c.commit()
     print(f"{len(cibles)} syndromes examinés, {n} rattachements")
