@@ -27,6 +27,10 @@ from collections import defaultdict
 from pathlib import Path
 
 DB = "/home/mathevet/Bureau/foeto_base/syndromes_foetaux.db"
+try:
+    TITRES_SPR = json.loads(Path("/home/mathevet/Bureau/Embedding_RAG_V2/chapitres/spranger/_titres_groupes.json").read_text(encoding="utf-8"))
+except Exception:
+    TITRES_SPR = {}
 SMITH = Path("/home/mathevet/Bureau/Embedding_RAG_V2/chapitres/smith")
 SPRANGER = Path("/home/mathevet/Bureau/Embedding_RAG_V2/chapitres/spranger")
 SEC = re.compile(r"^(ABNORMALITIES|OCCASIONAL ABNORMALITIES|NATURAL HISTORY|ETIOLOGY|COMMENT|References)\s*$", re.M)
@@ -142,7 +146,7 @@ def main():
     if m_spr:
         chap = sorted(Path("/home/mathevet/Bureau/Embedding_RAG_V2/chapitres/spranger").glob(f"ch{int(m_spr[1]):02d}_*.txt"))
         if chap:
-            fam.append(f"- **Groupe Spranger** : {m_spr[1]} — {chap[0].stem[5:].replace('_', ' ')}  \n  `{chap[0].name}`")
+            fam.append(f"- **Groupe Spranger** : {m_spr[1]} — {TITRES_SPR.get(m_spr[1], chap[0].stem[5:].replace('_', ' '))}  \n  `{chap[0].name}`")
     if orpha:
         for fid, nom in c.execute("""select f.family_id, f.family_name from syndrome_family_members m
                                      join syndrome_families f on f.family_id = m.family_id
