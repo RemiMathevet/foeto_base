@@ -63,6 +63,7 @@ def main():
 
     # --- index des noms -> ORPHA (table + Orphanet) et MIM -> ORPHA -----------
     noms = defaultdict(set)          # forme normalisee -> {ORPHA}
+    principaux = defaultdict(set)    # forme = NOM officiel (table ou Orphanet), pas un synonyme
     mim2orpha = defaultdict(set)
     orpha_nom = {}
     for sid, fr, en, al in c.execute("select id, name_fr, name_en, aliases from syndromes"):
@@ -70,6 +71,9 @@ def main():
         for f in [fr, en] + [x for x in (al or "").split("|")]:
             if norm(f):
                 noms[norm(f)].add(sid)
+        for f in (fr, en):
+            if norm(f):
+                principaux[norm(f)].add(sid)
     root = ET.parse(P1).getroot()
     n_syn = 0
     for d in root.iter("Disorder"):
@@ -79,6 +83,8 @@ def main():
         for el in [d.find("Name")] + list(d.iter("Synonym")):
             if el is not None and norm(el.text):
                 noms[norm(el.text)].add(sid); n_syn += 1
+        if norm(d.findtext("Name")):
+            principaux[norm(d.findtext("Name"))].add(sid)
         for ref in d.iter("ExternalReference"):
             if ref.findtext("Source") == "OMIM":
                 mim2orpha[ref.findtext("Reference")].add(sid)
@@ -129,6 +135,12 @@ def main():
                 cands.add(osid)
             if cands:
                 meth = "jaccard"
+        # plusieurs ORPHA pour une forme (« Meckel syndrome » est aussi un synonyme de
+        # 439897) : celui dont c'est le NOM officiel l'emporte
+        if meth == "nom" and len(cands) > 1:
+            off = {sid for v in vs for sid in principaux.get(norm(v), ()) if sid in cands}
+            if len(off) == 1:
+                cands = off
         cands = sorted(cands)
         auto = meth in ("mim", "nom") and len(cands) == 1
         # « VACTERL Association » -> « VACTERL with hydrocephalus », « Robin Sequence » ->
