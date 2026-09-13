@@ -73,12 +73,14 @@ def rendre(c, eid):
     L.append("\n## 2. Identité")
     if orpha:
         L.append(f"- **ORPHA** : {orpha} — *{syn['name_en'] if syn else ''}*")
-    if syn and syn["ages_of_onset"]:
-        try:
-            ages = ", ".join(json.loads(syn["ages_of_onset"]))
-        except Exception:
-            ages = syn["ages_of_onset"]
-        L.append(f"- **Début de manifestation** (Orphanet) : {ages}")
+    deb = c.execute("select debut from entites_livres where entite_id=?", (eid,)).fetchone()
+    if deb and deb[0]:
+        L.append(f"- **Début de manifestation** ({'Orphanet' if 'GeneReviews' not in deb[0] else 'GeneReviews, texte'}) : {deb[0].split(' (')[0]}")
+        if "GeneReviews" in deb[0]:
+            for e_gr, in c.execute("select entree from entites_livres_titres where entite_id=? and livre='genereviews'", (eid,)):
+                x = c.execute("select n_prenatal, n_tardif, extraits from genereviews_debut where slug=?", (e_gr.split('#')[0],)).fetchone()
+                if x and x["extraits"]:
+                    L.append(f"  - {x['n_prenatal']} marqueurs prénataux, {x['n_tardif']} tardifs — « {x['extraits'].split(' | ')[0][:300]} »")
     n_tot = c.execute(f"select count(distinct hpo_id) from syndrome_hpo_livres where syndrome_titre in ({q}) and est_parent=0", tl).fetchone()[0]
     n_foet = c.execute(f"select count(distinct hpo_id) from v_syndrome_hpo_livres_foetal where syndrome_titre in ({q}) and est_parent=0", tl).fetchone()[0]
     L.append(f"- **Signes fœtaux attestés** : {n_foet} sur {n_tot} signes des livres ({100*n_foet//max(n_tot,1)} %)")
@@ -236,7 +238,7 @@ def main():
                     continue
                 nom_f = (e["orpha"].replace(":", "_").lower() + "__" if e["orpha"] else "livre__") + slug_de(e["nom"]) + ".md"
                 (d / nom_f).write_text(md, encoding="utf-8"); ok += 1
-                deb = re.search(r"Début de manifestation\*\* \(Orphanet\) : (.+)", md)
+                deb = re.search(r"Début de manifestation\*\* \([^)]*\) : (.+)", md)
                 nf = re.search(r"Signes fœtaux attestés\*\* : (\d+) sur (\d+)", md)
                 idx.write(f"{nom_f}\t{e['entite_id']}\t{e['nom']}\t{e['orpha'] or ''}\t{e['livres']}\t{deb[1] if deb else ''}\t{nf[1] if nf else 0}\t{nf[2] if nf else 0}\n")
         print(f"{ok}/{len(ents)} fiches par entité -> {d} (+ _index.tsv)")
