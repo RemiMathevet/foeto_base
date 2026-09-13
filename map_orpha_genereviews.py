@@ -40,24 +40,44 @@ def main():
             if el is not None and M.norm(el.text):
                 noms[M.norm(el.text)].add(sid)
     fr = {"ORPHA:" + d.findtext("OrphaCode"): d.findtext("Name") for d in ET.parse(FR1).getroot().iter("Disorder")}
-    gr = {slug: (title.replace(" - GeneReviews® - NCBI Bookshelf", "").strip(), json.loads(om or "[]"))
+    # omim_ids de GeneReviews melange MIM de PHENOTYPE et MIM de GENE (SLC2A2 138160…) :
+    # un MIM de gene retombe sur n'importe quelle maladie du gene (les galactosemies et
+    # les glycogenoses sortaient « Fanconi-Bickel »). On ne garde que les MIM de
+    # phenotype = ceux que phenotype.hpoa annote comme maladies.
+    mim_pheno = set()
+    for line in M.HPOA.open(encoding="utf-8"):
+        if line.startswith("OMIM:"):
+            mim_pheno.add(line[5:11])
+    gr = {slug: (title.replace(" - GeneReviews® - NCBI Bookshelf", "").strip(), [m for m in json.loads(om or "[]") if str(m) in mim_pheno])
           for slug, title, om in c.execute("select slug, title, omim_ids from genereviews_full")}
+    formes_de = defaultdict(list)
+    for k, v in noms.items():
+        for sid in v:
+            formes_de[sid].append(k)
     ents = c.execute("""select distinct syndrome_titre, entree from syndrome_hpo_livres
                         where livre='genereviews' and syndrome_id is null""").fetchall()
     n = crees = 0
     for titre, entree in ents:
         slug = entree.split("#")[0]
         title, mims = gr.get(slug, (titre, []))
+        # omim_ids cite aussi les MIM des diagnostics differentiels du chapitre (Duarte
+        # galactosemia porte 227810 = Fanconi-Bickel) : un ORPHA par MIM n'est retenu que
+        # si son nom ou un synonyme partage des mots pleins avec le titre du chapitre
+        tt = M.toks(title)
+        # le NOM exact d'abord (« Glycogen Storage Disease Type I » est un synonyme
+        # Orphanet de ORPHA:364), les MIM ensuite, avec recouvrement fort du titre
         cands = Counter()
-        for m in mims:
-            for sid in mim2orpha.get(str(m), ()):
+        for v in M.variantes(title)[:2]:
+            for sid in noms.get(M.norm(v), ()):
                 cands[sid] += 1
-        meth = "mim"
+        meth = "nom"
         if not cands:
-            for v in M.variantes(title)[:2]:
-                for sid in noms.get(M.norm(v), ()):
-                    cands[sid] += 1
-            meth = "nom"
+            for m in mims:
+                for sid in mim2orpha.get(str(m), ()):
+                    formes = formes_de.get(sid, [])
+                    if any(len(tt & M.toks(f)) / max(1, len(tt | M.toks(f))) >= 0.5 for f in formes):
+                        cands[sid] += 1
+            meth = "mim"
         if not cands:
             continue
         sid = cands.most_common(1)[0][0]

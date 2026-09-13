@@ -36,10 +36,16 @@ def main():
     ic_def = sum(ic.values()) / len(ic)
     w = lambda h: ic.get(h, ic_def)
 
+    # le grain est l'ENTITE (entites_livres) : un syndrome decrit par trois livres compte
+    # une fois, ses signes sont l'union — sinon son plus proche voisin etait lui-meme
+    ent_de = dict(c.execute("select syndrome_titre, entite_id from entites_livres_titres"))
+    orpha_e = dict(c.execute("select entite_id, orpha from entites_livres"))
+    livres_e = dict(c.execute("select entite_id, livres from entites_livres"))
     direct, orpha, livre = defaultdict(set), {}, {}
     for t, sid, lv, h in c.execute("""select syndrome_titre, syndrome_id, livre, hpo_id from v_syndrome_hpo_livres_foetal
                                       where est_parent=0 and niveau_entree='syndrome'"""):
-        direct[t].add(h); orpha[t] = sid; livre[t] = lv
+        e = ent_de.get(t, t)
+        direct[e].add(h); orpha[e] = orpha_e.get(e, sid); livre[e] = livres_e.get(e, lv)
     ferm = {t: set().union(*(anc[h] | {h} for h in hs)) for t, hs in direct.items()}
     poids = {t: sum(w(h) for h in f) for t, f in ferm.items()}
     ents = sorted(direct)
@@ -80,16 +86,16 @@ def main():
     membres = defaultdict(set)
     noms = dict(c.execute("select family_id, family_name from syndrome_families"))
     o2t = defaultdict(set)
-    for t, sid in orpha.items():
+    for e, sid in orpha.items():
         if sid:
-            o2t[sid].add(t)
+            o2t[sid].add(e)
     for fid, sid in c.execute("select family_id, syndrome_id from syndrome_family_members"):
         for t in o2t.get(sid, ()):
             membres[fid].add(t)
-    for t in ents:
+    for t, e in ent_de.items():
         m = re.match(r"^(\d+)\.\d+\s", t)
-        if m and livre[t] == "spranger_entites":
-            membres[f"SPRFAM:{m[1]}"].add(t)
+        if m and e in direct:
+            membres[f"SPRFAM:{m[1]}"].add(e)
     frows = 0
     for fid, ts in membres.items():
         if len(ts) < 2:
