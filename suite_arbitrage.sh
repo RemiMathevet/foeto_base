@@ -25,7 +25,7 @@ import os; os.chdir("/home/mathevet/Bureau/tmux_supervisor/embeddings/pipeline_v
 import importlib; n = importlib.import_module("08_notify")
 from pathlib import Path
 log = Path("/home/mathevet/Bureau/foeto_base/logs_arbitrage.log").read_text()
-nx = Path("/home/mathevet/Bureau/foeto_base/logs_arbitre_next.log").read_text()
+nx = max(Path("/home/mathevet/Bureau/foeto_base").glob("logs_arbitre_next*.log"), key=lambda p: p.stat().st_mtime).read_text()
 n.send_email("Arbitrage llm_nom — Next puis avis externe, reconstruction", nx[-3000:] + "\n\n" + log[-5000:], n.SMTP_USER,
              attachments=[Path("/home/mathevet/Bureau/foeto_base/arbitrage_openrouter.tsv")])
 PYEOF
