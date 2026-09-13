@@ -137,7 +137,11 @@ def main():
         return r or "?"
     for rid, signe, region in rows:
         n = norm(signe)
-        hit = idx.get(n) or idx.get(norm(QUALIF.sub(" ", n))) or idx_tok.get(toks(signe))
+        # la meilleure portee parmi les trois voies, pas la premiere qui repond :
+        # « renal cysts » est un synonyme RELATED (pluriel) de HP:0000107 dont le NOM
+        # a exactement les memes mots — le NAME par tokens doit gagner
+        hits = [h for h in (idx.get(n), idx.get(norm(QUALIF.sub(" ", n))), idx_tok.get(toks(signe))) if h]
+        hit = min(hits, key=lambda h: RANK[h[1]]) if hits else None
         if not hit:
             stats["non mappé"] += 1
             miss[n] += 1

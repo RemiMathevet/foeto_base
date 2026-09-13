@@ -1,9 +1,13 @@
 livre	titre	methode	orpha	nom_orpha	autres	choix
+genereviews	15q13.3 Recurrent Deletion					
 genereviews	16p11.2 Recurrent Deletion					
+genereviews	16p12.2 Recurrent Deletion					
 genereviews	17q12 Recurrent Deletion Syndrome					
 genereviews	17q12 Recurrent Duplication					
+genereviews	1q21.1 Recurrent Deletion					
 genereviews	21-Hydroxylase-Deficient Congenital Adrenal Hyperplasia					
 genereviews	3-Hydroxyisobutyryl-CoA Hydrolase Deficiency					
+genereviews	3q29 Recurrent Deletion					
 genereviews	6q24-Related Transient Neonatal Diabetes Mellitus					
 genereviews	7q11.23 Duplication Syndrome					
 genereviews	AARS2-Related Disorder					
@@ -12,8 +16,10 @@ genereviews	ADAMTSL4-Related Eye Disorders
 genereviews	ADCY5-Related Movement Disorder					
 genereviews	AFF4-Related CHOPS Syndrome					
 genereviews	AFG3L2-Related Neurologic Disorders					
+genereviews	AIP Familial Isolated Pituitary Adenomas					
 genereviews	ALK-Related Neuroblastic Tumor Susceptibility					
 genereviews	ALPK1-Related Autoinflammatory Disease					
+genereviews	ALS2-Related Disorder					
 genereviews	ANKRD11-Related KBG Syndrome					
 genereviews	ANKRD17-Related Neurodevelopmental Syndrome					
 genereviews	ANKRD26-Related Thrombocytopenia					
@@ -25,24 +31,37 @@ genereviews	ASPM Primary Microcephaly
 genereviews	ASXL3-Related Disorder					
 genereviews	ATM-Related Cancer Predisposition					
 genereviews	ATN1-Related Neurodevelopmental Disorder					
+genereviews	ATP1A3-Related Disorder					
 genereviews	ATP6V0A2-Related Cutis Laxa					
+genereviews	ATP7A-Related Copper Transport Disorders					
 genereviews	ATP8B1 Deficiency					
+genereviews	Acid Sphingomyelinase Deficiency					
 genereviews	Adenosine Deaminase Deficiency	jaccard	ORPHA:404553	Deficiency of adenosine deaminase 2		
+genereviews	Adult Refsum Disease					
 genereviews	Alzheimer Disease Overview					
 genereviews	Argininosuccinate Lyase Deficiency					
 genereviews	Arrhythmogenic Right Ventricular Cardiomyopathy Overview					
+genereviews	Arylsulfatase A Deficiency	nom	ORPHA:512	Leucodystrophie métachromatique		
 genereviews	Autosomal Dominant TRPV4-Related Disorders					
+genereviews	Autosomal Dominant Tubulointerstitial Kidney Disease – MUC1					
 genereviews	Autosomal Dominant Tubulointerstitial Kidney Disease – REN					
+genereviews	Autosomal Dominant Tubulointerstitial Kidney Disease – UMOD					
+genereviews	Autosomal Recessive Polycystic Kidney Disease – PKHD1					
+genereviews	Autosomal Recessive RPE65-Related Retinal Degeneration					
 genereviews	BAP1 Tumor Predisposition Syndrome					
 genereviews	BCL11A-Related Intellectual Disability					
+genereviews	BSCL2-Related Neurologic Disorders / Seipinopathy					
 genereviews	Bardet-Biedl Syndrome Overview					
 genereviews	Bestrophinopathies					
 genereviews	Blepharophimosis, Ptosis, and Epicanthus Inversus Syndrome	nom	ORPHA:126	Blepharophimosis-ptosis-epicanthus inversus syndrome	ORPHA:572354 Blepharophimosis-ptosis-epicanthus inversus syndrome type 1 ; ORPHA:572361 Blepharophimosis-ptosis-epicanthus inversus syndrome type 2	
 genereviews	Branchiooculofacial Syndrome	nom	ORPHA:1297	Branchio-oculo-facial syndrome		
 genereviews	Bryant-Li-Bhoj Neurodevelopmental Syndrome					
+genereviews	C3 Glomerulopathy					
 genereviews	C9orf72 Frontotemporal Dementia and/or Amyotrophic Lateral Sclerosis	jaccard	ORPHA:803	Amyotrophic lateral sclerosis		
+genereviews	CACNA1C-Related Disorders					
 genereviews	CASK Disorders					
-genereviews	CDKL5 Deficiency Disorder	jaccard	ORPHA:505652	CDKL5-deficiency disorder		
+genereviews	CD40 Ligand Deficiency					
+genereviews	CDC73-Related Disorders					
 genereviews	CDKN2A Cancer Predisposition					
 genereviews	CEBPA-Associated Familial Acute Myeloid Leukemia					
 genereviews	CHCHD10-Related Disorders					
@@ -60,13 +79,14 @@ genereviews	CLPB Deficiency
 genereviews	CNOT1-Related Vissers-Bodmer Syndrome					
 genereviews	COL1A1- and COL1A2-Related Osteogenesis Imperfecta					
 genereviews	COL4A1-Related Disorders					
+genereviews	COMP-Related Pseudoachondroplasia					
 genereviews	CSF1R-Related Disorder					
 genereviews	CSNK2B-Related Neurodevelopmental Disorder					
 genereviews	CTCF-Related Disorder					
 genereviews	CTDP1-Related Congenital Cataracts, Facial Dysmorphism, and Neuropathy					
 genereviews	CTNNB1 Neurodevelopmental Disorder	nom	ORPHA:572798	WARS2-related combined oxidative phosphorylation defect		
 genereviews	CYLD Cutaneous Syndrome					
-genereviews	Capillary Malformation-Arteriovenous Malformation Syndrome	jaccard	ORPHA:137667	Capillary malformation-arteriovenous malformation	ORPHA:90307 Parkes Weber syndrome	
+genereviews	Calpainopathy					
 genereviews	Carbonic Anhydrase VA Deficiency	jaccard	ORPHA:2785	Osteopetrosis with renal tubular acidosis		
 genereviews	Carnitine Palmitoyltransferase 1A Deficiency	jaccard	ORPHA:156	Carnitine palmitoyl transferase 1A deficiency	ORPHA:157 Carnitine palmitoyltransferase II deficiency	
 genereviews	Cartilage-Hair Hypoplasia – Anauxetic Dysplasia Spectrum Disorders					
@@ -76,20 +96,26 @@ genereviews	Childhood Ataxia with Central Nervous System Hypomyelination / Vani
 genereviews	Chondrodysplasia Punctata 1, X-Linked	nom	ORPHA:79345	Brachytelephalangic chondrodysplasia punctata		
 genereviews	Chondrodysplasia with Congenital Joint Dislocations, CHST3-Related	jaccard	ORPHA:263463	CHST3-related skeletal dysplasia		
 genereviews	Classic Galactosemia and Clinical Variant Galactosemia					
+genereviews	Classic Isovaleric Acidemia					
 genereviews	Classic Mowat-Wilson Syndrome					
 genereviews	Cold-Induced Sweating Syndrome Including Crisponi Syndrome	jaccard	ORPHA:1545	Crisponi syndrome		
 genereviews	Collagen VI-Related Dystrophies					
+genereviews	Complete Plasminogen Activator Inhibitor 1 Deficiency					
 genereviews	Congenital Deafness with Labyrinthine Aplasia, Microtia, and Microdontia	jaccard	ORPHA:90024	Deafness with labyrinthine aplasia, microtia, and microdontia		
 genereviews	Congenital Fibrosis of the Extraocular Muscles Overview	jaccard	ORPHA:45358	Congenital fibrosis of extraocular muscles	ORPHA:91411 Congenital ptosis	
 genereviews	Congenital Insensitivity to Pain Overview					
+genereviews	Costeff Syndrome					
 genereviews	Creatine Deficiency Disorders					
 genereviews	Cytochrome P450 Oxidoreductase Deficiency					
 genereviews	DBA Syndrome					
+genereviews	DCTN1-Related Neurodegeneration					
 genereviews	DCX-Related Disorders					
+genereviews	DDX11-Related Cohesinopathy					
 genereviews	DDX3X-Related Neurodevelopmental Disorder					
 genereviews	DDX41-Associated Familial Myelodysplastic Syndrome and Acute Myeloid Leukemia					
 genereviews	DEPDC5-Related Epilepsy					
 genereviews	DFNA2 Nonsyndromic Hearing Loss					
+genereviews	DICER1-Related Tumor Predisposition					
 genereviews	DLG4-Related Synaptopathy					
 genereviews	DNAJC6 Parkinson Disease	nom	ORPHA:2828	Young-onset Parkinson disease		
 genereviews	DNMT1-Related Disorder					
@@ -100,6 +126,7 @@ genereviews	DYT-TOR1A
 genereviews	Diffuse Gastric and Lobular Breast Cancer Syndrome					
 genereviews	Disorders of GNAS Inactivation					
 genereviews	Disorders of Intracellular Cobalamin Metabolism					
+genereviews	Dysferlinopathy					
 genereviews	Dyskeratosis Congenita and Related Telomere Biology Disorders					
 genereviews	Dystrophinopathies					
 genereviews	EBF3 Neurodevelopmental Disorder	nom	ORPHA:572798	WARS2-related combined oxidative phosphorylation defect		
@@ -124,17 +151,22 @@ genereviews	FGD1-Related Faciogenital Dysplasia (Aarskog-Scott Syndrome)
 genereviews	FGFR Craniosynostosis Syndromes Overview					
 genereviews	FGFR1-Related Hartsfield Syndrome					
 genereviews	FH Tumor Predisposition Syndrome					
+genereviews	FLNA Deficiency					
 genereviews	FLNA-Related Otopalatodigital Spectrum Disorders					
 genereviews	FLNB-Related Disorders					
 genereviews	FMR1 Disorders					
 genereviews	FOLR1-Related Cerebral Folate Transport Deficiency					
-genereviews	FOXG1 Syndrome					
-genereviews	FOXP1 Syndrome					
 genereviews	FOXP2-Related Speech and Language Disorder					
 genereviews	FREM1 Autosomal Recessive Disorders					
+genereviews	FRMD7-Related Infantile Nystagmus					
 genereviews	Factor V Leiden Thrombophilia					
 genereviews	Familial Cerebral Cavernous Malformations					
 genereviews	Familial Hemiplegic Migraine					
+genereviews	Familial Hypercholesterolemia	jaccard	ORPHA:391665	Homozygous familial hypercholesterolemia		
+genereviews	Familial Paroxysmal Nonkinesigenic Dyskinesia	jaccard	ORPHA:79137	Generalized epilepsy-paroxysmal dyskinesia syndrome		
+genereviews	Familial Porphyria Cutanea Tarda	jaccard	ORPHA:443057	Sporadic porphyria cutanea tarda	ORPHA:95159 Hepatoerythropoietic porphyria	
+genereviews	Fibrous Dysplasia / McCune-Albright Syndrome					
+genereviews	Free Sialic Acid Storage Disorder	nom	ORPHA:834	Free sialic acid storage disease		ORPHA:834
 genereviews	Fumarate Hydratase Deficiency					
 genereviews	G6PC3 Deficiency					
 genereviews	GAA-FGF14-Related Ataxia					
@@ -152,95 +184,246 @@ genereviews	GNAI1-Related Neurodevelopmental Disorder
 genereviews	GNAO1-Related Disorder					
 genereviews	GNB1 Encephalopathy	nom	ORPHA:209370	MECP2-related severe neonatal encephalopathy	ORPHA:363400 Progressive encephalopathy-severe neurodegeneration-lipodystrophy syndrome ; ORPHA:496641 Early-onset progressive diffuse brain atrophy-microcephaly-muscle weakness-optic atrophy syndrome ; ORPHA:496756 Early-onset progressive encephalopathy-spastic ataxia-distal spinal muscular atrophy syndrome ; ORPHA:500144 Early-onset progressive encephalopathy-hearing loss-pons hypoplasia-brain atrophy syndrome ; ORPHA:51188 Ethylmalonic encephalopathy	
 genereviews	GNB5-Related Neurodevelopmental Disorder					
+genereviews	GNE Myopathy	nom	ORPHA:169186	Autosomal recessive centronuclear myopathy	ORPHA:178464 Hereditary myopathy with early respiratory failure ; ORPHA:2020 Congenital fiber-type disproportion myopathy ; ORPHA:210163 Congenital lethal myopathy, Compton-North type ; ORPHA:254857 Lethal infantile mitochondrial myopathy ; ORPHA:25980 X-linked myopathy with excessive autophagy ; ORPHA:261 Emery-Dreifuss muscular dystrophy ; ORPHA:280553 Fatal infantile hypertonic myofibrillar myopathy ; ORPHA:319160 Congenital myopathy with internal nuclei and atypical cores ; ORPHA:330054 Congenital cataract-progressive muscular hypotonia-hearing loss-developmental delay syndrome ; ORPHA:439212 Early-onset myopathy-areflexia-respiratory distress-dysphagia syndrome ; ORPHA:496686 Kyphosis-lateral tongue atrophy-myofibrillar myopathy syndrome ; ORPHA:53698 Myosin storage myopathy ; ORPHA:544602 Congenital myopathy with reduced type 2 muscle fibers ; ORPHA:596 X-linked centronuclear myopathy ; ORPHA:604680 Symptomatic form of X-linked centronuclear myopathy in female carriers ; ORPHA:79091 Hereditary inclusion body myopathy-joint contractures-ophthalmoplegia syndrome ; ORPHA:994 Fetal akinesia deformation sequence	
+genereviews	GNPTAB-Related Disorders					
 genereviews	GRIA2-Related Neurodevelopmental Disorder					
 genereviews	GRIN1-Related Neurodevelopmental Disorder					
 genereviews	GRIN2A-Related Disorders					
 genereviews	GRIN2D-Related Developmental and Epileptic Encephalopathy					
 genereviews	GTP Cyclohydrolase 1-Deficient Dopa-Responsive Dystonia					
+genereviews	Genetic Atypical Hemolytic-Uremic Syndrome					
+genereviews	Genetic Prion Disease					
 genereviews	Glucose Transporter Type 1 Deficiency Syndrome	jaccard	ORPHA:71277	Classic glucose transporter type 1 deficiency syndrome		
+genereviews	HAMP- and HJV-Related Hemochromatosis					
+genereviews	HEXA Disorders					
 genereviews	HIST1H1E Syndrome					
 genereviews	HNRNPU-Related Neurodevelopmental Disorder					
 genereviews	HOXA1-Related Disorders					
+genereviews	HPRT1 Disorders					
 genereviews	HRAS-Related Costello Syndrome					
 genereviews	HTRA1 Disorder					
 genereviews	HYAL2 Deficiency					
 genereviews	Haploinsufficiency of A20					
+genereviews	Hepatic Veno-Occlusive Disease with Immunodeficiency					
 genereviews	Hereditary Ataxia Overview					
 genereviews	Hereditary Fibrosing Poikiloderma with Tendon Contractures, Myopathy, and Pulmonary Fibrosis					
+genereviews	Hereditary Hyperekplexia Overview					
 genereviews	Hereditary Motor and Sensory Neuropathy with Agenesis of the Corpus Callosum					
 genereviews	Hereditary Multiple Osteochondromas					
+genereviews	Hereditary Nephrogenic Diabetes Insipidus	jaccard	ORPHA:223	Arginine vasopressin resistance		
+genereviews	Hereditary Paraganglioma-Pheochromocytoma Syndromes					
+genereviews	Hereditary Sensory and Autonomic Neuropathy Type II	nom	ORPHA:970	Hereditary sensory and autonomic neuropathy type 2		ORPHA:970
+genereviews	Hereditary Transthyretin Amyloidosis					
 genereviews	Hidrotic Ectodermal Dysplasia 2	jaccard	ORPHA:1809	Hidrotic ectodermal dysplasia, Halal type	ORPHA:189 Hidrotic ectodermal dysplasia	
+genereviews	Homocystinuria due to Deficiency of N(5,10)-Methylenetetrahydrofolate Reductase Activity	nom_partiel	ORPHA:395	Homocystinuria due to methylene tetrahydrofolate reductase deficiency		
+genereviews	Huntington Disease					
+genereviews	Huppke-Brendel Syndrome	nom	ORPHA:300313	Congenital cataract-hearing loss-severe developmental delay syndrome		
+genereviews	Hyperkalemic Periodic Paralysis					
 genereviews	Hypermanganesemia with Dystonia 1					
+genereviews	Hyperphosphatemic Familial Tumoral Calcinosis					
+genereviews	Hypokalemic Periodic Paralysis	jaccard	ORPHA:79102	Thyrotoxic periodic paralysis		
+genereviews	Hypomyelination and Congenital Cataract	jaccard	ORPHA:85163	Hypomyelination-congenital cataract syndrome		
+genereviews	IDEDNIK Syndrome					
 genereviews	INPPL1-Related Opsismodysplasia					
+genereviews	INSR-Related Severe Insulin Resistance Syndrome					
+genereviews	IPEX Syndrome					
+genereviews	IRF2BPL-Related Disorder					
 genereviews	IRF6-Related Disorders					
+genereviews	ISCA1-Related Multiple Mitochondrial Dysfunctions Syndrome					
+genereviews	ISCA2-Related Mitochondrial Disorder					
+genereviews	Isolated Gonadotropin-Releasing Hormone (GnRH) Deficiency	nom	ORPHA:238666	Isolated congenital hypogonadotropic hypogonadism		
+genereviews	Isolated Methylmalonic Acidemia					
 genereviews	Isolated and Classic Cutis Marmorata Telangiectatica Congenita					
+genereviews	Joubert Syndrome	nom	ORPHA:140874	Joubert syndrome and related disorders		
+genereviews	Juvenile Polyposis Syndrome					
 genereviews	KAT6B Disorders					
+genereviews	KCNC1-Related Disorders					
+genereviews	KCNK9 Imprinting Syndrome					
 genereviews	KCNQ2-Related Disorders					
+genereviews	KCNQ3-Related Disorders					
+genereviews	KCNT1-Related Epilepsy					
+genereviews	KCTD7-Related Progressive Myoclonic Epilepsy					
+genereviews	KIF1A-Related Neurodevelopmental Disorder					
+genereviews	KMT2B-Related Disorders					
+genereviews	KMT2E-Related Neurodevelopmental Disorder					
 genereviews	KPTN-Related Disorder					
+genereviews	Kindler Syndrome	nom	ORPHA:2908	Kindler epidermolysis bullosa		
+genereviews	LAMA2 Muscular Dystrophy	nom	ORPHA:98473	Polykystose rénale autosomique récessive (ARPKD)		
 genereviews	LMNA-Related Dilated Cardiomyopathy					
+genereviews	LMNB1-Related Autosomal Dominant Leukodystrophy					
+genereviews	LPIN2-Related Majeed Syndrome					
+genereviews	LRRK2-Related Parkinson Disease					
 genereviews	LTBP4-Related Cutis Laxa					
+genereviews	LZTR1- and SMARCB1-Related Schwannomatosis					
+genereviews	Laing Distal Myopathy					
+genereviews	Leukoencephalopathy with Brain Stem and Spinal Cord Involvement and Lactate Elevation	jaccard	ORPHA:137898	Leukoencephalopathy with brain stem and spinal cord involvement-high lactate syndrome		
+genereviews	Li-Fraumeni Syndrome					
+genereviews	Lipoid Proteinosis					
+genereviews	Lipoprotein Lipase Deficiency					
+genereviews	Long QT Syndrome Overview					
+genereviews	Long-Chain Hydroxyacyl-CoA Dehydrogenase Deficiency / Trifunctional Protein Deficiency	jaccard	ORPHA:5	Long chain 3-hydroxyacyl-CoA dehydrogenase deficiency		
+genereviews	Lowe Syndrome	nom	ORPHA:534	Oculocerebrorenal syndrome of Lowe		
 genereviews	MAPT-Related Frontotemporal Dementia					
+genereviews	MBD4-Related Tumor Predisposition Syndrome					
+genereviews	MBD5 Haploinsufficiency					
+genereviews	MBTPS1-Related Spondyloepimetaphyseal Dysplasia with Elevated Lysosomal Enzymes					
+genereviews	MCM8/MCM9-Related Syndromes					
+genereviews	MECP2 Disorders					
+genereviews	MECP2 Duplication Syndrome	jaccard	ORPHA:1762	Proximal Xq28 duplication syndrome		
+genereviews	MECR-Related Neurologic Disorder					
 genereviews	MED12-Related Disorders					
 genereviews	MED13L Syndrome					
+genereviews	MELAS					
+genereviews	MERRF					
 genereviews	MFN2 Hereditary Motor and Sensory Neuropathy					
 genereviews	MID1-Related Opitz G/BBB Syndrome					
-genereviews	MIRAGE Syndrome					
 genereviews	MPPH Syndrome					
+genereviews	MPV17-Related Mitochondrial DNA Maintenance Defect					
+genereviews	MUTYH Polyposis					
 genereviews	MYH9-Related Disease	jaccard	ORPHA:182050	MYH9-related syndromic thrombocytopenia		
 genereviews	Mandibulofacial Dysostosis with Microcephaly	jaccard	ORPHA:79113	Mandibulofacial dysostosis-microcephaly syndrome		
+genereviews	Marinesco-Sjögren Syndrome					
 genereviews	Maternal 15q Duplication Syndrome					
+genereviews	Maturity-Onset Diabetes of the Young Overview	jaccard	ORPHA:93111	HNF1B-related autosomal dominant tubulointerstitial kidney disease		
+genereviews	McLeod Neuroacanthocytosis Syndrome					
+genereviews	Medium-Chain Acyl-Coenzyme A Dehydrogenase Deficiency	nom	ORPHA:42	Medium chain acyl-CoA dehydrogenase deficiency		
+genereviews	Megacystis-Microcolon-Intestinal Hypoperistalsis Syndrome Overview	jaccard	ORPHA:2241	Megacystis-microcolon-intestinal hypoperistalsis syndrome		
+genereviews	Mitochondrial DNA Maintenance Defects Overview					
+genereviews	Mitochondrial DNA-Associated Leigh Syndrome Spectrum					
+genereviews	Mitochondrial Membrane Protein-Associated Neurodegeneration					
+genereviews	Mitochondrial Neurogastrointestinal Encephalopathy Disease					
 genereviews	Mitochondrial Short-Chain Enoyl-CoA Hydratase Deficiency	jaccard	ORPHA:653880	Mitochondrial short-chain enoyl-CoA hydratase 1 deficiency		
+genereviews	Molybdenum Cofactor Deficiency	nom	ORPHA:833	Encephalopathy due to sulfite oxidase deficiency		
 genereviews	Monogenic Isolated Dystonia Overview					
+genereviews	Monosomy 7 Predisposition Syndromes Overview					
 genereviews	Mosaic EPAS1 Gain-of-Function Spectrum					
+genereviews	Mucolipidosis III Gamma					
+genereviews	Mucolipidosis IV					
+genereviews	Mucopolysaccharidosis Type I					
+genereviews	Mucopolysaccharidosis Type II	nom	ORPHA:580	Mucopolysaccharidosis type 2		ORPHA:580
+genereviews	Mucopolysaccharidosis Type III					
+genereviews	Mucopolysaccharidosis Type IVA	jaccard	ORPHA:582	Mucopolysaccharidosis type 4		
+genereviews	Mucopolysaccharidosis Type VII	nom	ORPHA:584	Mucopolysaccharidosis type 7		ORPHA:584
+genereviews	Multiple Endocrine Neoplasia Type 1	jaccard	ORPHA:247709	Multiple endocrine neoplasia type 2B	ORPHA:653 Multiple endocrine neoplasia type 2	
+genereviews	Multiple Endocrine Neoplasia Type 4	jaccard	ORPHA:247709	Multiple endocrine neoplasia type 2B	ORPHA:653 Multiple endocrine neoplasia type 2	
+genereviews	Multisystem Proteinopathy					
+genereviews	Myotonia Congenita					
+genereviews	Myotonic Dystrophy Type 1	nom	ORPHA:273	Steinert myotonic dystrophy		
+genereviews	Myotonic Dystrophy Type 2	jaccard	ORPHA:273	Steinert myotonic dystrophy	ORPHA:589821 Congenital-onset Steinert myotonic dystrophy	
+genereviews	NARS1-Related Neurologic Disorders					
 genereviews	NDP-Related Retinopathies					
+genereviews	NF2-Related Schwannomatosis	jaccard	ORPHA:634475	Mosaic NF2-related schwannomatosis		
 genereviews	NFIA-Related Disorder					
 genereviews	NFIX-Related Malan Syndrome					
+genereviews	NGLY1-Related Congenital Disorder of Deglycosylation					
+genereviews	NKX2-1-Related Disorders					
+genereviews	NKX6-2-Related Disorder					
 genereviews	NOTCH3-Related Lateral Meningocele Syndrome					
 genereviews	NR0B1-Related Adrenal Hypoplasia Congenita					
+genereviews	NR2F1-Related Neurodevelopmental Disorder					
+genereviews	NSDHL-Related Disorders					
+genereviews	NTHL1 Tumor Syndrome					
+genereviews	NTRK1 Congenital Insensitivity to Pain with Anhidrosis	nom	ORPHA:642	Hereditary sensory and autonomic neuropathy type 4		
 genereviews	Nephronophthisis-Related Ciliopathies					
 genereviews	Neurocutaneous Disorders due to Mitochondrial Proline Synthesis Defects					
+genereviews	Neurodegeneration with Brain Iron Accumulation Disorders Overview					
+genereviews	Neuroferritinopathy					
 genereviews	Neurofibromatosis 1					
+genereviews	Neuronal Ceroid Lipofuscinoses Overview					
+genereviews	Niemann-Pick Disease Type C	jaccard	ORPHA:618891	Chronic neurovisceral acid sphingomyelinase deficiency	ORPHA:77292 Infantile neurovisceral acid sphingomyelinase deficiency	
+genereviews	Nonketotic Hyperglycinemia					
 genereviews	Nonsyndromic 46,XX Testicular Disorders/Differences of Sex Development					
 genereviews	Nonsyndromic Disorders of Testicular Development Overview					
+genereviews	Nonsyndromic Hearing Loss and Deafness, Mitochondrial					
+genereviews	Nonsyndromic Hypertrophic Cardiomyopathy Overview					
+genereviews	Nonsyndromic Leber Congenital Amaurosis / Early-Onset Severe Retinal Dystrophy Overview					
+genereviews	Nonsyndromic Malignant Hyperthermia Susceptibility					
+genereviews	Nonsyndromic Retinitis Pigmentosa Overview					
 genereviews	Nonsyndromic Tooth Agenesis Overview					
+genereviews	Nuclear Gene-Encoded Leigh Syndrome Spectrum Overview					
 genereviews	OTOF-Related Hearing Loss					
 genereviews	Oculocutaneous Albinism and Ocular Albinism Overview					
+genereviews	Oculopharyngeal Muscular Dystrophy					
+genereviews	Okur-Chung Neurodevelopmental Syndrome					
+genereviews	Osteoglophonic Dysplasia	nom	ORPHA:2645	Osteoglosphonic dysplasia		
+genereviews	PACS1-Related Neurodevelopmental Disorder	nom	ORPHA:329224	Schuurs-Hoeijmakers syndrome		
 genereviews	PAFAH1B1-Related Lissencephaly / Subcortical Band Heterotopia					
 genereviews	PAX2-Related Disorder					
 genereviews	PAX6 Aniridia Syndrome					
+genereviews	PI4KA-Related Disorder					
+genereviews	PIK3CA-Related Overgrowth Spectrum					
 genereviews	PIK3R1-Related SHORT Syndrome					
+genereviews	PINK1 Type of Young-Onset Parkinson Disease	jaccard	ORPHA:2828	Young-onset Parkinson disease		
+genereviews	PLA2G6-Associated Neurodegeneration					
 genereviews	PLP1-Related Disorders					
 genereviews	PLPBP Deficiency					
+genereviews	PNPLA6 Disorders					
 genereviews	PNPO Deficiency					
 genereviews	POLG-Related Disorders					
 genereviews	POLR3-Related Leukodystrophy					
 genereviews	PORCN-Related Developmental Disorders					
+genereviews	POT1 Tumor Predisposition					
 genereviews	PPP1R12A-Related Urogenital and/or Brain Malformation Syndrome					
+genereviews	PPP1R21-Related El-Hattab-Schmidts Syndrome					
+genereviews	PPP2R1A-Related Neurodevelopmental Disorder	nom	ORPHA:457284	Microcephaly-corpus callosum hypoplasia-intellectual disability-facial dysmorphism syndrome		
+genereviews	PPP2R5D-Related Neurodevelopmental Disorder	nom	ORPHA:457279	Intellectual disability-macrocephaly-hypotonia-behavioral abnormalities syndrome		
+genereviews	PRICKLE1-Related Disorders					
+genereviews	PRKN-Related Early-Onset Parkinson Disease					
 genereviews	PROP1-Related Combined Pituitary Hormone Deficiency					
+genereviews	PRRT2-Related Disorder					
+genereviews	PRSS1-Related Hereditary Pancreatitis					
 genereviews	PTDSS1-Related Lenz-Majewski Hyperostotic Dysplasia					
+genereviews	PTEN Hamartoma Tumor Syndrome					
 genereviews	PTH1R-Related Jansen Metaphyseal Chondrodysplasia					
+genereviews	PTS-Related Tetrahydrobiopterin Deficiency (PTPSD)					
 genereviews	PUF60-Related Disorders					
 genereviews	PURA-Related Neurodevelopmental Disorders					
+genereviews	Pantothenate Kinase-Associated Neurodegeneration	jaccard	ORPHA:216866	Classic pantothenate kinase-associated neurodegeneration		
 genereviews	Pediatric Genetic Cholestatic Liver Disease Overview					
+genereviews	Pelizaeus-Merzbacher-Like Disease 1	jaccard	ORPHA:280270	Pelizaeus-Merzbacher-like disease		
 genereviews	Phelan-McDermid Syndrome-SHANK3 Related					
+genereviews	Phenylalanine Hydroxylase Deficiency					
 genereviews	Phosphoribosylpyrophosphate Synthetase Deficiency					
 genereviews	Phosphorylase Kinase Deficiency					
 genereviews	Polycystic Kidney Disease, Autosomal Dominant					
+genereviews	Polycystic Lipomembranous Osteodysplasia with Sclerosing Leukoencephalopathy					
+genereviews	Potocki-Lupski Syndrome	nom	ORPHA:1713	17p11.2 microduplication syndrome		
 genereviews	Primary Carnitine Deficiency	jaccard	ORPHA:158	Systemic primary carnitine deficiency		
 genereviews	Primary Coenzyme Q10 Deficiency Overview	jaccard	ORPHA:319678	Encephalopathy-hypertrophic cardiomyopathy-renal tubular disease syndrome	ORPHA:457185 Neonatal encephalomyopathy-cardiomyopathy-respiratory distress syndrome	
 genereviews	Primary Familial Brain Calcification Overview					
+genereviews	Primary Familial and Congenital Erythrocytosis					
+genereviews	Primary Hyperoxaluria Type 1					
+genereviews	Primary Hyperoxaluria Type 2					
+genereviews	Primary Hyperoxaluria Type 3					
+genereviews	Primary Mitochondrial Disorders Overview					
+genereviews	Primary Pyruvate Dehydrogenase Complex Deficiency Overview					
+genereviews	Primary Trimethylaminuria					
+genereviews	Progressive Myoclonus Epilepsy, Lafora Type	nom	ORPHA:98261	Progressive myoclonic epilepsy		
+genereviews	Prothrombin Thrombophilia					
+genereviews	Pseudohypoaldosteronism Type II					
+genereviews	Pseudoxanthoma Elasticum					
 genereviews	Pyridoxine-Dependent Epilepsy – ALDH7A1	jaccard	ORPHA:3006	Pyridoxine-dependent-developmental and epileptic encephalopathy		
 genereviews	RAB18 Deficiency					
+genereviews	RAB32-Related Parkinson Disease					
 genereviews	RERE-Related Disorders					
+genereviews	RFC1 CANVAS / Spectrum Disorder					
 genereviews	RNU4atac-opathy					
 genereviews	ROR2-Related Robinow Syndrome					
 genereviews	RPS6KA3-Related Intellectual Disability					
+genereviews	RRM2B Mitochondrial DNA Maintenance Defects					
+genereviews	RUNX1 Familial Platelet Disorder with Associated Myeloid Malignancies					
+genereviews	Riboflavin Transporter Deficiency					
+genereviews	Rotor Syndrome					
 genereviews	SALL4-Related Disorders					
 genereviews	SAMD9L-Related Syndrome					
 genereviews	SCARB2-Related Action Myoclonus – Renal Failure Syndrome					
 genereviews	SCN1A Seizure Disorders					
 genereviews	SCN3A-Related Neurodevelopmental Disorder					
+genereviews	SCN8A-Related Epilepsy and/or Neurodevelopmental Disorders					
 genereviews	SCN9A Neuropathic Pain Syndromes					
+genereviews	SERAC1 Deficiency					
+genereviews	SETBP1 Haploinsufficiency Disorder					
+genereviews	SETD1B-Related Neurodevelopmental Disorder					
 genereviews	SETD2 Neurodevelopmental Disorders					
 genereviews	SH3TC2-Related Hereditary Motor and Sensory Neuropathy					
 genereviews	SHOX Deficiency Disorders					
@@ -248,42 +431,137 @@ genereviews	SLC19A1-Related Folate Transport Deficiency
 genereviews	SLC25A19-Related Thiamine Metabolism Dysfunction					
 genereviews	SLC26A2-Related Atelosteogenesis - Gene XML Preview - NCBI Bookshelf					
 genereviews	SLC26A2-Related Multiple Epiphyseal Dysplasia					
+genereviews	SLC26A4-Related Sensorineural Hearing Loss					
+genereviews	SLC39A14 Deficiency					
+genereviews	SLC6A1-Related Neurodevelopmental Disorder					
+genereviews	SLC6A3-Related Dopamine Transporter Deficiency Syndrome					
 genereviews	SMARCA2-Related Nicolaides-Baraitser Syndrome					
 genereviews	SOST-Related Sclerosing Bone Dysplasias					
 genereviews	SOX2 Disorder					
+genereviews	SPG7-Related Neurologic Disorder					
+genereviews	SPTBN4 Disorder					
+genereviews	SPTLC1-Related Hereditary Sensory Neuropathy					
 genereviews	SRCAP-Related Floating-Harbor Syndrome					
 genereviews	STAC3 Disorder					
+genereviews	STRC-Related Autosomal Recessive Hearing Loss					
+genereviews	STXBP1 Encephalopathy with Epilepsy					
+genereviews	SUCLA2-Related Mitochondrial DNA Depletion Syndrome, Encephalomyopathic Form with Methylmalonic Aciduria					
+genereviews	SUCLG1-Related Mitochondrial DNA Depletion Syndrome, Encephalomyopathic Form with Methylmalonic Aciduria					
+genereviews	SYNCRIP-Related Neurodevelopmental Disorder					
+genereviews	SYNE1 Deficiency					
+genereviews	SYNGAP1-Related Intellectual Disability					
+genereviews	Salih Myopathy	nom	ORPHA:289377	Early-onset myopathy with fatal cardiomyopathy		
+genereviews	Sandhoff Disease	nom	ORPHA:796	Maladie de Sandhoff (gangliosidose GM2, variant 0)		
 genereviews	Saul-Wilson Syndrome	nom	ORPHA:85172	Microcephalic osteodysplastic dysplasia, Saul-Wilson type		
+genereviews	Schimke Immunoosseous Dysplasia	jaccard	ORPHA:1830	Schimke immuno-osseous dysplasia		
+genereviews	Sepiapterin Reductase Deficiency	nom	ORPHA:70594	Dopa-responsive dystonia due to sepiapterin reductase deficiency		
+genereviews	Serine Deficiency Disorders					
+genereviews	Shashi-Pena Syndrome					
+genereviews	Sickle Cell Disease					
+genereviews	Single Large-Scale Mitochondrial DNA Deletion Syndromes					
+genereviews	Sitosterolemia					
+genereviews	Smith-Kingsmore Syndrome	nom	ORPHA:457485	Macrocephaly-intellectual disability-neurodevelopmental disorder-small thorax syndrome		
+genereviews	Snyder-Robinson Syndrome					
+genereviews	Spastic Paraplegia 11					
+genereviews	Spastic Paraplegia 15					
+genereviews	Spastic Paraplegia 3A					
+genereviews	Spastic Paraplegia 4	jaccard	ORPHA:521390	Spastic paraplegia-intellectual disability-nystagmus-obesity syndrome		
+genereviews	Spastic Paraplegia 8	jaccard	ORPHA:521390	Spastic paraplegia-intellectual disability-nystagmus-obesity syndrome		
+genereviews	Spinal Muscular Atrophy	nom	ORPHA:1145	Infantile-onset X-linked spinal muscular atrophy	ORPHA:209335 Autosomal dominant adult-onset proximal spinal muscular atrophy ; ORPHA:209341 DYNC1H1-related autosomal dominant childhood-onset proximal spinal muscular atrophy ; ORPHA:363447 Autosomal dominant childhood-onset proximal spinal muscular atrophy ; ORPHA:363454 BICD2-related autosomal dominant childhood-onset proximal spinal muscular atrophy ; ORPHA:83330 Proximal spinal muscular atrophy type 1 ; ORPHA:98920 Spinal muscular atrophy with respiratory distress type 1	
+genereviews	Spinal and Bulbar Muscular Atrophy	jaccard	ORPHA:83330	Proximal spinal muscular atrophy type 1	ORPHA:98920 Spinal muscular atrophy with respiratory distress type 1	
+genereviews	Spinocerebellar Ataxia Type 1	jaccard	ORPHA:363710	Spinocerebellar ataxia type 37	ORPHA:453521 Autosomal recessive cerebellar ataxia due to CWF19L1 deficiency ; ORPHA:88644 Autosomal recessive ataxia, Beauce type	
+genereviews	Spinocerebellar Ataxia Type 10					
+genereviews	Spinocerebellar Ataxia Type 11					
+genereviews	Spinocerebellar Ataxia Type 13					
+genereviews	Spinocerebellar Ataxia Type 14					
+genereviews	Spinocerebellar Ataxia Type 17					
+genereviews	Spinocerebellar Ataxia Type 2	jaccard	ORPHA:363710	Spinocerebellar ataxia type 37	ORPHA:453521 Autosomal recessive cerebellar ataxia due to CWF19L1 deficiency ; ORPHA:88644 Autosomal recessive ataxia, Beauce type	
+genereviews	Spinocerebellar Ataxia Type 20					
+genereviews	Spinocerebellar Ataxia Type 3	jaccard	ORPHA:363710	Spinocerebellar ataxia type 37	ORPHA:453521 Autosomal recessive cerebellar ataxia due to CWF19L1 deficiency ; ORPHA:88644 Autosomal recessive ataxia, Beauce type	
+genereviews	Spinocerebellar Ataxia Type 38					
+genereviews	Spinocerebellar Ataxia Type 4	jaccard	ORPHA:363710	Spinocerebellar ataxia type 37	ORPHA:453521 Autosomal recessive cerebellar ataxia due to CWF19L1 deficiency ; ORPHA:88644 Autosomal recessive ataxia, Beauce type	
+genereviews	Spinocerebellar Ataxia Type 6	jaccard	ORPHA:363710	Spinocerebellar ataxia type 37	ORPHA:453521 Autosomal recessive cerebellar ataxia due to CWF19L1 deficiency ; ORPHA:88644 Autosomal recessive ataxia, Beauce type	
+genereviews	Spinocerebellar Ataxia Type 7	jaccard	ORPHA:363710	Spinocerebellar ataxia type 37	ORPHA:453521 Autosomal recessive cerebellar ataxia due to CWF19L1 deficiency ; ORPHA:88644 Autosomal recessive ataxia, Beauce type	
+genereviews	Spinocerebellar Ataxia Type 8	jaccard	ORPHA:363710	Spinocerebellar ataxia type 37	ORPHA:453521 Autosomal recessive cerebellar ataxia due to CWF19L1 deficiency ; ORPHA:88644 Autosomal recessive ataxia, Beauce type	
+genereviews	Spinocerebellar Ataxia with Axonal Neuropathy Type 1					
 genereviews	Strømme Syndrome					
 genereviews	TAF8-Related Neurodevelopmental Disorder					
+genereviews	TANGO2 Deficiency					
+genereviews	TARDBP-Related Amyotrophic Lateral Sclerosis-Frontotemporal Dementia					
 genereviews	TBC1D24-Related Disorders					
+genereviews	TBCK-Related Neurodevelopmental Disorder					
 genereviews	TCIRG1-Related Osteopetrosis					
+genereviews	TECPR2-Related Hereditary Sensory and Autonomic Neuropathy with Intellectual Disability					
+genereviews	TEK-Related Venous Malformations					
+genereviews	TFR2-Related Hemochromatosis					
 genereviews	THOC6 Intellectual Disability Syndrome					
+genereviews	TK2-Related Mitochondrial DNA Maintenance Defect, Myopathic Form	nom	ORPHA:254875	Mitochondrial DNA depletion syndrome, myopathic form		
+genereviews	TNF Receptor-Associated Periodic Fever Syndrome					
 genereviews	TP63-Related Disorders					
+genereviews	TPK1-Related Thiamine Metabolism Dysfunction Syndrome					
+genereviews	TRIO-Related Neurodevelopmental Disorder					
+genereviews	TRMU Deficiency					
+genereviews	TRPM3-Related Neurodevelopmental Disorder					
 genereviews	TUBB4A-Related Neurologic Disorders					
 genereviews	TXNL4A-Related Craniofacial Disorders					
+genereviews	Thiamine-Responsive Megaloblastic Anemia Syndrome					
+genereviews	Troyer Syndrome					
 genereviews	Tubulinopathies Overview					
 genereviews	Type II Collagen Disorders Overview					
+genereviews	Tyrosine Hydroxylase Deficiency	nom	ORPHA:101150	Autosomal recessive dopa-responsive dystonia		
+genereviews	Tyrosinemia Type I					
+genereviews	Tyrosinemia Type II	nom	ORPHA:28378	Tyrosinemia type 2		ORPHA:28378
+genereviews	UNC80 Deficiency					
+genereviews	USP7-Related Hao-Fountain Syndrome					
+genereviews	Udd Distal Myopathy – Tibial Muscular Dystrophy					
+genereviews	Uncomplicated (Pure) Hereditary Spastic Paraplegia Overview					
+genereviews	Urea Cycle Disorders Overview					
+genereviews	Usher Syndrome Type I	nom	ORPHA:231169	Usher syndrome type 1	ORPHA:886 Usher syndrome	
+genereviews	Usher Syndrome Type II					
+genereviews	VEXAS Syndrome					
 genereviews	VLDLR Cerebellar Hypoplasia	nom	ORPHA:1766	Dysequilibrium syndrome		
 genereviews	VPS13A Disease					
+genereviews	VPS13D Movement Disorder					
+genereviews	VPS35-Related Parkinson Disease					
+genereviews	Variegate Porphyria					
+genereviews	Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency	jaccard	ORPHA:26793	Very long chain acyl-CoA dehydrogenase deficiency		
+genereviews	Von Hippel-Lindau Syndrome					
+genereviews	Von Willebrand Disease	nom	ORPHA:166096	Von Willebrand disease type 3		ORPHA:166096
+genereviews	WAC-Related Intellectual Disability					
+genereviews	WAGR Spectrum Disorder					
+genereviews	WARS2 Deficiency					
+genereviews	WAS-Related Disorders					
+genereviews	WDR26-Related Intellectual Disability					
 genereviews	WDR62 Primary Microcephaly					
+genereviews	WFS1 Spectrum Disorder					
+genereviews	WT1 Disorder					
+genereviews	Wilson Disease					
+genereviews	Woodhouse-Sakati Syndrome					
+genereviews	X-Linked Adrenoleukodystrophy					
+genereviews	X-Linked Agammaglobulinemia	jaccard	ORPHA:229717	Non-syndromic agammaglobulinemia		
+genereviews	X-Linked Congenital Retinoschisis					
+genereviews	X-Linked Lymphoproliferative Disease					
+genereviews	X-Linked Myotubular Myopathy	nom	ORPHA:596	X-linked centronuclear myopathy		
 genereviews	X-Linked Protoporphyria					
+genereviews	X-Linked Spondyloepiphyseal Dysplasia Tarda	jaccard	ORPHA:93284	Spondyloepiphyseal dysplasia tarda		
+genereviews	Xia-Gibbs Syndrome	nom	ORPHA:412069	AHDC1-related intellectual disability-obstructive sleep apnea-mild dysmorphism syndrome		
+genereviews	Xq28 Duplication Syndrome, Int22h1/Int22h2 Mediated					
+genereviews	Y Chromosome Infertility					
+genereviews	YARS1 Deficiency					
+genereviews	YIF1B-Related Neurodevelopmental Disorder					
+genereviews	ZAP70 Deficiency					
+genereviews	Zellweger Spectrum Disorder					
+genereviews	Zhu-Tokita-Takenouchi-Kim Syndrome	nom	ORPHA:500150	ZTTK syndrome		
 limb	101 Klippel–Trénaunay–Weber Syndrome	nom	ORPHA:90308	Capillary-lymphatic-venous malformation with segmental distribution		
 limb	12 Short Rib-Polydactyly Syndromes	jaccard	ORPHA:93270	Short rib-polydactyly syndrome, Saldino-Noonan type	ORPHA:93271 Short rib-polydactyly syndrome, Verma-Naumoff type	
-limb	14 Meckel Syndrome	nom	ORPHA:564	Meckel syndrome		ORPHA:564
 limb	19 Syndactyly Type Lueken					
 limb	20 Metacarpal 4–5 Fusion Syndrome					
 limb	21 Syndactyly Type Haas					
 limb	24 Craniosynostosis, Philadelphia Type	nom	ORPHA:1527	Craniosynostosis, Philadelphia type	ORPHA:1531 Craniosynostosis ; ORPHA:1541 Craniosynostosis, Boston type ; ORPHA:35093 Non-syndromic sagittal craniosynostosis ; ORPHA:35099 Non-syndromic bicoronal craniosynostosis	
 limb	28 Oro-Facial-Digital Syndrome, Type 1					
 limb	29 Ectodermal Dysplasia–Syndactyly Syndrome	nom	ORPHA:247820	Ectodermal dysplasia-pili torti-cutaneous syndactyly syndrome	ORPHA:247827 Ectodermal dysplasia-hyperhidrosis-cutaneous syndactyly syndrome	
-limb	33 Brachydactyly Type B1	nom	ORPHA:572385	Brachydactyly type B1		ORPHA:572385
-limb	34 Brachydactyly Type B2	nom	ORPHA:140908	Brachydactyly type B2		ORPHA:140908
 limb	36 Brachydactyly Type E; Brachydactyly Type D					
-limb	41 Feingold Syndrome	nom	ORPHA:1305	Feingold syndrome		ORPHA:1305
 limb	43 Brachydactyly-Hypertension Syndrome					
-limb	44 Rubinstein–Taybi Syndrome	nom	ORPHA:783	Rubinstein-Taybi syndrome		ORPHA:783
-limb	49 Trichorhinophalangeal Syndrome	nom	ORPHA:324764	Trichorhinophalangeal syndrome		ORPHA:324764
 limb	5 Preaxial Polydactyly	jaccard	ORPHA:93338	Polysyndactyly	ORPHA:93339 Polydactyly of a biphalangeal thumb and/or hallux	
 limb	52 Symphalangism; Multiple Synostoses Syndrome; Tarsal/Carpal Coalition Syndrome; Teunissen–Cremers Syndrome					
 limb	53 Antley–Bixler Syndrome With/Without Genital Anomalies or Disordered Steroidogenesis	jaccard	ORPHA:83	Antley-Bixler syndrome		
@@ -298,7 +576,6 @@ limb	63 Al-Awadi/Raas–Rothschild/Schinzel Phocomelia Syndrome
 limb	64 Tetra-Amelia, Peromelia					
 limb	65 Hanhart Syndrome	nom	ORPHA:989	Hypoglossia-hypodactyly syndrome		
 limb	68 Deficiency of Long Bones with Clubfoot and Mirror-Image Polydactyly					
-limb	7 Greig Cephalopolysyndactyly Syndrome	nom	ORPHA:380	Greig cephalopolysyndactyly syndrome		ORPHA:380
 limb	73 Terminal Transverse Defect					
 limb	78 Lacrimo-Auriculo-Dento-Digital (LADD) Syndrome					
 limb	8 Synpolydactyly	nom	ORPHA:93403	Syndactyly type 2		
@@ -310,10 +587,7 @@ limb	88 Valproate Embryopathy
 limb	89 Split Hand/Foot Malformation (SHFM)	nom_partiel	ORPHA:1307	Distal limb deficiencies-micrognathia syndrome	ORPHA:2440 Isolated split hand-split foot malformation	
 limb	90 Split Hand/Foot Malformation with Long Bone Deficiency (SHFLD)	nom	ORPHA:3329	Tibial aplasia-ectrodactyly syndrome		
 limb	91 Split Hand/Foot Malformation (SHFM), Syndromic, p63 Associated	nom_partiel	ORPHA:1307	Distal limb deficiencies-micrognathia syndrome	ORPHA:2440 Isolated split hand-split foot malformation	
-limb	93 Acromesomelic Dysplasia, Maroteaux Type	nom	ORPHA:40	Acromesomelic dysplasia, Maroteaux type		ORPHA:40
 limb	94 Léri–Weill Dyschondrosteosis; Mesomelic Dysplasia, Langer Type					
-limb	95 Robinow Syndrome	nom	ORPHA:97360	Robinow syndrome		ORPHA:97360
-limb	96 Mesomelic Dysplasia, Kantaputra Type	nom	ORPHA:1836	Mesomelic dysplasia, Kantaputra type		ORPHA:1836
 limb	97 Grebe Dysplasia; Hunter–Thompson Dysplasia; Du Pan Dysplasia; Chondrodysplasia, Acromesomelic, BMPR1B Type					
 limb	98 Mesomelic Dysplasia, Werner Type	nom	ORPHA:1836	Mesomelic dysplasia, Kantaputra type	ORPHA:85170 Mesomelic dysplasia, Savarirayan type	
 limb	99 Nievergelt Syndrome	nom	ORPHA:2633	Mesomelic dysplasia, Nievergelt type		

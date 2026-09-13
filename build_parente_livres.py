@@ -13,7 +13,8 @@ Deux tables, deterministes, recalculables :
       chaque signe atteste chez ses membres, n_membres_attestant / n_membres ;
       un signe present chez >= 60 % des membres est « coeur », un signe present
       chez un seul membre est son « discriminant » dans la famille.
-Filtre foetal (vue v_syndrome_hpo_livres_foetal), est_parent=0, clinique + radio.
+Filtre foetal (vue v_syndrome_hpo_livres_foetal), est_parent=0, clinique + radio ;
+les entites dont le debut exclut le prenatal (entites_livres.foetale = 0) sont ecartees.
 Rien n'est pondere par la frequence : l'attestation est binaire ici (5346afe04b4f).
 
 Usage : python3 build_parente_livres.py
@@ -42,15 +43,18 @@ def main():
     ent_de = dict(c.execute("select syndrome_titre, entite_id from entites_livres_titres"))
     orpha_e = dict(c.execute("select entite_id, orpha from entites_livres"))
     livres_e = dict(c.execute("select entite_id, livres from entites_livres"))
+    non_foet = {e for e, in c.execute("select entite_id from entites_livres where foetale=0")}
     direct, orpha, livre = defaultdict(set), {}, {}
     for t, sid, lv, h in c.execute("""select syndrome_titre, syndrome_id, livre, hpo_id from v_syndrome_hpo_livres_foetal
                                       where est_parent=0 and niveau_entree='syndrome'"""):
         e = ent_de.get(t, t)
+        if e in non_foet:
+            continue
         direct[e].add(h); orpha[e] = orpha_e.get(e, sid); livre[e] = livres_e.get(e, lv)
     ferm = {t: set().union(*(anc[h] | {h} for h in hs)) for t, hs in direct.items()}
     poids = {t: sum(w(h) for h in f) for t, f in ferm.items()}
     ents = sorted(direct)
-    print(f"{len(ents)} entités, {sum(len(v) for v in direct.values())} signes directs")
+    print(f"{len(ents)} entités ({len(non_foet)} écartées, début postnatal), {sum(len(v) for v in direct.values())} signes directs")
 
     c.execute("drop table if exists syndrome_parente_livres")
     c.execute("""create table syndrome_parente_livres (

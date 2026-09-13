@@ -115,14 +115,26 @@ def main():
         c.commit()
         print(f"  lot {k//LOT + 1}/{(len(rows) + LOT - 1)//LOT} : {len(lot)} signes, {time.time()-t0:3.0f} s — codés cumulés {st['signes_codes']}", flush=True)
     print(f"\n{len(rows)} signes repris : {dict(st)}")
-    # relecture : un libelle -> les noms resolus (le risque est semantique)
-    with open("/home/mathevet/Bureau/foeto_base/arbitrage_llm_nom.tsv", "w", encoding="utf-8") as f:
+    ecrire_tsv(c, obo)
+
+
+def ecrire_tsv(c, obo):
+    """relecture : un libelle -> les noms resolus (le risque est semantique). Les
+    « choix » deja poses par Remi sont conserves d'une regeneration a l'autre."""
+    import csv
+    from pathlib import Path
+    p = Path("/home/mathevet/Bureau/foeto_base/arbitrage_llm_nom.tsv")
+    choix = {}
+    if p.exists():
+        for r in csv.DictReader(open(p, encoding="utf-8"), delimiter="\t"):
+            if (r.get("choix") or "").strip():
+                choix[(r["signe"].lower(), r["hpo_id"])] = r["choix"].strip()
+    with open(p, "w", encoding="utf-8") as f:
         f.write("signe\tnom_propose\thpo_id\tlabel_hpo\tn\tchoix\n")
         for sg, fr, h, n in c.execute("""select c.signe, f.fragment, f.hpo_id, count(*) from signes_fragments f
                                         join syndrome_signes_livres_candidats c on c.id=f.candidat_id
                                         where f.hpo_id is not null group by lower(c.signe), f.hpo_id order by count(*) desc"""):
-            f.write(f"{sg}\t{fr}\t{h}\t{obo.get(h, {}).get('name', '')}\t{n}\t\n")
-
+            f.write(f"{sg}\t{fr}\t{h}\t{obo.get(h, {}).get('name', '')}\t{n}\t{choix.get((sg.lower(), h), '')}\n")
 
 if __name__ == "__main__":
     main()

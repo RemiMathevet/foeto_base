@@ -12,6 +12,10 @@ Regles, dans l'ordre, chacune tracee dans hpo_methode = 'regle:<nom>' :
   with      « X with Y » : X et Y mappes separement -> X+Y (les deux coexistent) ;
             un seul mappe -> celui-la, methode 'regle:with_partiel' (l'autre reste
             dans le libelle, verbatim intact)
+  parapluie « X anomalies / malformations / defects / abnormalities » -> le noeud
+            HPO « Abnormality of X » / « Abnormal X morphology » pose en PARENT
+            (est_parent=1 : « brain malformations » -> Abnormal brain morphology) ;
+            dysfunction / disease / involvement exclus, ce n'est pas de la morphologie
   suffixe   suppression des 1 ou 2 premiers mots si le reste (>= 2 mots) est un
             NAME/EXACT : « marked ocular hypertelorism » -> « ocular hypertelorism ».
             PROPOSITION seule (TSV), jamais appliquee : le mot retire peut porter le
@@ -28,6 +32,7 @@ from collections import Counter
 
 import map_signes_hpo_obo as O
 
+PARAP = re.compile(r"^(.*?)\s+(anomal(?:y|ies)|malformations?|defects?|abnormalit(?:y|ies))$")
 EQUIV = [(r"\b(encephalomeningocele|meningoencephalocele|encephalomeningoceles)\b", "encephalocele"),
          (r"\bhypotonicity\b", "hypotonia"), (r"\bhypertonicity\b", "hypertonia"),
          (r"\bnostrils?\b", "nares"), (r"\bmeningomyelocele\b", "myelomeningocele"),
@@ -110,6 +115,13 @@ def main():
                 hit, meth = ((hx[0] + "+" + hy[0]), "with"), "with"
             elif hx or hy:
                 hit, meth = (hx or hy), "with_partiel"
+        # parapluie
+        if not hit and (m := PARAP.match(e)):
+            x = O.toks(m.group(1))
+            for sup in ({"abnormality", "of"}, {"abnormality", "of", "the"}, {"abnormal", "morphology"}):
+                h = idx_tok.get(frozenset(x | sup))
+                if h and h[1] in ("NAME", "EXACT"):
+                    hit, meth = ("PARENT:" + h[0], h[1]), "parapluie"; break
         if hit:
             res.append((hit[0], hit[1] if meth != "with" else "with", f"regle:{meth}", rid))
             stats[meth] += 1

@@ -15,7 +15,9 @@ echo "=== $(date) mapping"
 $PY map_signes_hpo_obo.py --apply | tail -6
 $PY decoupe_composites.py --apply | tail -2
 $PY map_signes_hpo_regles.py --apply | tail -3
+$PY applique_arbitrages.py --apply
 $PY -u nomme_signes_hpo.py --apply | tail -2
+$PY resout_fragments.py --apply | head -1
 echo "=== $(date) orpha + reconstruction"
 $PY build_syndrome_hpo_livres.py --apply | tail -2
 $PY map_orpha_livres.py --apply | tail -4
@@ -23,6 +25,7 @@ $PY add_orpha_manquants.py --apply | tail -3
 $PY add_family_members.py --livres | tail -1
 $PY map_orpha_genereviews.py --apply | tail -1
 $PY build_syndrome_hpo_livres.py --apply | tail -1
+$PY onset_genereviews.py | head -1
 $PY build_entites_livres.py | head -1
 $PY build_parente_livres.py | head -1
 $PY temoin_appendice_smith.py | head -1
