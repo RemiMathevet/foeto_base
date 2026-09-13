@@ -19,6 +19,7 @@ Blocs, dans l'ordre du raisonnement d'autopsie :
 Usage : python3 render_fiche_syndrome.py "<motif de titre>" [--orpha ORPHA:xxxx] [--md f.md]
 """
 import argparse
+import json
 import re
 import sqlite3
 import sys
@@ -154,6 +155,18 @@ def main():
     # --- IDENTITE ---------------------------------------------------------
     secs = sections(fichier, SMITH if livre == "smith" else SPRANGER)
     L.append("\n## 2. Identité")
+    # début de manifestation (Orphanet product9) et part fœtale des signes attestés :
+    # c'est la clé de tri des fiches — une entrée de GeneReviews décrite à 5 ans n'est
+    # pas une fiche de fœtopathologie même si trois signes passent le filtre
+    if syn and syn["ages_of_onset"]:
+        try:
+            ages = ", ".join(json.loads(syn["ages_of_onset"]))
+        except Exception:
+            ages = syn["ages_of_onset"]
+        L.append(f"- **Début de manifestation** (Orphanet) : {ages}")
+    n_tot = c.execute("select count(distinct hpo_id) from syndrome_hpo_livres where syndrome_titre=? and est_parent=0", (titre,)).fetchone()[0]
+    n_foet = c.execute("select count(distinct hpo_id) from v_syndrome_hpo_livres_foetal where syndrome_titre=? and est_parent=0", (titre,)).fetchone()[0]
+    L.append(f"- **Signes fœtaux attestés** : {n_foet} sur {n_tot} signes du livre ({100*n_foet//max(n_tot,1)} %)")
     if syn:
         L.append(f"- **ORPHA** : {syn['id']} — *{syn['name_en']}*")
         if syn["omim"]:
@@ -347,7 +360,23 @@ def serie(dossier):
             print(f"  !! {titre[:60]} : {r.stderr.strip()[-120:]}", flush=True)
         if ok % 50 == 0 and ok:
             print(f"  {ok}/{len(ents)}", flush=True)
-    print(f"{ok}/{len(ents)} fiches -> {dossier}")
+    # index de tri : _index.tsv (fichier, titre, livre, orpha, début, signes fœtaux / total)
+    with open(dossier / "_index.tsv", "w", encoding="utf-8") as f:
+        f.write("fichier\ttitre\tlivre\torpha\tdebut\tn_foetal\tn_total\n")
+        for titre, sid, livre in ents:
+            slug = re.sub(r"_+", "_", re.sub(r"[^a-z0-9]+", "_", titre.lower())).strip("_")[:70]
+            fichier = f"{livre.replace('_entites', '')}__{slug}.md"
+            if not (dossier / fichier).exists():
+                continue
+            ages = c.execute("select ages_of_onset from syndromes where id=?", (sid,)).fetchone() if sid else None
+            try:
+                debut = ", ".join(json.loads(ages[0])) if ages and ages[0] else ""
+            except Exception:
+                debut = ages[0] if ages else ""
+            n_tot = c.execute("select count(distinct hpo_id) from syndrome_hpo_livres where syndrome_titre=? and est_parent=0", (titre,)).fetchone()[0]
+            n_foet = c.execute("select count(distinct hpo_id) from v_syndrome_hpo_livres_foetal where syndrome_titre=? and est_parent=0", (titre,)).fetchone()[0]
+            f.write(f"{fichier}\t{titre}\t{livre}\t{sid or ''}\t{debut}\t{n_foet}\t{n_tot}\n")
+    print(f"{ok}/{len(ents)} fiches -> {dossier} (+ _index.tsv)")
 
 
 if __name__ == "__main__":
