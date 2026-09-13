@@ -7,8 +7,9 @@ ATTEND=$1
 while kill -0 "$ATTEND" 2>/dev/null; do sleep 60; done
 eval "$(grep '^export OPENROUTER_API_KEY=' ~/.bashrc)"
 {
-echo "=== $(date) openrouter"
-$PY -u arbitre_llm_nom.py --etape openrouter --modele kimi | tail -3
+# Second avis : plus Kimi (14/80 tranchés, noms hors HPO) — le relecteur (Claude) avec
+# l'index sous la main, le lendemain, sur arbitrage_openrouter.tsv (Rémi, 13/09 19 h).
+echo "=== $(date) pas-sûrs de Next -> arbitrage_openrouter.tsv, relecture Claude le lendemain"
 echo "=== $(date) application + reconstruction"
 $PY applique_arbitrages.py --apply
 $PY build_syndrome_hpo_livres.py --apply | tail -1
