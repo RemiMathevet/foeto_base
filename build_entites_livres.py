@@ -12,7 +12,7 @@ livre cite et pas l'autre, et son plus proche voisin etait lui-meme (Remi,
 Tables : entites_livres (entite_id, nom, orpha, n_titres, livres, debut, foetale) et
 entites_livres_titres (entite_id, livre, syndrome_titre, entree).
 debut = ages Orphanet (ages_of_onset) sinon le verdict lexical du texte GeneReviews
-(genereviews_debut) ; foetale = 0 quand ce debut exclut le prenatal/neonatal
+(genereviews_debut), sinon l'onset HPOA (hpoa_debut, entites add_entites_hpoa) ; foetale = 0 quand ce debut exclut le prenatal/neonatal
 (Orphanet sans Prenatal/Neonatal, ou GeneReviews sans aucun marqueur prenatal),
 1 sinon — ne s'applique qu'aux entites decrites par GeneReviews SEUL : Smith,
 Spranger et limb sont les corpus de reference, on ne les ecarte pas (Angelman,
@@ -59,6 +59,8 @@ def main():
             ages[sid] = a
     gr_debut = {s: v for s, v in c.execute("select slug, verdict from genereviews_debut")} if c.execute(
         "select 1 from sqlite_master where name='genereviews_debut'").fetchone() else {}
+    hpoa_debut = dict(c.execute("select entree, verdict from hpoa_debut")) if c.execute(
+        "select 1 from sqlite_master where name='hpoa_debut'").fetchone() else {}
     GR_FR = {"prenatal": "Prénatal/Néonatal (GeneReviews, texte)", "postnatal": "Postnatal (GeneReviews, texte)", "incertain": "Incertain (GeneReviews, texte)"}
 
     def debut_de(key, ts):
@@ -69,6 +71,8 @@ def main():
         if v and gr_seul:
             best = "prenatal" if "prenatal" in v else ("incertain" if "incertain" in v else "postnatal")
             return GR_FR[best], int(best != "postnatal")
+        if not v and all(l == "hpoa" for l, _, _ in ts):                   # entité créée depuis phenotype.hpoa
+            return hpoa_debut.get(ts[0][2]), 1
         return (GR_FR[v[0]] if v else None), 1
     groupes = defaultdict(list)
     for livre, titre, sid, entree in rows:

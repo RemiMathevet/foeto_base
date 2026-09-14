@@ -1,0 +1,47 @@
+omim	nom	entite_proche	jaccard
+OMIM:620943	Brain malformation renal syndrome	NOM:ppp1r12a related urogenital and or brain malformation	0.4
+OMIM:621261	Cardiomyopathy, dilated, 2M, autosomal recessive	NOM:lmna related dilated cardiomyopathy	0.67
+OMIM:119800	Clubfoot, congenital, with or without deficiency of long bones and/or mirror-image polydactyly	NOM:deficiency of long bones with clubfoot and mirror image polydactyly	0.88
+OMIM:614702	Combined oxidative phosphorylation deficiency 10	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:614922	Combined oxidative phosphorylation deficiency 11	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:615440	Combined oxidative phosphorylation deficiency 17	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:615578	Combined oxidative phosphorylation deficiency 18	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:610498	Combined oxidative phosphorylation deficiency 2	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:615918	Combined oxidative phosphorylation deficiency 21	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:616794	Combined oxidative phosphorylation deficiency 28	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:610505	Combined oxidative phosphorylation deficiency 3	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:617713	Combined oxidative phosphorylation deficiency 33	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:610678	Combined oxidative phosphorylation deficiency 4	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:618835	Combined oxidative phosphorylation deficiency 40	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:618838	Combined oxidative phosphorylation deficiency 41	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:618839	Combined oxidative phosphorylation deficiency 42	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:620167	Combined oxidative phosphorylation deficiency 57	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:614096	Combined oxidative phosphorylation deficiency 8	NOM:fastkd2 related combined oxidative phosphorylation deficiency	0.8
+OMIM:219100	Cutis laxa, autosomal recessive, type IA	NOM:ltbp4 related cutis laxa	0.5
+OMIM:613177	Cutis laxa, autosomal recessive, type IC	NOM:ltbp4 related cutis laxa	0.5
+OMIM:620772	Developmental and epileptic encephalopathy 113	NOM:grin2d related developmental and epileptic encephalopathy	0.75
+OMIM:615476	Developmental and epileptic encephalopathy 18	NOM:grin2d related developmental and epileptic encephalopathy	0.75
+OMIM:619340	Developmental and epileptic encephalopathy 96	NOM:grin2d related developmental and epileptic encephalopathy	0.75
+OMIM:620133	Dyskeratosis congenita, autosomal recessive 8	NOM:dyskeratosis congenita and related telomere biology	0.4
+OMIM:225400	Ehlers-Danlos syndrome, kyphoscoliotic type, 1	ORPHA:98249	0.67
+OMIM:614557	Ehlers-Danlos syndrome, kyphoscoliotic type, 2	ORPHA:98249	0.67
+OMIM:245650	Larsen-like syndrome, Lethal type	ORPHA:284139	0.5
+OMIM:618782	Long QT syndrome 16	ORPHA:768	0.5
+OMIM:616914	Marfan lipodystrophy syndrome	ORPHA:558	0.5
+OMIM:617184	Mitochondrial DNA depletion syndrome 12A (cardiomyopathic type), autosomal dominant	NOM:fbxl4 related encephalomyopathic mitochondrial dna depletion	0.5
+OMIM:617156	Mitochondrial DNA depletion syndrome 15 (hepatocerebral type)	NOM:fbxl4 related encephalomyopathic mitochondrial dna depletion	0.5
+OMIM:245400	Mitochondrial DNA depletion syndrome 9 (encephalomyopathic type with methylmalonic aciduria)	NOM:suclg1 related mitochondrial dna depletion encephalomyopathic form with methylmalonic aciduria	0.86
+OMIM:312150	Multiple pterygium syndrome, X-linked	NOM:multiple pterygium escobar variant	0.5
+OMIM:602088	Nephronophthisis 2	NOM:nephronophthisis related ciliopathies	0.5
+OMIM:617926	Orofaciodigital syndrome XVII	ORPHA:2754	1.0
+OMIM:241800	Pallister-Hall-like syndrome	ORPHA:672	0.67
+OMIM:616546	Short-Rib thoracic dysplasia 14 with polydactyly	NOM:short rib polydactyly	0.6
+OMIM:617405	Short-Rib thoracic dysplasia 17 with or without polydactyly	NOM:short rib polydactyly	0.5
+OMIM:617866	Short-Rib thoracic dysplasia 18 with polydactyly	NOM:short rib polydactyly	0.6
+OMIM:617895	Short-Rib thoracic dysplasia 19 with or without polydactyly	NOM:short rib polydactyly	0.5
+OMIM:617925	Short-Rib thoracic dysplasia 20 with polydactyly	NOM:short rib polydactyly	0.6
+OMIM:269860	Short-rib thoracic dysplasia 12	NOM:short rib polydactyly	0.4
+OMIM:621260	Short-rib thoracic dysplasia 22 without polydactyly	NOM:short rib polydactyly	0.5
+OMIM:618908	Silver-Russell syndrome 5	ORPHA:813	1.0
+OMIM:314390	VACTERL association, X-linked	ORPHA:887	0.67
+OMIM:619033	Vissers-Bodmer syndrome	NOM:cnot1 related vissers bodmer	0.67
