@@ -1,0 +1,369 @@
+slug	titre_gr	foetale	orpha	nom_orpha	voie	jaccard	sur	choix
+ahc	NR0B1-Related Adrenal Hypoplasia Congenita	1	ORPHA:95702	X-linked adrenal hypoplasia congenita	titre ≠num	1.0	0	
+clcn7	CLCN7-Related Osteopetrosis	1	ORPHA:53	Albers-Schönberg osteopetrosis	titre ≠num	1.0	0	
+cutis-laxa	ATP6V0A2-Related Cutis Laxa	1	ORPHA:209	Cutis laxa	titre ≠gène	1.0	0	
+efemp2-cutis-laxa	EFEMP2-Related Cutis Laxa	1	ORPHA:209	Cutis laxa	titre ≠gène	1.0	0	
+eln-cutis-laxa	ELN-Related Cutis Laxa	1	ORPHA:209	Cutis laxa	titre ≠gène	1.0	0	
+kat6b-dis	KAT6B Disorders	1	ORPHA:597749	KAT6B-related multiple congenital anomalies syndrome	titre ≠gène	1.0	0	
+ltbp4-cutis-laxa	LTBP4-Related Cutis Laxa	0	ORPHA:209	Cutis laxa	titre ≠gène	1.0	0	
+oca-oa-ov	Oculocutaneous Albinism and Ocular Albinism Overview	0	ORPHA:98706	Oculocutaneous or ocular albinism	titre ≠num	1.0	0	
+pkd-ad	Polycystic Kidney Disease, Autosomal Dominant	1	ORPHA:731	Autosomal recessive polycystic kidney disease	titre ≠hérédité	1.0	0	
+pol3-leuk	POLR3-Related Leukodystrophy	1	ORPHA:68356	Leukodystrophy	titre ≠groupe	1.0	0	
+x-dcdp	EBP-Related X-Linked Chondrodysplasia Punctata	1	ORPHA:35173	X-linked dominant chondrodysplasia punctata	titre ≠hérédité	1.0	0	
+fbln5-cutis-laxa	FBLN5-Related Cutis Laxa	0	ORPHA:209	Cutis laxa	titre ≠gène	1.0	0	
+marfan	FBN1-Related Marfan Syndrome	1	ORPHA:558	Marfan syndrome	titre ≠gène	1.0	0	
+opd	FLNA-Related Otopalatodigital Spectrum Disorders	1	ORPHA:364541	Otopalatodigital syndrome spectrum disorder	titre ≠gène	1.0	0	
+tcirg1-opt	TCIRG1-Related Osteopetrosis	1	ORPHA:53	Albers-Schönberg osteopetrosis	titre ≠gène ≠num	1.0	0	
+ada	Adenosine Deaminase Deficiency	1	ORPHA:404553	Deficiency of adenosine deaminase 2	titre ≠num	1.0	0	
+ada	Adenosine Deaminase Deficiency	1	ORPHA:404553	Deficiency of adenosine deaminase 2	titre ≠num	1.0	0	
+alpk1-auto	ALPK1-Related Autoinflammatory Disease	0	ORPHA:93665	Autoinflammatory syndrome	titre ≠gène ≠groupe	1.0	0	
+ankrd17-nds	ANKRD17-Related Neurodevelopmental Syndrome	0	ORPHA:717823	Global developmental delay-recurrent infections-facial dysmorphism syndrome	titre ≠gène	1.0	0	
+cdp1-xlr	Chondrodysplasia Punctata 1, X-Linked	0	ORPHA:35173	X-linked dominant chondrodysplasia punctata	titre ≠num ≠hérédité	1.0	0	
+chkb-md	CHKB-Related Muscular Dystrophy	1	ORPHA:98473	Muscular dystrophy	titre ≠gène ≠groupe	1.0	0	
+cln3-dis	CLN3-Related Disorder	0	ORPHA:228346	CLN3 disease	titre ≠gène	1.0	0	
+cmt4c	SH3TC2-Related Hereditary Motor and Sensory Neuropathy	0	ORPHA:773	Adult Refsum disease	titre ≠gène ≠num	1.0	0	
+cyld-cs	CYLD Cutaneous Syndrome	0	ORPHA:79493	Brooke-Spiegler syndrome	titre ≠gène	1.0	0	
+dcm-lmna	LMNA-Related Dilated Cardiomyopathy	0	ORPHA:217619	Syndrome associated with dilated cardiomyopathy	titre ≠gène ≠groupe	1.0	0	
+depdc5-epilepsy	DEPDC5-Related Epilepsy	0	ORPHA:166463	Epilepsy syndrome	titre ≠gène ≠groupe	1.0	0	
+dyrk1a-id	DYRK1A Syndrome	1	ORPHA:464306	DYRK1A-related intellectual disability syndrome	titre ≠gène	1.0	0	
+echs1-def	Mitochondrial Short-Chain Enoyl-CoA Hydratase Deficiency	1	ORPHA:653880	Mitochondrial short-chain enoyl-CoA hydratase 1 deficiency	titre ≠num	1.0	0	
+ed2	Hidrotic Ectodermal Dysplasia 2	0	ORPHA:189	Hidrotic ectodermal dysplasia	titre ≠num	1.0	0	
+edm	SLC26A2-Related Multiple Epiphyseal Dysplasia	1	ORPHA:251	Multiple epiphyseal dysplasia	titre ≠gène	1.0	0	
+epp-ar	Erythropoietic Protoporphyria, Autosomal Recessive	0	ORPHA:443197	X-linked erythropoietic protoporphyria	titre ≠num ≠hérédité	1.0	0	
+epp-xl	X-Linked Protoporphyria	0	ORPHA:443197	X-linked erythropoietic protoporphyria	titre ≠hérédité	1.0	0	
+fbxl4-mtddepl	FBXL4-Related Encephalomyopathic Mitochondrial DNA Depletion Syndrome	1	ORPHA:254803	Mitochondrial DNA depletion syndrome, encephalomyopathic form	titre ≠gène	1.0	0	
+foxp2-sl-dis	FOXP2-Related Speech and Language Disorder	0	ORPHA:209908	Isolated childhood apraxia of speech	titre ≠num	1.0	0	
+ftdp-17	MAPT-Related Frontotemporal Dementia	0	ORPHA:282	Frontotemporal dementia	titre ≠gène	1.0	0	
+isca2-mt-dis	ISCA2-Related Mitochondrial Disorder	1	ORPHA:68380	Mitochondrial disease	titre ≠gène ≠groupe	1.0	0	
+jh	HAMP- and HJV-Related Hemochromatosis	0	ORPHA:79230	HJV or HAMP-related hemochromatosis	titre ≠num	1.0	0	
+kcnt1-epilepsy	KCNT1-Related Epilepsy	1	ORPHA:166463	Epilepsy syndrome	titre ≠gène ≠groupe	1.0	0	
+kennedy	Spinal and Bulbar Muscular Atrophy	0	ORPHA:481	Kennedy disease	titre ≠num	1.0	0	
+lad-ad	LMNB1-Related Autosomal Dominant Leukodystrophy	0	ORPHA:68356	Leukodystrophy	titre ≠gène ≠groupe	1.0	0	
+phts	PTEN Hamartoma Tumor Syndrome	1	ORPHA:306498	PTEN hamartoma tumor syndrome	titre ≠gène	1.0	0	
+pik3ca-overgrowth	PIK3CA-Related Overgrowth Spectrum	1	ORPHA:530313	PIK3CA-related overgrowth spectrum disorder	titre ≠gène	1.0	0	
+pmld1	Pelizaeus-Merzbacher-Like Disease 1	1	ORPHA:280270	Pelizaeus-Merzbacher-like disease	titre ≠num	1.0	0	
+sedt	X-Linked Spondyloepiphyseal Dysplasia Tarda	1	ORPHA:93284	Spondyloepiphyseal dysplasia tarda	titre ≠num	1.0	0	
+spg4	Spastic Paraplegia 4	0	ORPHA:99013	Spastic paraplegia type 7	titre ≠num	1.0	0	
+spg8	Spastic Paraplegia 8	0	ORPHA:99013	Spastic paraplegia type 7	titre ≠num	1.0	0	
+suclg1-mtddepl	SUCLG1-Related Mitochondrial DNA Depletion Syndrome, Encephalomyopathic Form with Methylmalonic Aciduria	1	ORPHA:1933	Mitochondrial DNA depletion syndrome, encephalomyopathic form with methylmalonic aciduria	titre ≠gène	1.0	0	
+tay-sachs	HEXA Disorders	1	ORPHA:845	Tay-Sachs disease	titre ≠gène	1.0	0	
+usp7-ndd	USP7-Related Hao-Fountain Syndrome	1	ORPHA:643549	Hao-Fountain syndrome	titre ≠gène	1.0	0	
+als-ftd	C9orf72 Frontotemporal Dementia and/or Amyotrophic Lateral Sclerosis	0	ORPHA:275872	Frontotemporal dementia with motor neuron disease	titre ≠num	0.83	0	
+prop1	PROP1-Related Combined Pituitary Hormone Deficiency	1	ORPHA:467	Non-acquired combined pituitary hormone deficiency	titre ≠gène ≠groupe	0.8	0	
+cmt2a	MFN2 Hereditary Motor and Sensory Neuropathy	0	ORPHA:773	Adult Refsum disease	titre ≠gène ≠num	0.8	0	
+ca5a-def	Carbonic Anhydrase VA Deficiency	1	ORPHA:2785	Osteopetrosis with renal tubular acidosis	titre ≠num	0.75	0	
+cpt1a	Carnitine Palmitoyltransferase 1A Deficiency	1	ORPHA:157	Carnitine palmitoyltransferase II deficiency	titre ≠num	0.75	0	
+fhm	Familial Hemiplegic Migraine	1	ORPHA:569	Familial or sporadic hemiplegic migraine	titre ≠num	0.75	0	
+grin2d-dee	GRIN2D-Related Developmental and Epileptic Encephalopathy	0	ORPHA:163681	CNTNAP2-related developmental and epileptic encephalopathy	titre ≠gène	0.75	0	
+kss	Single Large-Scale Mitochondrial DNA Deletion Syndromes	0	ORPHA:254767	Mitochondrial oxidative phosphorylation disorder due to a large-scale single deletion of mitochondrial DNA	titre ≠num ≠groupe	0.75	0	
+lchad	Long-Chain Hydroxyacyl-CoA Dehydrogenase Deficiency / Trifunctional Protein Deficiency	1	ORPHA:5	Long chain 3-hydroxyacyl-CoA dehydrogenase deficiency	titre ≠num	0.75	0	
+mpv17-mtdep	MPV17-Related Mitochondrial DNA Maintenance Defect	1	ORPHA:352456	Mitochondrial DNA maintenance syndrome	titre ≠gène ≠groupe	0.75	0	
+pendred	SLC26A4-Related Sensorineural Hearing Loss	1	ORPHA:33355	Reticular dysgenesis	titre ≠gène	0.75	0	
+traps	TNF Receptor-Associated Periodic Fever Syndrome	0	ORPHA:32960	Tumor necrosis factor receptor 1 associated periodic syndrome	titre ≠num	0.75	0	
+vlcad	Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency	1	ORPHA:26793	Very long chain acyl-CoA dehydrogenase deficiency	titre ≠num	0.75	0	
+xxms	Nonsyndromic 46,XX Testicular Disorders/Differences of Sex Development	1	ORPHA:393	46,XX testicular difference of sex development	titre	0.71	0	
+aspm-pm	ASPM Primary Microcephaly	1	ORPHA:2512	Autosomal recessive primary microcephaly	titre	0.67	0	
+chd8-ndd-og	CHD8-Related Neurodevelopmental Disorder with Overgrowth	0	ORPHA:642675	CHD8 overgrowth syndrome	titre	0.67	0	
+cls	RPS6KA3-Related Intellectual Disability	0	ORPHA:163937	X-linked intellectual disability, Najm type	titre ≠gène ≠num	0.67	0	
+ext	Hereditary Multiple Osteochondromas	0	ORPHA:321	Multiple osteochondromas	titre	0.67	0	
+gr_22q13_3	Phelan-McDermid Syndrome-SHANK3 Related	1	ORPHA:48652	Phelan-McDermid syndrome	titre ≠gène	0.67	0	
+mws	Classic Mowat-Wilson Syndrome	1	ORPHA:2152	Mowat-Wilson syndrome	titre	0.67	0	
+wdr62-pm	WDR62 Primary Microcephaly	1	ORPHA:2512	Autosomal recessive primary microcephaly	titre	0.67	0	
+cmtc	Isolated and Classic Cutis Marmorata Telangiectatica Congenita	1	ORPHA:1556	Cutis marmorata telangiectatica congenita	titre	0.67	0	
+dystonia-ov	Monogenic Isolated Dystonia Overview	1	ORPHA:156159	Isolated dystonia	titre	0.67	0	
+dystonia-ov	Monogenic Isolated Dystonia Overview	1	ORPHA:156159	Isolated dystonia	titre	0.67	0	
+oi	COL1A1- and COL1A2-Related Osteogenesis Imperfecta	1	ORPHA:666	Osteogenesis imperfecta	titre ≠gène	0.67	0	
+oi	COL1A1- and COL1A2-Related Osteogenesis Imperfecta	1	ORPHA:666	Osteogenesis imperfecta	titre ≠gène	0.67	0	
+atm-cpd	ATM-Related Cancer Predisposition	0	ORPHA:300576	Oligodontia-cancer predisposition syndrome	titre ≠gène	0.67	0	
+bcl11a-id	BCL11A-Related Intellectual Disability	1	ORPHA:163937	X-linked intellectual disability, Najm type	titre ≠gène ≠num	0.67	0	
+chek2-cpd	CHEK2-Related Cancer Predisposition	0	ORPHA:300576	Oligodontia-cancer predisposition syndrome	titre ≠gène	0.67	0	
+cmt2d	GARS1-Associated Axonal Neuropathy	1	ORPHA:643	Giant axonal neuropathy	titre ≠gène	0.67	0	
+ddx41-mds	DDX41-Associated Familial Myelodysplastic Syndrome and Acute Myeloid Leukemia	0	ORPHA:164726	Acute myeloid leukemia and myelodysplastic syndromes related to radiation	titre ≠gène ≠num	0.67	0	
+dfnb9	OTOF-Related Hearing Loss	1	ORPHA:999	Ermine phenotype	titre ≠gène	0.67	0	
+hibch-def	3-Hydroxyisobutyryl-CoA Hydrolase Deficiency	1	ORPHA:88639	Neurodegeneration due to 3-hydroxyisobutyryl-CoA hydrolase deficiency	titre ≠num	0.67	0	
+hmdpc	Hypermanganesemia with Dystonia 1	1	ORPHA:521406	Dystonia-parkinsonism-hypermanganesemia syndrome	titre ≠num	0.67	0	
+hyper-card	Nonsyndromic Hypertrophic Cardiomyopathy Overview	0	ORPHA:217595	Syndrome associated with hypertrophic cardiomyopathy	titre	0.67	0	
+insr-ir	INSR-Related Severe Insulin Resistance Syndrome	1	ORPHA:2297	Insulin-resistance syndrome type A	titre ≠num	0.67	0	
+isovaleric-a	Classic Isovaleric Acidemia	1	ORPHA:33	Isovaleric acidemia	titre	0.67	0	
+nf2	NF2-Related Schwannomatosis	1	ORPHA:637	Full NF2-related schwannomatosis	titre	0.67	0	
+pai-1-def	Complete Plasminogen Activator Inhibitor 1 Deficiency	1	ORPHA:465	Congenital plasminogen activator inhibitor type 1 deficiency	titre	0.67	0	
+prion	Genetic Prion Disease	0	ORPHA:280400	Inherited human prion disease	titre ≠groupe	0.67	0	
+prss1-hp	PRSS1-Related Hereditary Pancreatitis	0	ORPHA:676	Autosomal dominant hereditary chronic pancreatitis	titre	0.67	0	
+stxbp1-ee	STXBP1 Encephalopathy with Epilepsy	0	ORPHA:599373	STXBP1-related developmental and epileptic encephalopathy	titre	0.67	0	
+syngap1-id	SYNGAP1-Related Intellectual Disability	0	ORPHA:163937	X-linked intellectual disability, Najm type	titre ≠gène ≠num	0.67	0	
+trimethylaminuria	Primary Trimethylaminuria	0	ORPHA:468726	Severe primary trimethylaminuria	titre	0.67	0	
+vmcm	TEK-Related Venous Malformations	1	ORPHA:2451	Mucocutaneous venous malformations	titre	0.67	0	
+wac-id	WAC-Related Intellectual Disability	1	ORPHA:163937	X-linked intellectual disability, Najm type	titre ≠gène ≠num	0.67	0	
+wdr26-id	WDR26-Related Intellectual Disability	1	ORPHA:163937	X-linked intellectual disability, Najm type	titre ≠gène ≠num	0.67	0	
+xq28-dup	Xq28 Duplication Syndrome, Int22h1/Int22h2 Mediated	1	ORPHA:293939	Distal Xq28 microduplication syndrome	titre	0.67	0	
+chh	Cartilage-Hair Hypoplasia – Anauxetic Dysplasia Spectrum Disorders	1	ORPHA:175	Cartilage-hair hypoplasia	titre	0.6	0	
+ciss	Cold-Induced Sweating Syndrome Including Crisponi Syndrome	1	ORPHA:157820	Cold-induced sweating syndrome	titre	0.6	0	
+cach	Childhood Ataxia with Central Nervous System Hypomyelination / Vanishing White Matter	1	ORPHA:135	CACH syndrome	titre	0.6	0	
+ccm	Familial Cerebral Cavernous Malformations	0	ORPHA:221061	Familial cerebral cavernous malformation	titre	0.6	0	
+fastkd2-coxpd	FASTKD2-Related Combined Oxidative Phosphorylation Deficiency	1	ORPHA:137908	Hypotonia with lactic acidemia and hyperammonemia	titre ≠gène ≠num	0.6	0	
+gsd9	Phosphorylase Kinase Deficiency	0	ORPHA:370	Glycogen storage disease due to phosphorylase kinase deficiency	titre ≠num	0.6	0	
+pnknd	Familial Paroxysmal Nonkinesigenic Dyskinesia	0	ORPHA:98809	Paroxysmal kinesigenic dyskinesia	titre ≠num	0.6	0	
+rrm2b-mtddepl	RRM2B Mitochondrial DNA Maintenance Defects	0	ORPHA:352456	Mitochondrial DNA maintenance syndrome	titre ≠gène ≠groupe	0.6	0	
+accpn	Hereditary Motor and Sensory Neuropathy with Agenesis of the Corpus Callosum	0	ORPHA:773	Adult Refsum disease	titre ≠num	0.57	0	
+drd	GTP Cyclohydrolase 1-Deficient Dopa-Responsive Dystonia	1	ORPHA:98808	Autosomal dominant dopa-responsive dystonia	titre ≠num	0.57	0	
+cah	21-Hydroxylase-Deficient Congenital Adrenal Hyperplasia	1	ORPHA:90794	Classic congenital adrenal hyperplasia due to 21-hydroxylase deficiency	titre ≠num	0.56	0	
+abs	Cytochrome P450 Oxidoreductase Deficiency	1	ORPHA:95699	Congenital adrenal hyperplasia due to cytochrome P450 oxidoreductase deficiency	titre ≠num	0.5	0	
+adamtsl4-eyes	ADAMTSL4-Related Eye Disorders	1	ORPHA:195	Cat-eye syndrome	titre ≠gène	0.5	0	
+cmt2c	Autosomal Dominant TRPV4-Related Disorders	1	ORPHA:364820	TRPV4-related bone disorder	titre ≠gène	0.5	0	
+craniosynostosis	FGFR Craniosynostosis Syndromes Overview	1	ORPHA:1531	Craniosynostosis	titre	0.5	0	
+entpd1-ndd	ENTPD1-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+hgc	Diffuse Gastric and Lobular Breast Cancer Syndrome	0	ORPHA:26106	Hereditary diffuse gastric cancer	titre	0.5	0	
+nephron-ov	Nephronophthisis-Related Ciliopathies	1	ORPHA:655	Nephronophthisis	titre	0.5	0	
+nfix-malan	NFIX-Related Malan Syndrome	1	ORPHA:420179	Malan overgrowth syndrome	titre	0.5	0	
+pmd	PLP1-Related Disorders	1	ORPHA:280234	Null syndrome	titre	0.5	0	
+ppp1r12a-ubm	PPP1R12A-Related Urogenital and/or Brain Malformation Syndrome	1	ORPHA:269553	Genetic cerebral malformation	titre ≠num ≠groupe	0.5	0	
+pura-dis	PURA-Related Neurodevelopmental Disorders	1	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+samd9l-ap	SAMD9L-Related Syndrome	1	ORPHA:619367	SAMD9L-associated autoinflammatory syndrome	titre	0.5	0	
+taf8-ndd	TAF8-Related Neurodevelopmental Disorder	1	ORPHA:1915	Fetal alcohol syndrome	titre	0.5	0	
+thoc6-id	THOC6 Intellectual Disability Syndrome	1	ORPHA:163937	X-linked intellectual disability, Najm type	titre ≠gène ≠num	0.5	0	
+tooth-agenesis-ov	Nonsyndromic Tooth Agenesis Overview	1	ORPHA:99798	Oligodontia	titre	0.5	0	
+tubb4a-leuk	TUBB4A-Related Neurologic Disorders	0	ORPHA:36388	Paraneoplastic neurologic syndrome	titre ≠gène	0.5	0	
+vldlr-ch	VLDLR Cerebellar Hypoplasia	1	ORPHA:86823	Lissencephaly with cerebellar hypoplasia	titre ≠gène	0.5	0	
+actg2-dis	ACTG2 Visceral Myopathy	1	ORPHA:2604	Familial visceral myopathy	titre	0.5	0	
+atn1-ndd	ATN1-Related Neurodevelopmental Disorder	1	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+ddx3x-ndd	DDX3X-Related Neurodevelopmental Disorder	1	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+fg	MED12-Related Disorders	1	ORPHA:1415	Hardikar syndrome	titre	0.5	0	
+rere-dis	RERE-Related Disorders	1	ORPHA:494344	RERE-related neurodevelopmental syndrome	titre	0.5	0	
+saul-wilson	Saul-Wilson Syndrome	1	ORPHA:905	Wilson disease	titre	0.5	0	
+sca28	AFG3L2-Related Neurologic Disorders	0	ORPHA:36388	Paraneoplastic neurologic syndrome	titre ≠gène	0.5	0	
+scn3a-ndd	SCN3A-Related Neurodevelopmental Disorder	1	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+sost	SOST-Related Sclerosing Bone Dysplasias	1	ORPHA:93444	Primary bone dysplasia with increased bone density	titre ≠gène ≠groupe	0.5	0	
+adcy5-dysk	ADCY5-Related Movement Disorder	0	ORPHA:71519	Psychogenic movement disorders	titre ≠gène	0.5	0	
+alzheimer	Alzheimer Disease Overview	0	ORPHA:1020	Early-onset autosomal dominant Alzheimer disease	titre	0.5	0	
+amish-mcph	SLC25A19-Related Thiamine Metabolism Dysfunction	1	ORPHA:298644	Disorder of thiamine metabolism and transport	titre ≠gène ≠num ≠groupe	0.5	0	
+ankrd26	ANKRD26-Related Thrombocytopenia	0	ORPHA:3002	Immune thrombocytopenia	titre ≠gène	0.5	0	
+ano5-md	ANO5-Related Muscle Disease	0	ORPHA:171445	Muscle filaminopathy	titre ≠gène	0.5	0	
+args-aciduria	Argininosuccinate Lyase Deficiency	1	ORPHA:46	Adenylosuccinate lyase deficiency	titre	0.5	0	
+args-aciduria	Argininosuccinate Lyase Deficiency	1	ORPHA:46	Adenylosuccinate lyase deficiency	titre	0.5	0	
+arts	Phosphoribosylpyrophosphate Synthetase Deficiency	1	ORPHA:32	Glutathione synthetase deficiency	titre	0.5	0	
+bfns	KCNQ2-Related Disorders	1	ORPHA:439218	KCNQ2-related developmental and epileptic encephalopathy	titre	0.5	0	
+burn-mckeown	TXNL4A-Related Craniofacial Disorders	0	ORPHA:141229	Facial cleft	titre ≠gène	0.5	0	
+cbl	Disorders of Intracellular Cobalamin Metabolism	1	ORPHA:79171	Disorder of cobalamin metabolism and transport	titre	0.5	0	
+cc2-leuk	CLCN2-Related Leukoencephalopathy	0	ORPHA:83629	Leukoencephalopathy-spondyloepimetaphyseal dysplasia syndrome	titre ≠gène	0.5	0	
+cdkn2a-cpd	CDKN2A Cancer Predisposition	0	ORPHA:300576	Oligodontia-cancer predisposition syndrome	titre ≠gène	0.5	0	
+celiac	Celiac Disease	1	ORPHA:398063	Refractory celiac disease	titre	0.5	0	
+cetp-def	CETP-Related Hyperalphalipoproteinemia	0	ORPHA:181428	Familial Hyperalphalipoproteinemia	titre	0.5	0	
+chd2-dis	CHD2-Related Neurodevelopmental Disorders	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+clcn4-ndd	CLCN4-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+csnk2b-ndd	CSNK2B-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+ctcf-dis	CTCF-Related Disorder	1	ORPHA:363611	CTCF-related neurodevelopmental disorder	titre	0.5	0	
+cyclic-n	ELANE-Related Neutropenia	1	ORPHA:178996	Acquired neutropenia	titre ≠gène ≠groupe	0.5	0	
+dfnb1	GJB2-Related Autosomal Recessive Nonsyndromic Hearing Loss	1	ORPHA:999	Ermine phenotype	titre ≠gène	0.5	0	
+dkc	Dyskeratosis Congenita and Related Telomere Biology Disorders	0	ORPHA:1775	Dyskeratosis congenita	titre	0.5	0	
+dup15q	Maternal 15q Duplication Syndrome	0	ORPHA:1707	Distal duplication 15q syndrome	titre	0.5	0	
+dup7q11_23	7q11.23 Duplication Syndrome	1	ORPHA:904	Williams syndrome	titre	0.5	0	
+emc10-ndd	EMC10-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+etha	SCN9A Neuropathic Pain Syndromes	1	ORPHA:60039	Pudendal nerve entrapment syndrome	titre ≠gène	0.5	0	
+g6pc3-def	G6PC3 Deficiency	1	ORPHA:331176	Severe congenital neutropenia due to G6PC3 deficiency	titre ≠num	0.5	0	
+gan	GAN-Related Neurodegeneration	0	ORPHA:643	Giant axonal neuropathy	titre	0.5	0	
+gm1-ganglio	GLB1-Related Disorders	1	ORPHA:354	GM1 gangliosidosis	titre ≠gène	0.5	0	
+gm2a-def	GM2 Activator Deficiency	1	ORPHA:309246	GM2 gangliosidosis, AB variant	titre	0.5	0	
+gnai1-ndd	GNAI1-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre	0.5	0	
+gnb5-ndd	GNB5-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+gria2-ndd	GRIA2-Related Neurodevelopmental Disorder	1	ORPHA:1915	Fetal alcohol syndrome	titre	0.5	0	
+grin1-ndd	GRIN1-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+hlrcc	FH Tumor Predisposition Syndrome	0	ORPHA:231108	Rhabdoid tumor predisposition syndrome	titre ≠num	0.5	0	
+hnrnpu-ndd	HNRNPU-Related Neurodevelopmental Disorder	1	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+ipa	AIP Familial Isolated Pituitary Adenomas	0	ORPHA:314777	Familial isolated pituitary adenoma	titre	0.5	0	
+kif1a-ndd	KIF1A-Related Neurodevelopmental Disorder	1	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+kmt2e-ndd	KMT2E-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+lgmd2a	Calpainopathy	0	ORPHA:267	Calpain-3-related limb-girdle muscular dystrophy R1	titre	0.5	0	
+lns	HPRT1 Disorders	0	ORPHA:206428	Hypoxanthine-guanine phosphoribosyltransferase deficiency	titre ≠gène	0.5	0	
+mc-def	Molybdenum Cofactor Deficiency	1	ORPHA:308386	Sulfite oxidase deficiency due to molybdenum cofactor deficiency type A	titre ≠num	0.5	0	
+mecr-dis	MECR-Related Neurologic Disorder	0	ORPHA:36388	Paraneoplastic neurologic syndrome	titre ≠gène ≠groupe	0.5	0	
+mngie	Mitochondrial Neurogastrointestinal Encephalopathy Disease	0	ORPHA:298	Mitochondrial neurogastrointestinal encephalomyopathy	titre	0.5	0	
+monosomy7-ov	Monosomy 7 Predisposition Syndromes Overview	0	ORPHA:99226	Monosomy X syndrome	titre ≠num	0.5	0	
+mt-overview	Primary Mitochondrial Disorders Overview	0	ORPHA:68380	Mitochondrial disease	titre	0.5	0	
+mthfr-homocystinuria	Homocystinuria due to Deficiency of N(5,10)-Methylenetetrahydrofolate Reductase Activity	1	ORPHA:395	Homocystinuria due to methylene tetrahydrofolate reductase deficiency	titre ≠num	0.5	0	
+nars1	NARS1-Related Neurologic Disorders	1	ORPHA:36388	Paraneoplastic neurologic syndrome	titre	0.5	0	
+ncl	Neuronal Ceroid Lipofuscinoses Overview	1	ORPHA:216	Neuronal ceroid lipofuscinosis	titre	0.5	0	
+nr2f1-ndd	NR2F1-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+perry	DCTN1-Related Neurodegeneration	1	ORPHA:157846	Neuroferritinopathy	titre ≠gène	0.5	0	
+pha2	Pseudohypoaldosteronism Type II	0	ORPHA:171871	Renal pseudohypoaldosteronism type 1	titre ≠num	0.5	0	
+pot1-tpd	POT1 Tumor Predisposition	0	ORPHA:231108	Rhabdoid tumor predisposition syndrome	titre ≠gène	0.5	0	
+ppp1r21-ndd	PPP1R21-Related El-Hattab-Schmidts Syndrome	1	ORPHA:724148	Global developmental delay-early-onset refractory epilepsy-spastic quadriplegia-microcephaly-cerebral atrophy syndrome	titre	0.5	0	
+ptps-def	PTS-Related Tetrahydrobiopterin Deficiency (PTPSD)	1	ORPHA:238583	Hyperphenylalaninemia due to tetrahydrobiopterin deficiency	titre ≠gène ≠num	0.5	0	
+retinoschisis	X-Linked Congenital Retinoschisis	1	ORPHA:792	X-linked retinoschisis	titre	0.5	0	
+rett	MECP2 Disorders	1	ORPHA:1762	Proximal Xq28 duplication syndrome	titre	0.5	0	
+rfc1-canvas	RFC1 CANVAS / Spectrum Disorder	1	ORPHA:504476	Cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome	titre	0.5	0	
+rpe65-lca	Autosomal Recessive RPE65-Related Retinal Degeneration	1	ORPHA:1574	Retinal degeneration-nanophthalmos-glaucoma syndrome	titre ≠gène	0.5	0	
+scn8a-ee	SCN8A-Related Epilepsy and/or Neurodevelopmental Disorders	0	ORPHA:166463	Epilepsy syndrome	titre ≠gène ≠num	0.5	0	
+setd1b-ndd	SETD1B-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+slc6a1-ndd	SLC6A1-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+spg7	SPG7-Related Neurologic Disorder	0	ORPHA:99013	Spastic paraplegia type 7	titre	0.5	0	
+syncrip-ndd	SYNCRIP-Related Neurodevelopmental Disorder	1	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+tbck-ndd	TBCK-Related Neurodevelopmental Disorder	1	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+tpk1-def	TPK1-Related Thiamine Metabolism Dysfunction Syndrome	1	ORPHA:298644	Disorder of thiamine metabolism and transport	titre ≠gène ≠num ≠groupe	0.5	0	
+trio-id	TRIO-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+trpm3-ndd	TRPM3-Related Neurodevelopmental Disorder	1	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+udd	Udd Distal Myopathy – Tibial Muscular Dystrophy	0	ORPHA:599	Distal myopathy	titre ≠groupe	0.5	0	
+xlhi	CD40 Ligand Deficiency	0	ORPHA:101088	X-linked hyper-IgM syndrome	titre ≠gène ≠num	0.5	0	
+yif1b-ndd	YIF1B-Related Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.5	0	
+cmtx	GJB1 Disorders: Charcot-Marie-Tooth Neuropathy (CMT1X) and Central Nervous System Phenotypes	1	ORPHA:65753	Charcot-Marie-Tooth disease type 1	titre ≠gène ≠num	0.44	0	
+cmtx	GJB1 Disorders: Charcot-Marie-Tooth Neuropathy (CMT1X) and Central Nervous System Phenotypes	1	ORPHA:65753	Charcot-Marie-Tooth disease type 1	titre ≠gène ≠num	0.44	0	
+mt-deafness	Nonsyndromic Hearing Loss and Deafness, Mitochondrial	0	ORPHA:1349	Mitochondrial DNA-related cardiomyopathy and hearing loss	titre	0.43	0	
+bethlem	Collagen VI-Related Dystrophies	1	ORPHA:610	Bethlem muscular dystrophy	titre ≠num	0.4	0	
+bethlem	Collagen VI-Related Dystrophies	1	ORPHA:610	Bethlem muscular dystrophy	titre ≠num	0.4	0	
+chol-liver-ov	Pediatric Genetic Cholestatic Liver Disease Overview	1	ORPHA:156604	Genetic parenchymatous liver disease	titre	0.4	0	
+dfna2	DFNA2 Nonsyndromic Hearing Loss	1	ORPHA:999	Ermine phenotype	titre	0.4	0	
+fum	Fumarate Hydratase Deficiency	1	ORPHA:67046	3-methylglutaconic aciduria type 1	titre	0.4	0	
+mbtps1-semd	MBTPS1-Related Spondyloepimetaphyseal Dysplasia with Elevated Lysosomal Enzymes	1	ORPHA:93349	X-linked spondyloepimetaphyseal dysplasia	titre ≠num	0.4	0	
+mhs	Nonsyndromic Malignant Hyperthermia Susceptibility	0	ORPHA:423	Malignant hyperthermia of anesthesia	titre ≠num	0.4	0	
+siod	Schimke Immunoosseous Dysplasia	1	ORPHA:1830	Schimke immuno-osseous dysplasia	titre	0.4	0	
+ucd-overview	Urea Cycle Disorders Overview	1	ORPHA:79167	Disorder of urea cycle metabolism and ammonia detoxification	titre ≠num	0.4	0	
+xl-nystag	FRMD7-Related Infantile Nystagmus	0	ORPHA:651	NON RARE IN EUROPE: Idiopathic infantile nystagmus	titre ≠num	0.4	0	
+yci	Y Chromosome Infertility	0	ORPHA:1646	Chromosome Y microdeletion syndrome	titre ≠num	0.4	0	
+zap70-scid	ZAP70 Deficiency	1	ORPHA:911	Combined immunodeficiency due to ZAP70 deficiency	titre ≠num	0.4	0	
+neurocutaneous	Neurocutaneous Disorders due to Mitochondrial Proline Synthesis Defects	1	ORPHA:35696	Mitochondrial disorder due to a defect in mitochondrial protein synthesis	titre ≠num	0.38	0	
+collagen-2	Type II Collagen Disorders Overview	1	ORPHA:365	Glycogen storage disease due to acid maltase deficiency	titre	0.33	0	
+ebf3-ndd	EBF3 Neurodevelopmental Disorder	0	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.33	0	
+fam111a-dysp	FAM111A-Related Skeletal Dysplasias	1	ORPHA:98472	Skeletal muscle disease	titre ≠gène ≠groupe	0.33	0	
+focal-dh	PORCN-Related Developmental Disorders	1	ORPHA:168778	Rare pervasive developmental disorder	titre ≠gène	0.33	0	
+gonad-dys-46xy	Nonsyndromic Disorders of Testicular Development Overview	1	ORPHA:393	46,XX testicular difference of sex development	titre ≠num	0.33	0	
+mdel17q12	17q12 Recurrent Deletion Syndrome	1	ORPHA:102020	Autosomal monosomy syndrome	titre ≠groupe	0.33	0	
+pfic	ATP8B1 Deficiency	0	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+plpbp-def	PLPBP Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+pnpo-def	PNPO Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+setd2-ndd	SETD2 Neurodevelopmental Disorders	1	ORPHA:1915	Fetal alcohol syndrome	titre ≠gène	0.33	0	
+stac3-dis	STAC3 Disorder	1	ORPHA:168572	Native American myopathy	titre	0.33	0	
+stromme	Strømme Syndrome	0	ORPHA:497757	MME-related autosomal dominant Charcot Marie Tooth disease type 2	titre	0.33	0	
+gnb1-e	GNB1 Encephalopathy	0	ORPHA:407	Glycine encephalopathy	titre ≠gène	0.33	0	
+hyal2-def	HYAL2 Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+lwd	SHOX Deficiency Disorders	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+med13l	MED13L Syndrome	1	ORPHA:369891	Developmental delay-facial dysmorphism syndrome due to MED13L deficiency	titre	0.33	0	
+rab18-def	RAB18 Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+alk-nbs	ALK-Related Neuroblastic Tumor Susceptibility	0	ORPHA:289539	BAP1-related tumor predisposition syndrome	titre ≠gène ≠num	0.33	0	
+aniridia	PAX6 Aniridia Syndrome	1	ORPHA:250923	Isolated aniridia	titre	0.33	0	
+aniridia	PAX6 Aniridia Syndrome	1	ORPHA:250923	Isolated aniridia	titre	0.33	0	
+carasil	HTRA1 Disorder	0	ORPHA:482072	HTRA1-related cerebral small vessel disease	titre ≠gène	0.33	0	
+clpb-def	CLPB Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+del16p11_2	16p11.2 Recurrent Deletion	0	ORPHA:102020	Autosomal monosomy syndrome	titre ≠num ≠groupe	0.33	0	
+dup17q12	17q12 Recurrent Duplication	1	ORPHA:98130	Autosomal trisomy syndrome	titre ≠groupe	0.33	0	
+fap	APC-Associated Polyposis Conditions	1	ORPHA:220460	Attenuated familial adenomatous polyposis	titre	0.33	0	
+fars2-def	FARS2 Deficiency	0	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+fgf14-ataxia	GAA-FGF14-Related Ataxia	0	ORPHA:95	Friedreich ataxia	titre ≠gène	0.33	0	
+haplo-a20	Haploinsufficiency of A20	0	ORPHA:436151	Intellectual disability-expressive aphasia-facial dysmorphism syndrome	titre ≠num	0.33	0	
+ibmpfd	Multisystem Proteinopathy	0	ORPHA:102	Multiple system atrophy	titre	0.33	0	
+lrrk2	LRRK2-Related Parkinson Disease	0	ORPHA:2828	Young-onset Parkinson disease	titre	0.33	0	
+mbd5-dis	MBD5 Haploinsufficiency	0	ORPHA:436151	Intellectual disability-expressive aphasia-facial dysmorphism syndrome	titre ≠gène	0.33	0	
+mdel15q13_3	15q13.3 Recurrent Deletion	1	ORPHA:102020	Autosomal monosomy syndrome	titre ≠num ≠groupe	0.33	0	
+mdel16p12_2	16p12.2 Recurrent Deletion	1	ORPHA:102020	Autosomal monosomy syndrome	titre ≠num ≠groupe	0.33	0	
+mdel1q21_1	1q21.1 Recurrent Deletion	0	ORPHA:102020	Autosomal monosomy syndrome	titre ≠num ≠groupe	0.33	0	
+mdel3q29	3q29 Recurrent Deletion	1	ORPHA:102020	Autosomal monosomy syndrome	titre ≠groupe	0.33	0	
+megdel	SERAC1 Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+menkes	ATP7A-Related Copper Transport Disorders	1	ORPHA:309848	Disorder of magnesium transport	titre ≠gène ≠num	0.33	0	
+ngly1-cddg	NGLY1-Related Congenital Disorder of Deglycosylation	1	ORPHA:631	Non-acquired isolated growth hormone deficiency	titre ≠gène ≠num	0.33	0	
+nkh	Nonketotic Hyperglycinemia	1	ORPHA:35	Propionic acidemia	titre ≠num	0.33	0	
+nkx6-2-spax	NKX6-2-Related Disorder	1	ORPHA:527497	NKX6-2-related autosomal recessive hypomyelinating leukodystrophy	titre	0.33	0	
+nthl1-ts	NTHL1 Tumor Syndrome	0	ORPHA:199260	Calcifying aponeurotic fibroma	titre ≠gène	0.33	0	
+og-dysp	Osteoglophonic Dysplasia	0	ORPHA:166100	Autosomal dominant otospondylomegaepiphyseal dysplasia	titre	0.33	0	
+ptt	Prothrombin Thrombophilia	1	ORPHA:325	Congenital factor II deficiency	titre	0.33	0	
+rab32-pd	RAB32-Related Parkinson Disease	0	ORPHA:2828	Young-onset Parkinson disease	titre	0.33	0	
+schwann	LZTR1- and SMARCB1-Related Schwannomatosis	0	ORPHA:93921	Full schwannomatosis	titre	0.33	0	
+slc39a14-def	SLC39A14 Deficiency	0	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+spg17	BSCL2-Related Neurologic Disorders / Seipinopathy	1	ORPHA:36388	Paraneoplastic neurologic syndrome	titre ≠gène	0.33	0	
+syne1ca-ar	SYNE1 Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+tango2-mea	TANGO2 Deficiency	0	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+trmu-def	TRMU Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+unc80-def	UNC80 Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+vps13d-md	VPS13D Movement Disorder	0	ORPHA:71519	Psychogenic movement disorders	titre ≠gène	0.33	0	
+vps35-pd	VPS35-Related Parkinson Disease	0	ORPHA:2828	Young-onset Parkinson disease	titre ≠gène	0.33	0	
+wars2-def	WARS2 Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+x-pvh	FLNA Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+yars1-def	YARS1 Deficiency	1	ORPHA:93	Aspartylglucosaminuria	titre ≠gène	0.33	0	
+dnajc6-pd	DNAJC6 Parkinson Disease	0	ORPHA:2828	Young-onset Parkinson disease	mim	0.25	0	
+aff4-chops	AFF4-Related CHOPS Syndrome	1	ORPHA:444077	Cognitive impairment-coarse facies-heart defects-obesity-pulmonary involvement-short stature-skeletal dysplasia syndrome	titre	1.0	1	
+bbs	Bardet-Biedl Syndrome Overview	1	ORPHA:110	Bardet-Biedl syndrome	titre	1.0	1	
+cfeom	Congenital Fibrosis of the Extraocular Muscles Overview	1	ORPHA:45358	Congenital fibrosis of extraocular muscles	titre	1.0	1	
+ctnnb1-ndd	CTNNB1 Neurodevelopmental Disorder	0	ORPHA:404473	Intellectual disability-eye abnormalities-microcephaly-peripheral spasticity syndrome	titre	1.0	1	
+folr1-cft-def	FOLR1-Related Cerebral Folate Transport Deficiency	0	ORPHA:217382	Neurodegenerative syndrome due to cerebral folate transport deficiency	titre	1.0	1	
+gcps	GLI3-Related Greig Cephalopolysyndactyly Syndrome	0	ORPHA:380	Greig cephalopolysyndactyly syndrome	titre	1.0	1	
+hyper-nfj2	Autosomal Dominant Tubulointerstitial Kidney Disease – REN	0	ORPHA:217330	REN-related autosomal dominant tubulointerstitial kidney disease	titre	1.0	1	
+inppl1-opsmd	INPPL1-Related Opsismodysplasia	1	ORPHA:2746	Opsismodysplasia	titre	1.0	1	
+kbgs	ANKRD11-Related KBG Syndrome	1	ORPHA:2332	KBG syndrome	titre	1.0	1	
+lms	NOTCH3-Related Lateral Meningocele Syndrome	0	ORPHA:2789	Lateral meningocele syndrome	titre	1.0	1	
+mpph	MPPH Syndrome	1	ORPHA:83473	Megalencephaly-polymicrogyria-postaxial polydactyly-hydrocephalus syndrome	titre	1.0	1	
+nf1	Neurofibromatosis 1	0	ORPHA:636	Neurofibromatosis type 1	titre	1.0	1	
+opitz	MID1-Related Opitz G/BBB Syndrome	1	ORPHA:2745	Opitz GBBB syndrome	titre	1.0	1	
+phs	GLI3-Related Pallister-Hall Syndrome	1	ORPHA:672	Pallister-Hall syndrome	titre	1.0	1	
+ptdss1-lmhd	PTDSS1-Related Lenz-Majewski Hyperostotic Dysplasia	0	ORPHA:2658	Lenz-Majewski hyperostotic dysplasia	titre	1.0	1	
+rob	ROR2-Related Robinow Syndrome	1	ORPHA:1507	Autosomal recessive Robinow syndrome	titre	1.0	1	
+bpes	Blepharophimosis, Ptosis, and Epicanthus Inversus Syndrome	1	ORPHA:126	Blepharophimosis-ptosis-epicanthus inversus syndrome	titre	1.0	1	
+cd-chst3	Chondrodysplasia with Congenital Joint Dislocations, CHST3-Related	1	ORPHA:263463	CHST3-related skeletal dysplasia	titre	1.0	1	
+jmc	PTH1R-Related Jansen Metaphyseal Chondrodysplasia	1	ORPHA:33067	Metaphyseal chondrodysplasia, Jansen type	titre	1.0	1	
+mf-dys-mic	Mandibulofacial Dysostosis with Microcephaly	1	ORPHA:79113	Mandibulofacial dysostosis-microcephaly syndrome	titre	1.0	1	
+myh9	MYH9-Related Disease	1	ORPHA:182050	MYH9-related syndromic thrombocytopenia	titre	1.0	1	
+nbs	SMARCA2-Related Nicolaides-Baraitser Syndrome	1	ORPHA:3051	Nicolaides-Baraitser syndrome	titre	1.0	1	
+short	PIK3R1-Related SHORT Syndrome	0	ORPHA:3163	SHORT syndrome	titre	1.0	1	
+amrf	SCARB2-Related Action Myoclonus – Renal Failure Syndrome	0	ORPHA:163696	Action myoclonus-renal failure syndrome	titre	1.0	1	
+ataxias	Hereditary Ataxia Overview	0	ORPHA:183518	Hereditary ataxia	titre	1.0	1	
+bap1-tpds	BAP1 Tumor Predisposition Syndrome	0	ORPHA:289539	BAP1-related tumor predisposition syndrome	titre	1.0	1	
+bgc	Primary Familial Brain Calcification Overview	0	ORPHA:1980	Bilateral striopallidodentate calcinosis	titre	1.0	1	
+ccfdn	CTDP1-Related Congenital Cataracts, Facial Dysmorphism, and Neuropathy	1	ORPHA:48431	Congenital cataracts-facial dysmorphism-neuropathy syndrome	titre	1.0	1	
+chd4-ndd	CHD4 Neurodevelopmental Disorder	1	ORPHA:653712	CHD4-related neurodevelopmental disorder	titre	1.0	1	
+cmt	Charcot-Marie-Tooth Hereditary Neuropathy Overview	1	ORPHA:166	Charcot-Marie-Tooth disease/Hereditary motor and sensory neuropathy	titre	1.0	1	
+coq10-def	Primary Coenzyme Q10 Deficiency Overview	1	ORPHA:35656	Coenzyme Q10 deficiency	titre	1.0	1	
+costello	HRAS-Related Costello Syndrome	1	ORPHA:3071	Costello syndrome	titre	1.0	1	
+creatine	Creatine Deficiency Disorders	0	ORPHA:79172	Creatine deficiency syndrome	titre	1.0	1	
+diamond-b	DBA Syndrome	1	ORPHA:124	Diamond-Blackfan anemia	titre	1.0	1	
+fgd1-fgd	FGD1-Related Faciogenital Dysplasia (Aarskog-Scott Syndrome)	1	ORPHA:915	Aarskog-Scott syndrome	titre	1.0	1	
+fhs	SRCAP-Related Floating-Harbor Syndrome	1	ORPHA:2044	Floating-Harbor syndrome	titre	1.0	1	
+gm3-def	GM3 Synthase Deficiency	1	ORPHA:370933	GM3 synthase deficiency	titre	1.0	1	
+gnao1-dis	GNAO1-Related Disorder	0	ORPHA:592564	GNAO1-related developmental delay-seizures-movement disorder spectrum	titre	1.0	1	
+hartsfield	FGFR1-Related Hartsfield Syndrome	0	ORPHA:2117	Hartsfield syndrome	titre	1.0	1	
+hfpoik-tmp	Hereditary Fibrosing Poikiloderma with Tendon Contractures, Myopathy, and Pulmonary Fibrosis	0	ORPHA:221043	Hereditary fibrosing poikiloderma-tendon contractures-myopathy-pulmonary fibrosis syndrome	titre	1.0	1	
+hsp	Uncomplicated (Pure) Hereditary Spastic Paraplegia Overview	0	ORPHA:102012	Pure hereditary spastic paraplegia	titre	1.0	1	
+hyperek	Hereditary Hyperekplexia Overview	1	ORPHA:3197	Hereditary hyperekplexia	titre	1.0	1	
+hypo-mcc	Hypomyelination and Congenital Cataract	1	ORPHA:85163	Hypomyelination-congenital cataract syndrome	titre	1.0	1	
+ibm	GNE Myopathy	0	ORPHA:602	GNE myopathy	titre	1.0	1	
+ipex	IPEX Syndrome	1	ORPHA:37042	Immune dysregulation-polyendocrinopathy-enteropathy-X-linked syndrome	titre	1.0	1	
+kcnk9-is	KCNK9 Imprinting Syndrome	1	ORPHA:166108	Birk-Barel syndrome	titre	1.0	1	
+lbsl	Leukoencephalopathy with Brain Stem and Spinal Cord Involvement and Lactate Elevation	1	ORPHA:137898	Leukoencephalopathy with brain stem and spinal cord involvement-high lactate syndrome	titre	1.0	1	
+lpin2-majeed	LPIN2-Related Majeed Syndrome	1	ORPHA:77297	Majeed syndrome	titre	1.0	1	
+maps	MUTYH Polyposis	1	ORPHA:247798	MUTYH-related polyposis	titre	1.0	1	
+mckd1	Autosomal Dominant Tubulointerstitial Kidney Disease – MUC1	1	ORPHA:88949	MUC1-related autosomal dominant tubulointerstitial kidney disease	titre	1.0	1	
+mckd2	Autosomal Dominant Tubulointerstitial Kidney Disease – UMOD	0	ORPHA:88950	UMOD-related autosomal dominant tubulointerstitial kidney disease	titre	1.0	1	
+mecp2-dup	MECP2 Duplication Syndrome	0	ORPHA:1762	Proximal Xq28 duplication syndrome	titre	1.0	1	
+ml3c	Mucolipidosis III Gamma	1	ORPHA:423470	Mucolipidosis type III gamma	titre	1.0	1	
+mmihs-ov	Megacystis-Microcolon-Intestinal Hypoperistalsis Syndrome Overview	1	ORPHA:2241	Megacystis-microcolon-intestinal hypoperistalsis syndrome	titre	1.0	1	
+narp	Mitochondrial DNA-Associated Leigh Syndrome Spectrum	1	ORPHA:255210	Mitochondrial DNA-associated Leigh syndrome	titre	1.0	1	
+nbia-ov	Neurodegeneration with Brain Iron Accumulation Disorders Overview	0	ORPHA:385	Neurodegeneration with brain iron accumulation	titre	1.0	1	
+paragangliomas	Hereditary Paraganglioma-Pheochromocytoma Syndromes	0	ORPHA:29072	Hereditary pheochromocytoma-paraganglioma	titre	1.0	1	
+paragangliomas	Hereditary Paraganglioma-Pheochromocytoma Syndromes	0	ORPHA:29072	Hereditary pheochromocytoma-paraganglioma	titre	1.0	1	
+pbd	Zellweger Spectrum Disorder	1	ORPHA:912	Zellweger syndrome	titre	1.0	1	
+pp-blastoma	DICER1-Related Tumor Predisposition	1	ORPHA:284343	DICER1 tumor-predisposition syndrome	titre	1.0	1	
+psach	COMP-Related Pseudoachondroplasia	1	ORPHA:750	Pseudoachondroplasia	titre	1.0	1	
+runx1	RUNX1 Familial Platelet Disorder with Associated Myeloid Malignancies	0	ORPHA:71290	Familial platelet disorder with associated myeloid malignancy	titre	1.0	1	
+serine-def	Serine Deficiency Disorders	1	ORPHA:35705	Neurometabolic disorder due to serine deficiency	titre	1.0	1	
+setbp1-hd	SETBP1 Haploinsufficiency Disorder	0	ORPHA:436151	Intellectual disability-expressive aphasia-facial dysmorphism syndrome	titre	1.0	1	
+slc6a3-dtds	SLC6A3-Related Dopamine Transporter Deficiency Syndrome	0	ORPHA:238455	Infantile dystonia-parkinsonism	titre	1.0	1	
+spg11	Spastic Paraplegia 11	0	ORPHA:2822	Autosomal recessive spastic paraplegia type 11	titre	1.0	1	
+spg15	Spastic Paraplegia 15	0	ORPHA:100996	Kjellin syndrome	titre	1.0	1	
+spg3a	Spastic Paraplegia 3A	1	ORPHA:100984	Autosomal dominant spastic paraplegia type 3	titre	1.0	1	
+sucla2-def	SUCLA2-Related Mitochondrial DNA Depletion Syndrome, Encephalomyopathic Form with Methylmalonic Aciduria	0	ORPHA:1933	Mitochondrial DNA depletion syndrome, encephalomyopathic form with methylmalonic aciduria	titre	1.0	1	
+tardbp-als	TARDBP-Related Amyotrophic Lateral Sclerosis-Frontotemporal Dementia	0	ORPHA:275872	Frontotemporal dementia with motor neuron disease	titre	1.0	1	
+vexas	VEXAS Syndrome	0	ORPHA:596753	VEXAS syndrome	titre	1.0	1	
+vodi	Hepatic Veno-Occlusive Disease with Immunodeficiency	1	ORPHA:79124	Hepatic veno-occlusive disease-immunodeficiency syndrome	titre	1.0	1	
+wagr	WAGR Spectrum Disorder	1	ORPHA:893	WAGR syndrome	titre	1.0	1	
+was	WAS-Related Disorders	1	ORPHA:906	Wiskott-Aldrich syndrome	titre	1.0	1	
+df-lamm	Congenital Deafness with Labyrinthine Aplasia, Microtia, and Microdontia	1	ORPHA:90024	Deafness with labyrinthine aplasia, microtia, and microdontia	titre	0.83	1	
+arvd	Arrhythmogenic Right Ventricular Cardiomyopathy Overview	0	ORPHA:293910	Inherited isolated arrhythmogenic cardiomyopathy, dominant-right variant	titre	0.8	1	
+cebpa-aml	CEBPA-Associated Familial Acute Myeloid Leukemia	0	ORPHA:319465	Inherited acute myeloid leukemia	titre	0.8	1	
+dmtn	6q24-Related Transient Neonatal Diabetes Mellitus	1	ORPHA:99886	Transient neonatal diabetes mellitus	titre	0.8	1	
+eb-pa	Epidermolysis Bullosa with Pyloric Atresia	1	ORPHA:158684	Epidermolysis bullosa simplex with pyloric atresia	titre	0.8	1	
+chrom17-lis	PAFAH1B1-Related Lissencephaly / Subcortical Band Heterotopia	1	ORPHA:99796	Subcortical band heterotopia	titre	0.75	1	
+slc19a1-ft-def	SLC19A1-Related Folate Transport Deficiency	1	ORPHA:217382	Neurodegenerative syndrome due to cerebral folate transport deficiency	titre	0.75	1	
+cdsp	Primary Carnitine Deficiency	1	ORPHA:158	Systemic primary carnitine deficiency	titre	0.75	1	
+cip-overview	Congenital Insensitivity to Pain Overview	1	ORPHA:642	Hereditary sensory and autonomic neuropathy type 4	titre	0.75	1	
+galactosemia	Classic Galactosemia and Clinical Variant Galactosemia	1	ORPHA:723101	Clinical variant galactosemia	titre	0.75	1	
+glut1	Glucose Transporter Type 1 Deficiency Syndrome	1	ORPHA:71277	Classic glucose transporter type 1 deficiency syndrome	titre	0.75	1	
+husa	Genetic Atypical Hemolytic-Uremic Syndrome	1	ORPHA:2134	Atypical hemolytic uremic syndrome	titre	0.75	1	
+lpl	Lipoprotein Lipase Deficiency	0	ORPHA:309015	Familial lipoprotein lipase deficiency	titre	0.75	1	
+mtdna-md-ov	Mitochondrial DNA Maintenance Defects Overview	1	ORPHA:352456	Mitochondrial DNA maintenance syndrome	titre	0.75	1	
+pds	Pyridoxine-Dependent Epilepsy – ALDH7A1	1	ORPHA:3006	Pyridoxine-dependent-developmental and epileptic encephalopathy	gene:ALDH7A1	0.29	1	
+irf2bpl-dis	IRF2BPL-Related Disorder	0	ORPHA:597623	IRF2BPL-related regressive neurodevelopmental disorder-dystonia-seizures syndrome	gene:IRF2BPL	0.2	1	
