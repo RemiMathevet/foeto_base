@@ -34,9 +34,11 @@ def main():
     c = sqlite3.connect(DB)
     ic = dict(c.execute("select hpo_id, ic from hpo_ic"))
     lab = {h: (fr or en) for h, fr, en in c.execute("select hpo_id, label_fr, label_en from hpo_terms")}
-    anc = defaultdict(set)
-    for h, a in c.execute("select hpo_id, ancestor_id from hpo_ancestors"):
+    anc, proche = defaultdict(set), defaultdict(set)
+    for h, a, d in c.execute("select hpo_id, ancestor_id, distance from hpo_ancestors"):
         anc[h].add(a)
+        if d <= 2:
+            proche[h].add(a)          # parent et grand-parent seulement, cf. top3
     ic_def = sum(ic.values()) / len(ic)
     w = lambda h: ic.get(h, ic_def)
 
@@ -67,8 +69,13 @@ def main():
         """3 signes les plus informatifs de hs que l'autre n'atteste pas : ni le signe, ni un
         descendant (fermeture exclu), ni un ANCETRE (direct_autre) — « cheveux fins » ne
         discrimine pas d'un syndrome qui atteste « anomalie des cheveux », et l'inverse non
-        plus : un parent ne discrimine jamais un diagnostic differentiel (Remi, 2026-09-15)"""
-        ok = (h for h in hs if h not in exclu and not (anc[h] & direct_autre))
+        plus : un parent ne discrimine jamais un diagnostic differentiel (Remi, 2026-09-15).
+        Ancetres a distance <= 2 seulement : sur 1 000 paires de plus proches voisins, la
+        fermeture totale perdait 1,9 discriminant par paire, bloque a d >= 3 par « Anomalie
+        de la tete », « Anomalie phenotypique » ; d <= 2 en perd 1,2 et garde le cas cible
+        (cheveux fins <- texture <- cheveux, d = 2). Un seuil d'IC sur l'ancetre annulait la
+        regle : les ancetres ecrits par les livres SONT les termes peu informatifs."""
+        ok = (h for h in hs if h not in exclu and not (proche[h] & direct_autre))
         return " ; ".join(f"{lab.get(h, h)} {h}" for h in sorted(ok, key=lambda h: -w(h))[:3])
     rows = []
     for i, a in enumerate(ents):
@@ -135,7 +142,7 @@ def main():
                 continue
             part = len(who) / len(ts)
             # discriminant : un seul membre, et aucun autre n'atteste un ancetre (parent compatible)
-            seul = len(who) == 1 and not any(anc[h] & direct[t] for t in ts if t not in who)
+            seul = len(who) == 1 and not any(proche[h] & direct[t] for t in ts if t not in who)
             niveau = "coeur" if part >= 0.6 else ("discriminant" if seul else "partiel")
             c.execute("insert into famille_signes_livres values(?,?,?,?,?,?,?,?,?)",
                       (fid, noms.get(fid, fid if not fid.startswith("SPRFAM") else f"Groupe Spranger {fid.split(':')[1]}"),
