@@ -8,13 +8,14 @@ Deux tables, deterministes, recalculables :
       rencontrent a mi-chemin ; n_partages = signes directs communs ;
       partages = les 3 signes communs les plus informatifs ; disc_a / disc_b =
       les 3 signes les plus informatifs que l'un atteste et l'autre pas
-      (ni lui, ni ses descendants, ni un ancetre) ; meme_orpha = deux livres, une entite.
+      (ni lui ni ses descendants) — annotes « (l'autre : <ancetre>, d=N) » quand l'autre
+      atteste un ancetre ; meme_orpha = deux livres, une entite.
   famille_signes_livres    par famille (FAM via ORPHA, SPRFAM via prefixe) :
       chaque signe atteste chez ses membres, n_membres_attestant / n_membres ;
       un signe present chez >= 60 % des membres est « coeur », un signe present
       chez un seul membre est son « discriminant » dans la famille. Presence comptee sur
-      les FERMETURES (signe ou descendant) et un parent ne discrimine jamais : un membre
-      qui atteste « anomalie des cheveux » n'est pas discrimine par « cheveux fins ».
+      les FERMETURES (signe ou descendant) ; « discriminant faible » quand un autre membre
+      atteste un ancetre (« cheveux fins » face a « anomalie des cheveux »).
 Filtre foetal (vue v_syndrome_hpo_livres_foetal), est_parent=0, clinique + radio ;
 les entites dont le debut exclut le prenatal (entites_livres.foetale = 0) sont ecartees.
 Rien n'est pondere par la frequence : l'attestation est binaire ici (5346afe04b4f).
@@ -34,11 +35,10 @@ def main():
     c = sqlite3.connect(DB)
     ic = dict(c.execute("select hpo_id, ic from hpo_ic"))
     lab = {h: (fr or en) for h, fr, en in c.execute("select hpo_id, label_fr, label_en from hpo_terms")}
-    anc, proche = defaultdict(set), defaultdict(set)
+    anc, dist = defaultdict(set), {}
     for h, a, d in c.execute("select hpo_id, ancestor_id, distance from hpo_ancestors"):
         anc[h].add(a)
-        if d <= 2:
-            proche[h].add(a)          # parent et grand-parent seulement, cf. top3
+        dist[(h, a)] = d
     ic_def = sum(ic.values()) / len(ic)
     w = lambda h: ic.get(h, ic_def)
 
@@ -66,17 +66,21 @@ def main():
         score real, n_partages integer, partages text, disc_a text, disc_b text, meme_orpha integer,
         primary key (a, b))""")
     def top3(hs, exclu, direct_autre=frozenset()):
-        """3 signes les plus informatifs de hs que l'autre n'atteste pas : ni le signe, ni un
-        descendant (fermeture exclu), ni un ANCETRE (direct_autre) — « cheveux fins » ne
-        discrimine pas d'un syndrome qui atteste « anomalie des cheveux », et l'inverse non
-        plus : un parent ne discrimine jamais un diagnostic differentiel (Remi, 2026-09-15).
-        Ancetres a distance <= 2 seulement : sur 1 000 paires de plus proches voisins, la
-        fermeture totale perdait 1,9 discriminant par paire, bloque a d >= 3 par « Anomalie
-        de la tete », « Anomalie phenotypique » ; d <= 2 en perd 1,2 et garde le cas cible
-        (cheveux fins <- texture <- cheveux, d = 2). Un seuil d'IC sur l'ancetre annulait la
-        regle : les ancetres ecrits par les livres SONT les termes peu informatifs."""
-        ok = (h for h in hs if h not in exclu and not (proche[h] & direct_autre))
-        return " ; ".join(f"{lab.get(h, h)} {h}" for h in sorted(ok, key=lambda h: -w(h))[:3])
+        """3 signes les plus informatifs de hs que l'autre n'atteste pas (ni le signe ni un
+        descendant : fermeture exclu). Un parent ne discrimine jamais un diagnostic differentiel
+        (Remi, 2026-09-15) : quand l'autre atteste un ANCETRE du signe (direct_autre), le signe
+        n'est pas retire mais AFFICHE AVEC SA DISTANCE sur l'arbre — « Cheveux fins (l'autre :
+        Anomalie des cheveux, d=2) » — et passe apres les discriminants francs. Test sur 1 000
+        paires : retirer coutait 1,2-1,9 signe par paire, bloque a d >= 3 par des parapluies
+        (« Anomalie de la tete ») ; afficher la distance garde l'information et le doute."""
+        def faible(h):
+            bl = [(dist[(h, x)], x) for x in anc[h] & direct_autre]
+            return min(bl) if bl else None
+        out = []
+        for h in sorted((h for h in hs if h not in exclu), key=lambda h: (faible(h) is not None, -w(h))):
+            f = faible(h)
+            out.append(f"{lab.get(h, h)} {h}" + (f" (l'autre : {lab.get(f[1], f[1])}, d={f[0]})" if f else ""))
+        return " ; ".join(out[:3])
     rows = []
     for i, a in enumerate(ents):
         fa, pa = ferm[a], poids[a]
@@ -141,9 +145,10 @@ def main():
             if h not in ecrits:
                 continue
             part = len(who) / len(ts)
-            # discriminant : un seul membre, et aucun autre n'atteste un ancetre (parent compatible)
-            seul = len(who) == 1 and not any(proche[h] & direct[t] for t in ts if t not in who)
-            niveau = "coeur" if part >= 0.6 else ("discriminant" if seul else "partiel")
+            # discriminant : un seul membre ; « discriminant faible » si un autre membre atteste
+            # un ancetre (parent compatible) — garde, mais nomme
+            faible = len(who) == 1 and any(anc[h] & direct[t] for t in ts if t not in who)
+            niveau = "coeur" if part >= 0.6 else ("discriminant faible" if faible else "discriminant" if len(who) == 1 else "partiel")
             c.execute("insert into famille_signes_livres values(?,?,?,?,?,?,?,?,?)",
                       (fid, noms.get(fid, fid if not fid.startswith("SPRFAM") else f"Groupe Spranger {fid.split(':')[1]}"),
                        h, lab.get(h, h), len(who), len(ts), round(part, 3), niveau, " | ".join(sorted(who))))
