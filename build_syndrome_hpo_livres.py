@@ -89,10 +89,12 @@ def main():
         # la modalite est une COLONNE, le titre reste celui de l'entite (2026-09-12)
         titre = re.sub(r"\s*\[(clinique|radiographique)\]\s*$", "", titre)
         sid = None
+        if livre == "pubmed":                       # <pmid>@<entite_id> : l'entite est dans le nom
+            sid = fichier.split("@")[1]
         for v in variantes(titre):
-            sid = idx.get(norm(v))
             if sid:
                 break
+            sid = idx.get(norm(v))
         if niveau_entree == "famille":
             stats["famille (Spranger)"] += 1
         else:

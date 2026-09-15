@@ -124,9 +124,24 @@ def entries_genereviews():
                     break
 
 
+def entries_pubmed():
+    """Abstracts PubMed (case_reports, scrape_pubmed_hpoa) des entites hpoa : un abstract =
+    une entree, fichier = <pmid>@<entite_id> (le meme PMID peut servir deux entites) ;
+    build_syndrome_hpo_livres lit l'entite dans ce nom. Troisieme etage de preuve,
+    tague livre='pubmed', jamais confondu avec un livre."""
+    c = sqlite3.connect(f"file:{DB}?mode=ro", uri=True)
+    for cid, sid, pmid, titre, txt in c.execute("""select id, syndrome_id, pmid, gold_diagnosis, clinical_text from case_reports
+            where format='pubmed_abstract' and pmid is not null
+              and syndrome_id in (select entite_id from entites_livres where livres like '%hpoa%') order by id"""):
+        yield f"{pmid}@{sid}", cid, titre, txt[:WIN]
+
+
 def entries(livre):
     if livre == "genereviews":
         yield from entries_genereviews()
+        return
+    if livre == "pubmed":
+        yield from entries_pubmed()
         return
     if livre == "spranger_entites":
         for f in sorted((CHAP / livre).glob("e*.txt")):
@@ -155,7 +170,7 @@ def entries(livre):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--livre", choices=["smith", "spranger", "spranger_entites", "limb", "genereviews", "all"], default="all")
+    ap.add_argument("--livre", choices=["smith", "spranger", "spranger_entites", "limb", "genereviews", "pubmed", "all"], default="all")
     ap.add_argument("--limit", type=int, default=0)
     a = ap.parse_args()
     c = sqlite3.connect(DB)
