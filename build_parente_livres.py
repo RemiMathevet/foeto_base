@@ -8,11 +8,13 @@ Deux tables, deterministes, recalculables :
       rencontrent a mi-chemin ; n_partages = signes directs communs ;
       partages = les 3 signes communs les plus informatifs ; disc_a / disc_b =
       les 3 signes les plus informatifs que l'un atteste et l'autre pas
-      (ni lui ni ses descendants) ; meme_orpha = deux livres, une entite.
+      (ni lui, ni ses descendants, ni un ancetre) ; meme_orpha = deux livres, une entite.
   famille_signes_livres    par famille (FAM via ORPHA, SPRFAM via prefixe) :
       chaque signe atteste chez ses membres, n_membres_attestant / n_membres ;
       un signe present chez >= 60 % des membres est « coeur », un signe present
-      chez un seul membre est son « discriminant » dans la famille.
+      chez un seul membre est son « discriminant » dans la famille. Presence comptee sur
+      les FERMETURES (signe ou descendant) et un parent ne discrimine jamais : un membre
+      qui atteste « anomalie des cheveux » n'est pas discrimine par « cheveux fins ».
 Filtre foetal (vue v_syndrome_hpo_livres_foetal), est_parent=0, clinique + radio ;
 les entites dont le debut exclut le prenatal (entites_livres.foetale = 0) sont ecartees.
 Rien n'est pondere par la frequence : l'attestation est binaire ici (5346afe04b4f).
@@ -61,9 +63,13 @@ def main():
         a text, b text, orpha_a text, orpha_b text, livre_a text, livre_b text,
         score real, n_partages integer, partages text, disc_a text, disc_b text, meme_orpha integer,
         primary key (a, b))""")
-    def top3(hs, exclu):
-        """3 signes les plus informatifs de hs qui ne sont pas dans la fermeture exclu"""
-        return " ; ".join(f"{lab.get(h, h)} {h}" for h in sorted((h for h in hs if h not in exclu), key=lambda h: -w(h))[:3])
+    def top3(hs, exclu, direct_autre=frozenset()):
+        """3 signes les plus informatifs de hs que l'autre n'atteste pas : ni le signe, ni un
+        descendant (fermeture exclu), ni un ANCETRE (direct_autre) — « cheveux fins » ne
+        discrimine pas d'un syndrome qui atteste « anomalie des cheveux », et l'inverse non
+        plus : un parent ne discrimine jamais un diagnostic differentiel (Remi, 2026-09-15)"""
+        ok = (h for h in hs if h not in exclu and not (anc[h] & direct_autre))
+        return " ; ".join(f"{lab.get(h, h)} {h}" for h in sorted(ok, key=lambda h: -w(h))[:3])
     rows = []
     for i, a in enumerate(ents):
         fa, pa = ferm[a], poids[a]
@@ -79,7 +85,7 @@ def main():
         for s, b, inter in sorted(cands, key=lambda x: -x[0])[:TOP]:
             partages = direct[a] & direct[b]
             rows.append((a, b, orpha[a], orpha[b], livre[a], livre[b], round(s, 4), len(partages),
-                         top3(partages or inter, set()), top3(direct[a], ferm[b]), top3(direct[b], fa),
+                         top3(partages or inter, set()), top3(direct[a], ferm[b], direct[b]), top3(direct[b], fa, direct[a]),
                          int(bool(orpha[a]) and orpha[a] == orpha[b])))
     c.executemany("insert into syndrome_parente_livres values(?,?,?,?,?,?,?,?,?,?,?,?)", rows)
 
@@ -114,13 +120,23 @@ def main():
     for fid, ts in membres.items():
         if len(ts) < 2:
             continue
+        # un membre porte le signe s'il atteste le signe OU un descendant (« cheveux fins »
+        # compte pour « anomalie des cheveux ») : le parent d'un signe coeur est coeur, jamais
+        # le discriminant du membre qui l'ecrit au grain grossier. Lignes = signes ecrits
+        # directement par au moins un membre, comptes sur les fermetures.
         cnt = defaultdict(set)
         for t in ts:
             for h in direct[t]:
-                cnt[h].add(t)
+                for g in anc[h] | {h}:
+                    cnt[g].add(t)
+        ecrits = set().union(*(direct[t] for t in ts))
         for h, who in cnt.items():
+            if h not in ecrits:
+                continue
             part = len(who) / len(ts)
-            niveau = "coeur" if part >= 0.6 else ("discriminant" if len(who) == 1 else "partiel")
+            # discriminant : un seul membre, et aucun autre n'atteste un ancetre (parent compatible)
+            seul = len(who) == 1 and not any(anc[h] & direct[t] for t in ts if t not in who)
+            niveau = "coeur" if part >= 0.6 else ("discriminant" if seul else "partiel")
             c.execute("insert into famille_signes_livres values(?,?,?,?,?,?,?,?,?)",
                       (fid, noms.get(fid, fid if not fid.startswith("SPRFAM") else f"Groupe Spranger {fid.split(':')[1]}"),
                        h, lab.get(h, h), len(who), len(ts), round(part, 3), niveau, " | ".join(sorted(who))))
