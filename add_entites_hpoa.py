@@ -14,7 +14,7 @@ Sous-type = coeur du nom (sans numero/romain/lettre/type) a Jaccard >= 0,4 avec
 le coeur du nom d'une entite attestee.
 entite_id = ORPHA si product1 donne UN mapping exact vers un ORPHA de la base,
 sinon OMIM:<n>. Le debut vient de la colonne onset HPOA (table hpoa_debut).
-Rejouable : purge livre='hpoa' au depart.
+Rejouable : purge livre='hpoa' au depart ; les entites hpoa/pubmed ne comptent pas comme attestees.
 
 Usage : python3 add_entites_hpoa.py [--apply]
 """
@@ -53,7 +53,14 @@ def main():
     ap.add_argument("--apply", action="store_true")
     a = ap.parse_args()
     c = sqlite3.connect(DB)
-    ent = [(e, coeur(n)) for e, n in c.execute("select entite_id, nom from entites_livres where livres not like '%hpoa%'")]
+    # « atteste par un livre » = au moins un corpus autre que hpoa/pubmed ; les entites que ce
+    # script (et les abstracts) ont creees ne comptent pas — sinon la 2e execution voyait
+    # Bohring-Opitz « deja attestee » par elle-meme, la rangeait en sous-type ou la re-cle-
+    # tait OMIM: pendant que ses abstracts restaient sur l'ORPHA (97 entites scindees, nuit
+    # du 2026-09-15)
+    SANS_LIVRE = {"hpoa", "pubmed"}
+    livre_ent = {e: set(l.split(",")) - SANS_LIVRE for e, l in c.execute("select entite_id, livres from entites_livres")}
+    ent = [(e, coeur(n)) for e, n in c.execute("select entite_id, nom from entites_livres") if livre_ent[e]]
     rows = list(csv.DictReader(open(TSV, encoding="utf-8"), delimiter="\t"))
     trous, sous = [], []
     for r in rows:
@@ -69,7 +76,7 @@ def main():
 
     # OMIM -> ORPHA exact, present dans la base et pas deja une entite
     orphas = {o for o, in c.execute("select id from syndromes where id like 'ORPHA:%'")}
-    deja = {o for o, in c.execute("select orpha from entites_livres where orpha is not null")}
+    deja = {o for e, o in c.execute("select entite_id, orpha from entites_livres where orpha is not null") if livre_ent[e]}
     mim2orpha = defaultdict(set)
     for dis in ET.parse("/home/mathevet/Bureau/foeto_base/orphadata/en_product1.xml").getroot().iter("Disorder"):
         sid = "ORPHA:" + dis.findtext("OrphaCode")
