@@ -32,7 +32,9 @@ from collections import Counter
 
 import map_signes_hpo_obo as O
 
-PARAP = re.compile(r"^(.*?)\s+(anomal(?:y|ies)|malformations?|defects?|abnormalit(?:y|ies))$")
+# les abstracts qualifient le parapluie : « variable limb malformations », « multiple renal anomalies »
+PARAP = re.compile(r"^(?:(?:variable|multiple|various|several|severe|mild|minor|major|non-?specific|associated|other|additional|complex)\s+)*"
+                   r"(.*?)\s+(anomal(?:y|ies)|malformations?|defects?|abnormalit(?:y|ies))$")
 EQUIV = [(r"\b(encephalomeningocele|meningoencephalocele|encephalomeningoceles)\b", "encephalocele"),
          (r"\bhypotonicity\b", "hypotonia"), (r"\bhypertonicity\b", "hypertonia"),
          (r"\bnostrils?\b", "nares"), (r"\bmeningomyelocele\b", "myelomeningocele"),
