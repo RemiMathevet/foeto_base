@@ -92,13 +92,15 @@ def fragments(signe):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--livre", help="ne traiter que ce livre")
     a = ap.parse_args()
     c = sqlite3.connect(DB)
     idx, idx_tok = build_index(c, load_obo(OBO))
 
     rows = c.execute("select id, signe from syndrome_signes_livres_candidats "
                      "where verbatim_ok=1 and (signe like '% and %' or signe like '%,%' "
-                     "or signe like '%/%' or signe like '% or %')").fetchall()
+                     "or signe like '%/%' or signe like '% or %')"
+                     + (" and livre=?" if a.livre else ""), (a.livre,) if a.livre else ()).fetchall()
     scinde, refuse, alt, deja = [], 0, [], 0
     for rid, signe in rows:
         if lookup(idx, idx_tok, signe):
