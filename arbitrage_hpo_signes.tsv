@@ -479,3 +479,71 @@ congenital hypotonia								HP:0001319	Neonatal hypotonia
 cognitive delay								HP:0001263	Global developmental delay
 inflammatory bowel disease								HP:0002037	le terme HPO
 tall forehead								HP:0000348	High forehead
+mental restriction								HP:0001249	infections 2026-09-17 — Intellectual disability — « mental restriction » est la formule du livre
+psychomotor restriction								HP:0001263	infections 2026-09-17 — Global developmental delay
+growth restriction								HP:0001511	infections 2026-09-17 — Intrauterine growth retardation — contexte fœtal
+head circumference less than the fifth percentile								HP:0000252	infections 2026-09-17 — Microcephaly — définition même du terme
+enlarged placenta								HP:0006267	infections 2026-09-17 — Large placenta
+enlargement of pericerebral spaces								HP:0012704	infections 2026-09-17 — Enlarged subarachnoid space (EXACT HPO)
+diffuse porencephalic changes								HP:0002132	infections 2026-09-17 — Porencephalic cyst
+micropolygyria								HP:0002126	infections 2026-09-17 — Polymicrogyria — synonyme ancien
+ventricular enlargement								HP:0002119	infections 2026-09-17 — Ventriculomegaly — contexte cérébral
+periventricular calcifications								HP:0007229	infections 2026-09-17 — Intracerebral periventricular calcifications
+calcification in the periventricular region								HP:0007229	infections 2026-09-17 — Intracerebral periventricular calcifications
+calcifications								HP:0002514	infections 2026-09-17 — Cerebral calcification — contexte : lésions cérébrales du CMV
+calcified lesions								HP:0002514	infections 2026-09-17 — Cerebral calcification — contexte : toxoplasmose, cerveau/tronc/moelle
+cerebral white matter perivascular calcifications								HP:0002514	infections 2026-09-17 — Cerebral calcification — le périvasculaire n'a pas de terme, on prend le parent
+calcification in the thalamus								HP:0025041	infections 2026-09-17 — Thalamic calcification
+necrotic lesions or calcification in the basal ganglia								HP:0002135	infections 2026-09-17 — Basal ganglia calcification — la nécrose n'a pas de terme
+dysplastic cortex								HP:0002539	infections 2026-09-17 — Cortical dysplasia
+dysplasia of the hippocampus								HP:0025101	infections 2026-09-17 — Dysgenesis of the hippocampus
+olfactory bulb lesions								HP:0040327	infections 2026-09-17 — Abnormal morphology of the olfactory bulb
+temporal cysts								HP:0010576	infections 2026-09-17 — Intracranial cystic lesion — pas de terme temporal
+meningoencephalitis								HP:0002383	infections 2026-09-17 — Infectious encephalitis — contexte : infection congénitale
+encephalitis								HP:0002383	infections 2026-09-17 — Infectious encephalitis — contexte : infection congénitale
+acute meningitis								HP:0001287	infections 2026-09-17 — Meningitis
+basilar meningitis								HP:0001287	infections 2026-09-17 — Meningitis
+liver necrosis								HP:0002605	infections 2026-09-17 — Hepatic necrosis
+language and behavior disorders								HP:0000708	infections 2026-09-17 — Behavioral abnormality — le langage n'a pas de terme commun
+motor dysfunction								HP:0100022	infections 2026-09-17 — Abnormality of movement
+cerebral ischemic injury								HP:0002637	infections 2026-09-17 — Cerebral ischemia
+ischemic necrosis								HP:0002637	infections 2026-09-17 — Cerebral ischemia — contexte : neuropathologie de la syphilis
+skin scars								HP:0000987	infections 2026-09-17 — Atypical scarring of skin — cicatrices de la varicelle congénitale
+dermatomally distributed cicatricial lesions								HP:0000987	infections 2026-09-17 — Atypical scarring of skin
+dysfunction of the autonomic nervous system								HP:0012332	infections 2026-09-17 — Autonomic dysfunction
+vesicular or bullous skin lesions								HP:0200037	infections 2026-09-17 — Skin vesicle
+non-immune hydrops								HP:0001790	infections 2026-09-17 — Nonimmune hydrops fetalis
+snuffles								HP:0012384	infections 2026-09-17 — Rhinitis — le « snuffles » de la syphilis congénitale
+hypoplasia of bones or muscles								HP:0009826	infections 2026-09-17 — Limb undergrowth — contexte : membres (varicelle)
+absent or malformed digits								HP:0011297	infections 2026-09-17 — Abnormal digit morphology
+esophageal dilation and reflux								HP:0002020	infections 2026-09-17 — Gastroesophageal reflux
+chronic anemia								HP:0001903	infections 2026-09-17 — Anemia
+acute aplastic crisis								HP:0005510	infections 2026-09-17 — Transient erythroblastopenia — crise aplasique du parvovirus
+hemorrhagic infarcts								HP:0002170	infections 2026-09-17 — Intracranial hemorrhage — contexte cérébral (HSV)
+neurological findings								NON	infections 2026-09-17 — catégorie, pas un signe
+periventricular halo								NON	infections 2026-09-17 — signe échographique sans terme HPO
+lenticulostriate vasculopathy								NON	infections 2026-09-17 — pas de terme HPO
+ventricular erosion								NON	infections 2026-09-17 — histologie — canal FOETO
+radial glial cell loss								NON	infections 2026-09-17 — histologie — canal FOETO
+inflammation								NON	infections 2026-09-17 — trop général
+necrosis								NON	infections 2026-09-17 — histologie — canal FOETO
+cell loss								NON	infections 2026-09-17 — histologie — canal FOETO
+subependymal gliosis								NON	infections 2026-09-17 — histologie — canal FOETO
+owl’s eye nuclei								NON	infections 2026-09-17 — inclusion cytomégalique — canal FOETO
+owl's eye cells								NON	infections 2026-09-17 — inclusion cytomégalique — canal FOETO
+multinucleated giant cells								NON	infections 2026-09-17 — histologie — canal FOETO
+destructive lesions								NON	infections 2026-09-17 — trop général
+necrotic lesions								NON	infections 2026-09-17 — histologie — canal FOETO
+adrenal necrosis								NON	infections 2026-09-17 — histologie — canal FOETO
+lung necrosis								NON	infections 2026-09-17 — histologie — canal FOETO
+meningeal fibrosis								NON	infections 2026-09-17 — histologie — canal FOETO
+erythroblastosis								NON	infections 2026-09-17 — pas de terme HPO (érythroblastose fœtale)
+mucocutaneous lesions								NON	infections 2026-09-17 — trop général
+condylomata lata								NON	infections 2026-09-17 — pas de terme HPO
+palsies								NON	infections 2026-09-17 — trop général
+dental findings								NON	infections 2026-09-17 — catégorie
+ophthalmic findings								NON	infections 2026-09-17 — catégorie
+cns findings								NON	infections 2026-09-17 — catégorie
+musculoskeletal findings								NON	infections 2026-09-17 — catégorie
+abnormalities on imaging								NON	infections 2026-09-17 — pas un signe
+malformation								NON	infections 2026-09-17 — trop général
