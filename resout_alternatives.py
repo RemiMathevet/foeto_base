@@ -83,13 +83,15 @@ def main():
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--tsv")
     ap.add_argument("--max-dist", type=int, default=3)
+    ap.add_argument("--livre", help="ne traiter que ce livre")
     a = ap.parse_args()
     obo = load_obo(OBO)
     c = sqlite3.connect(DB)
     idx, idx_tok = build_index(c, obo)
 
     rows = c.execute("select id, signe from syndrome_signes_livres_candidats "
-                     "where hpo_methode='alternative_ou'").fetchall()
+                     "where hpo_methode='alternative_ou'"
+                     + (" and livre=?" if a.livre else ""), (a.livre,) if a.livre else ()).fetchall()
     resolus, trop_loin, partiels = [], [], []
     for rid, signe in rows:
         ms = membres(signe)

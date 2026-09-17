@@ -69,8 +69,8 @@ smith	R Senter-KID Syndrome	arbitrage	ORPHA:477			ORPHA:477
 smith	R Tricho-Dento-Osseous Syndrome (TDO Syndrome)	nom	ORPHA:3352	Tricho-dento-osseous syndrome		ORPHA:3352
 smith	R Xeroderma Pigmentosa Syndrome	arbitrage	ORPHA:910	Xeroderma pigmentosum		ORPHA:910
 smith	S Fetal Aminopterin/Methotrexate Syndrome	arbitrage	ORPHA:1908	Aminopterin/methotrexate embryofetopathy		ORPHA:1908
-smith	S Fetal Varicella Syndrome					
-smith	S Hyperthermia-Induced Spectrum of Defects					
+smith	S Fetal Varicella Syndrome	arbitrage		Congenital varicella syndrome		ORPHA:291
+smith	S Hyperthermia-Induced Spectrum of Defects	arbitrage		Maternal hyperthermia-induced birth defects		ORPHA:2216
 smith	T Alagille Syndrome (Arteriohepatic Dysplasia)	arbitrage	ORPHA:52	Alagille syndrome	ORPHA:261619 Alagille syndrome due to a JAG1 point mutation ; ORPHA:261629 Alagille syndrome due to a NOTCH2 point mutation ; ORPHA:52 Alagille syndrome	ORPHA:52
 smith	T Cerebro-Costo-Mandibular Syndrome	arbitrage	ORPHA:1393	Cerebrocostomandibular syndrome		ORPHA:1393
 smith	T Distichiasis-Lymphedema Syndrome	arbitrage	ORPHA:33001	Lymphedema-distichiasis syndrome		ORPHA:33001

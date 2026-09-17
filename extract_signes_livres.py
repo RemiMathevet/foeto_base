@@ -170,7 +170,7 @@ def entries(livre):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--livre", choices=["smith", "spranger", "spranger_entites", "limb", "genereviews", "pubmed", "all"], default="all")
+    ap.add_argument("--livre", choices=["smith", "spranger", "spranger_entites", "limb", "genereviews", "pubmed", "keeling_infections", "devneuro_infections", "all"], default="all")
     ap.add_argument("--limit", type=int, default=0)
     a = ap.parse_args()
     c = sqlite3.connect(DB)
@@ -192,8 +192,13 @@ def main():
                 break
             t0 = time.time()
             try:
+                # Keeling ch. 9 : l'entrée décrit l'infection chez la mère ET chez le
+                # fœtus ; seuls les signes fœtaux, néonataux et placentaires nous
+                # concernent — la fièvre ou l'éruption maternelle ne sont pas des signes du cas.
+                sys_prompt = SYSTEM + ("\nThis entry covers maternal AND fetal disease: keep ONLY fetal, neonatal and placental findings; skip maternal symptoms, epidemiology, screening."
+                                       if livre in ("keeling_infections", "devneuro_infections") else "")
                 r = cl.submit_and_wait(MODEL, f"TEXTBOOK ENTRY ({livre}, {title}):\n\n{body}",
-                                       system=SYSTEM, priority=6, timeout_s=900, wait_timeout=1200,
+                                       system=sys_prompt, priority=6, timeout_s=900, wait_timeout=1200,
                                        options={"temperature": 0.2, "num_predict": 12000})
                 raw = r.get("response") or ""
                 m = re.search(r"\{.*\}", raw, re.S)

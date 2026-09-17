@@ -97,6 +97,7 @@ def main():
     ap.add_argument("--tsv")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--top", type=int, default=300, help="lignes de la table d'arbitrage")
+    ap.add_argument("--livre", help="ne mapper que ce livre (les autres, déjà arbitrés, ne bougent pas)")
     a = ap.parse_args()
 
     obo = load_obo(OBO)
@@ -129,7 +130,8 @@ def main():
         for form in [x.strip() for x in (al or "").split("|") if x.strip()]:
             put(form, hid, "EXACT")
 
-    rows = c.execute("select id, signe, region from syndrome_signes_livres_candidats where verbatim_ok=1").fetchall()
+    rows = c.execute("select id, signe, region from syndrome_signes_livres_candidats where verbatim_ok=1"
+                     + (" and livre=?" if a.livre else ""), (a.livre,) if a.livre else ()).fetchall()
     out, stats, miss = [], Counter(), Counter()
     miss_region = defaultdict(Counter)
     related, related_cnt = {}, Counter()
