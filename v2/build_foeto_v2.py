@@ -50,39 +50,84 @@ def norm(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
-# Une référence de livre dans la fiche : `[keeling, ch. 24]`, `[Genest I]`…
-REF = re.compile(r"`\[([^\]`]+)\]`")
-PAS_UN_LIVRE = ("corpus", "expérience", "experience", "foeto_terms", "gabarit")
+# Une référence de livre dans la fiche, avec ou sans backticks : [keeling, ch. 24],
+# `[Genest I]`, [spranger]… Liste fermée d'ouvrages : corpus CR, expérience,
+# foeto_terms, pubmed… ne sont pas des livres.
+LIVRES = ("ernst", "keeling", "soffoet", "verdijk", "ashworth", "benirschke", "genest", "vogel",
+          "khong", "horii", "devneuro", "perineuro", "spranger", "amsterdam", "lherminecoulomb",
+          "saudubray")
+REF = re.compile(r"\[([^\[\]]{2,80})\]")
+
+
+def refs(texte):
+    return [r.strip("` ") for r in REF.findall(texte) if r.strip("` ").lower().startswith(LIVRES)]
+
+
+def hors_livre(texte):
+    """L'unité se réclame d'une source qui n'est pas un livre ([corpus CR], [expérience]…) :
+    elle n'hérite alors d'aucun livre du contexte."""
+    return any(not r.strip("` ").lower().startswith(LIVRES) and
+               any(m in r.lower() for m in ("corpus", "expérience", "experience", "foeto_terms", "pubmed"))
+               for r in REF.findall(texte))
 
 
 def index_fiche(chemin):
-    """Blocs de la fiche (ligne de tableau, ou paragraphe) : (texte normalisé, livres cités)."""
-    blocs, para = [], []
-    def clore():
-        if para:
-            brut = "\n".join(para)
-            blocs.append((norm(brut), [r for r in REF.findall(brut)
-                                       if not any(m in r.lower() for m in PAS_UN_LIVRE)]))
-            para.clear()
-    for ligne in chemin.read_text(encoding="utf-8").splitlines():
-        if not ligne.strip() or ligne.lstrip().startswith(("|", "#")):
-            clore()
-            if ligne.strip():
-                para.append(ligne)
-                clore()
-        else:
-            para.append(ligne)
-    clore()
-    return blocs
+    """Unités de la fiche : (texte normalisé, livres de l'unité, livres du contexte).
+    Unité = ligne de tableau, élément de liste, citation en bloc ou paragraphe.
+    Un paragraphe ordinaire ne vaut que par ses propres références. Les tableaux, et
+    dans une liste ou une citation le seul texte entre guillemets, héritent de la
+    dernière référence posée dans leur section « ## »
+    (la fiche annonce « Table 5 de [Genest I] » puis enchaîne tableaux et sous-titres),
+    plus, pour un tableau, celles de son en-tête et d'une ligne « Source … ci-dessus »."""
+    L = chemin.read_text(encoding="utf-8").splitlines()
+    out, i, avant = [], 0, []
+    liste = re.compile(r"^\s*(?:[-*+]|\d+[.)])\s")
+    while i < len(L):
+        l = L[i]
+        if l.startswith("## "):
+            avant = refs(l)
+            i += 1
+            continue
+        if l.lstrip().startswith("|"):
+            j = i
+            while j < len(L) and L[j].lstrip().startswith("|"):
+                j += 1
+            rangs = L[i:j]
+            ctx = refs(rangs[0]) + avant + [r for x in rangs
+                                             if re.search(r"\|\s*\**source|ci-dessus", x, re.I) for r in refs(x)]
+            out += [(norm(x), refs(x), [] if hors_livre(x) else ctx, None) for x in rangs]
+            i = j
+            continue
+        if not l.strip() or l.lstrip().startswith("#"):
+            avant = refs(l) or avant
+            i += 1
+            continue
+        genre = "cit" if l.lstrip().startswith(">") else "liste" if liste.match(l) else "para"
+        j, bloc = i + 1, [l]
+        while j < len(L) and L[j].strip() and not L[j].lstrip().startswith(("|", "#")) \
+                and (L[j].lstrip().startswith(">") == (genre == "cit")) \
+                and not (genre == "liste" and liste.match(L[j])):
+            bloc.append(L[j])
+            j += 1
+        t = "\n".join(bloc)
+        # liste ou citation en bloc : seul le texte cité ENTRE GUILLEMETS hérite du livre
+        # d'au-dessus — un encadré « Ce qu'il ne faut pas conclure » est de la fiche.
+        cites = [norm(m) for m in re.findall(r"«([^«»]+)»|“([^“”]+)”|\"([^\"]+)\"", t) for m in m if m]
+        out.append((norm(t), refs(t), avant if genre != "para" and not hors_livre(t) else [], cites))
+        avant = refs(t) or avant
+        i = j
+    return out
 
 
 def livres_de(index, texte):
-    """Livres cités dans le(s) bloc(s) de la fiche qui contiennent ce texte."""
-    n, vus = norm(texte), []
-    for bloc, refs in index:
-        if n in bloc:
-            vus += [r for r in refs if r not in vus]
-    return vus
+    """Livres qui portent ce texte : ceux de son unité, à défaut ceux de son contexte."""
+    n, propres, ctx = norm(texte), [], []
+    for u, r, c, cites in index:
+        if n in u:
+            propres += [x for x in r if x not in propres]
+            if cites is None or any(n in q for q in cites):
+                ctx += [x for x in c if x not in ctx]
+    return propres or ctx
 
 
 def ident(code, t, k):
@@ -98,22 +143,25 @@ def construire(src, c, v1):
     index = {f: index_fiche(FICHES / f) for f in S["fiches"]}
     ids, erreurs = {}, []
 
-    def verbatims(oid, vs, ou, axe=False):
+    def verbatims(oid, vs, quoi, axe=False):
         # Seuls les livres prouvent un signe : la pratique du service ne compte pas
         # devant eux, et la prose de la fiche ne vaut que par le livre qu'elle cite
         # dans la même phrase ou la même case (Rémi, 2026-09-28).
-        if not vs and not axe and not ou.endswith(".conservee"):
-            erreurs.append("aucun verbatim : %s" % ou)
+        if not vs and not axe and not quoi.endswith(".conservee"):
+            erreurs.append("aucun verbatim : %s" % quoi)
         for source, texte in vs:
             if source in NON_RECEVABLES:
-                erreurs.append("source non recevable pour un signe (%s) : %s" % (source, ou))
-            ou_f = next((f for f, t in fiches.items() if norm(texte) in t), None)
-            if not ou_f:
-                erreurs.append("verbatim introuvable (%s, %s) : %s" % (ou, source, texte))
-            elif source == "fiche":
-                livres = livres_de(index[ou_f], texte)
+                erreurs.append("source non recevable pour un signe (%s) : %s" % (source, quoi))
+            # toutes les versions de la fiche : on garde celle où le texte porte un livre
+            ou = [(f, livres_de(index[f], texte)) for f, t in fiches.items() if norm(texte) in t]
+            if not ou:
+                erreurs.append("verbatim introuvable (%s, %s) : %s" % (quoi, source, texte))
+                ou_f = None
+            else:
+                ou_f, livres = max(ou, key=lambda x: bool(x[1]))
                 if not livres:
-                    erreurs.append("verbatim sans livre (%s) : %s" % (ou, texte))
+                    erreurs.append("verbatim sans livre (%s) : %s" % (quoi, texte))
+                # la source est le livre que la fiche cite, pas l'étiquette posée à la main
                 source = " + ".join(livres) or source
             c.execute("insert into verbatims values (?,?,?,?)", (oid, source, texte, ou_f))
 
