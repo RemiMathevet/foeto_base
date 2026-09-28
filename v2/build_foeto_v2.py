@@ -21,13 +21,14 @@ from pathlib import Path
 
 ICI = Path(__file__).parent
 SOURCES = ICI / "sources"
-FICHES = Path("/home/mathevet/Bureau/fiches_lecture/diffusion")
+FICHES = Path("/home/mathevet/Bureau/fiches_lecture")   # fiche de TRAVAIL (la diffusion en est la sortie publique)
 V1 = ICI.parent / "syndromes_foetaux.db"
 SORTIE = ICI.parent / "foeto_v2.db"
 
 TYPES = {"QUA", "NOR", "MES", "CON", "DIA"}
 RELATIONS = {"critere_operationnel", "critere", "critere_non_refutant", "marqueur_gravite",
              "constant", "associe", "oriente", "exclut", "mime"}
+NON_RECEVABLES = {"corpus CR"}
 QUALITES = {"exacte", "partielle", "hors_fiche", "sans_equivalent"}
 
 SCHEMA = """
@@ -35,7 +36,7 @@ create table signes (id text primary key, organe text, type text, k text, label_
                      section text, statut text, garde_fou text, fiche text);
 create table grades (id text primary key, axe_id text references signes(id), rang integer,
                      label_fr text, borne text, statut text);
-create table verbatims (objet_id text, source text, texte text);
+create table verbatims (objet_id text, source text, texte text, fiche text);
 create table liens (de text, relation text, vers text);
 create table negatifs (objet_id text, rang integer, pourquoi text);
 create table correspondance_v1 (v1_id text primary key, v1_label text, v2_id text,
@@ -56,26 +57,35 @@ def ident(code, t, k):
 def construire(src, c, v1):
     S = json.loads(src.read_text(encoding="utf-8"))
     code, organe = S["code"], S["organe"]
-    fiche = norm((FICHES / S["fiche"]).read_text(encoding="utf-8"))
+    # Plusieurs versions d'une même fiche peuvent se compléter (travail : corpus
+    # du service + § 10 ; diffusion : Genest) — un verbatim tient s'il est dans l'une.
+    fiches = {f: norm((FICHES / f).read_text(encoding="utf-8")) for f in S["fiches"]}
     ids, erreurs = {}, []
 
     def verbatims(oid, vs, ou):
+        # Seuls les livres (et la prose de la fiche qui les cite) prouvent un signe :
+        # la pratique du service ne compte pas devant eux (Rémi, 2026-09-28).
+        if not vs and not ou.endswith(".conservee"):
+            erreurs.append("aucun verbatim : %s" % ou)
         for source, texte in vs:
-            if norm(texte) not in fiche:
+            if source in NON_RECEVABLES:
+                erreurs.append("source non recevable pour un signe (%s) : %s" % (source, ou))
+            ou_f = next((f for f, t in fiches.items() if norm(texte) in t), None)
+            if not ou_f:
                 erreurs.append("verbatim introuvable (%s, %s) : %s" % (ou, source, texte))
-            c.execute("insert into verbatims values (?,?,?)", (oid, source, texte))
+            c.execute("insert into verbatims values (?,?,?,?)", (oid, source, texte, ou_f))
 
     for x in S["signes"]:
         if x["t"] not in TYPES:
             erreurs.append("type inconnu %s : %s" % (x["t"], x["k"]))
         oid = ids[x["k"]] = ident(code, x["t"], x["k"])
         c.execute("insert into signes values (?,?,?,?,?,?,?,?,?)",
-                  (oid, organe, x["t"], x["k"], x["l"], x["sec"], x.get("statut"), x.get("gf"), S["fiche"]))
+                  (oid, organe, x["t"], x["k"], x["l"], x["sec"], x.get("statut"), x.get("gf"), S["fiches"][0]))
         verbatims(oid, x["v"], x["k"])
     for a in S["axes"]:
         aid = ids[a["k"]] = ident(code, "AXE", a["k"])
         c.execute("insert into signes values (?,?,?,?,?,?,?,?,?)",
-                  (aid, organe, "AXE", a["k"], a["l"], a["sec"], a.get("statut"), None, S["fiche"]))
+                  (aid, organe, "AXE", a["k"], a["l"], a["sec"], a.get("statut"), None, S["fiches"][0]))
         verbatims(aid, a["v"], a["k"])
         for g in a["grades"]:
             gid = ids["%s.%s" % (a["k"], g["k"])] = "%s.%s" % (aid, g["k"])
