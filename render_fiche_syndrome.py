@@ -10,7 +10,7 @@ Blocs, dans l'ordre du raisonnement d'autopsie :
   IDENTITE         ORPHA, gene, transmission — verbatim ETIOLOGY de Smith
   SIGNES           syndrome_hpo_livres filtre foetal, par region d'examen,
                    niveau principal/occasionnel, frequence SI le livre chiffre
-  COTATION V2      syndrome_foeto_v2 : le vocabulaire de paillasse et son score
+  COTATION V2      retirée (syndrome_foeto_v2 synthétique purgée le 2026-09-28)
   DIFFERENTIEL     syndromes.differential_diagnosis (chevauchement HPO calcule)
                    + discriminateurs
   EVOLUTION        verbatim NATURAL HISTORY
@@ -217,21 +217,9 @@ def main():
                  "MAJOR RADIOGRAPHIC FEATURES, reproduit au §7.*")
 
     # --- COTATION V2 ------------------------------------------------------
-    L.append("\n## 4. Cotation V2 (vocabulaire de paillasse)")
-    if orpha:
-        v2 = c.execute("""select t.id, t.label_fr, t.organe, v.score, v.source
-                          from syndrome_foeto_v2 v join foeto_terms t on t.id=v.foeto_id
-                          where v.syndrome_id=? order by v.score desc""", (orpha,)).fetchall()
-        if v2:
-            L.append("| terme FOETO | organe | score | canal |")
-            L.append("|---|---|---|---|")
-            for r in v2:
-                L.append(f"| {r['label_fr']} `{r['id']}` | {r['organe']} | {r['score']:.3f} | {r['source']} |")
-        else:
-            L.append("*(aucune cotation V2)*")
-    L.append("\n*Le score V2 vient des vignettes et du RAG, pas des livres : il dit ce que la "
-             "PRATIQUE associe au syndrome, là où le §3 dit ce que la LITTÉRATURE atteste. "
-             "Les deux se lisent ensemble, jamais l'un pour l'autre.*")
+    L.append("\n## 4. Cotation V2 — retirée")
+    L.append("*syndrome_foeto_v2 (vignettes synthétiques + RAG) a été purgée le 2026-09-28 : "
+             "le lien syndrome → signe se lit au §3, dans les livres.*")
 
     # --- DIFFERENTIEL -----------------------------------------------------
     L.append("\n## 5. Diagnostic différentiel — et ce qui tranche")

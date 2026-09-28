@@ -884,17 +884,7 @@ def foeto_view(fid):
         WHERE e.target_id = ? ORDER BY e.relation, e.confidence DESC
     """, (fid,)).fetchall()
 
-    syndrome_ids = [r[0] for r in db.execute(
-        "SELECT DISTINCT syndrome_id FROM syndrome_foeto_v2 WHERE foeto_id = ? AND score > 0.30",
-        (fid,)
-    ).fetchall()]
-    genes = set()
-    if syndrome_ids:
-        ph = ",".join("?" * len(syndrome_ids))
-        genes = set(r[0] for r in db.execute(
-            f"SELECT DISTINCT sg.gene_symbol FROM syndrome_genes sg WHERE sg.syndrome_id IN ({ph})",
-            syndrome_ids
-        ).fetchall())
+    genes = set()   # syndrome_foeto_v2 (synthétique) purgée le 2026-09-28 : gènes de la description seule
     desc_genes = set(r[0] for r in db.execute(
         "SELECT gene_symbol FROM foeto_genes WHERE foeto_id = ?", (fid,)
     ).fetchall())
