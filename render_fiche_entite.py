@@ -136,15 +136,7 @@ def rendre(c, eid):
         L.append("\n### 3b. Radiographie (Spranger)")
         bloc(True)
 
-    # §4 cotation V2 (vocabulaire de paillasse), comme la fiche par livre
-    if orpha:
-        v2 = c.execute("""select f.label_fr, sf.prob from syndrome_foeto sf join foeto_terms f on f.id = sf.foeto_id
-                          where sf.syndrome_id = ? and sf.prob >= 0.3 order by sf.prob desc limit 12""", (orpha,)).fetchall()
-        if v2:
-            L.append("\n## 4. Cotation V2 (vocabulaire de paillasse)")
-            L.append("\n*Termes FOETO liés à l'ORPHA (syndrome_foeto, synthétique — indicatif, pas une preuve).*")
-            for r in v2:
-                L.append(f"- {r['label_fr']} ({r['prob']:.2f})")
+    # §4 cotation V2 : retirée (syndrome_foeto, synthétique, purgée le 2026-09-28)
 
     # §5
     L.append("\n## 5. Diagnostic différentiel — et ce qui tranche")
