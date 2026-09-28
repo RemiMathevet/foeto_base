@@ -19,7 +19,11 @@ DB = "/home/mathevet/Bureau/foeto_base/syndromes_foetaux.db"
 CIBLES = [("foeto_terms", "parent_id"), ("foeto_hpo", "foeto_id"),
           ("syndrome_foeto", "foeto_id"), ("foeto_genes", "foeto_id"),
           ("foeto_term_segments", "foeto_id"),
-          ("foeto_edges", "source_id"), ("foeto_edges", "target_id")]
+          ("foeto_edges", "source_id"), ("foeto_edges", "target_id"),
+          # oubliées jusqu'au 2026-09-28 (69 liens cassés par les fusions du jour) :
+          ("syndrome_foeto_livres", "foeto_id"),
+          ("foeto_tags", "term_id"), ("foeto_verbatims", "term_id"), ("foeto_grades", "term_id"),
+          ("foeto_hpo_verifie", "term_id"), ("foeto_v2_import", "v1_id")]
 
 
 def carte(db, seulement=None):
