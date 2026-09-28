@@ -28,7 +28,7 @@ SORTIE = ICI.parent / "foeto_v2.db"
 TYPES = {"QUA", "NOR", "MES", "CON", "DIA"}
 RELATIONS = {"critere_operationnel", "critere", "critere_non_refutant", "marqueur_gravite",
              "constant", "associe", "oriente", "exclut", "mime"}
-NON_RECEVABLES = {"corpus CR"}
+NON_RECEVABLES = {"corpus CR", "expérience"}   # la pratique ne compte pas devant les livres
 QUALITES = {"exacte", "partielle", "hors_fiche", "sans_equivalent"}
 
 SCHEMA = """
@@ -50,6 +50,41 @@ def norm(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
+# Une référence de livre dans la fiche : `[keeling, ch. 24]`, `[Genest I]`…
+REF = re.compile(r"`\[([^\]`]+)\]`")
+PAS_UN_LIVRE = ("corpus", "expérience", "experience", "foeto_terms", "gabarit")
+
+
+def index_fiche(chemin):
+    """Blocs de la fiche (ligne de tableau, ou paragraphe) : (texte normalisé, livres cités)."""
+    blocs, para = [], []
+    def clore():
+        if para:
+            brut = "\n".join(para)
+            blocs.append((norm(brut), [r for r in REF.findall(brut)
+                                       if not any(m in r.lower() for m in PAS_UN_LIVRE)]))
+            para.clear()
+    for ligne in chemin.read_text(encoding="utf-8").splitlines():
+        if not ligne.strip() or ligne.lstrip().startswith(("|", "#")):
+            clore()
+            if ligne.strip():
+                para.append(ligne)
+                clore()
+        else:
+            para.append(ligne)
+    clore()
+    return blocs
+
+
+def livres_de(index, texte):
+    """Livres cités dans le(s) bloc(s) de la fiche qui contiennent ce texte."""
+    n, vus = norm(texte), []
+    for bloc, refs in index:
+        if n in bloc:
+            vus += [r for r in refs if r not in vus]
+    return vus
+
+
 def ident(code, t, k):
     return "FOETO2:PF.%s-%s-%s" % (code, t, k)
 
@@ -60,12 +95,14 @@ def construire(src, c, v1):
     # Plusieurs versions d'une même fiche peuvent se compléter (travail : corpus
     # du service + § 10 ; diffusion : Genest) — un verbatim tient s'il est dans l'une.
     fiches = {f: norm((FICHES / f).read_text(encoding="utf-8")) for f in S["fiches"]}
+    index = {f: index_fiche(FICHES / f) for f in S["fiches"]}
     ids, erreurs = {}, []
 
-    def verbatims(oid, vs, ou):
-        # Seuls les livres (et la prose de la fiche qui les cite) prouvent un signe :
-        # la pratique du service ne compte pas devant eux (Rémi, 2026-09-28).
-        if not vs and not ou.endswith(".conservee"):
+    def verbatims(oid, vs, ou, axe=False):
+        # Seuls les livres prouvent un signe : la pratique du service ne compte pas
+        # devant eux, et la prose de la fiche ne vaut que par le livre qu'elle cite
+        # dans la même phrase ou la même case (Rémi, 2026-09-28).
+        if not vs and not axe and not ou.endswith(".conservee"):
             erreurs.append("aucun verbatim : %s" % ou)
         for source, texte in vs:
             if source in NON_RECEVABLES:
@@ -73,6 +110,11 @@ def construire(src, c, v1):
             ou_f = next((f for f, t in fiches.items() if norm(texte) in t), None)
             if not ou_f:
                 erreurs.append("verbatim introuvable (%s, %s) : %s" % (ou, source, texte))
+            elif source == "fiche":
+                livres = livres_de(index[ou_f], texte)
+                if not livres:
+                    erreurs.append("verbatim sans livre (%s) : %s" % (ou, texte))
+                source = " + ".join(livres) or source
             c.execute("insert into verbatims values (?,?,?,?)", (oid, source, texte, ou_f))
 
     for x in S["signes"]:
@@ -86,7 +128,9 @@ def construire(src, c, v1):
         aid = ids[a["k"]] = ident(code, "AXE", a["k"])
         c.execute("insert into signes values (?,?,?,?,?,?,?,?,?)",
                   (aid, organe, "AXE", a["k"], a["l"], a["sec"], a.get("statut"), None, S["fiches"][0]))
-        verbatims(aid, a["v"], a["k"])
+        verbatims(aid, a["v"], a["k"], axe=True)
+        if not a["grades"]:
+            erreurs.append("axe sans grade : %s — en faire un signe" % a["k"])
         for g in a["grades"]:
             gid = ids["%s.%s" % (a["k"], g["k"])] = "%s.%s" % (aid, g["k"])
             c.execute("insert into grades values (?,?,?,?,?,?)",
@@ -104,9 +148,23 @@ def construire(src, c, v1):
             continue
         c.execute("insert into negatifs values (?,?,?)", (ids[k], rang, pourquoi))
 
-    # Correspondance : chaque terme v1 de l'organe, une et une seule fois
-    termes = dict(v1.execute("select id, label_fr from foeto_terms where organe = ?", (organe,)))
-    for vid in sorted(set(termes) - set(S["v1"])):
+    # Correspondance v1. Périmètre « organe » (rein) : chaque terme v1 de l'organe.
+    # Périmètre « triage » (défaut) : les termes que le triage v1 rattache à la
+    # fiche ; LESION et NON_LESION se rattachent à la main, HORS_FICHE d'office.
+    if S.get("v1_perimetre", "triage") == "organe":
+        termes = dict(v1.execute("select id, label_fr from foeto_terms where organe = ?", (organe,)))
+    else:
+        nom_fiche = "%%%s%%" % Path(S["fiches"][-1]).name
+        termes, hors = {}, {}
+        for i, l, v in v1.execute("select id, label_fr, triage_verdict from foeto_terms where triage_fiche like ?",
+                                  (nom_fiche,)):
+            (hors if v == "HORS_FICHE" else termes)[i] = l
+        for i in hors:
+            S["v1"].setdefault(i, [None, "hors_fiche"])
+        termes.update(hors)
+    # un terme v1 trié vers deux fiches est rattaché par la première qui le porte
+    deja = {r[0] for r in c.execute("select v1_id from correspondance_v1")}
+    for vid in sorted(set(termes) - set(S["v1"]) - deja):
         erreurs.append("terme v1 sans correspondance : %s « %s »" % (vid, termes[vid]))
     for vid, (cible, qualite, *note) in S["v1"].items():
         if vid not in termes:
@@ -114,6 +172,9 @@ def construire(src, c, v1):
         if qualite not in QUALITES or (cible is not None and cible not in ids) or \
            ((cible is None) != (qualite in ("hors_fiche", "sans_equivalent"))):
             erreurs.append("correspondance invalide : %s → %s (%s)" % (vid, cible, qualite))
+            continue
+        if vid in deja:
+            erreurs.append("terme v1 déjà rattaché par une autre fiche : %s" % vid)
             continue
         c.execute("insert into correspondance_v1 values (?,?,?,?,?)",
                   (vid, termes.get(vid), ids.get(cible), qualite, note[0] if note else None))
@@ -128,14 +189,21 @@ def construire(src, c, v1):
         q("select count(*) from grades g join signes s on s.id = g.axe_id where s.organe = ?"),
         q("select count(*) from verbatims v join signes s on v.objet_id like s.id || '%' where s.organe = ? and s.type = 'AXE'")
         + q("select count(*) from verbatims v join signes s on v.objet_id = s.id where s.organe = ? and s.type != 'AXE'"),
-        q("select count(*) from liens l join signes s on s.id = l.de where s.organe = ?"),
-        q("select count(*) from negatifs n join signes s on s.id = n.objet_id where s.organe = ?"),
+        q("select count(*) from liens l join signes s on l.de = s.id or l.de like s.id || '.%' where s.organe = ?"),
+        q("select count(*) from negatifs n join signes s on n.objet_id = s.id or n.objet_id like s.id || '.%' where s.organe = ?"),
         ", ".join("%s %d" % r for r in c.execute(
-            "select qualite, count(*) from correspondance_v1 where v1_id in (select id from v1.foeto_terms where organe = ?) group by 1",
-            (organe,)))))
+            "select qualite, count(*) from correspondance_v1 where v1_id in (%s) group by 1"
+            % ",".join("'%s'" % t for t in termes) if termes else "select 'aucun', 0"))))
 
 
 if __name__ == "__main__":
+    if sys.argv[1:2] == ["--essai"]:
+        # Vérifie une source seule, en mémoire : rien n'est écrit (agents en parallèle).
+        c = sqlite3.connect(":memory:")
+        c.executescript(SCHEMA)
+        c.execute("attach database ? as v1", ("file:%s?mode=ro" % V1,))
+        construire(SOURCES / (sys.argv[2] + ".json"), c, sqlite3.connect("file:%s?mode=ro" % V1, uri=True))
+        sys.exit(0)
     noms = sys.argv[1:] or sorted(p.stem for p in SOURCES.glob("*.json"))
     tmp = SORTIE.with_suffix(".tmp")
     tmp.unlink(missing_ok=True)
