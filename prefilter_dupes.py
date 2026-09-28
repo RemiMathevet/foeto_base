@@ -25,7 +25,7 @@ CACHE = os.path.join(os.path.dirname(__file__), "foeto_terms_biolord.npz")
 def load_terms(conn):
     rows = conn.execute("""
         SELECT t.id, t.organe, t.label_fr, t.label_en, t.axis, t.annotation_type,
-               (SELECT COUNT(*) FROM syndrome_foeto s WHERE s.foeto_id = t.id) AS n_synd,
+               (SELECT COUNT(*) FROM syndrome_foeto_livres s WHERE s.foeto_id = t.id) AS n_synd,
                (SELECT COUNT(*) FROM foeto_hpo h WHERE h.foeto_id = t.id)     AS n_hpo
         FROM foeto_terms t ORDER BY t.id
     """).fetchall()

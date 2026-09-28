@@ -4,7 +4,7 @@
 fusion_doublons_purs.py supprime la ligne du perdant et note son id dans
 merged_from du survivant, mais ne touchait pas les tables qui le referencent.
 Ce script relit merged_from, construit la carte retire -> survivant, et
-repointe : foeto_terms.parent_id, foeto_hpo, syndrome_foeto, foeto_genes,
+repointe : foeto_terms.parent_id, foeto_hpo, foeto_genes,
 foeto_term_segments, foeto_edges (source_id et target_id).
 
 Les doublons crees par le repointage sont ecrases (INSERT OR IGNORE puis DELETE)
@@ -17,7 +17,7 @@ import sqlite3, sys
 DB = "/home/mathevet/Bureau/foeto_base/syndromes_foetaux.db"
 # (table, colonne) portant un id de foeto_terms
 CIBLES = [("foeto_terms", "parent_id"), ("foeto_hpo", "foeto_id"),
-          ("syndrome_foeto", "foeto_id"), ("foeto_genes", "foeto_id"),
+          ("foeto_genes", "foeto_id"),
           ("foeto_term_segments", "foeto_id"),
           ("foeto_edges", "source_id"), ("foeto_edges", "target_id"),
           # oubliées jusqu'au 2026-09-28 (69 liens cassés par les fusions du jour) :
