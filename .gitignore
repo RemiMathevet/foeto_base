@@ -19,3 +19,6 @@ orphadata/
 syndromes_foetaux.db.bak-*
 foeto_v2.db
 foeto_v2.tmp
+# FOETO v2 : les sources curées portent des verbatims de livres — hors dépôt public
+v2/sources/
+v2/retires_sans_livre.tsv
