@@ -5,7 +5,7 @@ Candidats : (1) HPO des termes v1 rattachés en « exacte » au signe (foeto_hpo
 sans provenance, en partie attribuée par LLM : jamais reprise sans contrôle) ;
 (2) libellé du signe = libellé ou synonyme HPO (hpo_terms, fr). Net = égalité avec
 le libellé OFFICIEL HPO (fr ou en), jamais un synonyme ; libellés normalisés (accents, casse, ponctuation, « du/de la » neutres). Le reste
-part dans hpo_a_arbitrer.tsv. Écrit le champ "hpo" dans v2/sources/*.json, sans
+part dans sources/hpo_a_arbitrer.tsv (dépôt privé). Écrit le champ "hpo" dans v2/sources/*.json, sans
 jamais écraser un hpo déjà posé.
 """
 import json, re, sqlite3, unicodedata
@@ -65,7 +65,7 @@ for p in sorted((ICI / "sources").glob("*.json")):
     if n:
         p.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
         print("%-20s %d HPO nets écrits" % (d["organe"], n))
-(ICI / "hpo_a_arbitrer.tsv").write_text(
+(ICI / "sources" / "hpo_a_arbitrer.tsv").write_text(
     "organe\tclé\tlibellé v2\tHPO proposé\tlibellé HPO\torigine\n" + "".join("\t".join(r) + "\n" for r in arbitrer),
     encoding="utf-8")
 print("nets : %d · à arbitrer : %d lignes" % (len(nets), len(arbitrer)))
