@@ -17,3 +17,5 @@ syndromes_foetaux.db-wal
 syndromes_foetaux.db.bak.*
 orphadata/
 syndromes_foetaux.db.bak-*
+foeto_v2.db
+foeto_v2.tmp
