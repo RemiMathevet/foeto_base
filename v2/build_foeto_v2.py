@@ -33,7 +33,7 @@ QUALITES = {"exacte", "partielle", "hors_fiche", "sans_equivalent"}
 
 SCHEMA = """
 create table signes (id text primary key, organe text, type text, k text, label_fr text,
-                     section text, statut text, garde_fou text, fiche text);
+                     section text, statut text, garde_fou text, fiche text, hpo text);
 create table grades (id text primary key, axe_id text references signes(id), rang integer,
                      label_fr text, borne text, statut text);
 create table verbatims (objet_id text, source text, texte text, fiche text);
@@ -51,11 +51,11 @@ def norm(s):
 
 
 # Une référence de livre dans la fiche, avec ou sans backticks : [keeling, ch. 24],
-# `[Genest I]`, [spranger]… Liste fermée d'ouvrages : corpus CR, expérience,
-# foeto_terms, pubmed… ne sont pas des livres.
+# `[Genest I]`, [spranger], [pubmed …]… Liste fermée d'ouvrages : corpus CR,
+# expérience, foeto_terms… ne sont pas des livres.
 LIVRES = ("ernst", "keeling", "soffoet", "verdijk", "ashworth", "benirschke", "genest", "vogel",
           "khong", "horii", "devneuro", "perineuro", "spranger", "amsterdam", "lherminecoulomb",
-          "saudubray")
+          "saudubray", "pubmed")   # un article PubMed compte comme un livre (Rémi, 2026-09-28)
 REF = re.compile(r"\[([^\[\]]{2,80})\]")
 
 
@@ -67,7 +67,7 @@ def hors_livre(texte):
     """L'unité se réclame d'une source qui n'est pas un livre ([corpus CR], [expérience]…) :
     elle n'hérite alors d'aucun livre du contexte."""
     return any(not r.strip("` ").lower().startswith(LIVRES) and
-               any(m in r.lower() for m in ("corpus", "expérience", "experience", "foeto_terms", "pubmed"))
+               any(m in r.lower() for m in ("corpus", "expérience", "experience", "foeto_terms"))
                for r in REF.findall(texte))
 
 
@@ -169,13 +169,16 @@ def construire(src, c, v1):
         if x["t"] not in TYPES:
             erreurs.append("type inconnu %s : %s" % (x["t"], x["k"]))
         oid = ids[x["k"]] = ident(code, x["t"], x["k"])
-        c.execute("insert into signes values (?,?,?,?,?,?,?,?,?)",
-                  (oid, organe, x["t"], x["k"], x["l"], x["sec"], x.get("statut"), x.get("gf"), S["fiches"][0]))
+        # HPO complète FOETO (un code phénotypique en plus), il ne le remplace pas
+        if x.get("hpo") and not re.fullmatch(r"HP:\d{7}", x["hpo"]):
+            erreurs.append("code HPO illisible : %s %s" % (x["k"], x["hpo"]))
+        c.execute("insert into signes values (?,?,?,?,?,?,?,?,?,?)",
+                  (oid, organe, x["t"], x["k"], x["l"], x["sec"], x.get("statut"), x.get("gf"), S["fiches"][0], x.get("hpo")))
         verbatims(oid, x["v"], x["k"])
     for a in S["axes"]:
         aid = ids[a["k"]] = ident(code, "AXE", a["k"])
-        c.execute("insert into signes values (?,?,?,?,?,?,?,?,?)",
-                  (aid, organe, "AXE", a["k"], a["l"], a["sec"], a.get("statut"), None, S["fiches"][0]))
+        c.execute("insert into signes values (?,?,?,?,?,?,?,?,?,?)",
+                  (aid, organe, "AXE", a["k"], a["l"], a["sec"], a.get("statut"), None, S["fiches"][0], None))
         verbatims(aid, a["v"], a["k"], axe=True)
         if not a["grades"]:
             erreurs.append("axe sans grade : %s — en faire un signe" % a["k"])
