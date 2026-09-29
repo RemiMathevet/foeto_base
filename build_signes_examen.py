@@ -39,7 +39,7 @@ ANCRES = {
 }
 # les chips V1, telles qu'elles sont dans examen_clinique.html (a garder synchrone)
 CHIPS_V1 = {
-    "aspect_general": ["Macéré", "Hydropique", "Émacié", "Dysmorphique", "Momifié"],
+    "aspect_general": ["Hydropique", "Émacié", "Dysmorphique"],  # macéré/momifié : bloc Rétention (2.2.0)
     "symetrie": ["Asymétrie corporelle", "Hémihypertrophie", "Hémihypotrophie"],
     "proportions": ["Membres courts", "Tronc court", "Macrocéphalie relative", "Microcéphalie relative"],
     "teguments": ["Méconium", "Pâleur", "Ictère", "Cyanose", "Œdème", "Congestion", "Hémorragie", "Pétéchies", "Desquamation"],
